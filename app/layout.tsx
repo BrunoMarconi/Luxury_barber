@@ -2,11 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./header";
-import TeamSpotlight from "./TeamSpotlight";
-import ServicesSection from "./services_section";
-import GallerySection from "./GallerySection";
-import ContactSection from "./ContactSection";
-import CatalogPage from "./catalogo";
 import Footer from "./Footer";
 
 
