@@ -6,6 +6,7 @@ import TeamSpotlight from "./TeamSpotlight";
 import ServicesSection from "./services_section";
 import GallerySection from "./GallerySection";
 import ContactSection from "./ContactSection";
+import CatalogPage from "./catalogo";
 import Footer from "./Footer";
 
 

@@ -116,7 +116,7 @@ function HeroSplit({
               >
                 <div className="relative aspect-[3/4] w-full shadow-[0_18px_45px_rgba(0,0,0,0.18)]">
                   <Image
-                    src={rightCardImageSrc}
+                    src={'/Catálogo.jpeg'}
                     alt="Product promo"
                     fill
                     className="object-cover"
