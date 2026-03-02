@@ -118,7 +118,7 @@ export default function ServicesSection() {
 
             <FadeUp delay={0.05}>
               <h2 className="mt-3 text-[44px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[56px] lg:text-[72px]">
-                Services
+                Services & Pricing
               </h2>
             </FadeUp>
           </div>
@@ -162,7 +162,7 @@ export default function ServicesSection() {
 
           <FadeUp delay={0.12} amount={0.35}>
             <a
-              href="https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga?do=invite&_branch_match_id=1556921415801310876&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVj8jyCMxMT%2FbJi0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAOg7uKI6AAAA"
+              href="#book"
               className="inline-flex h-12 items-center justify-center rounded-full border border-black/30 bg-black/5 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-black hover:bg-black/10 transition"
             >
               Book now
