@@ -41,13 +41,13 @@ export default function ContactSection() {
           <div>
             <FadeUp delay={0}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
-                Contact
+                Contacto
               </p>
             </FadeUp>
 
             <FadeUp delay={0.05}>
               <h1 className="mt-3 text-[44px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[56px] lg:text-[72px]">
-                Let&apos;s book your next visit
+                Reservemos tu próxima visita
               </h1>
             </FadeUp>
           </div>
@@ -67,13 +67,13 @@ export default function ContactSection() {
             <FadeUp delay={0.05} amount={0.25}>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
-                  Quick info
+                  Información rápida
                 </p>
 
                 <div className="mt-6 grid gap-6 sm:grid-cols-2">
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50">
-                      Phone
+                      Teléfono
                     </p>
                     <a
                       href="tel:+34629357344"
@@ -91,13 +91,13 @@ export default function ContactSection() {
                       href="https://wa.me/629357344"
                       className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/90 hover:text-white"
                     >
-                      Message us
+                      Envíanos un mensaje
                     </a>
                   </div>
 
                   <div className="sm:col-span-2">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50">
-                      Address
+                      Dirección
                     </p>
                     <p className="mt-2 text-[12px] leading-6 tracking-[0.06em] text-white/70">
                       C. Eugenio Gross, Bailén-Miraflores, 29001 Málaga
@@ -106,7 +106,7 @@ export default function ContactSection() {
                       href="https://maps.app.goo.gl/LBDdNF1UThQGUteD7"
                       className="mt-3 inline-flex text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 hover:text-white"
                     >
-                      Open in maps →
+                      Abrir en mapas →
                     </a>
                   </div>
                 </div>
@@ -116,14 +116,14 @@ export default function ContactSection() {
             <FadeUp delay={0.1} amount={0.25}>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
-                  Opening hours
+                  Horario
                 </p>
 
                 <div className="mt-6 space-y-4">
                   {[
-                    ["Mon – Fri", "10:00 – 20:00"],
-                    ["Saturday", "10:00 – 18:00"],
-                    ["Sunday", "Closed"],
+                    ["Lun – Vie", "10:00 – 19:00"],
+                    ["Sábado", "10:00 – 19:00"],
+                    ["Domingo", "Cerrado"],
                   ].map(([d, h]) => (
                     <div key={d} className="flex items-center justify-between gap-6">
                       <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-white/80">
@@ -143,7 +143,7 @@ export default function ContactSection() {
                 href="https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga?do=invite&_branch_match_id=1556921415801310876&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVj8jyCMxMT%2FbJi0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAOg7uKI6AAAA"
                 className="inline-flex h-12 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-white/15 transition"
               >
-                Book now
+                Reservar ahora
               </a>
             </FadeUp>
           </div>
@@ -152,34 +152,62 @@ export default function ContactSection() {
           <FadeUp delay={0.08} amount={0.25}>
             <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
-                Send a message
+                Enviar mensaje
               </p>
 
               <form
                 className="mt-6 grid gap-5"
                 onSubmit={(e) => {
                   e.preventDefault();
-                  // Aquí luego lo conectas con tu backend/email service
-                  alert("Message sent (demo).");
+
+                  const form = e.currentTarget;
+                  const formData = new FormData(form);
+
+                  const name = formData.get("name");
+                  const phone = formData.get("phone");
+                  const email = formData.get("email");
+                  const message = formData.get("message");
+
+                  const text = `
+                Nueva solicitud desde la web:
+
+                Nombre: ${name}
+                Teléfono: ${phone}
+                Email: ${email}
+
+                Mensaje:
+                ${message}
+                  `;
+
+                  const encodedText = encodeURIComponent(text);
+
+                  // IMPORTANTE: número en formato internacional SIN +
+                  const whatsappNumber = "34629357344";
+
+                  const url = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+                  window.open(url, "_blank");
                 }}
               >
                 <div className="grid gap-5 sm:grid-cols-2">
                   <label className="grid gap-2">
                     <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/55">
-                      Name
+                      Nombre
                     </span>
                     <input
+                        name="name"
                       className="h-12 rounded-2xl border border-white/10 bg-black/20 px-4 text-[12px] tracking-[0.06em] text-white placeholder:text-white/35 outline-none focus:border-white/25"
-                      placeholder="Your name"
+                      placeholder="Tu nombre"
                       required
                     />
                   </label>
 
                   <label className="grid gap-2">
                     <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/55">
-                      Phone
+                      Teléfono
                     </span>
                     <input
+                        name="phone"
                       className="h-12 rounded-2xl border border-white/10 bg-black/20 px-4 text-[12px] tracking-[0.06em] text-white placeholder:text-white/35 outline-none focus:border-white/25"
                       placeholder="+34..."
                     />
@@ -191,6 +219,7 @@ export default function ContactSection() {
                     Email
                   </span>
                   <input
+                    name="email"
                     type="email"
                     className="h-12 rounded-2xl border border-white/10 bg-black/20 px-4 text-[12px] tracking-[0.06em] text-white placeholder:text-white/35 outline-none focus:border-white/25"
                     placeholder="you@email.com"
@@ -200,25 +229,26 @@ export default function ContactSection() {
 
                 <label className="grid gap-2">
                   <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/55">
-                    Message
+                    Mensaje
                   </span>
                   <textarea
+                    name="message"
                     className="min-h-[140px] resize-none rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-[12px] leading-6 tracking-[0.06em] text-white placeholder:text-white/35 outline-none focus:border-white/25"
-                    placeholder="Tell us what you want to book..."
+                    placeholder="Cuéntanos qué quieres reservar..."
                     required
                   />
                 </label>
 
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
-                    We respond within 24h
+                    Respondemos en 24h
                   </p>
 
                   <button
                     type="submit"
                     className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-white/15 transition"
                   >
-                    Send
+                    Enviar
                   </button>
                 </div>
               </form>

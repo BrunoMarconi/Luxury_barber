@@ -65,7 +65,7 @@ function HeroSplit({
               transition={{ delay: 0.3, duration: 0.7 }}
               className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/85"
             >
-              Tailor made services
+              Servicios a medida
             </motion.p>
 
             <motion.h1
@@ -75,10 +75,10 @@ function HeroSplit({
               className="mt-3 max-w-[18ch] text-white"
             >
               <span className="block text-[44px] leading-[0.95] tracking-tight sm:text-[64px] lg:text-[86px] xl:text-[96px]">
-                BARBERING
+                BARBERÍA
               </span>
               <span className="block text-[44px] leading-[0.95] tracking-tight sm:text-[64px] lg:text-[86px] xl:text-[96px]">
-                DETAILED PRICELIST
+                LISTA DE PRECIOS DETALLADA
               </span>
             </motion.h1>
           </div>
@@ -99,7 +99,7 @@ function HeroSplit({
                 transition={{ delay: 0.6, duration: 0.7 }}
                 className="text-[14px] font-semibold uppercase tracking-[0.08em] text-black"
               >
-                Juan Carlos <br /> Products for men
+                Juan Carlos <br /> Productos para hombres
               </motion.p>
 
               <motion.div
@@ -126,7 +126,7 @@ function HeroSplit({
                 href="/catalogo"
                 className="mt-6 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/85 hover:text-black transition"
               >
-                Learn more
+                Más información
               </motion.a>
             </div>
           </div>
@@ -137,15 +137,15 @@ function HeroSplit({
               <div className="marquee-track">
                 <div className="flex">
                   <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
-                    WELCOME TO JUAN CARLOS&apos;S WORLD &nbsp; WELCOME TO JUAN CARLO&apos;S WORLD &nbsp;
-                    WELCOME TO JUAN CARLO&apos;S WORLD &nbsp; WELCOME TO JUAN CARLO&apos;S WORLD &nbsp;
+                    BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
+                    BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
                   </span>
                 </div>
                 <div className="flex" aria-hidden="true">
                   <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
-                    WELCOME TO JUAN CARLOS&apos;S WORLD &nbsp; WELCOME TO JUAN CARLO&apos;S WORLD &nbsp;
-                    WELCOME TO JUAN CARLO&apos;S WORLD &nbsp; WELCOME TO JUAN CARLO&apos;S WORLD &nbsp;
-                    WELCOME TO JUAN CARLO&apos;S WORLD &nbsp; WELCOME TO JUAN CARLO&apos;S WORLD &nbsp;
+                    BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
+                    BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
+                    BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
                   </span>
                 </div>
               </div>

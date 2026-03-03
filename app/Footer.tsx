@@ -52,15 +52,15 @@ export default function Footer() {
             style={{ animation: "marquee-left 18s linear infinite", willChange: "transform" }}
           >
             <span className="whitespace-nowrap px-6 py-3 text-[14px] font-semibold uppercase tracking-[0.22em] text-white/70">
-              THE PROFESSIONAL BARBER &nbsp; • &nbsp; CLEAN WORK &nbsp; • &nbsp; MASTER OF DETAIL &nbsp; • &nbsp;
-              THE PROFESSIONAL BARBER &nbsp; • &nbsp; CLEAN WORK &nbsp; • &nbsp; MASTER OF DETAIL &nbsp; • &nbsp;
+              EL BARBERO PROFESIONAL &nbsp; • &nbsp; TRABAJO LIMPIO &nbsp; • &nbsp; MAESTRO DEL DETALLE &nbsp; • &nbsp;
+              EL BARBERO PROFESIONAL &nbsp; • &nbsp; TRABAJO LIMPIO &nbsp; • &nbsp; MAESTRO DEL DETALLE &nbsp; • &nbsp;
             </span>
             <span
               aria-hidden="true"
               className="whitespace-nowrap px-6 py-3 text-[14px] font-semibold uppercase tracking-[0.22em] text-white/70"
             >
-              THE PROFESSIONAL BARBER &nbsp; • &nbsp; CLEAN WORK &nbsp; • &nbsp; MASTER OF DETAIL &nbsp; • &nbsp;
-              THE PROFESSIONAL BARBER &nbsp; • &nbsp; CLEAN WORK &nbsp; • &nbsp; MASTER OF DETAIL &nbsp; • &nbsp;
+              EL BARBERO PROFESIONAL &nbsp; • &nbsp; TRABAJO LIMPIO &nbsp; • &nbsp; MAESTRO DEL DETALLE &nbsp; • &nbsp;
+              EL BARBERO PROFESIONAL &nbsp; • &nbsp; TRABAJO LIMPIO &nbsp; • &nbsp; MAESTRO DEL DETALLE &nbsp; • &nbsp;
             </span>
           </div>
         </div>
@@ -79,13 +79,13 @@ export default function Footer() {
           <div>
             <FadeUp delay={0}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
-                The Professional Barber
+                El Barbero Profesional
               </p>
             </FadeUp>
 
             <FadeUp delay={0.05}>
               <h2 className="mt-3 max-w-[18ch] text-[40px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[52px] lg:text-[64px]">
-                Book. Arrive. Leave sharp.
+                Reserva. Llega. Sal impecable.
               </h2>
             </FadeUp>
 
@@ -102,13 +102,13 @@ export default function Footer() {
                   href={bookUrl}
                   className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-white/15 transition"
                 >
-                  Book now
+                  Reservar ahora
                 </a>
                 <Link
                   href="/contact"
                   className="inline-flex h-12 items-center justify-center rounded-full border border-white/15 bg-transparent px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 hover:text-white hover:border-white/25 transition"
                 >
-                  Contact
+                  Contacto
                 </Link>
               </div>
             </FadeUp>
@@ -119,16 +119,16 @@ export default function Footer() {
             <FadeUp delay={0.06} amount={0.25}>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
-                  Pages
+                  Páginas
                 </p>
 
                 <div className="mt-4 grid gap-3">
                   {[
-                    ["Home", "/#home"],
-                    ["Services", "/#services"],
-                    ["Gallery", "/#gallery"],
-                    ["Team", "/#team"],
-                    ["Contact", "/contact"],
+                    ["Inicio", "/#home"],
+                    ["Servicios", "/#services"],
+                    ["Galería", "/#gallery"],
+                    ["Equipo", "/#team"],
+                    ["Contacto", "/contact"],
                   ].map(([label, href]) => (
                     <Link
                       key={href}
@@ -145,13 +145,13 @@ export default function Footer() {
             <FadeUp delay={0.1} amount={0.25}>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
-                  Info
+                  Información
                 </p>
 
                 <div className="mt-4 space-y-4">
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
-                      Address
+                      Dirección
                     </p>
                     <p className="mt-2 text-[12px] leading-6 tracking-[0.06em] text-white/70">
                       C. Eugenio Gross, Bailén-Miraflores, 29001 Málaga
@@ -161,7 +161,7 @@ export default function Footer() {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
-                        Phone
+                        Teléfono
                       </p>
                       <a
                         href="tel:+34000000000"
@@ -178,17 +178,17 @@ export default function Footer() {
                         href="https://wa.me/34629357344"
                         className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/75 hover:text-white"
                       >
-                        Message
+                        Mensaje
                       </a>
                     </div>
                   </div>
 
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
-                      Hours
+                      Horario
                     </p>
                     <p className="mt-2 text-[12px] leading-6 tracking-[0.06em] text-white/70">
-                      Mon–Fri 10:00–20:00 · Sat 10:00–18:00 · Sun Closed
+                      Lun–Vie 10:00–19:00 · Sáb 10:00–19:00 · Dom Cerrado
                     </p>
                   </div>
                 </div>
@@ -201,7 +201,7 @@ export default function Footer() {
         <div className="relative mt-12 border-t border-white/10 pt-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
-              © {new Date().getFullYear()} The Professional Barber. All rights reserved.
+              © {new Date().getFullYear()} El Barbero Profesional. Todos los derechos reservados.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">

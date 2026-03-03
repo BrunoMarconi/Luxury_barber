@@ -5,12 +5,11 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const nav = [
-  { label: "Home", href: "/#home" },
-  { label: "Services", href: "/#services" },
-  { label: "Team", href: "/#team" },
-  { label: "Gallery", href: "/#gallery" },
-  { label: "Catalog", href: "/catalogo" },
-  { label: "Contact", href: "/contact" },
+  { label: "Equipo", href: "/#team" },
+  { label: "Servicios", href: "/#services" },
+  { label: "Galería", href: "/#gallery" },
+  { label: "Catálogo", href: "/catalogo" },
+  { label: "Contacto", href: "/contact" },
 ];
 
 const BOOKSY_URL =
@@ -74,18 +73,18 @@ export default function Header() {
             href={BOOKSY_URL}
             className="pointer-events-auto rounded-full border border-white/35 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white backdrop-blur hover:bg-white/15 transition"
           >
-            Book now
+            Reservar ahora
           </a>
         </nav>
 
         {/* Mobile button */}
         <button
           className="pointer-events-auto md:hidden rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white backdrop-blur"
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
           type="button"
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? "Close" : "Menu"}
+          {open ? "Cerrar" : "Menú"}
         </button>
       </div>
 
@@ -119,7 +118,7 @@ export default function Header() {
             <div className="mx-auto max-w-6xl px-4 pt-4 pb-6 sm:px-6">
               <div className="flex items-center justify-between">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
-                  Navigation
+                  Navegación
                 </p>
                 <button
                   className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white hover:bg-white/15 transition"
@@ -146,12 +145,12 @@ export default function Header() {
                   href={BOOKSY_URL}
                   className="mt-2 inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-white/15 transition"
                 >
-                  Book now
+                  Reservar ahora
                 </a>
               </div>
 
               <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
-                Tap outside to close · ESC closes too
+                Toca fuera para cerrar · ESC también cierra
               </p>
             </div>
           </div>

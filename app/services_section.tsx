@@ -7,15 +7,16 @@ type ServiceItem = {
   description?: string;
   duration?: string;
   price: string;
-  tag?: string;
 };
+
+const BOOKSY_URL =
+  "https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga#ba_s=sh_1";
 
 const servicesLeft: ServiceItem[] = [
   {
     name: "Corte de Cabello",
     duration: "45 min",
     price: "15,00 €",
-    tag: "POPULAR",
   },
   {
     name: "Arreglo de Barba",
@@ -27,7 +28,6 @@ const servicesLeft: ServiceItem[] = [
     description: "Pack completo (incluye descuento aplicado).",
     duration: "1 h 30 min",
     price: "27,00 €",
-    tag: "AHORRA 10%",
   },
   {
     name: "Tinte Permanente en Barba",
@@ -42,14 +42,12 @@ const servicesRight: ServiceItem[] = [
     description: "Experiencia premium: cada detalle cuenta.",
     duration: "1 h 15 min",
     price: "27,00 €",
-    tag: "AHORRA 10%",
   },
   {
     name: "VIP · Haircut + Beard / Corte + Barba",
     description: "Experiencia premium completa: corte + barba.",
     duration: "1 h 45 min",
     price: "45,00 €",
-    tag: "AHORRA 10%",
   },
 ];
 
@@ -87,21 +85,12 @@ function ServiceRow({ s, idx }: { s: ServiceItem; idx: number }) {
       transition={{ duration: 0.75, delay: idx * 0.06, ease: [0.2, 0.8, 0.2, 1] }}
     >
       {/* mobile: stack / desktop: row */}
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
         {/* LEFT */}
         <div className="min-w-0">
-          {/* title row wraps in mobile */}
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-            <h3 className="min-w-0 flex-1 truncate text-[12px] font-semibold uppercase tracking-[0.22em] text-black">
-              {s.name}
-            </h3>
-
-            {s.tag ? (
-              <span className="shrink-0 rounded-full border border-black/30 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/80">
-                {s.tag}
-              </span>
-            ) : null}
-          </div>
+          <h3 className="truncate text-[12px] font-semibold uppercase tracking-[0.22em] text-black">
+            {s.name}
+          </h3>
 
           {s.description ? (
             <p className="mt-2 max-w-[52ch] text-[12px] leading-5 tracking-[0.06em] text-black/65">
@@ -114,11 +103,20 @@ function ServiceRow({ s, idx }: { s: ServiceItem; idx: number }) {
           </p>
         </div>
 
-        {/* RIGHT: price - on mobile goes under, on desktop stays right */}
+        {/* RIGHT */}
         <div className="shrink-0 sm:text-right">
           <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-black">
             {s.price}
           </p>
+
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 inline-flex h-10 w-full items-center justify-center rounded-full border border-black/25 bg-black/5 px-6 text-[10px] font-semibold uppercase tracking-[0.22em] text-black hover:bg-black/10 transition sm:w-auto"
+          >
+            Reservar ahora
+          </a>
         </div>
       </div>
     </motion.div>
@@ -129,7 +127,7 @@ function ServiceList({ list }: { list: ServiceItem[] }) {
   return (
     <div className="divide-y divide-black/10">
       {list.map((s, idx) => (
-        <ServiceRow key={s.name} s={s} idx={idx} />
+        <ServiceRow key={`${s.name}-${idx}`} s={s} idx={idx} />
       ))}
     </div>
   );
@@ -168,7 +166,11 @@ export default function ServicesSection() {
 
         {/* Body */}
         <div className="mt-12 grid gap-10 lg:grid-cols-2">
-          <FadeUp delay={0.05} amount={0.25} className="rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur">
+          <FadeUp
+            delay={0.05}
+            amount={0.25}
+            className="overflow-hidden rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur"
+          >
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
               Servicios estándar
             </p>
@@ -177,7 +179,11 @@ export default function ServicesSection() {
             </div>
           </FadeUp>
 
-          <FadeUp delay={0.1} amount={0.25} className="rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur">
+          <FadeUp
+            delay={0.1}
+            amount={0.25}
+            className="overflow-hidden rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur"
+          >
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
               VIP
             </p>
@@ -187,21 +193,12 @@ export default function ServicesSection() {
           </FadeUp>
         </div>
 
-        {/* CTA row */}
-        <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+        {/* Footer note */}
+        <div className="mt-12">
           <FadeUp delay={0.05} amount={0.35}>
-            <p className="text-center text-[10px] font-semibold uppercase tracking-[0.22em] text-black/60 sm:text-left">
+            <p className="text-center text-[10px] font-semibold uppercase tracking-[0.22em] text-black/60">
               Los precios pueden variar según largo del cabello y complejidad.
             </p>
-          </FadeUp>
-
-          <FadeUp delay={0.12} amount={0.35}>
-            <a
-              href="#book"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-black/30 bg-black/5 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-black hover:bg-black/10 transition"
-            >
-              Reservar ahora
-            </a>
           </FadeUp>
         </div>
       </div>
