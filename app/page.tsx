@@ -47,7 +47,7 @@ function HeroSplit({
           className="relative min-h-[70svh] lg:min-h-[100svh]"
         >
           <Image
-            src={leftImageSrc}
+            src={"/images/page.jpeg"}
             alt="Barbershop interior"
             fill
             priority
