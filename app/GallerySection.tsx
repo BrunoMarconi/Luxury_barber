@@ -11,42 +11,42 @@ type Photo = {
 
 const PHOTOS: Photo[] = [
   {
-    src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=2000&q=80",
+    src: "/images/Foto1_1.jpeg",
     alt: "Barber cutting hair",
     size: "tall",
   },
   {
-    src: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=2000&q=80",
+    src: "/images/Foto2.jpeg",
     alt: "Beard grooming",
     size: "square",
   },
   {
-    src: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=2400&q=80",
+    src: "/images/Foto3.jpeg",
     alt: "Shop interior",
     size: "wide",
   },
   {
-    src: "https://images.unsplash.com/photo-1520975869018-0c8f6b5e7c84?auto=format&fit=crop&w=2000&q=80",
+    src: "/images/Foto4.jpeg",
     alt: "Haircut close-up",
     size: "tall",
   },
   {
-    src: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=2000&q=80",
+    src: "/images/Foto5.jpeg",
     alt: "Tools on the station",
     size: "square",
   },
   {
-    src: "https://images.unsplash.com/photo-1520975958225-9c5c8c814d3b?auto=format&fit=crop&w=2000&q=80",
+    src: "/images/Foto6.jpeg",
     alt: "Barber chair",
     size: "wide",
   },
   {
-    src: "https://images.unsplash.com/photo-1536520002442-39764a41e987?auto=format&fit=crop&w=2000&q=80",
+    src: "/images/Foto7.jpeg",
     alt: "Beard trim detail",
     size: "tall",
   },
   {
-    src: "https://images.unsplash.com/photo-1520975682030-4f9a39d14f0c?auto=format&fit=crop&w=2000&q=80",
+    src: "/images/Foto8.jpeg",
     alt: "Scissors and comb",
     size: "square",
   },

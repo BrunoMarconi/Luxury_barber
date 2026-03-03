@@ -104,7 +104,7 @@ export default function TeamSpotlight({
           >
             <div className="relative aspect-[3/4.6] w-full shadow-[0_24px_55px_rgba(0,0,0,0.18)]">
               <Image
-                src={"https://images.unsplash.com/photo-1672149530508-acf91aceb7bd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                src={"/images/JuanCarlos.jpeg"}
                 alt={name}
                 fill
                 className="object-cover"
