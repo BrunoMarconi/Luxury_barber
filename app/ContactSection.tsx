@@ -54,8 +54,8 @@ export default function ContactSection() {
 
           <FadeUp delay={0.1}>
             <p className="max-w-[62ch] text-[12px] leading-6 tracking-[0.06em] text-white/60">
-              Escríbenos con lo que necesitas y te respondemos rápido. Si lo prefieres,
-              reserva directamente por teléfono o WhatsApp.
+              Escríbenos con lo que necesitas y te respondemos rápido. Para
+              reservar directamente, haz clic en el botón de "Reservar ahora" en la página principal o visita nuestro <a href="https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga?do=invite&_branch_match_id=1556921415801310876&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVj8jyCMxMT%2FbJi0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAOg7uKI6AAAA" className="underline hover:text-white/80 transition-colors">Booksy</a>.
             </p>
           </FadeUp>
         </div>
@@ -76,10 +76,10 @@ export default function ContactSection() {
                       Phone
                     </p>
                     <a
-                      href="tel:+34000000000"
+                      href="tel:+34629357344"
                       className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/90 hover:text-white"
                     >
-                      +34 000 000 000
+                      +34 629 357 344
                     </a>
                   </div>
 
@@ -88,7 +88,7 @@ export default function ContactSection() {
                       WhatsApp
                     </p>
                     <a
-                      href="https://wa.me/34000000000"
+                      href="https://wa.me/629357344"
                       className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/90 hover:text-white"
                     >
                       Message us
@@ -100,10 +100,10 @@ export default function ContactSection() {
                       Address
                     </p>
                     <p className="mt-2 text-[12px] leading-6 tracking-[0.06em] text-white/70">
-                      Calle Ejemplo 12, 28000 Madrid, España
+                      C. Eugenio Gross, Bailén-Miraflores, 29001 Málaga
                     </p>
                     <a
-                      href="https://www.google.com/maps"
+                      href="https://maps.app.goo.gl/LBDdNF1UThQGUteD7"
                       className="mt-3 inline-flex text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 hover:text-white"
                     >
                       Open in maps →

@@ -16,7 +16,7 @@ function HeroSplit({
   rightCardImageSrc,
 }: HeroSplitProps) {
   return (
-    <section className="relative min-h-[100svh] w-full overflow-hidden">
+    <section id="home" className="relative min-h-[100svh] w-full overflow-hidden">
       {/* CSS marquee */}
       <style>{`
         .marquee {
@@ -80,12 +80,6 @@ function HeroSplit({
               <span className="block text-[44px] leading-[0.95] tracking-tight sm:text-[64px] lg:text-[86px] xl:text-[96px]">
                 DETAILED PRICELIST
               </span>
-              <span className="block text-[44px] leading-[0.95] tracking-tight sm:text-[64px] lg:text-[86px] xl:text-[96px]">
-                GROOMING & WELLNESS
-              </span>
-              <span className="block text-[44px] leading-[0.95] tracking-tight sm:text-[64px] lg:text-[86px] xl:text-[96px]">
-                MANICURE & PEDICURE
-              </span>
             </motion.h1>
           </div>
         </motion.div>
@@ -105,7 +99,7 @@ function HeroSplit({
                 transition={{ delay: 0.6, duration: 0.7 }}
                 className="text-[14px] font-semibold uppercase tracking-[0.08em] text-black"
               >
-                Don Humanhood <br /> Products for men
+                Juan Carlos <br /> Products for men
               </motion.p>
 
               <motion.div
@@ -129,7 +123,7 @@ function HeroSplit({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.9, duration: 0.6 }}
-                href="#learn-more"
+                href="/catalogo"
                 className="mt-6 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/85 hover:text-black transition"
               >
                 Learn more
@@ -143,14 +137,15 @@ function HeroSplit({
               <div className="marquee-track">
                 <div className="flex">
                   <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
-                    WELCOME TO DON&apos;S WORLD &nbsp; WELCOME TO DON&apos;S WORLD &nbsp;
-                    WELCOME TO DON&apos;S WORLD &nbsp; WELCOME TO DON&apos;S WORLD &nbsp;
+                    WELCOME TO JUAN CARLOS&apos;S WORLD &nbsp; WELCOME TO JUAN CARLO&apos;S WORLD &nbsp;
+                    WELCOME TO JUAN CARLO&apos;S WORLD &nbsp; WELCOME TO JUAN CARLO&apos;S WORLD &nbsp;
                   </span>
                 </div>
                 <div className="flex" aria-hidden="true">
                   <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
-                    WELCOME TO DON&apos;S WORLD &nbsp; WELCOME TO DON&apos;S WORLD &nbsp;
-                    WELCOME TO DON&apos;S WORLD &nbsp; WELCOME TO DON&apos;S WORLD &nbsp;
+                    WELCOME TO JUAN CARLOS&apos;S WORLD &nbsp; WELCOME TO JUAN CARLO&apos;S WORLD &nbsp;
+                    WELCOME TO JUAN CARLO&apos;S WORLD &nbsp; WELCOME TO JUAN CARLO&apos;S WORLD &nbsp;
+                    WELCOME TO JUAN CARLO&apos;S WORLD &nbsp; WELCOME TO JUAN CARLO&apos;S WORLD &nbsp;
                   </span>
                 </div>
               </div>

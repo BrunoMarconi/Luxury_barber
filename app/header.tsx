@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const nav = [
+  { label: "Home", href: "/#home" },
   { label: "Services", href: "/#services" },
   { label: "Team", href: "/#team" },
   { label: "Gallery", href: "/#gallery" },
@@ -55,7 +56,7 @@ export default function Header() {
           className="pointer-events-auto select-none text-lg font-semibold tracking-[0.22em] text-white"
           aria-label="Home"
         >
-          Luxury
+          Luxury BarberShop
         </Link>
 
         {/* Desktop */}

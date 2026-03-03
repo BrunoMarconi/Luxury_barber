@@ -124,10 +124,10 @@ export default function Footer() {
 
                 <div className="mt-4 grid gap-3">
                   {[
-                    ["Home", "/"],
-                    ["Services", "/services"],
-                    ["Gallery", "/gallery"],
-                    ["Team", "/team"],
+                    ["Home", "/#home"],
+                    ["Services", "/#services"],
+                    ["Gallery", "/#gallery"],
+                    ["Team", "/#team"],
                     ["Contact", "/contact"],
                   ].map(([label, href]) => (
                     <Link
@@ -154,7 +154,7 @@ export default function Footer() {
                       Address
                     </p>
                     <p className="mt-2 text-[12px] leading-6 tracking-[0.06em] text-white/70">
-                      Calle Ejemplo 12, Málaga
+                      C. Eugenio Gross, Bailén-Miraflores, 29001 Málaga
                     </p>
                   </div>
 
@@ -167,7 +167,7 @@ export default function Footer() {
                         href="tel:+34000000000"
                         className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/75 hover:text-white"
                       >
-                        +34 000 000 000
+                        +34 629 35 73 44
                       </a>
                     </div>
                     <div>
@@ -175,7 +175,7 @@ export default function Footer() {
                         WhatsApp
                       </p>
                       <a
-                        href="https://wa.me/34000000000"
+                        href="https://wa.me/34629357344"
                         className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/75 hover:text-white"
                       >
                         Message
