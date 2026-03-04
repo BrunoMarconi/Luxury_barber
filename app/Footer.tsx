@@ -91,8 +91,8 @@ export default function Footer() {
 
             <FadeUp delay={0.1}>
               <p className="mt-5 max-w-[70ch] text-[12px] leading-6 tracking-[0.06em] text-white/60">
-                Barbería de autor: experiencia calmada, líneas limpias y detalle real. Reserva en segundos
-                o escríbenos y te respondemos rápido.
+                Barbería de autor: Experiencia con calma, perfilado limpio. Detalles reales
+                Reserva en segundos o escríbenos y te respondemos rápido.
               </p>
             </FadeUp>
 

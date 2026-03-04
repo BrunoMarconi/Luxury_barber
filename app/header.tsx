@@ -56,7 +56,7 @@ export default function Header() {
           className="pointer-events-auto select-none text-lg font-semibold tracking-[0.22em] text-white"
           aria-label="Home"
         >
-          Juan Carlos <br />
+          The Professional Barber <br />
         </Link>
 
         {/* Desktop */}
