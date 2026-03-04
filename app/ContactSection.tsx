@@ -70,7 +70,7 @@ export default function ContactSection() {
                   Información rápida
                 </p>
 
-                <div className="mt-6 grid gap-6 sm:grid-cols-2">
+                <div className="mt-6 grid gap-6 sm:grid-cols-3">
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50">
                       Teléfono
@@ -95,7 +95,21 @@ export default function ContactSection() {
                     </a>
                   </div>
 
-                  <div className="sm:col-span-2">
+                  <div>
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50">
+                      Instagram
+                    </p>
+                    <a
+                      href="https://www.instagram.com/juank.alpha.es?igsh=eXZvb3V2MDBwOHls"
+                      className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/90 hover:text-white"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Síguenos
+                    </a>
+                  </div>
+
+                  <div className="sm:col-span-3">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50">
                       Dirección
                     </p>

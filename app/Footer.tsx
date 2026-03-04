@@ -184,6 +184,19 @@ export default function Footer() {
                         Mensaje
                       </a>
                     </div>
+                    <div>
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
+                        Instagram
+                      </p>
+                      <a
+                        href="https://www.instagram.com/juank.alpha.es?igsh=eXZvb3V2MDBwOHls"
+                        className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/75 hover:text-white"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        @juank.alpha.es
+                      </a>
+                    </div>
                   </div>
 
                   <div>

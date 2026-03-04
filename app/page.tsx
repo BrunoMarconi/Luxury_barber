@@ -70,15 +70,15 @@ function RightPanel({ className }: { className?: string }) {
           <div className="marquee-track">
             <div className="flex">
               <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
-                BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
-                BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
+                ¿Estás listo para ver tu mejor versión? &nbsp; ¿Estás listo para ver tu mejor versión? &nbsp;
+               ¿Estás listo para ver tu mejor versión? &nbsp; ¿Estás listo para ver tu mejor versión? &nbsp;
               </span>
             </div>
             <div className="flex" aria-hidden="true">
               <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
-                BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
-                BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
-                BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
+                ¿Estás listo para ver tu mejor versión? &nbsp; ¿Estás listo para ver tu mejor versión? &nbsp;
+                ¿Estás listo para ver tu mejor versión? &nbsp; ¿Estás listo para ver tu mejor versión? &nbsp;
+                ¿Estás listo para ver tu mejor versión? &nbsp; ¿Estás listo para ver tu mejor versión? &nbsp;
               </span>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default function HomePage() {
       <div className="mt-6 mb-6 flex justify-center md:hidden">
         <a
           href={BOOKSY_URL}
-          className="inline-flex h-12 items-center justify-center rounded-full border border-black/30 bg-black/80 px-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-black/90 transition"
+          className="inline-flex h-12 items-center justify-center rounded-full border border-amber-500 bg-amber-50 px-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-black hover:bg-amber-100 transition"
         >
           Reservar ahora
         </a>
