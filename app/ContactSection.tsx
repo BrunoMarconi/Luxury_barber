@@ -99,9 +99,12 @@ export default function ContactSection() {
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50">
                       Dirección
                     </p>
-                    <p className="mt-2 text-[12px] leading-6 tracking-[0.06em] text-white/70">
+                    <a
+                      href="https://maps.app.goo.gl/LBDdNF1UThQGUteD7"
+                      className="mt-2 block text-[12px] leading-6 tracking-[0.06em] text-white/70 hover:underline"
+                    >
                       C. Eugenio Gross, Bailén-Miraflores, 29001 Málaga
-                    </p>
+                    </a>
                     <a
                       href="https://maps.app.goo.gl/LBDdNF1UThQGUteD7"
                       className="mt-3 inline-flex text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 hover:text-white"

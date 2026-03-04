@@ -6,10 +6,87 @@ import TeamSpotlight from "./TeamSpotlight";
 import ServicesSection from "./services_section";
 import GallerySection from "./GallerySection";
 
+// external booking link used in header/footer; reused here for mobile CTA
+const BOOKSY_URL =
+  "https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga?do=invite&_branch_match_id=1556921415801310876&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVj8jyCMxMT%2FbJi0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAOg7uKI6AAAA";
+
 type HeroSplitProps = {
   leftImageSrc: string;
   rightCardImageSrc: string;
 };
+
+// panel that appears to the right of the hero on desktop, duplicated below services on mobile
+function RightPanel({ className }: { className?: string }) {
+  return (
+    <motion.aside
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4, duration: 0.9 }}
+      className={`relative bg-[#ece8de] lg:min-h-[100svh] ${className ?? ""}`}
+    >
+      <div className="mx-auto flex h-full max-w-md flex-col px-6 pt-24 pb-24 lg:pt-28">
+        <div className="mt-6 flex flex-1 flex-col items-center justify-center text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.7 }}
+            className="text-[14px] font-semibold uppercase tracking-[0.08em] text-black"
+          >
+            Juan Carlos <br /> Productos el para cuidado masculino
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.75, duration: 0.6 }}
+            className="mt-6 w-[220px] sm:w-[260px] lg:w-[280px]"
+          >
+            <div className="relative aspect-[3/4] w-full shadow-[0_18px_45px_rgba(0,0,0,0.18)]">
+              <Image
+                src={'/Catálogo.jpeg'}
+                alt="Product promo"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 60vw, 280px"
+              />
+            </div>
+          </motion.div>
+
+          <motion.a
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
+            href="/catalogo"
+            className="mt-6 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/85 hover:text-black transition"
+          >
+            Más información
+          </motion.a>
+        </div>
+      </div>
+
+      {/* MARQUEE */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0">
+        <div className="marquee">
+          <div className="marquee-track">
+            <div className="flex">
+              <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
+                BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
+                BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
+              </span>
+            </div>
+            <div className="flex" aria-hidden="true">
+              <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
+                BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
+                BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
+                BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.aside>
+  );
+}
 
 function HeroSplit({
   leftImageSrc,
@@ -27,7 +104,8 @@ function HeroSplit({
           display: flex;
           width: max-content;
           will-change: transform;
-          animation: marquee-left 16s linear infinite;
+          /* slower movement */
+          animation: marquee-left 32s linear infinite;
         }
         @keyframes marquee-left {
           from { transform: translateX(0); }
@@ -84,74 +162,8 @@ function HeroSplit({
           </div>
         </motion.div>
 
-        {/* RIGHT PANEL */}
-        <motion.aside
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.9 }}
-          className="relative bg-[#ece8de] lg:min-h-[100svh]"
-        >
-          <div className="mx-auto flex h-full max-w-md flex-col px-6 pt-24 pb-24 lg:pt-28">
-            <div className="mt-6 flex flex-1 flex-col items-center justify-center text-center">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.7 }}
-                className="text-[14px] font-semibold uppercase tracking-[0.08em] text-black"
-              >
-                Juan Carlos <br /> Productos para hombres
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.75, duration: 0.6 }}
-                className="mt-6 w-[220px] sm:w-[260px] lg:w-[280px]"
-              >
-                <div className="relative aspect-[3/4] w-full shadow-[0_18px_45px_rgba(0,0,0,0.18)]">
-                  <Image
-                    src={'/Catálogo.jpeg'}
-                    alt="Product promo"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 60vw, 280px"
-                  />
-                </div>
-              </motion.div>
-
-              <motion.a
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.9, duration: 0.6 }}
-                href="/catalogo"
-                className="mt-6 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/85 hover:text-black transition"
-              >
-                Más información
-              </motion.a>
-            </div>
-          </div>
-
-          {/* MARQUEE */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0">
-            <div className="marquee">
-              <div className="marquee-track">
-                <div className="flex">
-                  <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
-                    BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
-                    BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
-                  </span>
-                </div>
-                <div className="flex" aria-hidden="true">
-                  <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
-                    BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
-                    BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
-                    BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp; BIENVENIDO AL MUNDO DE JUAN CARLOS &nbsp;
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.aside>
+        {/* RIGHT PANEL (desktop only) */}
+        <RightPanel className="hidden md:block" />
       </div>
     </section>
   );
@@ -165,8 +177,27 @@ export default function HomePage() {
         leftImageSrc="https://images.unsplash.com/photo-1769082863369-227f68991d07?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         rightCardImageSrc="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
-      <TeamSpotlight name="Juan Carlos" imageSrc="/team/don.jpg" />
-      <ServicesSection />
+      {/* mobile-only booking CTA */}
+      <div className="mt-6 mb-6 flex justify-center md:hidden">
+        <a
+          href={BOOKSY_URL}
+          className="inline-flex h-12 items-center justify-center rounded-full border border-black/30 bg-black/80 px-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-black/90 transition"
+        >
+          Reservar ahora
+        </a>
+      </div>
+      {/* container used to reorder on mobile */}
+      <div className="flex flex-col">
+        <div className="order-2 md:order-1">
+          <TeamSpotlight name="Juan Carlos" imageSrc="/team/don.jpg" />
+        </div>
+        <div className="order-1 md:order-2">
+          <ServicesSection />
+        </div>
+        <div className="order-3">
+          <RightPanel className="block md:hidden" />
+        </div>
+      </div>
       <GallerySection />
     </>
   );

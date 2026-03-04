@@ -104,7 +104,7 @@ export default function TeamSpotlight({
           >
             <div className="relative aspect-[3/4.6] w-full shadow-[0_24px_55px_rgba(0,0,0,0.18)]">
               <Image
-                src={"/images/JuanCarlos.jpeg"}
+                src={"/images/JuanCarlos1.jpeg"}
                 alt={name}
                 fill
                 className="object-cover"

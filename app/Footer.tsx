@@ -153,9 +153,12 @@ export default function Footer() {
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
                       Dirección
                     </p>
-                    <p className="mt-2 text-[12px] leading-6 tracking-[0.06em] text-white/70">
+                    <a
+                      href="https://maps.app.goo.gl/LBDdNF1UThQGUteD7"
+                      className="mt-2 block text-[12px] leading-6 tracking-[0.06em] text-white/70 hover:underline"
+                    >
                       C. Eugenio Gross, Bailén-Miraflores, 29001 Málaga
-                    </p>
+                    </a>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
