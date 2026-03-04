@@ -21,66 +21,118 @@ function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
   );
 }
 
-/* ----------------------------- bundle type ----------------------------- */
+/* ----------------------------- types ----------------------------- */
 
-type BundleCard = {
-  type: "bundle";
+type TreatmentHeader = {
+  type: "treatment-header";
   id: string;
-  title: string;
-  subtitle?: string;
-  line: string;
-  items: Array<{
-    name: string;
-    caption?: string;
-    image: string; // ruta en /public
-  }>;
+  title: string; // "Tratamiento Purificante"
+  subtitle?: string; // "Rutina completa (4 productos)"
+  line?: string; // opcional (para mostrar arriba)
 };
 
-type GridItem = Product | BundleCard;
+type TreatmentProduct = {
+  type: "treatment-product";
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+  category: string;
+  line: string;
+  image: string; // /public/...
+  sizes?: string[];
+};
 
-function isBundle(item: GridItem): item is BundleCard {
-  return (item as BundleCard).type === "bundle";
+type GridItem = Product | TreatmentHeader | TreatmentProduct;
+
+function isHeader(item: GridItem): item is TreatmentHeader {
+  return (item as TreatmentHeader).type === "treatment-header";
 }
 
-/* ----------------------------- UI: mini product tile ----------------------------- */
+function isTreatmentProduct(item: GridItem): item is TreatmentProduct {
+  return (item as TreatmentProduct).type === "treatment-product";
+}
 
-function MiniProductTile({
+/* ----------------------------- UI: card ----------------------------- */
+
+function ProductCard({
+  titleTop,
   name,
+  description,
   image,
+  chips,
+  onClick,
+  contain = false,
 }: {
+  titleTop: string;
   name: string;
+  description: string;
   image: string;
+  chips?: string[];
+  onClick?: () => void;
+  contain?: boolean;
 }) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-black/10 bg-white/55">
-      {/* marco de imagen consistente */}
-      <div className="relative h-[118px] w-full bg-white/70">
-        <Image
-          src={image}
-          alt={name}
-          fill
-          sizes="200px"
-          className={[
-            // ✅ NO recorta + se centra
-            "object-contain",
-            // ✅ aire tipo e-commerce
-            "p-3",
-            // ✅ un poquito de vida
-            "drop-shadow-[0_18px_18px_rgba(0,0,0,0.12)]",
-            // hover sutil
-            "transition duration-500 group-hover:scale-[1.02]",
-          ].join(" ")}
-        />
-        {/* brillo suave arriba */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.55),rgba(255,255,255,0)_55%)]" />
-      </div>
+    <motion.button
+      onClick={onClick}
+      className="group text-left"
+      initial={{ opacity: 0, y: 14, filter: "blur(6px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.65, ease: [0.2, 0.8, 0.2, 1] }}
+      type="button"
+    >
+      <div className="overflow-hidden rounded-3xl border border-black/10 bg-white/40 shadow-[0_18px_45px_rgba(0,0,0,0.08)]">
+        {/* Marco imagen consistente (packshots se ven mejor con contain) */}
+        <div className="relative h-[320px] w-full bg-white/55">
+          <Image
+            src={image}
+            alt={name}
+            fill
+            sizes="(max-width: 1024px) 50vw, 33vw"
+            className={[
+              contain ? "object-contain p-7" : "object-cover",
+              "transition duration-700 group-hover:scale-[1.02]",
+              contain ? "drop-shadow-[0_22px_22px_rgba(0,0,0,0.14)]" : "",
+            ].join(" ")}
+          />
+          {/* brillo suave */}
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.55),rgba(255,255,255,0)_55%)]" />
+        </div>
 
-      <div className="px-3 py-3">
-        <p className="truncate text-[10px] font-semibold uppercase tracking-[0.18em] text-black/80">
-          {name}
-        </p>
+        <div className="p-6">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/60">
+            {titleTop}
+          </p>
+
+          <p className="mt-3 text-[14px] font-semibold uppercase tracking-[0.12em] text-black">
+            {name}
+          </p>
+
+          <p className="mt-3 text-[12px] leading-6 tracking-[0.06em] text-black/60">
+            {description}
+          </p>
+
+          {chips?.length ? (
+            <div className="mt-5 flex flex-wrap gap-2">
+              {chips.slice(0, 3).map((c) => (
+                <span
+                  key={c}
+                  className="rounded-full border border-black/15 bg-white/40 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/70"
+                >
+                  {c}
+                </span>
+              ))}
+              {chips.length > 3 && (
+                <span className="rounded-full border border-black/15 bg-white/40 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/55">
+                  +{chips.length - 3}
+                </span>
+              )}
+            </div>
+          ) : null}
+        </div>
       </div>
-    </div>
+    </motion.button>
   );
 }
 
@@ -90,40 +142,116 @@ export default function CatalogPage() {
   const [q, setQ] = useState("");
   const [line, setLine] = useState<string>("ALL");
   const [active, setActive] = useState<Product | null>(null);
-  const [activeBundle, setActiveBundle] = useState<BundleCard | null>(null);
+  const [activeTreat, setActiveTreat] = useState<TreatmentProduct | null>(null);
 
-  const purifyingBundle: BundleCard = useMemo(
-    () => ({
-      type: "bundle",
-      id: "purifying-treatment",
+  // ✅ Tratamientos como: Header + productos grandes individuales
+  const treatments: GridItem[] = useMemo(() => {
+    const purifyingHeader: TreatmentHeader = {
+      type: "treatment-header",
+      id: "treat-purifying",
       title: "Tratamiento Purificante",
       subtitle: "Rutina completa (4 productos)",
       line: "EXTRA LIFE",
-      items: [
-        { name: "Purifying Shampoo", image: "/images/producto7.jpg" },
-        { name: "Purifying Treatment", image: "/images/producto8.jpg" },
-        { name: "Scalp Cleanser", image: "/images/producto9.jpg" },
-        { name: "Purifying Leave-in Lotion", image: "/images/producto10.jpeg" },
-      ],
-    }),
-    []
-  );
+    };
 
-  const hydrationBundle: BundleCard = useMemo(
-    () => ({
-      type: "bundle",
-      id: "hydration-treatment",
+    const purifyingProducts: TreatmentProduct[] = [
+      {
+        type: "treatment-product",
+        id: "treat-purifying-1",
+        slug: "purifying-shampoo",
+        name: "Purifying Shampoo",
+        description: "Champú purificante para limpieza profunda del cuero cabelludo.",
+        category: "Treatment",
+        line: "EXTRA LIFE",
+        image: "/images/producto7.jpg",
+        sizes: ["250 ml", "500 ml"],
+      },
+      {
+        type: "treatment-product",
+        id: "treat-purifying-2",
+        slug: "purifying-treatment",
+        name: "Purifying Treatment",
+        description: "Tratamiento intensivo para equilibrar y purificar.",
+        category: "Treatment",
+        line: "EXTRA LIFE",
+        image: "/images/producto8.jpg",
+        sizes: ["200 ml"],
+      },
+      {
+        type: "treatment-product",
+        id: "treat-purifying-3",
+        slug: "scalp-cleanser",
+        name: "Scalp Cleanser",
+        description: "Limpieza específica de cuero cabelludo para sensación fresca.",
+        category: "Treatment",
+        line: "EXTRA LIFE",
+        image: "/images/producto9.jpg",
+        sizes: ["150 ml"],
+      },
+      {
+        type: "treatment-product",
+        id: "treat-purifying-4",
+        slug: "purifying-leave-in",
+        name: "Purifying Leave-in Lotion",
+        description: "Loción sin aclarado para mantener el cuero cabelludo equilibrado.",
+        category: "Treatment",
+        line: "EXTRA LIFE",
+        image: "/images/producto10.jpeg",
+        sizes: ["100 ml"],
+      },
+    ];
+
+    const blondeHeader: TreatmentHeader = {
+      type: "treatment-header",
+      id: "treat-blonde",
       title: "Tratamiento para cabellos rubios",
       subtitle: "Rutina completa (3 productos)",
       line: "EXTRA LIFE",
-      items: [
-        { name: "Hydrating Shampoo", image: "/images/producto11.jpeg" },
-        { name: "Hydrating Mask", image: "/images/producto12.jpeg" },
-        { name: "Hydrating Leave-in", image: "/images/producto13.jpeg" },
-      ],
-    }),
-    []
-  );
+    };
+
+    const blondeProducts: TreatmentProduct[] = [
+      {
+        type: "treatment-product",
+        id: "treat-blonde-1",
+        slug: "hydrating-shampoo",
+        name: "Hydrating Shampoo",
+        description: "Champú hidratante para mantener brillo y suavidad.",
+        category: "Treatment",
+        line: "EXTRA LIFE",
+        image: "/images/producto11.jpeg",
+        sizes: ["250 ml"],
+      },
+      {
+        type: "treatment-product",
+        id: "treat-blonde-2",
+        slug: "hydrating-mask",
+        name: "Hydrating Mask",
+        description: "Mascarilla hidratante para reparar y proteger el color.",
+        category: "Treatment",
+        line: "EXTRA LIFE",
+        image: "/images/producto12.jpeg",
+        sizes: ["200 ml"],
+      },
+      {
+        type: "treatment-product",
+        id: "treat-blonde-3",
+        slug: "hydrating-leave-in",
+        name: "Hydrating Leave-in",
+        description: "Leave-in para control, hidratación y acabado premium.",
+        category: "Treatment",
+        line: "EXTRA LIFE",
+        image: "/images/producto13.jpeg",
+        sizes: ["100 ml"],
+      },
+    ];
+
+    return [
+      purifyingHeader,
+      ...purifyingProducts,
+      blondeHeader,
+      ...blondeProducts,
+    ];
+  }, []);
 
   const filtered = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -139,9 +267,22 @@ export default function CatalogPage() {
     });
   }, [q, line]);
 
+  // ✅ un solo grid, pero con headers intercalados
   const gridItems: GridItem[] = useMemo(() => {
-    return [purifyingBundle, hydrationBundle, ...filtered];
-  }, [purifyingBundle, hydrationBundle, filtered]);
+    // Si filtras por una línea diferente a EXTRA LIFE,
+    // puedes esconder tratamientos si quieres:
+    // if (line !== "ALL" && line !== "EXTRA LIFE") return filtered;
+
+    // Si hay búsqueda, puedes optar por NO mostrar headers:
+    // if (q.trim()) return filtered;
+
+    return [...treatments, ...filtered];
+  }, [treatments, filtered /*, line, q */]);
+
+  // índice del primer producto normal (no header, no treatment-product)
+  const firstProductIndex = useMemo(() => {
+    return gridItems.findIndex((it) => !isHeader(it) && !isTreatmentProduct(it));
+  }, [gridItems]);
 
   return (
     <main className="min-h-screen bg-[#ece8de] text-black">
@@ -180,6 +321,7 @@ export default function CatalogPage() {
                   ? "border-black/35 bg-black/5"
                   : "border-black/15 bg-white/40 hover:border-black/25",
               ].join(" ")}
+              type="button"
             >
               Todos
             </button>
@@ -194,6 +336,7 @@ export default function CatalogPage() {
                     ? "border-black/35 bg-black/5"
                     : "border-black/15 bg-white/40 hover:border-black/25",
                 ].join(" ")}
+                type="button"
               >
                 {l}
               </button>
@@ -215,113 +358,92 @@ export default function CatalogPage() {
 
         {/* Grid */}
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {gridItems.map((item: GridItem, i: number) => {
-            /* ----------------------------- BUNDLE CARD ----------------------------- */
-            if (isBundle(item)) {
-              const cols = item.items.length === 3 ? "grid-cols-3" : "grid-cols-2";
-
+          {gridItems.map((item, i) => {
+            // inserta un separador visual justo antes del primer producto individual
+            if (i === firstProductIndex) {
               return (
-                <motion.button
+                <motion.div
+                  key={`separator-${i}`}
+                  className="sm:col-span-2 lg:col-span-3"
+                  initial={{ opacity: 0, y: 6 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.45 }}
+                >
+                  <div className="mt-2 mb-2 flex items-center justify-between rounded-2xl border-t border-black/10 pt-6">
+                    <h3 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-black/70">
+                      Productos individuales
+                    </h3>
+                    <p className="text-[11px] text-black/50">Productos de tratamiento mostrados arriba</p>
+                  </div>
+                </motion.div>
+              );
+            }
+            // ✅ HEADER separador (ocupa todas las columnas)
+            if (isHeader(item)) {
+              return (
+                <motion.div
                   key={item.id}
-                  onClick={() => setActiveBundle(item)}
-                  className="group text-left"
-                  initial={{ opacity: 0, y: 14, filter: "blur(6px)" }}
+                  className="sm:col-span-2 lg:col-span-3"
+                  initial={{ opacity: 0, y: 10, filter: "blur(6px)" }}
                   whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.65, delay: i * 0.02, ease: [0.2, 0.8, 0.2, 1] }}
+                  transition={{ duration: 0.55, delay: i * 0.01, ease: [0.2, 0.8, 0.2, 1] }}
                 >
-                  <div className="overflow-hidden rounded-3xl border border-black/10 bg-white/40 shadow-[0_18px_45px_rgba(0,0,0,0.08)]">
-                    <div className="p-6">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/60">
-                        {item.line} · Rutina
-                      </p>
-
-                      <p className="mt-3 text-[14px] font-semibold uppercase tracking-[0.12em] text-black">
+                  <div className="rounded-3xl border border-black/10 bg-white/35 px-6 py-6 sm:px-8">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/55">
+                      {item.line ? `${item.line} · ` : ""}Tratamiento
+                    </p>
+                    <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                      <p className="text-[22px] font-semibold uppercase tracking-[0.10em] text-black">
                         {item.title}
                       </p>
-
                       {item.subtitle ? (
-                        <p className="mt-3 text-[12px] leading-6 tracking-[0.06em] text-black/60">
+                        <p className="text-[12px] leading-6 tracking-[0.06em] text-black/60">
                           {item.subtitle}
                         </p>
                       ) : null}
-
-                      <div className={`mt-5 grid gap-3 ${cols}`}>
-                        {item.items.map((it) => (
-                          <MiniProductTile key={it.name} name={it.name} image={it.image} />
-                        ))}
-                      </div>
-
-                      <div className="mt-5 flex flex-wrap gap-2">
-                        <span className="rounded-full border border-black/15 bg-white/40 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/70">
-                          Ver rutina
-                        </span>
-                      </div>
                     </div>
                   </div>
-                </motion.button>
+                </motion.div>
               );
             }
 
-            /* ----------------------------- NORMAL PRODUCT CARD ----------------------------- */
-            const p = item;
+            // ✅ TREATMENT PRODUCT (card grande, igual que las demás)
+            if (isTreatmentProduct(item)) {
+              return (
+                <ProductCard
+                  key={item.id}
+                  titleTop={`${item.line} · ${item.category}`}
+                  name={item.name}
+                  description={item.description}
+                  image={item.image}
+                  chips={item.sizes}
+                  contain
+                  onClick={() => setActiveTreat(item)}
+                />
+              );
+            }
 
+            // ✅ NORMAL PRODUCT (de tu lib)
+            const p = item as Product;
             return (
-              <motion.button
+              <ProductCard
                 key={p.id}
+                titleTop={`${p.line} · ${p.category}`}
+                name={p.name}
+                description={p.description}
+                image={p.image}
+                chips={p.sizes}
+                contain={false} // tus fotos normales se ven bien en cover
                 onClick={() => setActive(p)}
-                className="group text-left"
-                initial={{ opacity: 0, y: 14, filter: "blur(6px)" }}
-                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.65, delay: i * 0.02, ease: [0.2, 0.8, 0.2, 1] }}
-              >
-                <div className="overflow-hidden rounded-3xl border border-black/10 bg-white/40 shadow-[0_18px_45px_rgba(0,0,0,0.08)]">
-                  <div className="relative h-[360px] w-full">
-                    <Image
-                      src={p.image}
-                      alt={p.name}
-                      fill
-                      className="object-cover transition duration-700 group-hover:scale-[1.03]"
-                      sizes="(max-width: 1024px) 50vw, 33vw"
-                    />
-                  </div>
-
-                  <div className="p-6">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/60">
-                      {p.line} · {p.category}
-                    </p>
-                    <p className="mt-3 text-[14px] font-semibold uppercase tracking-[0.12em] text-black">
-                      {p.name}
-                    </p>
-                    <p className="mt-3 text-[12px] leading-6 tracking-[0.06em] text-black/60">
-                      {p.description}
-                    </p>
-
-                    <div className="mt-5 flex flex-wrap gap-2">
-                      {(p.sizes ?? []).slice(0, 3).map((s: string) => (
-                        <span
-                          key={s}
-                          className="rounded-full border border-black/15 bg-white/40 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/70"
-                        >
-                          {s}
-                        </span>
-                      ))}
-                      {(p.sizes?.length ?? 0) > 3 && (
-                        <span className="rounded-full border border-black/15 bg-white/40 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/55">
-                          +{(p.sizes?.length ?? 0) - 3}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </motion.button>
+              />
             );
           })}
         </div>
       </div>
 
-      {/* ----------------------------- PRODUCT MODAL ----------------------------- */}
+      {/* ----------------------------- PRODUCT MODAL (NORMAL) ----------------------------- */}
       <AnimatePresence>
         {active && (
           <motion.div
@@ -382,6 +504,7 @@ export default function CatalogPage() {
                     <button
                       onClick={() => setActive(null)}
                       className="inline-flex h-12 flex-1 items-center justify-center rounded-full border border-black/15 bg-white/50 px-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-black/75 hover:text-black hover:border-black/25 transition"
+                      type="button"
                     >
                       Close
                     </button>
@@ -397,85 +520,78 @@ export default function CatalogPage() {
         )}
       </AnimatePresence>
 
-      {/* ----------------------------- BUNDLE MODAL (SOLUCIÓN AQUÍ) ----------------------------- */}
+      {/* ----------------------------- MODAL (TREATMENT PRODUCT) ----------------------------- */}
       <AnimatePresence>
-        {activeBundle && (
+        {activeTreat && (
           <motion.div
-            className="fixed inset-0 z-[90] flex items-end justify-center bg-black/55 p-4 sm:items-center"
+            className="fixed inset-0 z-[80] flex items-end justify-center bg-black/55 p-4 sm:items-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setActiveBundle(null)}
+            onClick={() => setActiveTreat(null)}
           >
             <motion.div
-              className="w-full max-w-4xl overflow-hidden rounded-3xl border border-black/10 bg-[#ece8de] shadow-[0_40px_90px_rgba(0,0,0,0.35)]"
+              className="w-full max-w-3xl overflow-hidden rounded-3xl border border-black/10 bg-[#ece8de] shadow-[0_40px_90px_rgba(0,0,0,0.35)]"
               initial={{ y: 30, opacity: 0, filter: "blur(8px)" }}
               animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
               exit={{ y: 30, opacity: 0, filter: "blur(8px)" }}
               transition={{ duration: 0.35, ease: [0.2, 0.8, 0.2, 1] }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between gap-4 border-b border-black/10 px-6 py-4">
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/60">
-                    {activeBundle.line} · Rutina
-                  </p>
-                  <p className="mt-1 text-[14px] font-semibold uppercase tracking-[0.12em] text-black">
-                    {activeBundle.title}
-                  </p>
+              <div className="grid gap-0 sm:grid-cols-[1fr_1.05fr]">
+                {/* ✅ contain + padding para packshot */}
+                <div className="relative h-[280px] bg-white/65 sm:h-full">
+                  <Image
+                    src={activeTreat.image}
+                    alt={activeTreat.name}
+                    fill
+                    className="object-contain p-10 drop-shadow-[0_26px_26px_rgba(0,0,0,0.16)]"
+                  />
                 </div>
 
-                <button
-                  onClick={() => setActiveBundle(null)}
-                  className="inline-flex h-10 items-center justify-center rounded-full border border-black/15 bg-white/60 px-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-black/80 hover:text-black hover:border-black/25 transition"
-                >
-                  Close
-                </button>
-              </div>
-
-              <div className="p-6">
-                {activeBundle.subtitle ? (
-                  <p className="text-[12px] leading-6 tracking-[0.06em] text-black/65">
-                    {activeBundle.subtitle}
+                <div className="p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/60">
+                    {activeTreat.line} · {activeTreat.category}
                   </p>
-                ) : null}
+                  <h3 className="mt-3 text-[22px] font-semibold uppercase tracking-[0.10em] text-black">
+                    {activeTreat.name}
+                  </h3>
+                  <p className="mt-4 text-[12px] leading-6 tracking-[0.06em] text-black/65">
+                    {activeTreat.description}
+                  </p>
 
-                {/* ✅ grid en modal con packshot consistente */}
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                  {activeBundle.items.map((it) => (
-                    <div
-                      key={it.name}
-                      className="overflow-hidden rounded-3xl border border-black/10 bg-white/45"
-                    >
-                      {/* ✅ marco alto + contain para NO recortar */}
-                      <div className="relative h-[260px] w-full bg-white/70">
-                        <Image
-                          src={it.image}
-                          alt={it.name}
-                          fill
-                          sizes="(max-width: 1024px) 50vw, 520px"
-                          className="object-contain p-6 drop-shadow-[0_22px_22px_rgba(0,0,0,0.14)]"
-                        />
-                        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.65),rgba(255,255,255,0)_55%)]" />
-                      </div>
-
-                      <div className="p-5">
-                        <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-black">
-                          {it.name}
-                        </p>
-                        {it.caption ? (
-                          <p className="mt-2 text-[12px] leading-6 tracking-[0.06em] text-black/60">
-                            {it.caption}
-                          </p>
-                        ) : null}
+                  {activeTreat.sizes?.length ? (
+                    <div className="mt-6">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-black/55">
+                        Sizes
+                      </p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {activeTreat.sizes.map((s) => (
+                          <span
+                            key={s}
+                            className="rounded-full border border-black/15 bg-white/50 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/70"
+                          >
+                            {s}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                  ))}
-                </div>
+                  ) : null}
 
-                <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/45">
-                  Disponible en barbería · Sin compra online
-                </p>
+                  <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                    <button
+                      onClick={() => setActiveTreat(null)}
+                      className="inline-flex h-12 flex-1 items-center justify-center rounded-full border border-black/15 bg-white/50 px-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-black/75 hover:text-black hover:border-black/25 transition"
+                      type="button"
+                    >
+                      Close
+                    </button>
+                  </div>
+
+                  <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/45">
+                    Disponible en barbería · Sin compra online
+                  </p>
+                </div>
               </div>
             </motion.div>
           </motion.div>
