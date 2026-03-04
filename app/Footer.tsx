@@ -164,21 +164,10 @@ export default function Footer() {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
-                        Teléfono
-                      </p>
-                      <a
-                        href="tel:+34000000000"
-                        className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/75 hover:text-white"
-                      >
-                        +34 629 35 73 44
-                      </a>
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
                         WhatsApp
                       </p>
                       <a
-                        href="https://wa.me/34629357344"
+                        href="https://wa.me/34672516317"
                         className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/75 hover:text-white"
                       >
                         Mensaje

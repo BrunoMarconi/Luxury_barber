@@ -73,22 +73,10 @@ export default function ContactSection() {
                 <div className="mt-6 grid gap-6 sm:grid-cols-3">
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50">
-                      Teléfono
-                    </p>
-                    <a
-                      href="tel:+34629357344"
-                      className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/90 hover:text-white"
-                    >
-                      +34 629 357 344
-                    </a>
-                  </div>
-
-                  <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50">
                       WhatsApp
                     </p>
                     <a
-                      href="https://wa.me/629357344"
+                      href="https://wa.me/34672516317"
                       className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/90 hover:text-white"
                     >
                       Envíanos un mensaje
@@ -199,7 +187,7 @@ export default function ContactSection() {
                   const encodedText = encodeURIComponent(text);
 
                   // IMPORTANTE: número en formato internacional SIN +
-                  const whatsappNumber = "34629357344";
+                  const whatsappNumber = "34672516317";
 
                   const url = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
 
