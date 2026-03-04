@@ -126,7 +126,7 @@ export default function TeamSpotlight({
 
           {/* CTA BUTTON */}
           <motion.a
-            href="#team"
+            href="/blog"
             className="mt-16 inline-flex h-12 items-center justify-center rounded-full border border-black/45 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-black/85 hover:bg-black/5"
             variants={reveal}
             initial="hidden"
