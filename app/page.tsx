@@ -181,7 +181,7 @@ export default function HomePage() {
       <div className="mt-6 mb-6 flex justify-center md:hidden">
         <a
           href={BOOKSY_URL}
-          className="inline-flex h-12 items-center justify-center rounded-full border border-amber-500 bg-amber-50 px-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-black hover:bg-amber-100 transition"
+          className="inline-flex h-12 items-center justify-center rounded-full border border-black/35 bg-black/80 px-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-black/90 transition"
         >
           Reservar ahora
         </a>

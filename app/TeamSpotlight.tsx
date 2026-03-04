@@ -42,7 +42,7 @@ export default function TeamSpotlight({
         {/* TOP MICROCOPY */}
         <div className="mx-auto max-w-xl text-center">
           <motion.p
-            className="text-[11px] font-semibold uppercase tracking-[0.22em] text-black/80"
+            className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white"
             variants={reveal}
             initial="hidden"
             whileInView="show"
@@ -53,7 +53,7 @@ export default function TeamSpotlight({
           </motion.p>
 
           <motion.h2
-            className="mt-2 text-[12px] font-semibold uppercase tracking-[0.22em]"
+            className="mt-3 text-[16px] font-semibold uppercase tracking-[0.22em] text-white sm:text-[20px] lg:text-[28px]"
             variants={reveal}
             initial="hidden"
             whileInView="show"
@@ -79,14 +79,14 @@ export default function TeamSpotlight({
         <div className="relative mt-12 flex flex-col items-center">
           {/* BIG NAME BEHIND */}
           <motion.div
-            className="pointer-events-none absolute left-1/2 top-0 w-[1200px] -translate-x-1/2 text-center"
+            className="pointer-events-none absolute left-1/2 top-0 w-[320px] -translate-x-1/2 text-center sm:w-[480px] lg:w-[1200px]"
             variants={reveal}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.35 }}
             custom={3}
           >
-            <div className="select-none text-[68px] font-semibold uppercase leading-[0.9] tracking-[-0.02em] text-black/90 sm:text-[96px] lg:text-[132px]">
+            <div className="select-none text-[36px] font-semibold uppercase leading-[0.9] tracking-[-0.02em] text-white sm:text-[60px] lg:text-[132px]">
               {name.split(" ").slice(0, 1).join(" ")}
               <br />
               {name.split(" ").slice(1).join(" ")}
@@ -95,7 +95,7 @@ export default function TeamSpotlight({
 
           {/* PHOTO */}
           <motion.div
-            className="relative mt-28 w-[260px] sm:w-[280px] lg:mt-32 lg:w-[300px]"
+            className="relative mt-32 w-[260px] sm:w-[280px] lg:mt-56 lg:w-[300px]"
             variants={reveal}
             initial="hidden"
             whileInView="show"

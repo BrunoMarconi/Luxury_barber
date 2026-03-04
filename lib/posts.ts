@@ -34,7 +34,13 @@ export function getPosts(): Post[] {
     };
   });
 
-  return posts.sort((a, b) => (a.date > b.date ? -1 : 1));
+  return posts.sort((a, b) => {
+    // bienvenida siempre primero
+    if (a.slug === "bienvenida") return -1;
+    if (b.slug === "bienvenida") return 1;
+    // luego por fecha descendente (más recientes primero)
+    return a.date > b.date ? -1 : 1;
+  });
 }
 
 export type PostDetail = Post & {

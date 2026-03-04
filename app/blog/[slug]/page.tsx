@@ -1,6 +1,7 @@
 import { getPost, getPosts, type PostDetail } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { BlogImage } from "../BlogImage";
 
 export function generateStaticParams() {
   const posts = getPosts();
@@ -28,7 +29,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         </h1>
 
         <div className="mt-10 prose prose-neutral max-w-none">
-          <MDXRemote source={post.content} />
+          <MDXRemote 
+            source={post.content} 
+            components={{ BlogImage }}
+          />
         </div>
 
       </article>

@@ -147,13 +147,13 @@ export default function GalleryScrollRail() {
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">
           <div>
             <FadeUp delay={0}>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white">
                 Galería
               </p>
             </FadeUp>
 
             <FadeUp delay={0.05}>
-              <h2 className="mt-3 text-[44px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[56px] lg:text-[72px]">
+              <h2 className="mt-3 text-[44px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[56px] lg:text-[72px]">
                 Momentos y detalles
               </h2>
             </FadeUp>
@@ -161,7 +161,7 @@ export default function GalleryScrollRail() {
 
           <div className="lg:pl-6">
             <FadeUp delay={0.08}>
-              <p className="max-w-[62ch] text-[12px] leading-6 tracking-[0.06em] text-black/65">
+              <p className="max-w-[62ch] text-[12px] leading-6 tracking-[0.06em] text-white/85">
                 El rail se mueve todo el rato hacia la izquierda. Si pasas el ratón, se pausa.
               </p>
             </FadeUp>
