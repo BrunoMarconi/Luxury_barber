@@ -244,7 +244,7 @@ export default function CatalogPage() {
         description: "Champú hidratante para mantener brillo y suavidad.",
         category: "Treatment",
         line: "EXTRA LIFE",
-        image: "/images/producto12.png",
+        image: "/images/Producto12.png",
         sizes: ["250 ml"],
       },
       {
@@ -255,7 +255,7 @@ export default function CatalogPage() {
         description: "Mascarilla hidratante para reparar y proteger el color.",
         category: "Treatment",
         line: "EXTRA LIFE",
-        image: "/images/producto11.png",
+        image: "/images/Producto11.png",
         sizes: ["200 ml"],
       },
       {
