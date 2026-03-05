@@ -34,7 +34,7 @@ function RightPanel({ className }: { className?: string }) {
             transition={{ delay: 0.6, duration: 0.7 }}
             className="text-[14px] font-semibold uppercase tracking-[0.08em] text-black"
           >
-            Juan Carlos <br /> Productos el para cuidado masculino
+            Juan Carlos <br /> Productos para el cuidado masculino.
           </motion.p>
 
           <motion.div
