@@ -41,7 +41,7 @@ const servicesRight: ServiceItem[] = [
     name: "VIP · Haircut / Corte de Cabello",
     description: "Experiencia premium: cada detalle cuenta.",
     duration: "1 h 15 min",
-    price: "27,00 €",
+    price: "30,00 €",
   },
   {
     name: "VIP · Haircut + Beard / Corte + Barba",

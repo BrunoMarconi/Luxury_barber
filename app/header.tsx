@@ -50,7 +50,7 @@ export default function Header() {
       {/* capa para legibilidad sobre imagen */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-black/10 to-transparent" />
 
-      <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:h-20 sm:px-6">
+      <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6">
         <Link
           href="/"
           className="pointer-events-auto select-none text-lg font-semibold tracking-[0.22em] text-white"

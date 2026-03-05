@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import TeamSpotlight from "./TeamSpotlight";
 import ServicesSection from "./services_section";
 import GallerySection from "./GallerySection";
+import ReviewsSection from "./reseñas";
+
 
 // external booking link used in header/footer; reused here for mobile CTA
 const BOOKSY_URL =
@@ -199,6 +201,7 @@ export default function HomePage() {
         </div>
       </div>
       <GallerySection />
+      <ReviewsSection />
     </>
   );
 }

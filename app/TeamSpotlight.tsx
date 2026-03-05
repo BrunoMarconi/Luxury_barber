@@ -64,7 +64,7 @@ export default function TeamSpotlight({
           </motion.h2>
 
           <motion.p
-            className="mt-3 text-[10px] leading-5 tracking-[0.08em] text-black/75"
+            className="mt-3 text-[10px] leading-5 tracking-[0.08em] text-white"
             variants={reveal}
             initial="hidden"
             whileInView="show"

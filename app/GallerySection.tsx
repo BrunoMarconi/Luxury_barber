@@ -162,7 +162,7 @@ export default function GalleryScrollRail() {
           <div className="lg:pl-6">
             <FadeUp delay={0.08}>
               <p className="max-w-[62ch] text-[12px] leading-6 tracking-[0.06em] text-white/85">
-                El rail se mueve todo el rato hacia la izquierda. Si pasas el ratón, se pausa.
+                
               </p>
             </FadeUp>
 

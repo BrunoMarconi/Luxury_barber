@@ -90,19 +90,14 @@ function ProductCard({
       type="button"
     >
       <div className="overflow-hidden rounded-3xl border border-black/10 bg-white/40 shadow-[0_18px_45px_rgba(0,0,0,0.08)]">
-        {/* Stage consistente para packshots (contain) */}
+        {/* ✅ Stage consistente: ratio fijo, evita “cortes” visuales */}
         <div
           className={[
-            "relative w-full",
-            // altura responsive para que en móvil no “se coma” el texto
-            "h-[260px] sm:h-[300px] lg:h-[320px]",
-            contain
-              ? "bg-[linear-gradient(to_bottom,#fbfaf7,#f1efe8)]"
-              : "bg-white/55",
+            "relative w-full overflow-hidden",
+            "bg-[linear-gradient(to_bottom,#fbfaf7,#f1efe8)]",
           ].join(" ")}
         >
-          {/* “canvas” interno para controlar escala sin cortes */}
-          <div className={contain ? "absolute inset-0 p-7 sm:p-8" : "absolute inset-0"}>
+          <div className="relative aspect-[4/5] w-full">
             <Image
               src={image}
               alt={name}
@@ -110,18 +105,16 @@ function ProductCard({
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className={[
                 contain ? "object-contain" : "object-cover",
+                contain ? "p-10 sm:p-12" : "",
+                contain ? "drop-shadow-[0_26px_26px_rgba(0,0,0,0.16)]" : "",
                 "transition duration-700 group-hover:scale-[1.02]",
-                contain
-                  ? "drop-shadow-[0_26px_26px_rgba(0,0,0,0.16)]"
-                  : "",
               ].join(" ")}
             />
+
+            {/* brillo suave */}
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.70),rgba(255,255,255,0)_55%)]" />
           </div>
 
-          {/* brillo suave (no tapa el producto) */}
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.55),rgba(255,255,255,0)_55%)]" />
-
-          {/* micro borde inferior para “separar” mejor */}
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-black/10" />
         </div>
 
@@ -167,7 +160,6 @@ export default function CatalogPage() {
   const [q, setQ] = useState("");
   const [line, setLine] = useState<string>("ALL");
 
-  // Modal unificado (para productos normales + treatment products)
   const [active, setActive] = useState<
     | (Product & { __mode?: "normal" })
     | (TreatmentProduct & { __mode?: "treatment" })
@@ -191,10 +183,11 @@ export default function CatalogPage() {
         id: "treat-purifying-1",
         slug: "purifying-shampoo",
         name: "Purifying Shampoo",
-        description: "Champú purificante para limpieza profunda del cuero cabelludo.",
+        description:
+          "Champú purificante para limpieza profunda del cuero cabelludo.",
         category: "Treatment",
         line: "EXTRA LIFE",
-        image: "/images/producto7.jpg",
+        image: "/images/producto7.png",
         sizes: ["250 ml", "500 ml"],
       },
       {
@@ -205,7 +198,7 @@ export default function CatalogPage() {
         description: "Tratamiento intensivo para equilibrar y purificar.",
         category: "Treatment",
         line: "EXTRA LIFE",
-        image: "/images/producto8_1.webp",
+        image: "/images/producto8.png",
         sizes: ["200 ml"],
       },
       {
@@ -213,10 +206,11 @@ export default function CatalogPage() {
         id: "treat-purifying-3",
         slug: "scalp-cleanser",
         name: "Scalp Cleanser",
-        description: "Limpieza específica de cuero cabelludo para sensación fresca.",
+        description:
+          "Limpieza específica de cuero cabelludo para sensación fresca.",
         category: "Treatment",
         line: "EXTRA LIFE",
-        image: "/images/producto9.jpg",
+        image: "/images/producto9.png",
         sizes: ["150 ml"],
       },
       {
@@ -224,10 +218,11 @@ export default function CatalogPage() {
         id: "treat-purifying-4",
         slug: "purifying-leave-in",
         name: "Purifying Leave-in Lotion",
-        description: "Loción sin aclarado para mantener el cuero cabelludo equilibrado.",
+        description:
+          "Loción sin aclarado para mantener el cuero cabelludo equilibrado.",
         category: "Treatment",
         line: "EXTRA LIFE",
-        image: "/images/producto10.jpeg",
+        image: "/images/Producto10.png",
         sizes: ["100 ml"],
       },
     ];
@@ -249,7 +244,7 @@ export default function CatalogPage() {
         description: "Champú hidratante para mantener brillo y suavidad.",
         category: "Treatment",
         line: "EXTRA LIFE",
-        image: "/images/producto11.jpeg",
+        image: "/images/producto12.png",
         sizes: ["250 ml"],
       },
       {
@@ -260,7 +255,7 @@ export default function CatalogPage() {
         description: "Mascarilla hidratante para reparar y proteger el color.",
         category: "Treatment",
         line: "EXTRA LIFE",
-        image: "/images/producto12.jpeg",
+        image: "/images/producto11.png",
         sizes: ["200 ml"],
       },
       {
@@ -271,12 +266,17 @@ export default function CatalogPage() {
         description: "Leave-in para control, hidratación y acabado premium.",
         category: "Treatment",
         line: "EXTRA LIFE",
-        image: "/images/producto13.jpeg",
+        image: "/images/Producto13.png",
         sizes: ["100 ml"],
       },
     ];
 
-    return [purifyingHeader, ...purifyingProducts, blondeHeader, ...blondeProducts];
+    return [
+      purifyingHeader,
+      ...purifyingProducts,
+      blondeHeader,
+      ...blondeProducts,
+    ];
   }, []);
 
   /* ----------------------------- products filter ----------------------------- */
@@ -296,14 +296,8 @@ export default function CatalogPage() {
   }, [q, line]);
 
   const gridItems: GridItem[] = useMemo(() => {
-    // Si NO quieres que salgan tratamientos cuando filtras otra cosa:
-    // if (line !== "ALL" && line !== "EXTRA LIFE") return filtered;
-
-    // Si estás buscando, suele ser mejor ocultar headers (opcional):
-    // if (q.trim()) return filtered;
-
     return [...treatments, ...filtered];
-  }, [treatments, filtered /*, line, q */]);
+  }, [treatments, filtered]);
 
   const firstNormalProductIndex = useMemo(() => {
     return gridItems.findIndex((it) => !isHeader(it) && !isTreatmentProduct(it));
@@ -386,7 +380,6 @@ export default function CatalogPage() {
         {/* Grid */}
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {gridItems.map((item, i) => {
-            // Separador antes de productos normales
             if (i === firstNormalProductIndex) {
               return (
                 <motion.div
@@ -409,7 +402,6 @@ export default function CatalogPage() {
               );
             }
 
-            // Header de tratamiento
             if (isHeader(item)) {
               return (
                 <motion.div
@@ -418,7 +410,11 @@ export default function CatalogPage() {
                   initial={{ opacity: 0, y: 10, filter: "blur(6px)" }}
                   whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.55, delay: i * 0.01, ease: [0.2, 0.8, 0.2, 1] }}
+                  transition={{
+                    duration: 0.55,
+                    delay: i * 0.01,
+                    ease: [0.2, 0.8, 0.2, 1],
+                  }}
                 >
                   <div className="rounded-3xl border border-black/10 bg-white/35 px-6 py-6 sm:px-8">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/55">
@@ -440,7 +436,6 @@ export default function CatalogPage() {
               );
             }
 
-            // Treatment product (packshot contain)
             if (isTreatmentProduct(item)) {
               return (
                 <ProductCard
@@ -450,14 +445,13 @@ export default function CatalogPage() {
                   description={item.description}
                   image={item.image}
                   chips={item.sizes}
-                  contain
+                  contain // ✅ ESTO es lo que quita los cortes
                   delay={i * 0.02}
                   onClick={() => setActive({ ...item, __mode: "treatment" })}
                 />
               );
             }
 
-            // Normal product
             const p = item as Product;
             return (
               <ProductCard
@@ -467,7 +461,7 @@ export default function CatalogPage() {
                 description={p.description}
                 image={p.image}
                 chips={p.sizes}
-                contain={false}
+                contain={false} // lifestyle / fotos normales
                 delay={i * 0.02}
                 onClick={() => setActive({ ...p, __mode: "normal" })}
               />
@@ -495,22 +489,22 @@ export default function CatalogPage() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="grid gap-0 sm:grid-cols-[1fr_1.05fr]">
-                <div
-                  className={[
-                    "relative h-[280px] sm:h-full",
-                    active.__mode === "treatment" ? "bg-white/70" : "",
-                  ].join(" ")}
-                >
-                  <Image
-                    src={(active as any).image}
-                    alt={(active as any).name}
-                    fill
-                    className={[
-                      active.__mode === "treatment"
-                        ? "object-contain p-10 drop-shadow-[0_26px_26px_rgba(0,0,0,0.16)]"
-                        : "object-cover",
-                    ].join(" ")}
-                  />
+                {/* ✅ Modal image stage */}
+                <div className="relative bg-white/70">
+                  <div className="relative h-[320px] sm:h-full sm:min-h-[520px]">
+                    <Image
+                      src={(active as any).image}
+                      alt={(active as any).name}
+                      fill
+                      sizes="(max-width: 1024px) 50vw, 520px"
+                      className={[
+                        active.__mode === "treatment"
+                          ? "object-contain p-10 drop-shadow-[0_30px_30px_rgba(0,0,0,0.18)]"
+                          : "object-cover",
+                      ].join(" ")}
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.70),rgba(255,255,255,0)_55%)]" />
+                  </div>
                 </div>
 
                 <div className="p-7">
@@ -545,7 +539,6 @@ export default function CatalogPage() {
                   ) : null}
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                    {/* Solo para productos normales (si tienes ruta /producto/[slug]) */}
                     {active.__mode === "normal" ? (
                       <Link
                         href={`/producto/${(active as any).slug}`}
