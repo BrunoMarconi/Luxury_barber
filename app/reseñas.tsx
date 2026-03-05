@@ -33,7 +33,7 @@ const REVIEWS: Review[] = [
     source: "Booksy",
     rating: 5,
     date: "Ene 2026",
-    text: "Como peluquero es muy profesional, no se limita solo a cortar el pelo, sino que cuida cada detalle y es muy meticuloso. Como persona, además, es muy gradable, y el tiempo que duró el corte de pelo se me pasó volando. Muy recomendable, repetiré sin duda.",
+    text: "Como peluquero es muy profesional, no se limita solo a cortar el pelo, sino que cuida cada detalle y es muy meticuloso. Como persona, además, es muy agradable, y el tiempo que duró el corte de pelo se me pasó volando. Muy recomendable, repetiré sin duda.",
     service: "Corte de cabello",
   },
   {
