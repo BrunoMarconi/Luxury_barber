@@ -33,7 +33,7 @@ export default function TeamSpotlight({
   blurb = "Juan Carlos Teran Tenorio – Fundador de Alpha. Barbero desde los 18 años, comencé mi camino en Cali, Colombia, aprendiendo de manera autodidacta y perfeccionando cada técnica. Mi pasión me llevó a Chile, donde me formé con los mejores profesionales del país, y en 2019 viajé a Málaga, España, para entrenar en la prestigiosa escuela Antonio Eloy, aprendiendo de Fran Aranda e Ismael de Mora, quienes me brindaron una mirada vanguardista sobre el cuidado y estilo masculino. De esta experiencia nace Alpha, un concepto que se materializó en Chile y que sigue funcionando bajo los estándares de calidad y profesionalismo que definí desde el inicio. Más que una barbería, Alpha es un espacio donde el cuidado, la imagen y el estilo del hombre son la prioridad.Hoy regreso a Málaga con la misma pasión, iniciando desde cero, con el objetivo de crear la mejor barbería, más allá de un corte: una experiencia completa de cuidado masculino. Mi historia no estaría completa sin mi madre, Digna Nubia Tenorio Ortiz, quien me regaló mi primera máquina de cortar cabello y me apoyó en cada paso de mi camino profesional. Gracias, madre.",
   name,
   role = "PROPIETARIO - BARBERO MAESTRO",
-  cta = "NUESTRO EQUIPO",
+  cta = "RESERVAR AHORA",
   imageSrc,
 }: TeamSpotlightProps) {
   return (
@@ -126,7 +126,9 @@ export default function TeamSpotlight({
 
           {/* CTA BUTTON */}
           <motion.a
-            href="/blog"
+            href="https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga?do=invite&_branch_match_id=1556921415801310876&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVj8jyCMxMT%2FbJi0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAOg7uKI6AAAA"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-16 inline-flex h-12 items-center justify-center rounded-full border border-black/45 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-black/85 hover:bg-black/5"
             variants={reveal}
             initial="hidden"
