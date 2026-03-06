@@ -146,7 +146,7 @@ export default function ServicesSection() {
           <div>
             <FadeUp delay={0}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
-                Servicios a medida
+                Servicios personalizados
               </p>
             </FadeUp>
 
@@ -159,7 +159,7 @@ export default function ServicesSection() {
 
           <FadeUp delay={0.1}>
             <p className="max-w-[62ch] text-[12px] leading-6 tracking-[0.06em] text-black/65">
-              Trabajo limpio y detallista. Elige tu servicio y reserva en segundos.
+              El detalle y la atención personalizada hace la diferencia. Descúbrelo. Reserva tu cita ahora.
             </p>
           </FadeUp>
         </div>
@@ -172,10 +172,10 @@ export default function ServicesSection() {
             className="overflow-hidden rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur"
           >
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
-              Servicios estándar
+              VIP
             </p>
             <div className="mt-4">
-              <ServiceList list={servicesLeft} />
+              <ServiceList list={servicesRight} />
             </div>
           </FadeUp>
 
@@ -185,10 +185,10 @@ export default function ServicesSection() {
             className="overflow-hidden rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur"
           >
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
-              VIP
+              Servicios estándar 
             </p>
             <div className="mt-4">
-              <ServiceList list={servicesRight} />
+              <ServiceList list={servicesLeft} />
             </div>
           </FadeUp>
         </div>
@@ -197,7 +197,7 @@ export default function ServicesSection() {
         <div className="mt-12">
           <FadeUp delay={0.05} amount={0.35}>
             <p className="text-center text-[10px] font-semibold uppercase tracking-[0.22em] text-black/60">
-              Los precios pueden variar según largo del cabello y complejidad.
+              Conoce todos los servicios que hay disponibles para ti.
             </p>
           </FadeUp>
         </div>

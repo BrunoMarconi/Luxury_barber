@@ -12,13 +12,19 @@ type Photo = {
 
 const PHOTOS: Photo[] = [
   { src: "/images/Foto1_1.jpeg", alt: "Barbero cortando cabello", size: "tall" },
-  { src: "/images/Foto2.jpeg", alt: "Arreglo de barba", size: "square" },
+  { src: "/images/Foto2_1.jpeg", alt: "Arreglo de barba", size: "square" },
   { src: "/images/Foto3.jpeg", alt: "Interior de la tienda", size: "wide" },
-  { src: "/images/Foto4.jpeg", alt: "Detalle de corte de cabello", size: "tall" },
-  { src: "/images/Foto5.jpeg", alt: "Herramientas en la estación", size: "square" },
-  { src: "/images/Foto6.jpeg", alt: "Silla de barbero", size: "wide" },
+  { src: "/images/Foto4_1.jpeg", alt: "Detalle de corte de cabello", size: "tall" },
+  { src: "/images/Foto5_1.jpeg", alt: "Herramientas en la estación", size: "square" },
+  { src: "/images/Foto6_1.jpeg", alt: "Silla de barbero", size: "tall" },
   { src: "/images/Foto7.jpeg", alt: "Detalle de recorte de barba", size: "tall" },
-  { src: "/images/Foto8.jpeg", alt: "Tijeras y peine", size: "square" },
+  { src: "/images/Foto8_1.jpeg", alt: "Tijeras y peine", size: "square" },
+  { src: "/images/Foto9.jpeg", alt: "Tijeras y peine", size: "tall" },
+  { src: "/images/Foto10.jpeg", alt: "Tijeras y peine", size: "wide" },
+  { src: "/images/Foto11.jpeg", alt: "Tijeras y peine", size: "tall" },
+  { src: "/images/Foto12.jpeg", alt: "Tijeras y peine", size: "square" },
+  { src: "/images/Foto13.jpeg", alt: "Tijeras y peine", size: "tall" },
+
 ];
 
 function FadeUp({

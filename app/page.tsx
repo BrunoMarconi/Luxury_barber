@@ -34,7 +34,7 @@ function RightPanel({ className }: { className?: string }) {
             transition={{ delay: 0.6, duration: 0.7 }}
             className="text-[14px] font-semibold uppercase tracking-[0.08em] text-black"
           >
-            Juan Carlos <br /> Productos para el cuidado masculino.
+          Productos para el cuidado masculino.
           </motion.p>
 
           <motion.div
@@ -145,7 +145,7 @@ function HeroSplit({
               transition={{ delay: 0.3, duration: 0.7 }}
               className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/85"
             >
-              Servicios a medida
+              Servicios personalizado.
             </motion.p>
 
             <motion.h1
@@ -155,10 +155,7 @@ function HeroSplit({
               className="mt-3 max-w-[18ch] text-white"
             >
               <span className="block text-[44px] leading-[0.95] tracking-tight sm:text-[64px] lg:text-[86px] xl:text-[96px]">
-                BARBERÍA
-              </span>
-              <span className="block text-[44px] leading-[0.95] tracking-tight sm:text-[64px] lg:text-[86px] xl:text-[96px]">
-                LISTA DE PRECIOS DETALLADA
+                Servicio personalizado para el cuidado masculino
               </span>
             </motion.h1>
           </div>

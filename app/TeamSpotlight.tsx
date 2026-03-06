@@ -30,7 +30,7 @@ const reveal: Variants = {
 export default function TeamSpotlight({
   kicker = "CUIDADO & BIENESTAR",
   title = "LA FAMILIA",
-  blurb = "UN GRUPO SELECCIONADO DE PROFESIONALES TALENTOSOS, ENTUSIASTAS Y AMIGABLES ASEGURA QUE CADA CLIENTE SALGA DE NUESTRO SALÓN SINTIÉNDOSE PERFECTAMENTE ARREGLADO Y REFRESCADO.",
+  blurb = "Juan Carlos Teran Tenorio – Fundador de Alpha. Barbero desde los 18 años, comencé mi camino en Cali, Colombia, aprendiendo de manera autodidacta y perfeccionando cada técnica. Mi pasión me llevó a Chile, donde me formé con los mejores profesionales del país, y en 2019 viajé a Málaga, España, para entrenar en la prestigiosa escuela Antonio Eloy, aprendiendo de Fran Aranda e Ismael de Mora, quienes me brindaron una mirada vanguardista sobre el cuidado y estilo masculino. De esta experiencia nace Alpha, un concepto que se materializó en Chile y que sigue funcionando bajo los estándares de calidad y profesionalismo que definí desde el inicio. Más que una barbería, Alpha es un espacio donde el cuidado, la imagen y el estilo del hombre son la prioridad.Hoy regreso a Málaga con la misma pasión, iniciando desde cero, con el objetivo de crear la mejor barbería, más allá de un corte: una experiencia completa de cuidado masculino. Mi historia no estaría completa sin mi madre, Digna Nubia Tenorio Ortiz, quien me regaló mi primera máquina de cortar cabello y me apoyó en cada paso de mi camino profesional. Gracias, madre.",
   name,
   role = "PROPIETARIO - BARBERO MAESTRO",
   cta = "NUESTRO EQUIPO",
