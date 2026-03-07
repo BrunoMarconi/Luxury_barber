@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./header";
 import Footer from "./Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 const geistSans = Geist({
@@ -34,7 +35,7 @@ export default function RootLayout({
         {children}
         {/* page-specific sections will be rendered by each page component */}
         <Footer />
-        
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -5,7 +5,6 @@ export type Product = {
   category: string;
   line: string;
   image: string;
-  price: number;
   slug: string;
   tags?: string[];
   sizes?: string[];
@@ -21,7 +20,6 @@ export const PRODUCTS: Product[] = [
     category: "Beard Care",
     line: "BEARD",
     image: "/images/Producto1.jpeg",
-    price: 29.99,
     slug: "beard-oil",
     tags: ["beard", "oil", "grooming"],
     sizes: ["250ml", "1000ml"],
@@ -33,7 +31,6 @@ export const PRODUCTS: Product[] = [
     category: "Previa Man Tonic Hair + Scalp 150ml - loción anticaída Loción en spray estimulante para el cuero cabelludo con extracto de ajenjo orgánico y células madre de uva. Indicado para la prevención de la caída del cabello. Uso diario.",
     line: "HAIR",
     image: "/images/Producto4.webp",
-    price: 24.99,
     slug: "hair-pomade",
     tags: ["hair", "pomade", "styling"],
     sizes: ["150ml"],
@@ -41,11 +38,10 @@ export const PRODUCTS: Product[] = [
   {
     id: "3",
     name: "Uppercut Deluxe Matt Pomade",
-    description: "La Uppercut Deluxe Matt Pomade es una pomada para el cabello soluble en agua con acabado mate y fijación media, que deja un look natural y texturizado. Fue desarrollada por barberos y sirve para todo tipo de cabello y estilos. Tiene una fragancia sutil y una buena fijación que mantiene el peinado durante todo el día. Se aplica en el cabello seco, distribuyendo una pequeña cantidad con las manos y peinando para dar forma.",
+    description: "La Uppercut Deluxe Matt Pomade es una pomada para el cabello soluble en agua con acabado mate y fijación media, que deja un look natural y texturizado. Fue desarrollada por barberos y sirve para todo tipo de cabello y estilos. Tiene una fragancia sutil y una buena fijación que mantiene el peinado durante todo del día. Se aplica en el cabello seco, distribuyendo una pequeña cantidad con las manos y peinando para dar forma.",
     category: "Face Care",
     line: "GROOMING",
     image: "/images/Producto3.jpg",
-    price: 19.99,
     slug: "face-wash",
     tags: ["face", "wash", "cleanser"],
     sizes: ["200ml", "400ml"],
@@ -57,7 +53,6 @@ export const PRODUCTS: Product[] = [
     category: "Beard Care",
     line: "BEARD",
     image: "/images/Producto5.jpg",
-    price: 18,
     slug: "beard-balm", 
     tags: ["beard", "balm", "style"],
     sizes: ["20g"],
@@ -69,7 +64,6 @@ export const PRODUCTS: Product[] = [
     category: "Hair Styling",
     line: "HAIR",
     image: "/images/Producto6.jpg",
-    price: 26.0,
     slug: "sea-salt-spray",
     tags: ["hair", "spray", "textured"],
     sizes: ["150ml"],
