@@ -211,11 +211,7 @@ export default function GalleryScrollRail() {
 
         {/* CTA */}
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <FadeUp delay={0.05} amount={0.35}>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-black/55">
-              Selección curada — sin ruido.
-            </p>
-          </FadeUp>
+          
 
           <FadeUp delay={0.12} amount={0.35}>
             <a

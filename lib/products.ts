@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
     line: "BEARD",
     image: "/images/Producto5.jpg",
     price: 18,
-    slug: "beard-balm",
+    slug: "beard-balm", 
     tags: ["beard", "balm", "style"],
     sizes: ["20g"],
   },
