@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import { getPosts } from "@/lib/posts";
 import { BlogCard } from "./BlogCard";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Artículos y consejos sobre estilo masculino, cuidado del cabello y barbería en Málaga.",
+  keywords: ["blog barbería Málaga", "consejos barbero"],
+};
 
 export default function BlogPage() {
   const posts = getPosts();

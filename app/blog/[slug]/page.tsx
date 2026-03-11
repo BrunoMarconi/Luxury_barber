@@ -1,7 +1,43 @@
+import type { Metadata } from "next";
 import { getPost, getPosts, type PostDetail } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { BlogImage } from "../BlogImage";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const post = getPost(params.slug);
+  if (!post) {
+    return {};
+  }
+  const url = `https://your-domain.com/blog/${post.slug}`;
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url,
+      type: "article",
+      locale: "es_ES",
+      images: [
+        {
+          url: post.cover || "/images/og-image.jpg",
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.cover || "/images/og-image.jpg"],
+    },
+  };
+}
 
 export function generateStaticParams() {
   const posts = getPosts();

@@ -1,5 +1,6 @@
 "use client";
 
+import type { Metadata } from "next";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import TeamSpotlight from "./TeamSpotlight";
@@ -128,7 +129,7 @@ function HeroSplit({
         >
           <Image
             src={"/images/page.jpeg"}
-            alt="Barbershop interior"
+            alt="Interior de la barbería El Barbero Profesional en Málaga"
             fill
             priority
             className="object-cover scale-[1.03]"
@@ -169,6 +170,18 @@ function HeroSplit({
 }
 
 // HomePage: composes hero + all page sections
+
+export const metadata: Metadata = {
+  title: "Inicio",
+  description:
+    "Barbería en Málaga – servicios de corte, afeitado y estilo de alta calidad con reservas online.",
+  keywords: [
+    "inicio barbería Málaga",
+    "barbero profesional Málaga",
+    "corte de pelo masculino Málaga",
+  ],
+};
+
 export default function HomePage() {
   return (
     <>

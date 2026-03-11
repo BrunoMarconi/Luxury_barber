@@ -1,5 +1,6 @@
 "use client";
 
+import type { Metadata } from "next";
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -155,6 +156,17 @@ function ProductCard({
 }
 
 /* ----------------------------- page ----------------------------- */
+
+export const metadata: Metadata = {
+  title: "Catálogo de productos",
+  description:
+    "Explora nuestro catálogo de productos profesionales para el cuidado masculino disponibles en Málaga.",
+  keywords: [
+    "catálogo barbería Málaga",
+    "productos cuidado masculino",
+    "cosmética barbería",
+  ],
+};
 
 export default function CatalogPage() {
   const [q, setQ] = useState("");
