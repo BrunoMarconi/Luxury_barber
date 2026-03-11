@@ -1,7 +1,7 @@
 export const runtime = "edge";
 
 export async function GET() {
-  const sitemapUrl = "https://your-domain.com/sitemap.xml";
+  const sitemapUrl = "https://theprofessionalbarber.es/sitemap.xml";
   const txt = `User-agent: *
 Allow: /
 Sitemap: ${sitemapUrl}
