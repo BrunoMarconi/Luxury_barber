@@ -3,7 +3,7 @@ import { getPosts } from "@/lib/posts";
 import { BlogCard } from "./BlogCard";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog | Barbería Málaga",
   description:
     "Artículos y consejos sobre estilo masculino, cuidado del cabello y barbería en Málaga.",
   keywords: ["blog barbería Málaga", "consejos barbero"],

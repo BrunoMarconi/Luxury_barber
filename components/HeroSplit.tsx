@@ -1,0 +1,159 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+export function RightPanel({ className }: { className?: string }) {
+  return (
+    <motion.aside
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4, duration: 0.9 }}
+      className={`relative bg-[#ece8de] lg:min-h-[100svh] ${className ?? ""}`}
+    >
+      <div className="mx-auto flex h-full max-w-md flex-col px-6 pt-24 pb-24 lg:pt-28">
+        <div className="mt-6 flex flex-1 flex-col items-center justify-center text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.7 }}
+            className="text-[14px] font-semibold uppercase tracking-[0.08em] text-black"
+          >
+            Productos para el cuidado masculino.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.75, duration: 0.6 }}
+            className="mt-6 w-[220px] sm:w-[260px] lg:w-[280px]"
+          >
+            <div className="relative aspect-[3/4] w-full shadow-[0_18px_45px_rgba(0,0,0,0.18)]">
+              <Image
+                src={'/Catálogo.jpeg'}
+                alt="Product promo"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 60vw, 280px"
+              />
+            </div>
+          </motion.div>
+
+          <motion.a
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
+            href="/catalogo"
+            className="mt-6 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/85 hover:text-black transition"
+          >
+            Más información
+          </motion.a>
+        </div>
+      </div>
+
+      {/* MARQUEE */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0">
+        <div className="marquee">
+          <div className="marquee-track">
+            <div className="flex">
+              <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
+                ¿Estás listo para ver tu mejor versión? &nbsp; ¿Estás listo para ver tu mejor versión? &nbsp;
+               ¿Estás listo para ver tu mejor versión? &nbsp; ¿Estás listo para ver tu mejor versión? &nbsp;
+              </span>
+            </div>
+            <div className="flex" aria-hidden="true">
+              <span className="whitespace-nowrap px-6 text-[44px] font-semibold uppercase tracking-[0.12em] text-black/90 sm:text-[56px] lg:text-[64px]">
+                ¿Estás listo para ver tu mejor versión? &nbsp; ¿Estás listo para ver tu mejor versión? &nbsp;
+                ¿Estás listo para ver tu mejor versión? &nbsp; ¿Estás listo para ver tu mejor versión? &nbsp;
+                ¿Estás listo para ver tu mejor versión? &nbsp; ¿Estás listo para ver tu mejor versión? &nbsp;
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.aside>
+  );
+}
+
+export type HeroSplitProps = {
+  leftImageSrc: string;
+  rightCardImageSrc: string;
+};
+
+export default function HeroSplit({
+  leftImageSrc,
+  rightCardImageSrc,
+}: HeroSplitProps) {
+  return (
+    <section id="home" className="relative min-h-[100svh] w-full overflow-hidden">
+      {/* CSS marquee */}
+      <style>{`
+        .marquee {
+          width: 100%;
+          overflow: hidden;
+        }
+        .marquee-track {
+          display: flex;
+          width: max-content;
+          will-change: transform;
+          /* slower movement */
+          animation: marquee-left 32s linear infinite;
+        }
+        @keyframes marquee-left {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .marquee-track { animation: none; }
+        }
+      `}</style>
+
+      <div className="grid min-h-[100svh] grid-cols-1 lg:grid-cols-[1.55fr_1fr]">
+        {/* LEFT */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="relative min-h-[70svh] lg:min-h-[100svh]"
+        >
+          <Image
+            src={leftImageSrc}
+            alt="Interior de la barbería El Barbero Profesional en Málaga"
+            fill
+            priority
+            className="object-cover scale-[1.03]"
+            sizes="(max-width: 1024px) 100vw, 60vw"
+          />
+
+          <div className="absolute inset-0 bg-black/20" />
+          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/65 to-transparent" />
+
+          <div className="absolute left-6 bottom-8 right-6 lg:left-10 lg:bottom-12 lg:right-10">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/85"
+            >
+              Servicios personalizado.
+            </motion.p>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45, duration: 0.8 }}
+              className="mt-3 max-w-[18ch] text-white"
+            >
+              <span className="block text-[44px] leading-[0.95] tracking-tight sm:text-[64px] lg:text-[86px] xl:text-[96px]">
+                Servicio personalizado para el cuidado masculino
+              </span>
+            </motion.h1>
+          </div>
+        </motion.div>
+
+        {/* RIGHT PANEL (desktop only) */}
+        <RightPanel className="hidden md:block" />
+      </div>
+    </section>
+  );
+}

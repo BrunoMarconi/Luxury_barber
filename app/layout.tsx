@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Barbería Málaga",
   },
   description:
-    "Barbería profesional en Málaga. Corte de pelo, afeitado y estilo personal en un ambiente exclusivo para el hombre moderno.",
+    "Barbería en Málaga – servicios de corte, afeitado y estilo de alta calidad con reservas online.",
   keywords: [
     "barbería Málaga",
     "barbero Málaga",
