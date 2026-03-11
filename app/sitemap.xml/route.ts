@@ -1,19 +1,15 @@
 import { getPosts } from "@/lib/posts";
 
-export const runtime = "edge";
+// use node runtime so getPosts (fs) works
+export const runtime = "nodejs";
 
-export async function GET() {
-  // prefer an env var so it works in dev and production
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://theprofessionalbarber.com";
+export async function GET(request: Request) {
+  const host = request.headers.get("host") || "theprofessionalbarber.es";
+  const protocol = host.startsWith("localhost") ? "http" : "https";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || `${protocol}://${host}`;
   const posts = getPosts();
 
-  // paths without leading slash – we'll concatenate later
-  const staticUrls = [
-    "",
-    "contact",
-    "catalogo",
-    "blog",
-  ];
+  const staticUrls = ["", "contact", "catalogo", "blog"];
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
