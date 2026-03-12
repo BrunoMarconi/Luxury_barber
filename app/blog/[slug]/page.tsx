@@ -7,9 +7,10 @@ import { BlogImage } from "../BlogImage";
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const post = getPost(params.slug);
+  const { slug } = await params;
+  const post = getPost(slug);
   if (!post) {
     return {};
   }
