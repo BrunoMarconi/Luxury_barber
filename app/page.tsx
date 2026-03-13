@@ -2,7 +2,7 @@
 import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
-  title: "Inicio | Barbería Málaga",
+  title: "The professional barber | Barbería Málaga",
   description:
     "Bienvenido a theprofessionalbarber en Málaga: barbería de lujo con cortes de pelo, afeitado y reservas online.",
 };
