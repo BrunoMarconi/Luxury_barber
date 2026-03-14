@@ -105,6 +105,16 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       "como-pedir-corte-pelo-barberia-guia-masculina",
       "tendencias-cortes-pelo-masculino-2026",
     ],
+    "uppercut-peinado-cabello-sano": [
+      "como-mantener-peinado-todo-el-dia",
+      "producto-cabello-guia-masculina",
+      "cabello-masculino-cuidado-rutina",
+    ],
+    "errores-comunes-pomada-polvo-spray": [
+      "uppercut-peinado-cabello-sano",
+      "como-mantener-peinado-todo-el-dia",
+      "producto-cabello-guia-masculina",
+    ],
   };
 
   const relatedSlugs = relatedBySlug[slug] || getPosts().map((p) => p.slug).filter((s) => s !== slug).slice(0, 3);
