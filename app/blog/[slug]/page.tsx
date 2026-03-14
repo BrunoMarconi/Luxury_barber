@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getPost, getPosts, type PostDetail } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -113,7 +114,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     <main className="min-h-screen bg-[#ece8de] text-black">
       <article className="mx-auto max-w-3xl px-6 pt-28 pb-24">
 
-        <p className="text-[10px] uppercase tracking-[0.28em] text-black/60">
+        <div className="flex items-center gap-3 rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-black/75">
+          <Link href="/blog" className="text-blue-700 underline hover:text-blue-900">
+            ← Volver al blog completo
+          </Link>
+        </div>
+
+        <p className="mt-4 text-[10px] uppercase tracking-[0.28em] text-black/60">
           {post.category}
         </p>
 
