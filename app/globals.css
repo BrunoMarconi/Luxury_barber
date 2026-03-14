@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.article-content a {
+  color: #1d4ed8 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px !important;
+  font-weight: 600;
+}
+
+.article-content a:hover {
+  color: #1e40af !important;
+}
+
+.article-content ul li a {
+  color: #1d4ed8 !important;
+  text-decoration: underline !important;
+}

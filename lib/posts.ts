@@ -27,7 +27,7 @@ export function getPosts(): Post[] {
     return {
       slug,
       title: data.title,
-      excerpt: data.excerpt,
+      excerpt: data.excerpt || data.description || "",
       date: data.date,
       category: data.category,
       cover: data.cover,
@@ -57,7 +57,7 @@ export function getPost(slug: string): PostDetail | null {
     return {
       slug,
       title: data.title || "",
-      excerpt: data.excerpt || "",
+      excerpt: data.excerpt || data.description || "",
       date: data.date || "",
       category: data.category || "",
       cover: data.cover || "",
