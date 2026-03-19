@@ -108,8 +108,8 @@ function Tile({ p, idx, total }: { p: Photo; idx: number; total: number }) {
   );
 }
 
-export default function GalleryScrollRail() {
-  const photos = useMemo(() => PHOTOS, []);
+export default function GalleryScrollRail({ photos }: { photos?: Photo[] }) {
+  const galleryPhotos = useMemo(() => (photos && photos.length ? photos : PHOTOS), [photos]);
 
   return (
     <section id="gallery" className="relative overflow-hidden bg-[#7A7676] text-black">
@@ -198,12 +198,12 @@ export default function GalleryScrollRail() {
           <div className="rail-wrap rail-mask relative">
             <div className="rail-track py-6">
               {/* Bloque 1 */}
-              {photos.map((p, idx) => (
-                <Tile key={`a-${p.src}`} p={p} idx={idx} total={photos.length} />
+              {galleryPhotos.map((p, idx) => (
+                <Tile key={`a-${p.src}`} p={p} idx={idx} total={galleryPhotos.length} />
               ))}
               {/* Bloque 2 duplicado */}
-              {photos.map((p, idx) => (
-                <Tile key={`b-${p.src}`} p={p} idx={idx} total={photos.length} />
+              {galleryPhotos.map((p, idx) => (
+                <Tile key={`b-${p.src}`} p={p} idx={idx} total={galleryPhotos.length} />
               ))}
             </div>
           </div>

@@ -2,6 +2,15 @@
 
 import { motion } from "framer-motion";
 
+type SanityService = {
+  _id: string;
+  title: string;
+  description: string;
+  price: string;
+  duration?: string;
+  isVip?: boolean;
+};
+
 type ServiceItem = {
   name: string;
   description?: string;
@@ -11,30 +20,6 @@ type ServiceItem = {
 
 const BOOKSY_URL =
   "https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga#ba_s=sh_1";
-
-const servicesLeft: ServiceItem[] = [
-  {
-    name: "Corte de Cabello",
-    duration: "45 min",
-    price: "15,00 €",
-  },
-  {
-    name: "Arreglo de Barba",
-    duration: "45 min",
-    price: "15,00 €",
-  },
-  {
-    name: "Corte de Cabello + Perfilado de Barba",
-    description: "Pack completo (incluye descuento aplicado).",
-    duration: "1 h 30 min",
-    price: "27,00 €",
-  },
-  {
-    name: "Tinte Permanente en Barba",
-    duration: "30 min",
-    price: "10,00 €+",
-  },
-];
 
 const servicesRight: ServiceItem[] = [
   {
@@ -84,9 +69,7 @@ function ServiceRow({ s, idx }: { s: ServiceItem; idx: number }) {
       viewport={{ once: true, amount: 0.35 }}
       transition={{ duration: 0.75, delay: idx * 0.06, ease: [0.2, 0.8, 0.2, 1] }}
     >
-      {/* mobile: stack / desktop: row */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-        {/* LEFT */}
         <div className="min-w-0">
           <h3 className="truncate text-[12px] font-semibold uppercase tracking-[0.22em] text-black">
             {s.name}
@@ -99,11 +82,10 @@ function ServiceRow({ s, idx }: { s: ServiceItem; idx: number }) {
           ) : null}
 
           <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/55">
-            {s.duration ?? "—"}
+            {s.duration ?? "Consultar"}
           </p>
         </div>
 
-        {/* RIGHT */}
         <div className="shrink-0 sm:text-right">
           <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-black">
             {s.price}
@@ -133,7 +115,32 @@ function ServiceList({ list }: { list: ServiceItem[] }) {
   );
 }
 
-export default function ServicesSection() {
+export default function ServicesSection({
+  services,
+}: {
+  services?: SanityService[];
+}) {
+  const vipServices: ServiceItem[] = (services ?? [])
+    .filter((service) => service.isVip)
+    .map((service) => ({
+      name: service.title,
+      description: service.description,
+      duration: service.duration,
+      price: service.price,
+    }));
+
+  const standardServices: ServiceItem[] = (services ?? [])
+    .filter((service) => !service.isVip)
+    .map((service) => ({
+      name: service.title,
+      description: service.description,
+      duration: service.duration,
+      price: service.price,
+    }));
+
+  const vipList = vipServices.length > 0 ? vipServices : servicesRight;
+  const standardList = standardServices.length > 0 ? standardServices : [];
+
   return (
     <section id="services" className="relative overflow-hidden bg-[#ece8de]">
       <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
@@ -141,7 +148,6 @@ export default function ServicesSection() {
       </div>
 
       <div className="mx-auto max-w-6xl px-6 py-20 lg:py-24">
-        {/* Header */}
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">
           <div>
             <FadeUp delay={0}>
@@ -164,7 +170,6 @@ export default function ServicesSection() {
           </FadeUp>
         </div>
 
-        {/* Body */}
         <div className="mt-12 grid gap-10 lg:grid-cols-2">
           <FadeUp
             delay={0.05}
@@ -175,7 +180,7 @@ export default function ServicesSection() {
               VIP
             </p>
             <div className="mt-4">
-              <ServiceList list={servicesRight} />
+              <ServiceList list={vipList} />
             </div>
           </FadeUp>
 
@@ -185,15 +190,14 @@ export default function ServicesSection() {
             className="overflow-hidden rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur"
           >
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
-              Servicios estándar 
+              Servicios estándar
             </p>
             <div className="mt-4">
-              <ServiceList list={servicesLeft} />
+              <ServiceList list={standardList} />
             </div>
           </FadeUp>
         </div>
 
-        {/* Footer note */}
         <div className="mt-12">
           <FadeUp delay={0.05} amount={0.35}>
             <p className="text-center text-[10px] font-semibold uppercase tracking-[0.22em] text-black/60">

@@ -17,6 +17,26 @@ type HeroSplitProps = {
   rightCardImageSrc: string;
 };
 
+type Service = {
+  _id: string;
+  title: string;
+  description: string;
+  price: string;
+};
+
+type GalleryPhoto = {
+  _id: string;
+  src: string;
+  alt: string;
+  size?: "tall" | "wide" | "square";
+};
+
+const defaultServices: Service[] = [
+  { _id: "1", title: "Corte clásico", description: "Corte personalizado con estilo y acabado impecable.", price: "30,00 €" },
+  { _id: "2", title: "Afeitado tradicional", description: "Afeitado con navaja, toalla caliente y loción calmante.", price: "25,00 €" },
+  { _id: "3", title: "Peinado + styling", description: "Peinado final para un look perfecto y duradero.", price: "20,00 €" },
+];
+
 // panel that appears to the right of the hero on desktop, duplicated below services on mobile
 function RightPanel({ className }: { className?: string }) {
   return (
@@ -169,7 +189,9 @@ function HeroSplit({
 }
 
 
-export default function HomePage() {
+export default function HomePage({ services, gallery }: { services?: Service[]; gallery?: GalleryPhoto[] }) {
+  const servicesToRender = services?.length ? services : defaultServices;
+
   return (
     <>
       <Head>
@@ -199,7 +221,7 @@ export default function HomePage() {
           <TeamSpotlight name="Juan Carlos" imageSrc="/team/don.jpg" />
         </div>
         <div className="order-1 md:order-2">
-          <ServicesSection />
+          <ServicesSection services={servicesToRender} />
         </div>
         <div className="order-3">
           <RightPanel className="block md:hidden" />
@@ -207,7 +229,7 @@ export default function HomePage() {
       </div>
 
       {/* products promo on desktop is handled by RightPanel in hero; below we show gallery and reviews */}
-      <GallerySection />
+      <GallerySection photos={gallery} />
       <ReviewsSection />
     </>
   );

@@ -14,8 +14,10 @@
     "gray-matter": "^4.0.3",
     "next": "16.1.6",
     "next-mdx-remote": "^6.0.0",
+    "next-sanity": "^12.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "sanity": "^5.16.0",
     "styled-components": "^6.3.11"
   },
   "devDependencies": {
