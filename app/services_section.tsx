@@ -95,7 +95,7 @@ function ServiceRow({ s, idx }: { s: ServiceItem; idx: number }) {
             href={BOOKSY_URL}
             target="_blank"
             rel="noreferrer"
-            className="mt-3 inline-flex h-10 w-full items-center justify-center rounded-full border border-black/25 bg-black/5 px-6 text-[10px] font-semibold uppercase tracking-[0.22em] text-black hover:bg-black/10 transition sm:w-auto"
+            className="btn-reserva mt-3 h-10 w-full text-[10px] uppercase tracking-[0.22em] sm:w-auto"
           >
             Reservar ahora
           </a>

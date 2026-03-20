@@ -146,7 +146,7 @@ export default function ContactSection() {
             <FadeUp delay={0.15} amount={0.25}>
               <a
                 href="https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga?do=invite&_branch_match_id=1556921415801310876&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVj8jyCMxMT%2FbJi0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAOg7uKI6AAAA"
-                className="inline-flex h-12 w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-white/15 transition"
+                className="btn-reserva w-full text-[11px] uppercase tracking-[0.22em]"
               >
                 Reservar ahora
               </a>

@@ -99,7 +99,7 @@ export default function Footer() {
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
                   href={bookUrl}
-                  className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-white/15 transition"
+                  className="btn-reserva text-[11px] uppercase tracking-[0.22em]"
                 >
                   Reservar ahora
                 </a>

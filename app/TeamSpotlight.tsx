@@ -129,7 +129,7 @@ export default function TeamSpotlight({
             href="https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga?do=invite&_branch_match_id=1556921415801310876&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVj8jyCMxMT%2FbJi0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAOg7uKI6AAAA"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-16 inline-flex h-12 items-center justify-center rounded-full border border-black/45 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-black/85 hover:bg-black/5"
+            className="btn-reserva mt-16 text-[11px] uppercase tracking-[0.22em]"
             variants={reveal}
             initial="hidden"
             whileInView="show"

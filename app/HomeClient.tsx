@@ -165,7 +165,7 @@ function HeroSplit({
               transition={{ delay: 0.3, duration: 0.7 }}
               className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/85"
             >
-              Servicios personalizado.
+              Barbero profesional en málaga
             </motion.p>
 
             <motion.h1
@@ -175,7 +175,7 @@ function HeroSplit({
               className="mt-3 max-w-[18ch] text-white"
             >
               <span className="block text-[44px] leading-[0.95] tracking-tight sm:text-[64px] lg:text-[86px] xl:text-[96px]">
-                Servicio personalizado para el cuidado masculino
+                Especialista en imagen masculina
               </span>
             </motion.h1>
           </div>
@@ -209,7 +209,7 @@ export default function HomePage({ services, gallery }: { services?: Service[]; 
       <div className="mt-6 mb-6 flex justify-center md:hidden">
         <a
           href={BOOKSY_URL}
-          className="inline-flex h-12 items-center justify-center rounded-full border border-black/35 bg-black/80 px-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-black/90 transition"
+          className="btn-reserva text-white bg-[#f8aa00] hover:bg-[#e69300] border-transparent"
         >
           Reservar ahora
         </a>

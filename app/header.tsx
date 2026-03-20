@@ -72,7 +72,7 @@ export default function Header() {
           ))}
           <a
             href={BOOKSY_URL}
-            className="pointer-events-auto rounded-full border border-white/35 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white backdrop-blur hover:bg-white/15 transition"
+            className="btn-reserva text-[10px] uppercase tracking-[0.22em]"
           >
             Reservar ahora
           </a>
@@ -144,7 +144,7 @@ export default function Header() {
 
                 <a
                   href={BOOKSY_URL}
-                  className="mt-2 inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-white/15 transition"
+                  className="btn-reserva text-[10px] uppercase tracking-[0.22em] w-full sm:w-auto"
                 >
                   Reservar ahora
                 </a>
