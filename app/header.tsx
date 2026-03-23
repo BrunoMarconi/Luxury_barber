@@ -50,17 +50,17 @@ export default function Header() {
       {/* capa para legibilidad sobre imagen */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-black/10 to-transparent" />
 
-      <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6">
+      <div className="relative mx-auto flex h-16 max-w-7xl items-center px-4 sm:h-20 sm:px-6">
         <Link
           href="/"
           className="pointer-events-auto select-none text-lg font-semibold tracking-[0.22em] text-white"
           aria-label="Home"
         >
-          The Professional Barber <br />
+          The Professional Barber in Málaga <br />
         </Link>
 
         {/* Desktop */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 md:flex ml-16 bg-black/20 backdrop-blur-sm rounded-full px-6 py-2 border border-white/10">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -72,7 +72,7 @@ export default function Header() {
           ))}
           <a
             href={BOOKSY_URL}
-            className="btn-reserva text-[10px] uppercase tracking-[0.22em]"
+            className="btn-reserva text-xs uppercase tracking-[0.22em] ml-4"
           >
             Reservar ahora
           </a>
