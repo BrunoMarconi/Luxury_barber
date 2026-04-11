@@ -8,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServiciosPage() {
-  return <ServicesSection />;
+  return (
+    <main className="min-h-screen bg-[#ece8de]">
+      <div className="pt-20">
+        <ServicesSection />
+      </div>
+    </main>
+  );
 }
