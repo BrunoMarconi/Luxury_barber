@@ -56,12 +56,12 @@ function FadeUp({
 function sizeClasses(size: Photo["size"]) {
   switch (size) {
     case "wide":
-      return "aspect-[16/10] w-full";
+      return "w-[520px] h-[320px] sm:w-[620px] sm:h-[360px]";
     case "square":
-      return "aspect-square w-full";
+      return "w-[360px] h-[360px] sm:w-[420px] sm:h-[420px]";
     case "tall":
     default:
-      return "aspect-[3/4] w-full";
+      return "w-[340px] h-[460px] sm:w-[380px] sm:h-[540px]";
   }
 }
 
@@ -115,7 +115,33 @@ export default function GalleryScrollRail({ photos }: { photos?: Photo[] }) {
 
   return (
     <section id="gallery" className="relative overflow-hidden bg-[#7A7676] text-black">
-      {/* No CSS needed for grid layout */}
+      {/* CSS marquee + mask edges */}
+      <style>{`
+        .rail-wrap { overflow: hidden; }
+        .rail-track {
+          display: flex;
+          width: max-content;
+          gap: 40px;
+          will-change: transform;
+          animation: rail-left 32s linear infinite;
+        }
+        .rail-wrap:hover .rail-track { animation-play-state: paused; }
+
+        @keyframes rail-left {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .rail-track { animation: none !important; transform: translateX(0) !important; }
+        }
+
+        /* mask para bordes (más elegante que los gradients) */
+        .rail-mask {
+          -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        }
+      `}</style>
 
       {/* Fondo suave (sin cambiar color base) */}
       <div className="pointer-events-none absolute inset-0">
@@ -169,12 +195,19 @@ export default function GalleryScrollRail({ photos }: { photos?: Photo[] }) {
           </div>
         </div>
 
-        {/* Gallery Grid */}
+        {/* Rail */}
         <FadeUp delay={0.08} amount={0.2} className="mt-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {galleryPhotos.map((p, idx) => (
-              <Tile key={p.src} p={p} idx={idx} total={galleryPhotos.length} />
-            ))}
+          <div className="rail-wrap rail-mask relative">
+            <div className="rail-track py-6">
+              {/* Bloque 1 */}
+              {galleryPhotos.map((p, idx) => (
+                <Tile key={`a-${p.src}`} p={p} idx={idx} total={galleryPhotos.length} />
+              ))}
+              {/* Bloque 2 duplicado */}
+              {galleryPhotos.map((p, idx) => (
+                <Tile key={`b-${p.src}`} p={p} idx={idx} total={galleryPhotos.length} />
+              ))}
+            </div>
           </div>
         </FadeUp>
 
