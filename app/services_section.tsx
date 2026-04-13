@@ -226,10 +226,26 @@ export default function ServicesSection({
         </div>
 
         <div className="mt-12">
-          <FadeUp delay={0.05} amount={0.35}>
-            <p className="text-center text-[10px] font-semibold uppercase tracking-[0.22em] text-black/60">
-              Conoce todos los servicios que hay disponibles para ti.
-            </p>
+          <FadeUp delay={0.05} amount={0.25}>
+            <a
+              href="/corte-de-pelo-hombre-marbella"
+              className="flex items-center justify-between gap-6 overflow-hidden rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur transition hover:bg-white/50 group"
+            >
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
+                  Servicio destacado
+                </p>
+                <h3 className="mt-2 text-[20px] font-semibold uppercase leading-tight tracking-tight text-black sm:text-[26px]">
+                  Corte de pelo hombre en Marbella
+                </h3>
+                <p className="mt-2 text-[12px] leading-6 tracking-[0.04em] text-black/60">
+                  Diagnóstico capilar, visagismo y asesoría personalizada. Descubre el proceso completo.
+                </p>
+              </div>
+              <span className="shrink-0 text-[22px] text-black/40 transition group-hover:translate-x-1">
+                →
+              </span>
+            </a>
           </FadeUp>
         </div>
       </div>
