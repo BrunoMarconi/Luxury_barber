@@ -29,7 +29,7 @@ function FadeUp({
 
 export default function Footer() {
   const bookUrl =
-    "https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga?do=invite&_branch_match_id=1556921415801310876&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVj8jyCMxMT%2FbJi0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAOg7uKI6AAAA";
+    "https://wa.me/34672516317";
 
   return (
     <footer className="relative overflow-hidden bg-[#0f1112] text-white">

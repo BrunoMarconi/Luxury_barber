@@ -55,7 +55,7 @@ export default function ContactSection() {
           <FadeUp delay={0.1}>
             <p className="max-w-[62ch] text-[12px] leading-6 tracking-[0.06em] text-white/60">
               Escríbenos con lo que necesitas y te respondemos rápido. Para
-              reservar directamente, haz clic en el botón de "Reservar ahora" en la página principal o visita nuestro <a href="https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga?do=invite&_branch_match_id=1556921415801310876&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVj8jyCMxMT%2FbJi0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAOg7uKI6AAAA" className="underline hover:text-white/80 transition-colors">Booksy</a>.
+              reservar directamente, haz clic en el botón de "Reservar ahora" en la página principal o visita nuestro <a href="https://wa.me/34672516317" className="underline hover:text-white/80 transition-colors">WhatsApp</a>.
             </p>
           </FadeUp>
         </div>
@@ -145,7 +145,7 @@ export default function ContactSection() {
 
             <FadeUp delay={0.15} amount={0.25}>
               <a
-                href="https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga?do=invite&_branch_match_id=1556921415801310876&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVj8jyCMxMT%2FbJi0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAOg7uKI6AAAA"
+                href="https://wa.me/34672516317"
                 className="btn-reserva w-full text-[11px] uppercase tracking-[0.22em]"
               >
                 Reservar ahora
