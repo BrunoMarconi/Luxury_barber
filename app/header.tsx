@@ -6,7 +6,12 @@ import { usePathname } from "next/navigation";
 
 const nav = [
   { label: "Equipo", href: "/#team" },
-  { label: "Servicios", href: "/servicios" },
+  { label: "Servicios", href: "/servicios", subNav: [
+    { label: "Cortes de Pelo", href: "/corte-de-pelo-hombre-marbella" },
+    { label: "Arreglo de Barba", href: "/servicios#barba" },
+    { label: "Cortes VIP", href: "/servicios#vip" },
+    { label: "Todos los Servicios", href: "/servicios" },
+  ] },
   { label: "Galería", href: "/#gallery" },
   { label: "Catálogo", href: "/catalogo" },
   { label: "Blog", href: "/blog" },
@@ -18,11 +23,14 @@ const BOOKSY_URL =
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
+  const [mobileSubOpen, setMobileSubOpen] = useState<string | null>(null);
   const pathname = usePathname();
 
   // Cierra el menú al cambiar de ruta
   useEffect(() => {
     setOpen(false);
+    setMobileSubOpen(null);
   }, [pathname]);
 
   // Bloquea scroll del body cuando el drawer está abierto
@@ -62,13 +70,39 @@ export default function Header() {
         {/* Desktop */}
         <nav className="hidden items-center gap-8 md:flex ml-16 bg-black/20 backdrop-blur-sm rounded-full px-6 py-2 border border-white/10">
           {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="pointer-events-auto text-xs font-medium uppercase tracking-[0.22em] text-white/85 hover:text-white transition"
-            >
-              {item.label}
-            </Link>
+            item.subNav ? (
+              <div
+                key={item.href}
+                className="relative"
+                onMouseEnter={() => setDropdownOpen(item.label)}
+                onMouseLeave={() => setDropdownOpen(null)}
+              >
+                <div className="pointer-events-auto text-xs font-medium uppercase tracking-[0.22em] text-white/85 hover:text-white transition cursor-pointer">
+                  {item.label}
+                </div>
+                {dropdownOpen === item.label && (
+                  <div className="absolute top-full mt-2 bg-black/90 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10 min-w-[200px]">
+                    {item.subNav.map((subItem) => (
+                      <Link
+                        key={subItem.href}
+                        href={subItem.href}
+                        className="block text-xs font-medium uppercase tracking-[0.22em] text-white/85 hover:text-white transition py-1"
+                      >
+                        {subItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="pointer-events-auto text-xs font-medium uppercase tracking-[0.22em] text-white/85 hover:text-white transition"
+              >
+                {item.label}
+              </Link>
+            )
           ))}
           <a
             href={BOOKSY_URL}
@@ -103,7 +137,7 @@ export default function Header() {
             "fixed inset-0 bg-black/55 backdrop-blur-sm transition-opacity",
             open ? "opacity-100" : "opacity-0",
           ].join(" ")}
-          onClick={() => setOpen(false)}
+          onClick={() => { setOpen(false); setMobileSubOpen(null); }}
         />
 
         {/* Panel */}
@@ -124,7 +158,7 @@ export default function Header() {
                 <button
                   className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white hover:bg-white/15 transition"
                   type="button"
-                  onClick={() => setOpen(false)}
+                  onClick={() => { setOpen(false); setMobileSubOpen(null); }}
                 >
                   Close
                 </button>
@@ -132,14 +166,40 @@ export default function Header() {
 
               <div className="mt-6 grid gap-3">
                 {nav.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white/85 hover:text-white hover:bg-white/10 transition"
-                  >
-                    {item.label}
-                  </Link>
+                  item.subNav ? (
+                    <div key={item.href}>
+                      <button
+                        onClick={() => setMobileSubOpen(mobileSubOpen === item.label ? null : item.label)}
+                        className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white/85 hover:text-white hover:bg-white/10 transition flex justify-between items-center"
+                      >
+                        {item.label}
+                        <span className={`transition-transform ${mobileSubOpen === item.label ? 'rotate-180' : ''}`}>▼</span>
+                      </button>
+                      {mobileSubOpen === item.label && (
+                        <div className="mt-2 ml-4 grid gap-2">
+                          {item.subNav.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              onClick={() => setOpen(false)}
+                              className="rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/85 hover:text-white hover:bg-white/10 transition"
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white/85 hover:text-white hover:bg-white/10 transition"
+                    >
+                      {item.label}
+                    </Link>
+                  )
                 ))}
 
                 <a
