@@ -36,6 +36,33 @@ const servicesRight: ServiceItem[] = [
   },
 ];
 
+const servicesStandard: ServiceItem[] = [
+  {
+    name: "Haircut / Corte de Cabello",
+    description: "Corte personalizado con estilo y acabado impecable.",
+    duration: "45 min",
+    price: "20,00 €",
+  },
+  {
+    name: "Haircut + Beard / Corte + Barba",
+    description: "Corte completo más arreglo y perfilado de barba.",
+    duration: "1 h",
+    price: "30,00 €",
+  },
+  {
+    name: "Beard / Barba",
+    description: "Arreglo, perfilado y acabado profesional de barba.",
+    duration: "30 min",
+    price: "15,00 €",
+  },
+  {
+    name: "Afeitado tradicional",
+    description: "Afeitado con navaja, toalla caliente y loción calmante.",
+    duration: "30 min",
+    price: "15,00 €",
+  },
+];
+
 function FadeUp({
   children,
   delay = 0,
@@ -139,7 +166,7 @@ export default function ServicesSection({
     }));
 
   const vipList = vipServices.length > 0 ? vipServices : servicesRight;
-  const standardList = standardServices.length > 0 ? standardServices : [];
+  const standardList = standardServices.length > 0 ? standardServices : servicesStandard;
 
   return (
     <section id="services" className="relative overflow-hidden bg-[#ece8de]">
