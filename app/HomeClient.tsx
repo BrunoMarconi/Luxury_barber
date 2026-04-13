@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import TeamSpotlight from "./TeamSpotlight";
 import GallerySection from "./GallerySection";
@@ -217,6 +218,19 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
           >
             Descubre por qué somos la referencia en corte de pelo hombre en Marbella. Reserva tu cita hoy y experimenta la diferencia de un servicio premium.
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            className="mt-8"
+          >
+            <Link
+              href="/corte-de-pelo-hombre-marbella"
+              className="inline-flex items-center justify-center rounded-full border border-black bg-transparent px-8 py-3 text-[12px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-black hover:text-white"
+            >
+              Ver servicio de corte →
+            </Link>
+          </motion.div>
         </div>
       </section>
 
