@@ -24,7 +24,9 @@ const PHOTOS: Photo[] = [
   { src: "/images/Foto11.jpeg", alt: "Tijeras y peine", size: "tall" },
   { src: "/images/Foto12.jpeg", alt: "Tijeras y peine", size: "square" },
   { src: "/images/Foto13.jpeg", alt: "Tijeras y peine", size: "tall" },
-
+  { src: "/images/Foto14.jpeg", alt: "Corte de cabello profesional", size: "square" },
+  { src: "/images/Foto15.jpeg", alt: "Estilo masculino moderno", size: "tall" },
+  { src: "/images/Foto16.jpeg", alt: "Barbería en acción", size: "wide" },
 ];
 
 function FadeUp({
