@@ -10,7 +10,7 @@ import ReviewsSection from "./reseñas";
 
 // external booking link used in header/footer; reused here for mobile CTA
 const BOOKSY_URL =
-  "https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga?do=invite&_branch_match_id=1556921415801310876&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVj8jyCMxMT%2FbJi0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAOg7uKI6AAAA";
+  "https://wa.me/34672516317";
 
 type HeroSplitProps = {
   leftImageSrc: string;
@@ -389,7 +389,7 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
                 href={BOOKSY_URL}
                 className="inline-flex items-center justify-center rounded-full border border-black bg-white px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.15em] text-black shadow-lg shadow-black/20 transition-all duration-300 hover:bg-gray-50 hover:-translate-y-0.5"
               >
-                Agenda en Booksy
+                Agenda por WhatsApp
               </a>
             </motion.div>
           </div>

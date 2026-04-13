@@ -19,7 +19,7 @@ type ServiceItem = {
 };
 
 const BOOKSY_URL =
-  "https://booksy.com/es-es/160739_the-professional-barber_barberia_29485_malaga#ba_s=sh_1";
+  "https://wa.me/34672516317";
 
 const servicesRight: ServiceItem[] = [
   {

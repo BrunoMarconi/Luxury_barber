@@ -233,7 +233,7 @@ export default function Footer() {
                 href={bookUrl}
                 className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45 hover:text-white/70"
               >
-                Booksy
+                WhatsApp
               </a>
             </div>
           </div>
