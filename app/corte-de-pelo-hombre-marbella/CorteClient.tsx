@@ -75,7 +75,7 @@ export default function CorteClient() {
       {/* ── HERO ── */}
       <section className="relative min-h-[92svh] overflow-hidden">
         <Image
-          src="/images/Foto1_1.jpeg"
+          src="/images/Foto21.jpeg"
           alt="corte de pelo hombre Marbella"
           fill
           priority
@@ -119,7 +119,7 @@ export default function CorteClient() {
             className="mt-8 flex flex-wrap gap-4"
           >
             <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer" className="btn-reserva px-8 py-4 text-[11px]">
-              Reserva tu cita ahora
+              Reserva tu cita en Marbella
             </a>
             <Link
               href="/servicios"
@@ -147,12 +147,24 @@ export default function CorteClient() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                En Marbella hay muchas barberías. Pero no todas entienden que un corte de pelo hombre no empieza con las tijeras — empieza con una conversación. Analizamos tu tipo de cabello, tu morfología facial y tu estilo de vida antes de tomar ninguna decisión. El resultado: un corte que se ve bien el día uno y sigue viéndose bien semanas después.
+                En Marbella, la imagen personal forma parte de tu estilo de vida.
+                Por eso, este servicio de corte de pelo masculino en Marbella no se basa únicamente en cortar, sino en entender qué necesitas y cómo debe adaptarse el resultado a ti.
+              </p>
+              <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
+                No trabajamos con patrones estándar.
+                Analizamos, diseñamos y ejecutamos cada corte en función de tu rostro, tu cabello y tu estilo.
               </p>
             </FadeUp>
             <FadeUp delay={0.15}>
               <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Nada es al azar. Cada paso del proceso tiene un porqué.
+                Si estás buscando una{" "}
+                <Link href="/" className="underline underline-offset-2 hover:text-black transition">
+                  barbería en Marbella
+                </Link>{" "}
+                donde el corte no sea genérico, este servicio está diseñado para ti.
+              </p>
+              <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
+                Aquí no se trata solo de estética, sino de crear un resultado que encaje contigo, que sea funcional en tu día a día y que mantenga su forma con el tiempo.
               </p>
             </FadeUp>
           </div>
@@ -197,24 +209,45 @@ export default function CorteClient() {
               </FadeUp>
               <FadeUp delay={0.12}>
                 <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  Antes de cortar, evaluamos tu morfología facial para determinar qué estilo potencia más tu imagen. Analizamos también el estado de tu cuero cabelludo y el patrón de crecimiento de tu cabello. Con esa información, tomamos decisiones técnicas — no decisiones de moda.
+                  Antes de comenzar el corte, realizamos un análisis completo para entender exactamente qué necesita tu cabello y tu imagen.
+                </p>
+                <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/60">
+                  Este proceso tiene una duración aproximada de 10 a 15 minutos y nos permite tomar decisiones con criterio profesional.
                 </p>
               </FadeUp>
 
               <FadeUp delay={0.18}>
-                <ul className="mt-8 space-y-4">
-                  {[
-                    "Análisis de morfología facial (visagismo)",
-                    "Diagnóstico del tipo y densidad capilar",
-                    "Asesoría sobre el estilo más adecuado para ti",
-                    "Recomendaciones de mantenimiento en casa",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/70">
-                      <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <div className="mt-8 space-y-5">
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 mb-3">
+                      Analizamos el cuero cabelludo con tecnología especializada para evaluar:
+                    </p>
+                    <ul className="space-y-2">
+                      {["Densidad capilar", "Nivel de grasa", "Presencia de caspa", "Estado general de la piel"].map((item) => (
+                        <li key={item} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/70">
+                          <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 mb-3">
+                      Trabajamos el visagismo para adaptar el corte a tu estructura:
+                    </p>
+                    <ul className="space-y-2">
+                      {["Tipo de rostro", "Forma del cráneo", "Dirección del cabello"].map((item) => (
+                        <li key={item} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/70">
+                          <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <p className="text-[12px] leading-6 tracking-[0.04em] text-white/50 italic pt-2">
+                    Nada es al azar. Cada paso del proceso tiene un porqué.
+                  </p>
+                </div>
               </FadeUp>
 
               <FadeUp delay={0.22}>
@@ -224,7 +257,7 @@ export default function CorteClient() {
                   rel="noopener noreferrer"
                   className="mt-10 inline-flex items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
                 >
-                  Reservar por WhatsApp
+                  Reserva tu cita en Marbella
                 </a>
               </FadeUp>
             </div>
@@ -232,25 +265,33 @@ export default function CorteClient() {
         </div>
       </section>
 
-      {/* ── PROCESO PASO A PASO ── */}
+      {/* ── TECNOLOGÍA ── */}
       <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
         <FadeUp>
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
-            El proceso
+            Tecnología avanzada
           </p>
         </FadeUp>
         <FadeUp delay={0.05}>
-          <h2 className="mt-3 max-w-[20ch] text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-            Cada detalle tiene un porqué
+          <h2 className="mt-3 max-w-[22ch] text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
+            Foreo: tecnología al servicio de tu piel y cabello
           </h2>
+        </FadeUp>
+        <FadeUp delay={0.1}>
+          <p className="mt-6 max-w-[60ch] text-[13px] leading-7 tracking-[0.04em] text-black/65">
+            Durante el servicio trabajamos con tecnología avanzada de Foreo para mejorar la salud del cuero cabelludo y la piel.
+          </p>
+          <p className="mt-4 max-w-[60ch] text-[13px] leading-7 tracking-[0.04em] text-black/65">
+            Antes de comenzar, realizamos una limpieza facial con Foreo Luna 4 Men y tecnología LED para preparar la piel.
+          </p>
         </FadeUp>
 
         <div className="mt-14 grid gap-px bg-black/10 sm:grid-cols-2 lg:grid-cols-4 rounded-3xl overflow-hidden">
           {[
-            { num: "01", title: "Diagnóstico", desc: "Análisis facial y capilar. Hablamos de tu estilo y tu rutina." },
-            { num: "02", title: "Diseño", desc: "Definimos la silueta y el corte que mejor encaja con tu fisonomía." },
-            { num: "03", title: "Ejecución", desc: "Técnica precisa: tijera, máquina y navaja según lo que requiera tu corte." },
-            { num: "04", title: "Acabado", desc: "Styling y producto para que salgas como tienes que salir." },
+            { num: "01", title: "Limpieza capilar", desc: "Limpieza profunda del cuero cabelludo para eliminar impurezas y preparar el folículo." },
+            { num: "02", title: "Estimulación", desc: "Estimulación capilar para activar la circulación y favorecer la salud del cabello." },
+            { num: "03", title: "Tratamiento", desc: "Aplicación de tratamientos específicos según el análisis previo: control de grasa, hidratación o prevención de caída." },
+            { num: "04", title: "Facial LED", desc: "Tratamiento facial con tecnología LED Foreo UFO 3 para cerrar el protocolo y dejar la piel en óptimo estado." },
           ].map((step, i) => (
             <FadeUp key={step.num} delay={i * 0.06} className="bg-[#ece8de] p-8">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/40">
@@ -265,6 +306,11 @@ export default function CorteClient() {
             </FadeUp>
           ))}
         </div>
+        <FadeUp delay={0.1}>
+          <p className="mt-8 text-[13px] leading-7 tracking-[0.04em] text-black/65">
+            Cada tratamiento se adapta al estado real del cabello y la piel en la barbería premium en Marbella: control de grasa, hidratación o prevención de caída.
+          </p>
+        </FadeUp>
       </section>
 
       {/* ── BENEFICIOS ── */}
@@ -286,9 +332,9 @@ export default function CorteClient() {
               <div className="mt-10 space-y-6">
                 {[
                   { title: "Personalización total", desc: "No hay dos cortes iguales. Cada cliente recibe una propuesta diseñada para su cara y su estilo." },
-                  { title: "10+ años de experiencia", desc: "Formado en Colombia, Chile y la Academia Antonio Eloy de Málaga. El oficio se nota." },
+                  { title: "20+ años de experiencia", desc: "Formado en Colombia, Chile y la Academia Antonio Eloy de Málaga. El oficio se nota." },
                   { title: "Especialista en visagismo", desc: "Saber qué corte sienta bien a cada cara es una técnica. Aquí la aplicamos en cada visita." },
-                  { title: "Servicio premium en Marbella", desc: "Un espacio donde el hombre aprende a cuidarse y a proyectar su mejor versión." },
+                  { title: "Barbería premium en Marbella", desc: "Un espacio donde el hombre aprende a cuidarse y a proyectar su mejor versión." },
                 ].map((b, i) => (
                   <FadeUp key={b.title} delay={i * 0.06}>
                     <div className="flex gap-4">
@@ -309,10 +355,10 @@ export default function CorteClient() {
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { src: "/images/Foto5_1.jpeg", alt: "antes y después corte de cabello Marbella" },
-                { src: "/images/Foto6_1.jpeg", alt: "corte de pelo hombre Marbella profesional" },
-                { src: "/images/Foto7.jpeg", alt: "barbería premium Marbella" },
-                { src: "/images/Foto8_1.jpeg", alt: "corte personalizado Marbella" },
+                { src: "/images/Foto17.jpeg", alt: "antes y después corte de pelo Marbella" },
+                { src: "/images/Foto18.jpeg", alt: "corte de pelo hombre Marbella profesional" },
+                { src: "/images/Foto19.jpeg", alt: "barbería premium Marbella" },
+                { src: "/images/Foto20.jpeg", alt: "corte masculino en Marbella personalizado" },
               ].map((img, i) => (
                 <FadeUp key={img.src} delay={i * 0.07} className="relative aspect-square overflow-hidden rounded-2xl">
                   <Image
@@ -344,12 +390,12 @@ export default function CorteClient() {
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { src: "/images/Foto9.jpeg", alt: "corte de pelo hombre Marbella resultado" },
-            { src: "/images/Foto10.jpeg", alt: "antes y después corte de cabello Marbella" },
-            { src: "/images/Foto11.jpeg", alt: "corte masculino premium Marbella" },
-            { src: "/images/Foto12.jpeg", alt: "barbería profesional Marbella" },
-            { src: "/images/Foto2_1.jpeg", alt: "arreglo barba Marbella" },
-            { src: "/images/Foto3.jpeg", alt: "interior barbería Marbella" },
+            { src: "/images/Foto17.jpeg", alt: "corte de pelo hombre Marbella resultado" },
+            { src: "/images/Foto18.jpeg", alt: "antes y después corte de pelo Marbella" },
+            { src: "/images/Foto19.jpeg", alt: "corte masculino en Marbella premium" },
+            { src: "/images/Foto20.jpeg", alt: "barbero en Marbella profesional" },
+            { src: "/images/Foto21.jpeg", alt: "barbería en Marbella arreglo barba" },
+            { src: "/images/Foto22.jpeg", alt: "interior barbería premium Marbella" },
           ].map((img, i) => (
             <FadeUp key={img.src} delay={i * 0.05} className="relative aspect-square overflow-hidden rounded-2xl shadow-[0_12px_30px_rgba(0,0,0,0.1)]">
               <Image
@@ -425,7 +471,7 @@ export default function CorteClient() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Más de 10 años de experiencia. Formado en Colombia, Chile y la Academia Antonio Eloy de Málaga — donde trabajó junto a referentes como Fran Aranda e Ismael de Mora. Especialista en visagismo y cuidado masculino integral.
+                Como barbero en Marbella con más de 20 años de experiencia y formación internacional, este servicio está diseñado para hombres que buscan algo más que un corte convencional.
               </p>
             </FadeUp>
             <FadeUp delay={0.14}>
@@ -436,7 +482,7 @@ export default function CorteClient() {
 
             <FadeUp delay={0.18}>
               <div className="mt-8 flex flex-wrap gap-3">
-                {["10+ años de experiencia", "Visagismo", "Formación internacional", "Servicio premium"].map((tag) => (
+                {["20+ años de experiencia", "Visagismo", "Formación internacional", "Servicio premium"].map((tag) => (
                   <span key={tag} className="rounded-full border border-black/15 bg-black/5 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-black/70">
                     {tag}
                   </span>
@@ -470,7 +516,11 @@ export default function CorteClient() {
           </FadeUp>
           <FadeUp delay={0.1}>
             <p className="mt-5 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-              Reserva tu cita ahora y experimenta un corte de pelo hombre en Marbella diseñado desde el diagnóstico hasta el acabado final.
+              Este servicio de corte de pelo en Marbella está pensado para hombres que valoran el detalle, la precisión y una imagen bien trabajada.
+            </p>
+            <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-black/65">
+              No es un corte rápido.<br />
+              Es un trabajo bien hecho.
             </p>
           </FadeUp>
           <FadeUp delay={0.15}>
@@ -481,7 +531,7 @@ export default function CorteClient() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-transparent bg-black px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-white shadow-lg transition hover:bg-black/80 hover:-translate-y-0.5"
               >
-                Reserva tu cita ahora
+                Reserva tu cita en Marbella
               </a>
               <a
                 href={BOOKSY_URL}
@@ -489,7 +539,7 @@ export default function CorteClient() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-black bg-transparent px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-black/10 hover:-translate-y-0.5"
               >
-                Reservar por WhatsApp
+                Reservar en Booksy
               </a>
             </div>
           </FadeUp>

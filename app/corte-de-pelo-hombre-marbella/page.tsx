@@ -7,9 +7,11 @@ export const metadata: Metadata = {
     "Corte de pelo hombre en Marbella con asesoría personalizada, diagnóstico capilar y servicio premium. Reserva tu cita ahora.",
   keywords: [
     "corte de pelo hombre Marbella",
-    "barbería Marbella",
+    "barbería en Marbella",
+    "barbero en Marbella",
+    "corte masculino en Marbella",
+    "barbería premium en Marbella",
     "barbero profesional Marbella",
-    "corte masculino Marbella",
     "diagnóstico capilar Marbella",
     "visagismo Marbella",
   ],
