@@ -69,38 +69,38 @@ function Stars({ n = 5 }: { n?: number }) {
 
 const FAQ = [
   {
-    q: "¿Qué corte de cabello me favorece según mi rostro?",
-    a: "Depende de la forma de tu rostro. Si es cuadrado, favorecen cortes estructurados o fade con textura. Si es redondo, buscamos volumen superior para alargar. Si es ovalado, es más versátil. Además, analizamos ojos, orejas, crecimiento del cabello y estilo personal para diseñar un resultado totalmente personalizado.",
+    q: "¿Qué tipo de barba me favorece según mi rostro?",
+    a: "La barba adecuada depende de múltiples factores como la forma del rostro, la proyección del mentón, la definición de la mandíbula, el perfil facial (recto, convexo o cóncavo) y la densidad del vello. Con toda esta información, se diseña una barba personalizada que equilibre el rostro y mejore la imagen.",
   },
   {
-    q: "¿Cada cuánto debería cortarme el cabello?",
-    a: "Cada 2 a 3 semanas para mantener la estructura y la imagen cuidada.",
+    q: "¿Qué incluye el servicio de corte de cabello y barba en Marbella?",
+    a: "Incluye diagnóstico capilar y facial, corte de cabello, diseño de barba personalizado, lavado con tratamiento adaptado, uso de tecnología profesional y cuidado de la piel.",
   },
   {
-    q: "¿Qué diferencia este corte de otros en Marbella?",
-    a: "El nivel de personalización. No es un corte genérico, sino un servicio donde se analiza cada detalle para lograr un resultado superior.",
+    q: "¿Cada cuánto debería hacerme corte de cabello y barba en Marbella?",
+    a: "Lo recomendable es cada 4 a 5 semanas. Entre medias, el mantenimiento de la barba ayuda a mantener una imagen cuidada.",
   },
   {
-    q: "¿El análisis capilar realmente sirve?",
-    a: "Sí, porque nos permite entender el estado del cuero cabelludo y elegir los productos adecuados para mejorar el resultado.",
+    q: "¿Qué diferencia este servicio de otros en Marbella?",
+    a: "Aquí no se trabaja con patrones estándar. Cada cliente recibe un diseño adaptado a su rostro, combinando técnica, diagnóstico y tecnología para lograr un resultado superior.",
   },
 ];
 
-export default function CorteClient() {
+export default function CorteBarbaClient() {
   return (
     <main className="min-h-screen bg-[#ece8de] text-black">
 
       {/* ── HERO ── */}
       <section className="relative min-h-[92svh] overflow-hidden">
         <Image
-          src="/images/cortepelo1.jpeg"
-          alt="corte de cabello en Marbella"
+          src="/images/barba1.jpeg"
+          alt="corte de cabello y barba hombre Marbella"
           fill
           priority
           className="object-cover scale-[1.03]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-black/55 via-black/30 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/70" />
 
         <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col justify-end px-6 pb-16 lg:pb-24">
           <motion.p
@@ -118,7 +118,7 @@ export default function CorteClient() {
             transition={{ duration: 0.85, delay: 0.35 }}
             className="mt-4 max-w-[18ch] text-[40px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[58px] lg:text-[76px]"
           >
-            Corte de cabello en Marbella con asesoría personalizada premium
+            Barbería en Marbella | Corte de cabello y barba con asesoría personalizada
           </motion.h1>
 
           <motion.p
@@ -160,29 +160,29 @@ export default function CorteClient() {
             </FadeUp>
             <FadeUp delay={0.05}>
               <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-                Un corte diseñado para ti, no para todos
+                Una imagen completa, diseñada para ti
               </h2>
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Este servicio de corte de cabello en Marbella está diseñado para hombres que buscan un resultado personalizado, teniendo en cuenta su tipo de rostro, estructura facial y estilo de vida. No se trata solo de cortar el cabello, sino de crear una imagen que encaje contigo.
+                Este servicio de corte de cabello y barba en Marbella está diseñado para hombres que buscan una imagen completa, teniendo en cuenta la estructura del rostro, el estilo personal y el crecimiento natural del cabello y la barba.
               </p>
             </FadeUp>
             <FadeUp delay={0.15}>
               <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Si estás buscando una{" "}
+                En nuestra{" "}
                 <Link href="/" className="underline underline-offset-2 hover:text-black transition">
                   barbería en Marbella
-                </Link>{" "}
-                donde el corte no sea genérico, este servicio está diseñado para ti.
+                </Link>
+                , no se trata solo de cortar o perfilar, sino de crear un resultado equilibrado y adaptado a cada persona.
               </p>
             </FadeUp>
           </div>
 
           <FadeUp delay={0.1} className="relative aspect-3/4 overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.12)]">
             <Image
-              src="/images/cortepelo2.jpeg"
-              alt="corte de cabello en Marbella personalizado"
+              src="/images/barba2.jpeg"
+              alt="corte de cabello y barba hombre Marbella"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -196,7 +196,7 @@ export default function CorteClient() {
         <div className="grid gap-px bg-black/10 sm:grid-cols-3 rounded-3xl overflow-hidden">
           {[
             { num: "+20", label: "Años de experiencia", desc: "Formación internacional y técnica refinada en cada visita." },
-            { num: "100%", label: "Personalizado", desc: "Ningún corte es igual. Cada resultado se diseña para tu rostro y estilo." },
+            { num: "100%", label: "Personalizado", desc: "Ningún corte ni barba es igual. Cada resultado se diseña para tu rostro." },
             { num: "5★", label: "Valoración media", desc: "Reseñas verificadas de clientes reales en Booksy." },
           ].map((stat, i) => (
             <FadeUp key={stat.num} delay={i * 0.07} className="bg-[#ece8de] px-8 py-12 flex flex-col justify-between">
@@ -233,16 +233,16 @@ export default function CorteClient() {
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                  Desde que llegas, buscamos que la experiencia sea diferente. Te recibimos, entendemos lo que buscas y te asesoramos. Durante el servicio trabajamos con técnicas profesionales, lavado capilar adaptado a tu tipo de cabello y finalizamos con un styling cuidado al detalle.
+                  Desde que llegas, buscamos que la experiencia sea diferente. Te recibimos, entendemos lo que buscas y te asesoramos. Durante el servicio trabajamos con técnicas profesionales en cabello y barba, lavado adaptado y finalizamos con un styling cuidado al detalle.
                 </p>
               </FadeUp>
             </div>
 
             <FadeUp delay={0.1} className="flex flex-col justify-center gap-6">
               {[
-                { step: "01", title: "Llegada y bienvenida", desc: "Te recibimos y escuchamos exactamente qué buscas y cómo llevas el cabello en tu día a día." },
-                { step: "02", title: "Asesoría y diagnóstico", desc: "Analizamos tu rostro, cabello y estilo para diseñar el resultado antes de empezar." },
-                { step: "03", title: "Servicio completo", desc: "Corte con técnica, lavado adaptado y styling final con herramientas profesionales." },
+                { step: "01", title: "Llegada y bienvenida", desc: "Te recibimos y escuchamos exactamente qué buscas, tanto en cabello como en barba." },
+                { step: "02", title: "Diagnóstico y diseño", desc: "Analizamos tu rostro, mandíbula y proporciones para diseñar el resultado antes de empezar." },
+                { step: "03", title: "Servicio completo", desc: "Corte, diseño de barba, lavado adaptado y styling final con herramientas profesionales." },
               ].map((item) => (
                 <div key={item.step} className="flex gap-5 items-start">
                   <span className="shrink-0 w-10 h-10 rounded-full border border-black/20 flex items-center justify-center text-[11px] font-semibold uppercase tracking-[0.18em] text-black/50">
@@ -265,13 +265,13 @@ export default function CorteClient() {
 
       {/* ── DIAGNÓSTICO ── */}
       <section className="bg-[#0f1112] py-20 lg:py-28">
-        <div className="pointer-events-none absolute left-1/2 top-0 h-px w-3/4 -translate-x-1/2 bg-linear-to-r from-transparent via-[#f8aa00]/40 to-transparent" />
+        <div className="pointer-events-none absolute left-1/2 top-0 h-[1px] w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#f8aa00]/40 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <FadeUp delay={0.05} className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.3)]">
+            <FadeUp delay={0.05} className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.3)]">
               <Image
-                src="/images/visagismopelo.jpeg"
-                alt="análisis visagismo corte de cabello Marbella"
+                src="/images/Visagismo.jpeg"
+                alt="diseño de barba según rostro Marbella"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -286,12 +286,15 @@ export default function CorteClient() {
               </FadeUp>
               <FadeUp delay={0.06}>
                 <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
-                  Análisis capilar y facial antes del corte
+                  Diseño de barba basado en tu estructura facial
                 </h2>
               </FadeUp>
               <FadeUp delay={0.12}>
                 <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  Antes de comenzar, realizamos un análisis personalizado donde estudiamos la forma del rostro, proporciones faciales, dirección natural del cabello y estilo personal. Nada es al azar. Cada paso del proceso tiene un porqué.
+                  Antes de comenzar, realizamos un análisis personalizado donde evaluamos la forma del rostro, la proyección del mentón, la definición de la mandíbula, el perfil facial (recto, convexo o cóncavo) y la densidad de la barba.
+                </p>
+                <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/60">
+                  Este servicio está basado en formación internacional y en un enfoque técnico donde cada decisión tiene una justificación estética y estructural.
                 </p>
               </FadeUp>
 
@@ -299,10 +302,16 @@ export default function CorteClient() {
                 <div className="mt-8 space-y-5">
                   <div>
                     <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 mb-3">
-                      Analizamos el cuero cabelludo con tecnología especializada para evaluar:
+                      Evaluamos en profundidad:
                     </p>
                     <ul className="space-y-2">
-                      {["Densidad capilar", "Nivel de grasa", "Presencia de caspa", "Estado general de la piel"].map((item) => (
+                      {[
+                        "Forma del rostro y proporciones",
+                        "Proyección del mentón",
+                        "Definición de mandíbula y pómulos",
+                        "Perfil facial (recto, convexo o cóncavo)",
+                        "Densidad y dirección del vello",
+                      ].map((item) => (
                         <li key={item} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/70">
                           <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
                           {item}
@@ -310,19 +319,9 @@ export default function CorteClient() {
                       ))}
                     </ul>
                   </div>
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 mb-3">
-                      Trabajamos el visagismo para adaptar el corte a tu estructura:
-                    </p>
-                    <ul className="space-y-2">
-                      {["Tipo de rostro", "Forma del cráneo", "Dirección del cabello"].map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/70">
-                          <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <p className="text-[12px] leading-6 tracking-[0.04em] text-white/50 italic pt-2">
+                    Nada es al azar. Cada paso del proceso tiene un porqué.
+                  </p>
                 </div>
               </FadeUp>
 
@@ -350,24 +349,24 @@ export default function CorteClient() {
         </FadeUp>
         <FadeUp delay={0.05}>
           <h2 className="mt-3 max-w-[22ch] text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-            Foreo: tecnología al servicio de tu piel y cabello
+            Tecnología profesional al servicio de tu piel
           </h2>
         </FadeUp>
         <FadeUp delay={0.1}>
           <p className="mt-6 max-w-[60ch] text-[13px] leading-7 tracking-[0.04em] text-black/65">
-            Trabajamos con tecnología profesional para mejorar tanto el resultado como la salud del cabello y la piel. Utilizamos dispositivos de Foreo para limpieza y estimulación capilar, así como tratamientos faciales adaptados a cada tipo de piel.
+            Trabajamos con tecnología profesional para mejorar tanto el resultado como la salud de la piel. Utilizamos dispositivos de Foreo para la limpieza, estimulación y tratamiento facial, junto con vaporizador profesional que permite abrir los poros, limpiar profundamente la piel y mejorar la absorción de los tratamientos.
           </p>
           <p className="mt-4 max-w-[60ch] text-[13px] leading-7 tracking-[0.04em] text-black/65">
-            En el cuidado capilar utilizamos productos de alta calidad como Previa, seleccionados según el análisis realizado, para tratar problemas como grasa, caída o desequilibrios del cuero cabelludo.
+            Posteriormente, se realiza un proceso de cierre y calma para un acabado más limpio y duradero.
           </p>
         </FadeUp>
 
         <div className="mt-14 grid gap-px bg-black/10 sm:grid-cols-2 lg:grid-cols-4 rounded-3xl overflow-hidden">
           {[
-            { num: "01", title: "Limpieza capilar", desc: "Limpieza profunda del cuero cabelludo para eliminar impurezas y preparar el folículo." },
-            { num: "02", title: "Estimulación", desc: "Estimulación capilar para activar la circulación y favorecer la salud del cabello." },
-            { num: "03", title: "Tratamiento", desc: "Aplicación de tratamientos específicos según el análisis previo: control de grasa, hidratación o prevención de caída." },
-            { num: "04", title: "Facial LED", desc: "Tratamiento facial con tecnología LED Foreo UFO 3 para cerrar el protocolo y dejar la piel en óptimo estado." },
+            { num: "01", title: "Vaporizador", desc: "Apertura de poros y limpieza profunda para preparar la piel antes del servicio de barba." },
+            { num: "02", title: "Foreo facial", desc: "Limpieza, estimulación y tratamiento con tecnología LED adaptada al tipo de piel." },
+            { num: "03", title: "Tratamiento capilar", desc: "Productos Previa seleccionados según el análisis para cabello y cuero cabelludo." },
+            { num: "04", title: "Cierre y calma", desc: "Protocolo de cierre para calmar la piel tras el servicio y conseguir un acabado duradero." },
           ].map((step, i) => (
             <FadeUp key={step.num} delay={i * 0.06} className="bg-[#ece8de] p-8">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/40">
@@ -401,7 +400,7 @@ export default function CorteClient() {
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  El lavado capilar no es un paso más, es parte del resultado. Seleccionamos el tratamiento adecuado según el estado del cabello y cuero cabelludo, buscando no solo limpiar, sino mejorar la salud capilar.
+                  El lavado capilar forma parte del resultado final. Trabajamos con productos profesionales de Previa, seleccionados según el estado del cabello y cuero cabelludo, asegurando limpieza, tratamiento y preparación para un mejor acabado del corte.
                 </p>
               </FadeUp>
               <FadeUp delay={0.15}>
@@ -418,9 +417,9 @@ export default function CorteClient() {
 
             <FadeUp delay={0.1} className="grid grid-cols-1 gap-4">
               {[
-                { icon: "◎", title: "Diagnóstico previo", desc: "Evaluamos el estado del cuero cabelludo antes de elegir el tratamiento." },
-                { icon: "◈", title: "Producto adaptado", desc: "Usamos productos Previa seleccionados para tu tipo de cabello y piel." },
-                { icon: "◉", title: "Resultado visible", desc: "No solo limpio, sino con mejor salud capilar tras cada visita." },
+                { icon: "◎", title: "Diagnóstico previo", desc: "Evaluamos el estado del cuero cabelludo antes de elegir el tratamiento adecuado." },
+                { icon: "◈", title: "Productos Previa", desc: "Línea profesional seleccionada según tu tipo de cabello y análisis realizado." },
+                { icon: "◉", title: "Resultado visible", desc: "No solo limpio, sino con mejor salud capilar y base ideal para el corte." },
               ].map((feat) => (
                 <div key={feat.title} className="rounded-2xl border border-white/10 bg-white/5 px-6 py-5 flex gap-4 items-start">
                   <span className="text-[#f8aa00] text-[20px] leading-none mt-0.5">{feat.icon}</span>
@@ -439,6 +438,46 @@ export default function CorteClient() {
         </div>
       </section>
 
+      {/* ── STYLING / ACABADO ── */}
+      <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <FadeUp delay={0.05} className="rounded-3xl bg-[#0f1112] px-10 py-14 flex flex-col justify-between min-h-[340px]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+              El acabado final
+            </p>
+            <p className="mt-6 text-[72px] font-semibold uppercase leading-none tracking-tight text-white/10 select-none">
+              BEARD
+            </p>
+            <div className="mt-auto space-y-3">
+              {["Navaja y tijera profesional", "Perfilado de precisión", "Acabado limpio y duradero"].map((tag) => (
+                <div key={tag} className="flex items-center gap-3">
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-white/70">{tag}</p>
+                </div>
+              ))}
+            </div>
+          </FadeUp>
+
+          <div>
+            <FadeUp>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
+                El acabado final
+              </p>
+            </FadeUp>
+            <FadeUp delay={0.06}>
+              <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
+                Styling y perfilado de precisión
+              </h2>
+            </FadeUp>
+            <FadeUp delay={0.1}>
+              <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
+                Finalizamos el servicio con un peinado y perfilado adaptados a tu estilo, utilizando navaja y herramientas profesionales para conseguir líneas limpias, precisas y un acabado natural y duradero.
+              </p>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
+
       {/* ── DIFERENCIACIÓN ── */}
       <section className="bg-white/40 py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
@@ -451,21 +490,24 @@ export default function CorteClient() {
               </FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-                  La diferencia que notas desde el primer corte
+                  No es una barba estándar
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                  No es un corte de cabello tradicional en Marbella. Este servicio combina formación constante, diagnóstico, tecnología y técnica para conseguir un resultado completamente personalizado.
+                  La mayoría de barberías trabajan la barba de forma estándar, aplicando el mismo diseño a todos los clientes. En esta barbería en Marbella, cada barba se diseña en función del rostro, teniendo en cuenta mandíbula, pómulos, proporciones y crecimiento del vello.
+                </p>
+                <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
+                  No se trata de perfilar, sino de crear una barba que realmente encaje con cada persona.
                 </p>
               </FadeUp>
 
               <div className="mt-10 space-y-6">
                 {[
-                  { title: "Personalización total", desc: "No hay dos cortes iguales. Cada cliente recibe una propuesta diseñada para su cara y su estilo." },
-                  { title: "20+ años de experiencia", desc: "Formado en Colombia, Chile y la Academia Antonio Eloy de Málaga. El oficio se nota." },
-                  { title: "Especialista en visagismo", desc: "Saber qué corte sienta bien a cada cara es una técnica. Aquí la aplicamos en cada visita." },
-                  { title: "Barbería premium en Marbella", desc: "Un espacio donde el hombre aprende a cuidarse y a proyectar su mejor versión." },
+                  { title: "Diseño personalizado", desc: "Cada barba se diseña según el rostro, no según una plantilla." },
+                  { title: "20+ años de experiencia", desc: "Formado internacionalmente. Técnica y criterio en cada visita." },
+                  { title: "Tecnología + técnica", desc: "Vaporizador, Foreo y navaja profesional para un resultado superior." },
+                  { title: "Barbería premium en Marbella", desc: "Un espacio donde el detalle y la personalización marcan la diferencia." },
                 ].map((b, i) => (
                   <FadeUp key={b.title} delay={i * 0.06}>
                     <div className="flex gap-4">
@@ -486,10 +528,10 @@ export default function CorteClient() {
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { src: "/images/cortepelo3.jpeg", alt: "antes y después corte de cabello Marbella" },
-                { src: "/images/cortepelo4.jpeg", alt: "corte de cabello hombre Marbella profesional" },
-                { src: "/images/cortepelo5.jpeg", alt: "barbería premium Marbella" },
-                { src: "/images/cortepelo6.jpeg", alt: "corte masculino en Marbella personalizado" },
+                { src: "/images/barba3.jpeg", alt: "antes y después corte y barba Marbella" },
+                { src: "/images/barba4.jpeg", alt: "perfilado de barba profesional Marbella" },
+                { src: "/images/barba5.jpeg", alt: "barbería premium Marbella" },
+                { src: "/images/barba6.jpeg", alt: "detalle barba precisión Marbella" },
               ].map((img, i) => (
                 <FadeUp key={img.src} delay={i * 0.07} className="relative aspect-square overflow-hidden rounded-2xl">
                   <Image
@@ -506,7 +548,7 @@ export default function CorteClient() {
         </div>
       </section>
 
-      {/* ── GALERÍA ANTES/DESPUÉS ── */}
+      {/* ── GALERÍA ── */}
       <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
         <FadeUp>
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
@@ -521,12 +563,12 @@ export default function CorteClient() {
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { src: "/images/Foto17.jpeg", alt: "corte de cabello hombre Marbella resultado" },
-            { src: "/images/Foto18.jpeg", alt: "antes y después corte de cabello Marbella" },
-            { src: "/images/Foto19.jpeg", alt: "corte masculino en Marbella premium" },
-            { src: "/images/Foto20.jpeg", alt: "barbero en Marbella profesional" },
-            { src: "/images/Foto21.jpeg", alt: "barbería en Marbella arreglo barba" },
-            { src: "/images/Foto22.jpeg", alt: "interior barbería premium Marbella" },
+            { src: "/images/barba1.jpeg", alt: "corte de cabello y barba Marbella resultado" },
+            { src: "/images/barba2.jpeg", alt: "antes y después corte y barba Marbella" },
+            { src: "/images/barba3.jpeg", alt: "barba personalizada Marbella premium" },
+            { src: "/images/barba4.jpeg", alt: "barbero en Marbella profesional" },
+            { src: "/images/barba5.jpeg", alt: "barbería en Marbella corte y barba" },
+            { src: "/images/barba6.jpeg", alt: "interior barbería premium Marbella" },
           ].map((img, i) => (
             <FadeUp key={img.src} delay={i * 0.05} className="relative aspect-square overflow-hidden rounded-2xl shadow-[0_12px_30px_rgba(0,0,0,0.1)]">
               <Image
@@ -576,127 +618,87 @@ export default function CorteClient() {
         </div>
       </section>
 
-      {/* ── STYLING FINAL ── */}
-      <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <FadeUp delay={0.05} className="rounded-3xl bg-[#0f1112] px-10 py-14 flex flex-col justify-between min-h-85">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
-              El acabado final
-            </p>
-            <p className="mt-6 text-[72px] font-semibold uppercase leading-none tracking-tight text-white/10 select-none">
-              STYLE
-            </p>
-            <div className="mt-auto space-y-3">
-              {["Herramientas profesionales", "Peinado adaptado a tu estilo", "Acabado limpio y duradero"].map((tag) => (
-                <div key={tag} className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
-                  <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-white/70">{tag}</p>
-                </div>
-              ))}
-            </div>
-          </FadeUp>
-
-          <div>
-            <FadeUp>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
-                El acabado final
-              </p>
-            </FadeUp>
-            <FadeUp delay={0.06}>
-              <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-                Styling profesional al detalle
-              </h2>
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Finalizamos el servicio con un peinado adaptado a tu estilo, utilizando herramientas profesionales para conseguir un acabado limpio, natural y duradero.
-              </p>
-            </FadeUp>
-          </div>
-        </div>
-      </section>
-
       {/* ── FAQ ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
-        <div className="mx-auto max-w-6xl px-6">
-          <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
-              Preguntas frecuentes
-            </p>
-          </FadeUp>
-          <FadeUp delay={0.05}>
-            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
-              Todo lo que necesitas saber
-            </h2>
-          </FadeUp>
+      <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
+        <FadeUp>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
+            Preguntas frecuentes
+          </p>
+        </FadeUp>
+        <FadeUp delay={0.05}>
+          <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
+            Todo lo que necesitas saber
+          </h2>
+        </FadeUp>
 
-          <div className="mt-12 space-y-0">
-            {FAQ.map((item, i) => (
-              <FadeUp key={i} delay={i * 0.06} className="border-b border-white/10 py-8">
-                <p className="text-[14px] font-semibold uppercase tracking-widest text-white">
-                  {item.q}
-                </p>
-                <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  {item.a}
-                </p>
-              </FadeUp>
-            ))}
-          </div>
+        <div className="mt-12 space-y-0">
+          {FAQ.map((item, i) => (
+            <FadeUp key={i} delay={i * 0.06} className="border-b border-black/10 py-8">
+              <p className="text-[14px] font-semibold uppercase tracking-[0.1em] text-black">
+                {item.q}
+              </p>
+              <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-black/60">
+                {item.a}
+              </p>
+            </FadeUp>
+          ))}
         </div>
       </section>
 
       {/* ── AUTORIDAD ── */}
-      <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <FadeUp delay={0.05} className="relative aspect-3/4 overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.12)]">
-            <Image
-              src="/images/JuanCarlos1.jpeg"
-              alt="Juan Carlos barbero profesional Marbella"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </FadeUp>
-
-          <div>
-            <FadeUp>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
-                Tu barbero en Marbella
-              </p>
-            </FadeUp>
-            <FadeUp delay={0.06}>
-              <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-                Juan Carlos Terán
-              </h2>
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Como barbero en Marbella con más de 20 años de experiencia y formación internacional, este servicio está diseñado para hombres que buscan algo más que un corte convencional.
-              </p>
-            </FadeUp>
-            <FadeUp delay={0.14}>
-              <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Hoy en Marbella, con un objetivo claro: construir la experiencia de barbería masculina más completa y personalizada de la Costa del Sol.
-              </p>
+      <section className="bg-white/40 py-20 lg:py-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <FadeUp delay={0.05} className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.12)]">
+              <Image
+                src="/images/JuanCarlos1.jpeg"
+                alt="Juan Carlos barbero profesional Marbella"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </FadeUp>
 
-            <FadeUp delay={0.18}>
-              <div className="mt-8 flex flex-wrap gap-3">
-                {["20+ años de experiencia", "Visagismo", "Formación internacional", "Servicio premium"].map((tag) => (
-                  <span key={tag} className="rounded-full border border-black/15 bg-black/5 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-black/70">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </FadeUp>
+            <div>
+              <FadeUp>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
+                  Tu barbero en Marbella
+                </p>
+              </FadeUp>
+              <FadeUp delay={0.06}>
+                <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
+                  Juan Carlos Terán
+                </h2>
+              </FadeUp>
+              <FadeUp delay={0.1}>
+                <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
+                  Este servicio está pensado para hombres que valoran su imagen y entienden que un buen resultado no es casualidad, sino el resultado de técnica, diagnóstico y experiencia.
+                </p>
+              </FadeUp>
+              <FadeUp delay={0.14}>
+                <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
+                  Con más de 20 años de experiencia y formación internacional, hoy en Marbella con un objetivo claro: construir la experiencia de barbería masculina más completa y personalizada de la Costa del Sol.
+                </p>
+              </FadeUp>
 
-            <FadeUp delay={0.22}>
-              <div className="mt-8 flex flex-wrap gap-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/50">
-                <Link href="/" className="hover:text-black transition">← Inicio</Link>
-                <Link href="/servicios" className="hover:text-black transition">Todos los servicios</Link>
-                <span className="text-black/25">Próximamente: Barba · VIP</span>
-              </div>
-            </FadeUp>
+              <FadeUp delay={0.18}>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  {["20+ años de experiencia", "Visagismo", "Formación internacional", "Servicio premium"].map((tag) => (
+                    <span key={tag} className="rounded-full border border-black/15 bg-black/5 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-black/70">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.22}>
+                <div className="mt-8 flex flex-wrap gap-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/50">
+                  <Link href="/" className="hover:text-black transition">← Inicio</Link>
+                  <Link href="/corte-de-pelo-hombre-marbella" className="hover:text-black transition">Solo corte</Link>
+                  <Link href="/servicios" className="hover:text-black transition">Todos los servicios</Link>
+                </div>
+              </FadeUp>
+            </div>
           </div>
         </div>
       </section>
@@ -711,12 +713,12 @@ export default function CorteClient() {
           </FadeUp>
           <FadeUp delay={0.05}>
             <h2 className="mt-4 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[52px]">
-              ¿Listo para tu mejor corte en Marbella?
+              ¿Listo para tu mejor imagen en Marbella?
             </h2>
           </FadeUp>
           <FadeUp delay={0.1}>
             <p className="mt-5 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-              Este servicio de corte de cabello en Marbella está pensado para hombres que valoran el detalle, la precisión y una imagen bien trabajada.
+              Este servicio de corte de cabello y barba en Marbella está pensado para hombres que valoran el detalle, la precisión y una imagen bien trabajada.
             </p>
             <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-black/65">
               No es un corte rápido.<br />

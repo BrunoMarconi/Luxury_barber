@@ -7,8 +7,9 @@ import { usePathname } from "next/navigation";
 const nav = [
   { label: "Equipo", href: "/#team" },
   { label: "Servicios", href: "/servicios", subNav: [
-    { label: "Cortes de Pelo", href: "/corte-de-pelo-hombre-marbella" },
-    { label: "Arreglo de Barba", href: "/servicios#barba" },
+    { label: "Corte de Cabello", href: "/corte-de-pelo-hombre-marbella" },
+    { label: "Corte y Barba", href: "/barberia-marbella-corte-barba" },
+    { label: "Tratamiento Facial", href: "/tratamiento-facial-hombre-marbella" },
     { label: "Cortes VIP", href: "/servicios#vip" },
     { label: "Todos los Servicios", href: "/servicios" },
   ] },
@@ -56,7 +57,7 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       {/* capa para legibilidad sobre imagen */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-black/10 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-black/45 via-black/10 to-transparent" />
 
       <div className="relative mx-auto flex h-16 max-w-7xl items-center px-4 sm:h-20 sm:px-6">
         <Link
@@ -81,7 +82,7 @@ export default function Header() {
                   {item.label}
                 </div>
                 {dropdownOpen === item.label && (
-                  <div className="absolute top-full mt-2 bg-black/90 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10 min-w-[200px]">
+                  <div className="absolute top-full mt-2 bg-black/90 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10 min-w-50">
                     {item.subNav.map((subItem) => (
                       <Link
                         key={subItem.href}
