@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import GallerySection from "../GallerySection";
 
 export const metadata: Metadata = {
-  title: "Galería | Barbería Málaga",
+  title: "Galería | Barbería Marbella",
   description:
-    "Explora nuestra galería de cortes y estilos en Málaga. Inspírate con imágenes de la barbería elprofessionalbarber en acción.",
+    "Explora nuestra galería de cortes y estilos en Marbella. Inspírate con los resultados reales de El Barbero Profesional.",
 };
 
 export default function GaleriaPage() {

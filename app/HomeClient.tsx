@@ -2,7 +2,6 @@
 
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import TeamSpotlight from "./TeamSpotlight";
 import GallerySection from "./GallerySection";
@@ -191,49 +190,6 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
         rightCardImageSrc="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
 
-      {/* Strategic Text Section */}
-      <section className="py-20 bg-[#ece8de] text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-[32px] font-semibold uppercase tracking-[0.08em] text-black mb-8"
-          >
-            Barbería en Marbella: Tu Destino para el Mejor Corte de Pelo Hombre
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-[16px] font-medium text-black/85 mb-6 leading-relaxed"
-          >
-            En nuestra barbería en Marbella, nos especializamos en cortes de pelo hombre personalizados que realzan tu estilo único. Como barbero profesional en Marbella, ofrezco servicios de alta calidad con atención al detalle, utilizando técnicas tradicionales y modernas para lograr resultados excepcionales.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-[16px] font-medium text-black/85 leading-relaxed"
-          >
-            Descubre por qué somos la referencia en corte de pelo hombre en Marbella. Reserva tu cita hoy y experimenta la diferencia de un servicio premium.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-            className="mt-8"
-          >
-            <Link
-              href="/corte-de-pelo-hombre-marbella"
-              className="inline-flex items-center justify-center rounded-full border border-black bg-transparent px-8 py-3 text-[12px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-black hover:text-white"
-            >
-              Ver servicio de corte →
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
       {/* mobile-only booking CTA */}
       <div className="mt-6 mb-6 flex justify-center md:hidden">
         <a
@@ -349,47 +305,6 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
                 className="inline-flex items-center justify-center rounded-full border border-[#f8aa00] bg-transparent px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#f8aa00] transition-all duration-300 hover:bg-[#f8aa00] hover:text-black"
               >
                 Reserva tu cita ahora
-              </a>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-[#f8aa00] text-center">
-          <div className="max-w-4xl mx-auto px-6">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="text-[32px] font-semibold uppercase tracking-[0.08em] text-white mb-6"
-            >
-              ¿Listo para tu transformación en Marbella?
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-[16px] font-medium text-white/90 mb-10 leading-relaxed"
-            >
-              Agenda tu cita ahora y descubre el mejor servicio de barbería en Marbella.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center"
-            >
-              <a
-                href={BOOKSY_URL}
-                className="inline-flex items-center justify-center rounded-full border border-transparent bg-black px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.15em] text-white shadow-lg shadow-black/20 transition-all duration-300 hover:bg-gray-900 hover:-translate-y-0.5"
-              >
-                Reserva tu cita ahora
-              </a>
-              <a
-                href={BOOKSY_URL}
-                className="inline-flex items-center justify-center rounded-full border border-black bg-white px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.15em] text-black shadow-lg shadow-black/20 transition-all duration-300 hover:bg-gray-50 hover:-translate-y-0.5"
-              >
-                Agenda por WhatsApp
               </a>
             </motion.div>
           </div>

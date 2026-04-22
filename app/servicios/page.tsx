@@ -4,9 +4,9 @@ import { client } from "@/lib/sanity.client";
 import { servicesQuery } from "@/lib/sanity.queries";
 
 export const metadata: Metadata = {
-  title: "Servicios | Barbería Málaga",
+  title: "Servicios | Barbería Marbella",
   description:
-    "Descubre nuestros servicios de barbería en Málaga: cortes de pelo, arreglo de barba y afeitado profesional, con opciones VIP.",
+    "Descubre nuestros servicios de barbería en Marbella: corte de cabello, diseño de barba y tratamiento facial con asesoría personalizada.",
 };
 
 export default async function ServiciosPage() {

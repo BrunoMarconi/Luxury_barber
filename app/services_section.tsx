@@ -15,7 +15,7 @@ type ServiceItem = {
   name: string;
   description?: string;
   duration?: string;
-  price: string;
+  price?: string;
 };
 
 const BOOKSY_URL =
@@ -26,13 +26,11 @@ const servicesRight: ServiceItem[] = [
     name: "VIP · Haircut / Corte de Cabello",
     description: "Experiencia premium: cada detalle cuenta.",
     duration: "1 h 15 min",
-    price: "30,00 €",
   },
   {
     name: "VIP · Haircut + Beard / Corte + Barba",
     description: "Experiencia premium completa: corte + barba.",
     duration: "1 h 45 min",
-    price: "45,00 €",
   },
 ];
 
@@ -41,25 +39,21 @@ const servicesStandard: ServiceItem[] = [
     name: "Haircut / Corte de Cabello",
     description: "Corte personalizado con estilo y acabado impecable.",
     duration: "45 min",
-    price: "20,00 €",
   },
   {
     name: "Haircut + Beard / Corte + Barba",
     description: "Corte completo más arreglo y perfilado de barba.",
     duration: "1 h",
-    price: "30,00 €",
   },
   {
     name: "Beard / Barba",
     description: "Arreglo, perfilado y acabado profesional de barba.",
     duration: "30 min",
-    price: "15,00 €",
   },
   {
     name: "Afeitado tradicional",
     description: "Afeitado con navaja, toalla caliente y loción calmante.",
     duration: "30 min",
-    price: "15,00 €",
   },
 ];
 
@@ -114,15 +108,11 @@ function ServiceRow({ s, idx }: { s: ServiceItem; idx: number }) {
         </div>
 
         <div className="shrink-0 sm:text-right">
-          <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-black">
-            {s.price}
-          </p>
-
           <a
             href={BOOKSY_URL}
             target="_blank"
             rel="noreferrer"
-            className="btn-reserva mt-3 h-10 w-full text-[10px] uppercase tracking-[0.22em] sm:w-auto"
+            className="btn-reserva h-10 w-full text-[10px] uppercase tracking-[0.22em] sm:w-auto"
           >
             Reservar ahora
           </a>
@@ -185,7 +175,7 @@ export default function ServicesSection({
 
             <FadeUp delay={0.05}>
               <h2 className="mt-3 text-[44px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[56px] lg:text-[72px]">
-                Servicios y Precios
+                Servicios
               </h2>
             </FadeUp>
           </div>

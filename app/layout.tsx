@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "barbero profesional Marbella",
     "barbería de lujo Marbella",
     "visagismo Marbella",
-    "barbería Málaga",
+    "barbería premium Marbella",
     "corte masculino Marbella",
   ],
   metadataBase: new URL("https://theprofessionalbarber.es"),
