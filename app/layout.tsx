@@ -104,10 +104,10 @@ export default function RootLayout({
               telephone: "+34 672 516 317",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "C. Eugenio Gross 43",
-                addressLocality: "Málaga",
-                addressRegion: "Andalucía",
-                postalCode: "29001",
+                streetAddress: "C. Padre Enrique Cantos, 2",
+                addressLocality: "Marbella",
+                addressRegion: "Málaga",
+                postalCode: "29602",
                 addressCountry: "ES",
               },
               openingHoursSpecification: [

@@ -96,6 +96,432 @@ function RightPanel({ className }: { className?: string }) {
   );
 }
 
+const differentiationCards = [
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M21 21l-4.35-4.35" />
+        <path d="M11 8v6M8 11h6" />
+      </svg>
+    ),
+    title: "Diagnóstico capilar y facial",
+    text: "Analizamos el cuero cabelludo, la piel y la estructura del rostro utilizando herramientas de diagnóstico profesional.",
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+        <path d="M12 2a7 7 0 1 0 0 14A7 7 0 0 0 12 2z" />
+        <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+        <path d="M9 9h.01M15 9h.01" />
+        <path d="M5 20c2-2 4-3 7-3s5 1 7 3" />
+      </svg>
+    ),
+    title: "Diseño basado en visagismo",
+    text: "Creamos un diseño personalizado adaptado a tu rostro, estilo de vida y objetivos de imagen.",
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+        <path d="M6 3a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3z" />
+        <path d="M18 3a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3z" />
+        <path d="M9 12l6-6" />
+        <path d="M9 6l6 6" />
+      </svg>
+    ),
+    title: "Corte de alta precisión",
+    text: "Aplicamos técnicas avanzadas para lograr un resultado limpio, equilibrado y duradero.",
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+        <rect x="2" y="7" width="20" height="14" rx="2" />
+        <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+        <path d="M12 12v3" />
+        <circle cx="12" cy="16" r="1" />
+      </svg>
+    ),
+    title: "Tecnología tratamiento profesional",
+    text: "Trabajamos con tecnología facial FOREO y productos italianos Previa para mejorar el estado del cabello y la piel.",
+  },
+];
+
+function DifferentiationBlock() {
+  return (
+    <section className="bg-[#0f1112] py-24 lg:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20 lg:items-start">
+
+          {/* Left: text */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#f8aa00]">
+              El método
+            </p>
+            <h2 className="mt-4 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[42px] lg:text-[52px]">
+              No trabajamos por plantillas. Cada cliente tiene un diseño.
+            </h2>
+            <div className="mt-8 space-y-5 text-[13px] leading-7 tracking-[0.03em] text-white/60">
+              <p>Cada servicio comienza con un análisis real.</p>
+              <p>
+                Evaluamos el estado del cuero cabelludo, la estructura del rostro y la forma en la que crece el cabello.
+                A partir de ahí, diseñamos un resultado adaptado a cada persona.
+              </p>
+              <p>No se trata solo de cortar el pelo.</p>
+              <p>
+                Se trata de entender qué te favorece, qué necesitas y cómo mantenerlo en el tiempo.
+                Por eso trabajamos con herramientas de diagnóstico, técnicas de visagismo y productos profesionales que nos permiten tomar decisiones con criterio.
+              </p>
+              <p className="font-semibold text-white/85">Nada es al azar. Cada paso tiene un porqué.</p>
+            </div>
+          </motion.div>
+
+          {/* Right: 4 cards */}
+          <div className="grid gap-4 sm:grid-cols-2">
+            {differentiationCards.map((card, i) => (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.7, delay: i * 0.08 }}
+                className="rounded-2xl border border-white/10 bg-white/5 p-6"
+              >
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#f8aa00]/30 bg-[#f8aa00]/10 text-[#f8aa00]">
+                  {card.icon}
+                </span>
+                <h3 className="mt-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-white">
+                  {card.title}
+                </h3>
+                <p className="mt-2 text-[12px] leading-6 tracking-[0.03em] text-white/55">
+                  {card.text}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const experienceSteps = [
+  {
+    n: "01",
+    title: "Evaluación inicial",
+    text: "Analizamos tu cabello, cuero cabelludo y rostro para entender tu punto de partida.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+        <circle cx="12" cy="12" r="3" />
+      </svg>
+    ),
+  },
+  {
+    n: "02",
+    title: "Diagnóstico capilar y facial",
+    text: "Utilizamos herramientas profesionales para detectar necesidades reales de la piel y el cabello.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+      </svg>
+    ),
+  },
+  {
+    n: "03",
+    title: "Diseño personalizado",
+    text: "Definimos el estilo más adecuado según tu rostro, crecimiento del cabello y estilo de vida.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+        <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+      </svg>
+    ),
+  },
+  {
+    n: "04",
+    title: "Corte de alta precisión",
+    text: "Ejecutamos el corte con técnicas avanzadas, cuidando cada ángulo y cada detalle.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+        <circle cx="6" cy="6" r="3" /><circle cx="6" cy="18" r="3" />
+        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
+      </svg>
+    ),
+  },
+  {
+    n: "05",
+    title: "Tratamiento y acabado",
+    text: "Aplicamos productos profesionales Previa y tecnología facial FOREO para mejorar el estado del cabello y la piel.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+        <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z" />
+        <path d="M12 6v6l4 2" />
+      </svg>
+    ),
+  },
+  {
+    n: "06",
+    title: "Recomendación personalizada",
+    text: "Te explicamos cómo mantener el resultado y qué productos utilizar en tu día a día.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+    ),
+  },
+];
+
+function ExperienceBlock() {
+  return (
+    <section className="bg-[#ece8de] py-24 lg:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        {/* Header */}
+        <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-end">
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.6 }}
+              className="text-[11px] font-semibold uppercase tracking-[0.3em] text-black/55"
+            >
+              El proceso
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.7, delay: 0.05 }}
+              className="mt-3 text-[38px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[50px] lg:text-[60px]"
+            >
+              Qué incluye la experiencia
+            </motion.h2>
+          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="max-w-[56ch] text-[13px] leading-7 tracking-[0.04em] text-black/60"
+          >
+            No es solo un corte. Es un proceso completo diseñado para mejorar tu imagen con criterio y precisión.
+          </motion.p>
+        </div>
+
+        {/* Steps grid */}
+        <div className="mt-16 grid gap-px bg-black/10 sm:grid-cols-2 lg:grid-cols-3 rounded-3xl overflow-hidden">
+          {experienceSteps.map((step, i) => (
+            <motion.div
+              key={step.n}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.7, delay: i * 0.07 }}
+              className="bg-[#ece8de] p-8"
+            >
+              <div className="flex items-start gap-4">
+                <span className="shrink-0 text-[11px] font-bold tracking-[0.2em] text-[#f8aa00]">
+                  {step.n}
+                </span>
+                <span className="mt-0.5 shrink-0 text-black/40">
+                  {step.icon}
+                </span>
+              </div>
+              <h3 className="mt-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-black">
+                {step.title}
+              </h3>
+              <p className="mt-2 text-[12px] leading-6 tracking-[0.03em] text-black/60">
+                {step.text}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AuthorityBlock() {
+  return (
+    <section className="bg-[#0f1112] py-24 lg:py-32">
+      <div className="pointer-events-none absolute left-1/2 h-px w-3/4 -translate-x-1/2 bg-linear-to-r from-transparent via-[#f8aa00]/30 to-transparent" />
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid gap-16 lg:grid-cols-[1fr_420px] lg:items-center">
+
+          {/* Text */}
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6 }}
+              className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#f8aa00]"
+            >
+              El especialista
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7, delay: 0.05 }}
+              className="mt-4 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[42px] lg:text-[52px]"
+            >
+              Detrás de cada resultado hay experiencia, criterio y formación
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7, delay: 0.12 }}
+              className="mt-8 space-y-5 text-[13px] leading-7 tracking-[0.03em] text-white/60"
+            >
+              <p>
+                Soy Juan Carlos Terán, especialista en imagen masculina con más de 20 años de experiencia en barbería.
+              </p>
+              <p>
+                Mi formación ha pasado por Colombia, Chile y España, incluyendo academias como Antonio Eloy, donde desarrollé una visión más avanzada del cuidado masculino.
+              </p>
+              <p className="text-white/85">No trabajo desde la improvisación.</p>
+              <p>
+                Cada decisión que tomo —desde el diagnóstico hasta el acabado— tiene una base técnica y un objetivo claro: mejorar tu imagen de forma real y coherente contigo.
+              </p>
+              <p className="text-white/85">Este servicio no está pensado para cualquiera.</p>
+              <p>
+                Está pensado para hombres que valoran el detalle, el criterio y el resultado.
+              </p>
+            </motion.div>
+            <motion.a
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.22 }}
+              href={BOOKSY_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-10 inline-flex items-center justify-center rounded-full border border-[#f8aa00] bg-transparent px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+            >
+              Reservar experiencia premium
+            </motion.a>
+          </div>
+
+          {/* Photo */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.9, delay: 0.1 }}
+            className="relative mx-auto w-full max-w-[380px] lg:mx-0"
+          >
+            <div className="relative aspect-3/4 w-full overflow-hidden rounded-3xl shadow-[0_32px_64px_rgba(0,0,0,0.5)]">
+              <Image
+                src="/images/JuanCarlos1.jpeg"
+                alt="Juan Carlos Terán — Especialista en imagen masculina en Marbella"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 80vw, 420px"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
+            </div>
+            <div className="absolute bottom-6 left-6 right-6">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/70">
+                Juan Carlos Terán
+              </p>
+              <p className="mt-0.5 text-[10px] uppercase tracking-[0.2em] text-white/45">
+                Especialista en imagen masculina
+              </p>
+            </div>
+          </motion.div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ClosingCTA() {
+  return (
+    <section className="relative overflow-hidden bg-[#0a0c0d] py-32 lg:py-40">
+      {/* gold line top */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/50 to-transparent" />
+
+      {/* subtle radial glow */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f8aa00]/5 blur-3xl" />
+
+      <div className="relative mx-auto max-w-3xl px-6 text-center">
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6 }}
+          className="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#f8aa00]"
+        >
+          Reserva tu experiencia
+        </motion.p>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.06 }}
+          className="mt-6 text-[34px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[46px] lg:text-[58px]"
+        >
+          No es para todos. Pero si es para ti, lo vas a notar desde el primer momento.
+        </motion.h2>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.7, delay: 0.14 }}
+          className="mt-8 space-y-3 text-[14px] leading-7 tracking-[0.03em] text-white/55"
+        >
+          <p>
+            Este servicio está pensado para hombres que valoran su imagen, el detalle y el criterio detrás de cada decisión.
+          </p>
+          <p>
+            Si buscas algo rápido, probablemente no sea para ti.<br />
+            Si buscas un resultado bien trabajado, personalizado y con sentido, entonces sí.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.7, delay: 0.22 }}
+          className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+        >
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="w-full rounded-full bg-[#f8aa00] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300] sm:w-auto"
+          >
+            Reservar experiencia premium
+          </a>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="w-full rounded-full border border-white/25 bg-transparent px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white/80 transition hover:border-white/50 hover:text-white sm:w-auto"
+          >
+            Consultar disponibilidad
+          </a>
+        </motion.div>
+      </div>
+
+      {/* gold line bottom */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/50 to-transparent" />
+    </section>
+  );
+}
+
 function HeroSplit({
   leftImageSrc,
   rightCardImageSrc,
@@ -141,29 +567,60 @@ function HeroSplit({
             sizes="(max-width: 1024px) 100vw, 60vw"
           />
 
-          <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/65 to-transparent" />
+          <div className="absolute inset-0 bg-black/25" />
+          <div className="absolute inset-x-0 bottom-0 h-72 bg-linear-to-t from-black/80 to-transparent" />
 
           <div className="absolute left-6 bottom-8 right-6 lg:left-10 lg:bottom-12 lg:right-10">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.7 }}
-              className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/85"
+              className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70"
             >
-              Barbero profesional en Marbella
+              Grooming masculino · Marbella
             </motion.p>
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.45, duration: 0.8 }}
-              className="mt-3 max-w-[18ch] text-white"
+              className="mt-3 max-w-[20ch] text-white"
             >
-              <span className="block text-[44px] leading-[0.95] tracking-tight sm:text-[64px] lg:text-[86px] xl:text-[96px]">
-                Barbería en Marbella especializada en corte masculino personalizado
+              <span className="block text-[38px] leading-[0.95] tracking-tight sm:text-[56px] lg:text-[76px] xl:text-[86px]">
+                La experiencia de grooming masculino más precisa de Marbella.
               </span>
             </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.7 }}
+              className="mt-4 max-w-[52ch] text-[13px] leading-6 tracking-[0.04em] text-white/75 lg:text-[14px]"
+            >
+              Diagnóstico capilar y facial, visagismo y corte de alta precisión en una experiencia diseñada para hombres que buscan algo más que un corte convencional.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.75, duration: 0.6 }}
+              className="mt-6 flex flex-wrap gap-3"
+            >
+              <a
+                href={BOOKSY_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-[#f8aa00] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-[#e69300]"
+              >
+                Reservar experiencia premium
+              </a>
+              <a
+                href="/corte-de-pelo-hombre-marbella"
+                className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-white backdrop-blur transition hover:bg-white/20"
+              >
+                Ver el protocolo completo
+              </a>
+            </motion.div>
           </div>
         </motion.div>
 
@@ -189,16 +646,10 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
         leftImageSrc="https://images.unsplash.com/photo-1769082863369-227f68991d07?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         rightCardImageSrc="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
-
-      {/* mobile-only booking CTA */}
-      <div className="mt-6 mb-6 flex justify-center md:hidden">
-        <a
-          href={BOOKSY_URL}
-          className="btn-reserva text-white bg-[#f8aa00] hover:bg-[#e69300] border-transparent"
-        >
-          Reserva tu cita ahora
-        </a>
-      </div>
+      <DifferentiationBlock />
+      <ExperienceBlock />
+      <AuthorityBlock />
+      <ClosingCTA />
 
       {/* container used to reorder on mobile: services first, then team, then product promo */}
       <div className="flex flex-col">

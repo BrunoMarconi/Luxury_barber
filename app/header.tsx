@@ -7,11 +7,12 @@ import { usePathname } from "next/navigation";
 const nav = [
   { label: "Equipo", href: "/#team" },
   { label: "Servicios", href: "/servicios", subNav: [
-    { label: "Corte de Cabello", href: "/corte-de-pelo-hombre-marbella" },
     { label: "Corte y Barba", href: "/barberia-marbella-corte-barba" },
+    { label: "Corte de Cabello", href: "/corte-de-pelo-hombre-marbella" },
+    { label: "Barba", href: "/arreglo-de-barba-marbella" },
     { label: "Tratamiento Facial", href: "/tratamiento-facial-hombre-marbella" },
-    { label: "Cortes VIP", href: "/servicios#vip" },
-    { label: "Todos los Servicios", href: "/servicios" },
+    { label: "Diagnóstico Capilar", href: "/diagnostico-capilar-marbella" },
+    { label: "Barbería Marbella", href: "/barberia-marbella" },
   ] },
   { label: "Galería", href: "/#gallery" },
   { label: "Catálogo", href: "/catalogo" },

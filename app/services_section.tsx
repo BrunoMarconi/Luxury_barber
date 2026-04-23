@@ -2,60 +2,7 @@
 
 import { motion } from "framer-motion";
 
-type SanityService = {
-  _id: string;
-  title: string;
-  description: string;
-  price: string;
-  duration?: string;
-  isVip?: boolean;
-};
-
-type ServiceItem = {
-  name: string;
-  description?: string;
-  duration?: string;
-  price?: string;
-};
-
-const BOOKSY_URL =
-  "https://wa.me/34672516317";
-
-const servicesRight: ServiceItem[] = [
-  {
-    name: "VIP · Haircut / Corte de Cabello",
-    description: "Experiencia premium: cada detalle cuenta.",
-    duration: "1 h 15 min",
-  },
-  {
-    name: "VIP · Haircut + Beard / Corte + Barba",
-    description: "Experiencia premium completa: corte + barba.",
-    duration: "1 h 45 min",
-  },
-];
-
-const servicesStandard: ServiceItem[] = [
-  {
-    name: "Haircut / Corte de Cabello",
-    description: "Corte personalizado con estilo y acabado impecable.",
-    duration: "45 min",
-  },
-  {
-    name: "Haircut + Beard / Corte + Barba",
-    description: "Corte completo más arreglo y perfilado de barba.",
-    duration: "1 h",
-  },
-  {
-    name: "Beard / Barba",
-    description: "Arreglo, perfilado y acabado profesional de barba.",
-    duration: "30 min",
-  },
-  {
-    name: "Afeitado tradicional",
-    description: "Afeitado con navaja, toalla caliente y loción calmante.",
-    duration: "30 min",
-  },
-];
+const BOOKSY_URL = "https://wa.me/34672516317";
 
 function FadeUp({
   children,
@@ -81,87 +28,46 @@ function FadeUp({
   );
 }
 
-function ServiceRow({ s, idx }: { s: ServiceItem; idx: number }) {
-  return (
-    <motion.div
-      className="py-6"
-      initial={{ opacity: 0, y: 18, filter: "blur(6px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: true, amount: 0.35 }}
-      transition={{ duration: 0.75, delay: idx * 0.06, ease: [0.2, 0.8, 0.2, 1] }}
-    >
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-        <div className="min-w-0">
-          <h3 className="truncate text-[12px] font-semibold uppercase tracking-[0.22em] text-black">
-            {s.name}
-          </h3>
+const serviceCards = [
+  {
+    kicker: "Corte · Barba",
+    title: "Corte y Barba",
+    description:
+      "Servicio completo: corte personalizado con diagnóstico facial y diseño de barba adaptado a tu morfología.",
+    href: "/barberia-marbella-corte-barba",
+    available: true,
+  },
+  {
+    kicker: "Corte de Cabello",
+    title: "Corte de Cabello",
+    description:
+      "Diagnóstico capilar, visagismo y asesoría personalizada. Cada corte diseñado para tu imagen.",
+    href: "/corte-de-pelo-hombre-marbella",
+    available: true,
+  },
+  {
+    kicker: "Barba",
+    title: "Barba",
+    description:
+      "Perfilado, diseño y acabado profesional de barba. Técnicas precisas para definir tu estilo.",
+    href: "/arreglo-de-barba-marbella",
+    available: true,
+  },
+  {
+    kicker: "Tratamiento Facial",
+    title: "Tratamiento Facial",
+    description:
+      "Cuidado de la piel masculina con diagnóstico personalizado. Hidratación, limpieza y antiedad.",
+    href: "/tratamiento-facial-hombre-marbella",
+    available: true,
+  },
+];
 
-          {s.description ? (
-            <p className="mt-2 max-w-[52ch] text-[12px] leading-5 tracking-[0.06em] text-black/65">
-              {s.description}
-            </p>
-          ) : null}
-
-          <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/55">
-            {s.duration ?? "Consultar"}
-          </p>
-        </div>
-
-        <div className="shrink-0 sm:text-right">
-          <a
-            href={BOOKSY_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-reserva h-10 w-full text-[10px] uppercase tracking-[0.22em] sm:w-auto"
-          >
-            Reservar ahora
-          </a>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
-function ServiceList({ list }: { list: ServiceItem[] }) {
-  return (
-    <div className="divide-y divide-black/10">
-      {list.map((s, idx) => (
-        <ServiceRow key={`${s.name}-${idx}`} s={s} idx={idx} />
-      ))}
-    </div>
-  );
-}
-
-export default function ServicesSection({
-  services,
-}: {
-  services?: SanityService[];
-}) {
-  const vipServices: ServiceItem[] = (services ?? [])
-    .filter((service) => service.isVip)
-    .map((service) => ({
-      name: service.title,
-      description: service.description,
-      duration: service.duration,
-      price: service.price,
-    }));
-
-  const standardServices: ServiceItem[] = (services ?? [])
-    .filter((service) => !service.isVip)
-    .map((service) => ({
-      name: service.title,
-      description: service.description,
-      duration: service.duration,
-      price: service.price,
-    }));
-
-  const vipList = vipServices.length > 0 ? vipServices : servicesRight;
-  const standardList = standardServices.length > 0 ? standardServices : servicesStandard;
-
+export default function ServicesSection() {
   return (
     <section id="services" className="relative overflow-hidden bg-[#ece8de]">
       <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
-        <div className="absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-black" />
+        <div className="absolute -top-24 left-1/2 h-130 w-130 -translate-x-1/2 rounded-full bg-black" />
       </div>
 
       <div className="mx-auto max-w-6xl px-6 py-20 lg:py-24">
@@ -187,56 +93,60 @@ export default function ServicesSection({
           </FadeUp>
         </div>
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-2">
-          <FadeUp
-            delay={0.05}
-            amount={0.25}
-            className="overflow-hidden rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur"
-          >
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
-              VIP
-            </p>
-            <div className="mt-4">
-              <ServiceList list={vipList} />
-            </div>
-          </FadeUp>
-
-          <FadeUp
-            delay={0.1}
-            amount={0.25}
-            className="overflow-hidden rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur"
-          >
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
-              Servicios estándar
-            </p>
-            <div className="mt-4">
-              <ServiceList list={standardList} />
-            </div>
-          </FadeUp>
-        </div>
-
-        <div className="mt-12">
-          <FadeUp delay={0.05} amount={0.25}>
-            <a
-              href="/corte-de-pelo-hombre-marbella"
-              className="flex items-center justify-between gap-6 overflow-hidden rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur transition hover:bg-white/50 group"
-            >
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
-                  Servicio destacado
-                </p>
-                <h3 className="mt-2 text-[20px] font-semibold uppercase leading-tight tracking-tight text-black sm:text-[26px]">
-                  Corte de pelo hombre en Marbella
-                </h3>
-                <p className="mt-2 text-[12px] leading-6 tracking-[0.04em] text-black/60">
-                  Diagnóstico capilar, visagismo y asesoría personalizada. Descubre el proceso completo.
-                </p>
-              </div>
-              <span className="shrink-0 text-[22px] text-black/40 transition group-hover:translate-x-1">
-                →
-              </span>
-            </a>
-          </FadeUp>
+        <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          {serviceCards.map((card, i) =>
+            card.available ? (
+              <FadeUp key={card.title} delay={i * 0.06} amount={0.2}>
+                <a
+                  href={card.href!}
+                  className="group flex h-full items-start justify-between gap-6 overflow-hidden rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur transition hover:bg-white/50"
+                >
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/55">
+                      {card.kicker}
+                    </p>
+                    <h3 className="mt-2 text-[22px] font-semibold uppercase leading-tight tracking-tight text-black sm:text-[28px]">
+                      {card.title}
+                    </h3>
+                    <p className="mt-3 text-[12px] leading-6 tracking-[0.04em] text-black/60">
+                      {card.description}
+                    </p>
+                    <a
+                      href={BOOKSY_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="btn-reserva mt-6 inline-flex text-[10px] uppercase tracking-[0.22em]"
+                    >
+                      Reservar ahora
+                    </a>
+                  </div>
+                  <span className="shrink-0 text-[22px] text-black/30 transition group-hover:translate-x-1">
+                    →
+                  </span>
+                </a>
+              </FadeUp>
+            ) : (
+              <FadeUp key={card.title} delay={i * 0.06} amount={0.2}>
+                <div className="flex h-full items-start justify-between gap-6 overflow-hidden rounded-3xl border border-black/10 bg-white/20 p-8 backdrop-blur opacity-60">
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/55">
+                      {card.kicker}
+                    </p>
+                    <h3 className="mt-2 text-[22px] font-semibold uppercase leading-tight tracking-tight text-black sm:text-[28px]">
+                      {card.title}
+                    </h3>
+                    <p className="mt-3 text-[12px] leading-6 tracking-[0.04em] text-black/60">
+                      {card.description}
+                    </p>
+                    <span className="mt-6 inline-block rounded-full border border-black/20 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/50">
+                      Próximamente
+                    </span>
+                  </div>
+                </div>
+              </FadeUp>
+            )
+          )}
         </div>
       </div>
     </section>

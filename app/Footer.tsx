@@ -97,12 +97,17 @@ export default function Footer() {
 
             <FadeUp delay={0.14}>
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <a
-                  href={bookUrl}
-                  className="btn-reserva text-[11px] uppercase tracking-[0.22em]"
-                >
-                  Reservar ahora
-                </a>
+                <div className="flex flex-col gap-2">
+                  <a
+                    href={bookUrl}
+                    className="btn-reserva text-[11px] uppercase tracking-[0.22em]"
+                  >
+                    Reservar cita personalizada
+                  </a>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
+                    Reserva online en menos de 1 minuto
+                  </p>
+                </div>
                 <Link
                   href="/contact"
                   className="inline-flex h-12 items-center justify-center rounded-full border border-white/15 bg-transparent px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 hover:text-white hover:border-white/25 transition"
@@ -152,12 +157,10 @@ export default function Footer() {
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
                       Dirección
                     </p>
-                    <a
-                      href="https://maps.app.goo.gl/LBDdNF1UThQGUteD7"
-                      className="mt-2 block text-[12px] leading-6 tracking-[0.06em] text-white/70 hover:underline"
-                    >
-                      C. Eugenio Gross 43, Bailén-Miraflores, 29001 Málaga
-                    </a>
+                    <address className="mt-2 not-italic text-[12px] leading-6 tracking-[0.06em] text-white/70">
+                      C. Padre Enrique Cantos, 2<br />
+                      29602 Marbella, Málaga
+                    </address>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">

@@ -142,9 +142,14 @@ export default function TratamientoFacialClient() {
             transition={{ duration: 0.7, delay: 0.7 }}
             className="mt-8 flex flex-wrap gap-4"
           >
-            <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer" className="btn-reserva px-8 py-4 text-[11px]">
-              Reserva tu tratamiento
-            </a>
+            <div className="flex flex-col gap-1.5">
+              <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer" className="btn-reserva px-8 py-4 text-[11px]">
+                Reserva tu tratamiento
+              </a>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
+                Reserva online en menos de 1 minuto
+              </p>
+            </div>
             <Link
               href="/servicios"
               className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur transition hover:bg-white/20"
@@ -276,7 +281,11 @@ export default function TratamientoFacialClient() {
                 Realizamos un análisis facial para entender el estado real de tu piel. Este análisis forma parte de un enfoque profesional en el cuidado de la piel masculina en Marbella.
               </p>
               <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Con esta información definimos el tratamiento exacto.
+                Con esta información definimos el tratamiento exacto. Este enfoque forma parte del mismo sistema de{" "}
+                <Link href="/diagnostico-capilar-marbella" className="underline underline-offset-2 hover:text-black transition">
+                  diagnóstico capilar y facial
+                </Link>
+                {" "}que aplicamos en todos los servicios.
               </p>
             </FadeUp>
             <FadeUp delay={0.15}>
@@ -406,6 +415,740 @@ export default function TratamientoFacialClient() {
               </div>
             </FadeUp>
           ))}
+        </div>
+      </section>
+
+      {/* ── LIMPIEZA FACIAL PROFUNDA ── */}
+      <section className="bg-[#0f1112] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/30 to-transparent" />
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+              Tratamiento
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
+              Limpieza facial profunda
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-4 max-w-[58ch] text-[13px] leading-7 tracking-[0.04em] text-white/60">
+              Elimina impurezas, limpia los poros y mejora la apariencia de tu piel desde la primera sesión.
+            </p>
+          </FadeUp>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-start">
+
+            {/* Left: problema + método */}
+            <div className="space-y-10">
+              <FadeUp delay={0.1}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El problema
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    La piel acumula grasa, suciedad y células muertas que no siempre se eliminan con el cuidado diario.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Esto provoca poros obstruidos, textura irregular y una apariencia apagada que afecta directamente a cómo se ve tu rostro.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.14}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El método
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Este tratamiento comienza con un diagnóstico facial para identificar el estado real de tu piel.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    A partir de ahí, trabajamos una limpieza profunda utilizando tecnología Foreo, que permite limpiar de forma más eficaz y respetuosa con la piel.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Se eliminan impurezas, se libera el poro y se prepara la piel para recibir hidratación.
+                  </p>
+                </div>
+              </FadeUp>
+            </div>
+
+            {/* Right: qué incluye + resultado + CTA */}
+            <div className="space-y-6">
+              <FadeUp delay={0.12}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Qué incluye
+                  </p>
+                  <ul className="mt-5 space-y-3">
+                    {[
+                      "Diagnóstico facial",
+                      "Limpieza profunda con tecnología Foreo",
+                      "Eliminación de impurezas",
+                      "Trabajo sobre poros",
+                      "Hidratación posterior",
+                      "Aplicación de productos específicos según el tipo de piel",
+                    ].map((step) => (
+                      <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        {step}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.18}>
+                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Resultado
+                  </p>
+                  <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
+                    Una piel más limpia, más uniforme y con mejor apariencia.
+                  </p>
+                  <p className="mt-2 text-[13px] leading-6 tracking-[0.04em] text-white/60 italic">
+                    No solo se ve mejor. Se siente mejor.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.22}>
+                <a
+                  href={BOOKSY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                >
+                  Añadir tratamiento a tu servicio
+                </a>
+              </FadeUp>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── HIDRATACIÓN PROFUNDA ── */}
+      <section className="bg-[#0f1112] py-20 lg:py-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+              Tratamiento
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
+              Hidratación profunda
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-4 max-w-[58ch] text-[13px] leading-7 tracking-[0.04em] text-white/60">
+              Devuelve la elasticidad, mejora la textura y da vida a una piel seca, tirante o apagada.
+            </p>
+          </FadeUp>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div className="space-y-10">
+              <FadeUp delay={0.1}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El problema
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    La piel masculina pierde agua con facilidad. El afeitado frecuente, la exposición al sol y la falta de rutina generan sequedad, tirantez y una apariencia cansada.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Una piel deshidratada también envejece más rápido y tiene menos resistencia a los factores externos.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.14}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El método
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Comenzamos con diagnóstico y limpieza para preparar la piel. Después, aplicamos tecnología Foreo para optimizar la absorción y potenciar los activos hidratantes.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    El tratamiento finaliza con una mascarilla hidratante y cierre con frío para fijar el resultado y mejorar la textura visible de la piel.
+                  </p>
+                </div>
+              </FadeUp>
+            </div>
+
+            <div className="space-y-6">
+              <FadeUp delay={0.12}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Qué incluye
+                  </p>
+                  <ul className="mt-5 space-y-3">
+                    {[
+                      "Diagnóstico facial",
+                      "Limpieza y preparación de la piel",
+                      "Tecnología Foreo para activar la absorción",
+                      "Mascarilla hidratante de alta concentración",
+                      "Sellado con vaporizador frío",
+                      "Activos específicos según tipo de piel",
+                    ].map((step) => (
+                      <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        {step}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.18}>
+                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Resultado
+                  </p>
+                  <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
+                    Piel con mayor elasticidad, mejor textura y apariencia saludable.
+                  </p>
+                  <p className="mt-2 text-[13px] leading-6 tracking-[0.04em] text-white/60 italic">
+                    Se nota diferente. Se siente diferente.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.22}>
+                <a
+                  href={BOOKSY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                >
+                  Reservar tratamiento
+                </a>
+              </FadeUp>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TRATAMIENTO OCULAR ── */}
+      <section className="bg-[#0f1112] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+              Tratamiento
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
+              Tratamiento ocular
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-4 max-w-[58ch] text-[13px] leading-7 tracking-[0.04em] text-white/60">
+              Para ojeras, hinchazón y mirada cansada. La zona periocular es la más delicada y la primera que delata el cansancio.
+            </p>
+          </FadeUp>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div className="space-y-10">
+              <FadeUp delay={0.1}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El problema
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    El contorno de ojos es la zona más fina y sensible del rostro. La falta de descanso, el estrés y la deshidratación se acumulan aquí primero.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Ojeras marcadas, hinchazón y mirada apagada son señales que afectan directamente a la percepción de tu imagen.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.14}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El método
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Aplicamos parches hidratantes específicos para la zona periocular. La tecnología Foreo combinada con LED estimula la microcirculación y activa el drenaje.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    El resultado es una zona más descansada, menos hinchada y con mejor tono desde la primera sesión.
+                  </p>
+                </div>
+              </FadeUp>
+            </div>
+
+            <div className="space-y-6">
+              <FadeUp delay={0.12}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Qué incluye
+                  </p>
+                  <ul className="mt-5 space-y-3">
+                    {[
+                      "Diagnóstico de la zona periocular",
+                      "Parches hidratantes específicos",
+                      "Tecnología Foreo + LED",
+                      "Estimulación de microcirculación",
+                      "Drenaje de la zona con técnica manual",
+                      "Activos despigmentantes y descongestivos",
+                    ].map((step) => (
+                      <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        {step}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.18}>
+                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Resultado
+                  </p>
+                  <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
+                    Mirada más descansada, menos hinchazón y mejor tono en el contorno.
+                  </p>
+                  <p className="mt-2 text-[13px] leading-6 tracking-[0.04em] text-white/60 italic">
+                    Una mirada que comunica presencia.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.22}>
+                <a
+                  href={BOOKSY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                >
+                  Reservar tratamiento
+                </a>
+              </FadeUp>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PURIFICANTE ── */}
+      <section className="bg-[#0f1112] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+              Tratamiento
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
+              Purificante
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-4 max-w-[58ch] text-[13px] leading-7 tracking-[0.04em] text-white/60">
+              Para piel grasa, con brillo excesivo o impurezas visibles. Limpieza profunda con control del equilibrio sebáceo.
+            </p>
+          </FadeUp>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div className="space-y-10">
+              <FadeUp delay={0.1}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El problema
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    El exceso de grasa obstruye los poros y favorece la aparición de impurezas, brillos y una textura irregular que es difícil de controlar solo con el cuidado diario.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Una piel grasa no tratada correctamente puede empeorar con el tiempo y afectar a la uniformidad del tono.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.14}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El método
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Realizamos una limpieza profunda con vaporizador caliente para abrir los poros y facilitar la extracción. La tecnología Foreo actúa sobre la capa superficial eliminando el exceso de sebo.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Una mascarilla purificante completa el proceso, seguida de cierre con frío para reducir los poros y equilibrar la piel.
+                  </p>
+                </div>
+              </FadeUp>
+            </div>
+
+            <div className="space-y-6">
+              <FadeUp delay={0.12}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Qué incluye
+                  </p>
+                  <ul className="mt-5 space-y-3">
+                    {[
+                      "Diagnóstico facial y análisis sebáceo",
+                      "Limpieza profunda con vaporizador caliente",
+                      "Tecnología Foreo para control de grasa",
+                      "Eliminación de impurezas y puntos negros",
+                      "Mascarilla purificante",
+                      "Cierre de poros con vaporizador frío",
+                    ].map((step) => (
+                      <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        {step}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.18}>
+                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Resultado
+                  </p>
+                  <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
+                    Piel más limpia, poros menos visibles y mejor equilibrio sebáceo.
+                  </p>
+                  <p className="mt-2 text-[13px] leading-6 tracking-[0.04em] text-white/60 italic">
+                    Sin brillos. Con control.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.22}>
+                <a
+                  href={BOOKSY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                >
+                  Reservar tratamiento
+                </a>
+              </FadeUp>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── ANTIEDAD ── */}
+      <section className="bg-[#0f1112] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+              Tratamiento
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
+              Antiedad
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-4 max-w-[58ch] text-[13px] leading-7 tracking-[0.04em] text-white/60">
+              Para líneas de expresión, pérdida de firmeza y signos de envejecimiento prematuro. Estimulación activa con tecnología.
+            </p>
+          </FadeUp>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div className="space-y-10">
+              <FadeUp delay={0.1}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El problema
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    A partir de los 30, la producción de colágeno disminuye de forma progresiva. La piel pierde firmeza, aparecen las primeras líneas de expresión y el óvalo facial empieza a perder definición.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Sin un protocolo activo, estos signos se aceleran con el tiempo.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.14}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El método
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Utilizamos tecnología Foreo para estimular la producción de colágeno y mejorar la firmeza desde dentro. La combinación con LED optimiza la regeneración celular.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Una mascarilla reafirmante completa el protocolo, aportando tensión visible y mejorando la elasticidad de la piel de forma progresiva.
+                  </p>
+                </div>
+              </FadeUp>
+            </div>
+
+            <div className="space-y-6">
+              <FadeUp delay={0.12}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Qué incluye
+                  </p>
+                  <ul className="mt-5 space-y-3">
+                    {[
+                      "Diagnóstico de signos de envejecimiento",
+                      "Estimulación con tecnología Foreo",
+                      "Terapia LED para regeneración celular",
+                      "Mascarilla reafirmante de alta concentración",
+                      "Activación celular con activos específicos",
+                      "Protocolo progresivo de sesiones",
+                    ].map((step) => (
+                      <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        {step}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.18}>
+                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Resultado
+                  </p>
+                  <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
+                    Piel con mejor firmeza, menor visibilidad de líneas y aspecto más joven y descansado.
+                  </p>
+                  <p className="mt-2 text-[13px] leading-6 tracking-[0.04em] text-white/60 italic">
+                    El tiempo no se detiene. Pero se puede trabajar.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.22}>
+                <a
+                  href={BOOKSY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                >
+                  Reservar tratamiento
+                </a>
+              </FadeUp>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CALMANTE ── */}
+      <section className="bg-[#0f1112] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+              Tratamiento
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
+              Calmante
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-4 max-w-[58ch] text-[13px] leading-7 tracking-[0.04em] text-white/60">
+              Para pieles sensibles, con rojeces o irritación. Protocolos suaves que restauran el equilibrio de la piel sin agredir.
+            </p>
+          </FadeUp>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div className="space-y-10">
+              <FadeUp delay={0.1}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El problema
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    La piel sensible reacciona con facilidad: rojeces, picor, ardor o sensación de incomodidad después del afeitado o la exposición al sol son señales de una barrera cutánea debilitada.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Usar productos inadecuados o protocolos agresivos empeora la situación. Esta piel necesita delicadeza y activos específicos.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.14}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El método
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Todo el protocolo se adapta a la sensibilidad de tu piel. Limpieza suave, activos calmantes de alta tolerancia y tecnología con parámetros ajustados para no generar reacción.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    El objetivo es reducir la inflamación, restaurar la barrera cutánea y dejar la piel equilibrada y sin molestias.
+                  </p>
+                </div>
+              </FadeUp>
+            </div>
+
+            <div className="space-y-6">
+              <FadeUp delay={0.12}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Qué incluye
+                  </p>
+                  <ul className="mt-5 space-y-3">
+                    {[
+                      "Diagnóstico de sensibilidad cutánea",
+                      "Limpieza suave con productos de alta tolerancia",
+                      "Activos calmantes e ingredientes antiinflamatorios",
+                      "Reducción de rojeces e irritación",
+                      "Restauración de la barrera hidrolipídica",
+                      "Protocolo sin fragancias ni ingredientes agresivos",
+                    ].map((step) => (
+                      <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        {step}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.18}>
+                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Resultado
+                  </p>
+                  <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
+                    Piel equilibrada, sin rojeces ni molestias. Barrera cutánea reforzada.
+                  </p>
+                  <p className="mt-2 text-[13px] leading-6 tracking-[0.04em] text-white/60 italic">
+                    Comodidad desde la primera sesión.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.22}>
+                <a
+                  href={BOOKSY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                >
+                  Reservar tratamiento
+                </a>
+              </FadeUp>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── ILUMINADOR ── */}
+      <section className="bg-[#0f1112] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/30 to-transparent" />
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+              Tratamiento
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
+              Iluminador
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-4 max-w-[58ch] text-[13px] leading-7 tracking-[0.04em] text-white/60">
+              Para piel apagada, sin luminosidad o con tono desigual. Revitalización y uniformidad desde la primera sesión.
+            </p>
+          </FadeUp>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div className="space-y-10">
+              <FadeUp delay={0.1}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El problema
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    La acumulación de células muertas, la falta de renovación celular y el estrés generan una piel apagada, sin vida y con un tono irregular que resta presencia.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    No es un problema grave, pero afecta notablemente al aspecto global del rostro y a la primera impresión que das.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.14}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    El método
+                  </p>
+                  <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Comenzamos con una limpieza y exfoliación ligera para eliminar las células muertas que opacan la piel. La tecnología activa la renovación celular y mejora el tono.
+                  </p>
+                  <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/65">
+                    Una mascarilla revitalizante con activos iluminadores completa el protocolo, aportando uniformidad y brillo saludable de forma inmediata.
+                  </p>
+                </div>
+              </FadeUp>
+            </div>
+
+            <div className="space-y-6">
+              <FadeUp delay={0.12}>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Qué incluye
+                  </p>
+                  <ul className="mt-5 space-y-3">
+                    {[
+                      "Diagnóstico de tono y luminosidad",
+                      "Limpieza + exfoliación ligera",
+                      "Activación de la renovación celular",
+                      "Tecnología para uniformizar el tono",
+                      "Mascarilla revitalizante con activos iluminadores",
+                      "Hidratación de cierre para fijar el resultado",
+                    ].map((step) => (
+                      <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        {step}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.18}>
+                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                    Resultado
+                  </p>
+                  <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
+                    Piel más uniforme, luminosa y revitalizada. Tono equilibrado con efecto inmediato.
+                  </p>
+                  <p className="mt-2 text-[13px] leading-6 tracking-[0.04em] text-white/60 italic">
+                    Tu piel, en su mejor versión.
+                  </p>
+                </div>
+              </FadeUp>
+
+              <FadeUp delay={0.22}>
+                <a
+                  href={BOOKSY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                >
+                  Reservar tratamiento
+                </a>
+              </FadeUp>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -651,6 +1394,77 @@ export default function TratamientoFacialClient() {
                 </div>
               </FadeUp>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIOS ── */}
+      <section className="bg-[#ece8de] py-20 lg:py-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
+              Clientes reales
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
+              Lo que dicen clientes que ya lo han probado
+            </h2>
+          </FadeUp>
+
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              "Pensaba que todos los tratamientos faciales eran iguales... hasta que probé este.",
+              "Se nota que aquí no improvisan, todo tiene un porqué.",
+              "Después de este servicio, mi piel cambió completamente.",
+              "No es un tratamiento más, es otra forma de cuidar la imagen.",
+              "La diferencia con otros sitios es que aquí primero analizan, luego actúan.",
+            ].map((quote, i) => (
+              <FadeUp key={i} delay={i * 0.05} className="rounded-3xl border border-black/10 bg-white/60 p-7">
+                <p className="text-[13px] leading-7 tracking-[0.04em] text-black/70 italic">
+                  &ldquo;{quote}&rdquo;
+                </p>
+                <div className="mt-5 h-px bg-black/10" />
+                <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/35">
+                  Cliente · Marbella
+                </p>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ANTES DE RESERVAR ── */}
+      <section className="bg-[#0f1112] py-20 lg:py-28">
+        <div className="mx-auto max-w-4xl px-6">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+              Resuelve tus dudas
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
+              Antes de reservar
+            </h2>
+          </FadeUp>
+
+          <div className="mt-12 space-y-0">
+            {[
+              { q: "¿Qué incluye exactamente el servicio?", a: "Incluye diagnóstico, diseño personalizado, ejecución técnica y recomendación final adaptada a cada cliente." },
+              { q: "¿Cuánto dura el servicio?", a: "Depende del servicio, pero en general entre 45 minutos y 1 hora y media, ya que no es un servicio rápido, sino trabajado." },
+              { q: "¿Este servicio es para cualquier persona?", a: "Sí, pero especialmente para quienes buscan mejorar su imagen y no quieren un resultado genérico." },
+              { q: "¿Por qué no se muestra el precio en la web?", a: "Porque cada servicio está pensado como una experiencia completa. Puedes ver todos los detalles y seleccionar tu servicio directamente en la reserva online." },
+              { q: "¿Puedo añadir tratamientos?", a: "Sí, puedes complementar tu servicio con tratamientos faciales para mejorar el resultado final." },
+            ].map((item, i) => (
+              <FadeUp key={i} delay={i * 0.05} className="border-b border-white/10 py-8">
+                <p className="text-[14px] font-semibold uppercase tracking-widest text-white">
+                  {item.q}
+                </p>
+                <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/60">
+                  {item.a}
+                </p>
+              </FadeUp>
+            ))}
           </div>
         </div>
       </section>
