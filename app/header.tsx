@@ -13,6 +13,7 @@ const nav = [
     { label: "Barba", href: "/arreglo-de-barba-marbella" },
     { label: "Tratamiento Facial", href: "/tratamiento-facial-hombre-marbella" },
     { label: "Diagnóstico Capilar", href: "/diagnostico-capilar-marbella" },
+    { label: "Tratamiento Capilar", href: "/tratamiento-capilar-hombre-marbella" },
     { label: "Barbería Marbella", href: "/barberia-marbella" },
   ] },
   { label: "Galería", href: "/#gallery" },

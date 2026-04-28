@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -31,29 +31,59 @@ function FadeUp({
 const SERVICES = [
   {
     kicker: "Corte de pelo",
-    title: "Corte de Pelo",
+    h2: "Corte de pelo en Marbella",
     description:
-      "Corte adaptado al estilo del cliente, trabajado con precisión y atención al detalle.",
+      "Corte de pelo para hombre en Marbella adaptado a tu tipo de cabello, forma del rostro y estilo personal. Trabajamos con precisión para lograr un resultado limpio, natural y fácil de mantener.",
     cta: "Reservar corte",
-    href: "/corte-de-pelo-hombre-marbella",
+    microText: "¿Quieres mejorar también la salud de tu cabello?",
+    microLabel: "Ver diagnóstico capilar →",
+    microHref: "/diagnostico-capilar-marbella",
+    waPage: "barberia-marbella-corte",
   },
   {
     kicker: "Arreglo de barba",
-    title: "Arreglo de Barba",
+    h2: "Arreglo de barba en Marbella",
     description:
-      "Perfilado y arreglo de barba para mantener una imagen limpia y cuidada.",
+      "Perfilado y arreglo de barba en Marbella con técnicas de precisión para definir líneas, equilibrar proporciones y mejorar tu imagen de forma natural.",
     cta: "Reservar barba",
-    href: "/arreglo-de-barba-marbella",
+    microText: "¿Buscas un cuidado más completo para tu piel?",
+    microLabel: "Ver tratamiento facial →",
+    microHref: "/tratamiento-facial-hombre-marbella",
+    waPage: "barberia-marbella-barba",
   },
   {
     kicker: "Servicio combinado",
-    title: "Corte + Barba",
+    h2: "Corte y barba en Marbella",
     description:
-      "Servicio combinado para trabajar el conjunto de la imagen de forma equilibrada.",
-    cta: "Reservar corte + barba",
-    href: "/barberia-marbella-corte-barba",
+      "Servicio completo de corte de pelo y barba en Marbella diseñado para conseguir una imagen equilibrada, limpia y adaptada a tu estilo. Precisión en cada detalle para un resultado profesional.",
+    cta: "Reservar servicio completo",
+    microText: "Lleva tu imagen al siguiente nivel",
+    microLabel: "Ver tratamientos premium →",
+    microHref: "/tratamiento-facial-hombre-marbella",
+    waPage: "barberia-marbella-corte-barba",
   },
 ];
+
+const REVIEWS = [
+  {
+    name: "Carlos M.",
+    text: "Servicio impecable, el corte dura semanas perfecto.",
+  },
+  {
+    name: "Javier R.",
+    text: "Por fin encontré un barbero que entiende lo que quiero.",
+  },
+  {
+    name: "Luis G.",
+    text: "Profesionalismo y detalle desde que entras hasta que sales.",
+  },
+];
+
+function Stars() {
+  return (
+    <span className="text-[#f8aa00] tracking-tight text-sm">★★★★★</span>
+  );
+}
 
 export default function BarberiaMarbellaClient() {
   return (
@@ -149,7 +179,7 @@ export default function BarberiaMarbellaClient() {
       </section>
 
       {/* ── SERVICIOS ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="relative bg-[#0f1112] py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/30 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
@@ -165,70 +195,104 @@ export default function BarberiaMarbellaClient() {
 
           <div className="mt-14 grid gap-6 sm:grid-cols-3">
             {SERVICES.map((s, i) => (
-              <FadeUp key={s.title} delay={i * 0.08} className="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-8">
+              <FadeUp key={s.h2} delay={i * 0.08} className="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-8">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
                   {s.kicker}
                 </p>
-                <h3 className="mt-3 text-[22px] font-semibold uppercase leading-tight tracking-tight text-white">
-                  {s.title}
+                <h3 className="mt-3 text-[20px] font-semibold uppercase leading-tight tracking-tight text-white">
+                  {s.h2}
                 </h3>
                 <p className="mt-4 flex-1 text-[12px] leading-6 tracking-[0.04em] text-white/55">
                   {s.description}
                 </p>
                 <div className="mt-8 flex flex-col gap-3">
                   <a
-                    href={BOOKSY_URL}
+                    href={buildWaUrl(s.waPage)}
                     target="_blank"
                     rel="noopener noreferrer"
                     data-cta="whatsapp-asesoria"
-                    data-page="barberia-marbella"
+                    data-page={s.waPage}
                     className="flex items-center justify-center rounded-full bg-[#f8aa00] px-6 py-3.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300]"
                   >
                     {s.cta}
                   </a>
-                  <Link
-                    href={s.href}
-                    className="flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/60 transition hover:border-white/30 hover:text-white/80"
-                  >
-                    Ver detalles →
-                  </Link>
+                  <div className="mt-1 border-t border-white/8 pt-4">
+                    <p className="text-[10px] leading-5 tracking-[0.04em] text-white/40">
+                      {s.microText}
+                    </p>
+                    <Link
+                      href={s.microHref}
+                      className="mt-1.5 inline-block text-[10px] font-semibold uppercase tracking-[0.18em] text-[#f8aa00]/70 transition hover:text-[#f8aa00]"
+                    >
+                      {s.microLabel}
+                    </Link>
+                  </div>
                 </div>
               </FadeUp>
             ))}
           </div>
         </div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/30 to-transparent" />
+      </section>
+
+      {/* ── RESEÑAS ── */}
+      <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
+        <FadeUp>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/55">
+            Lo que dicen nuestros clientes
+          </p>
+        </FadeUp>
+        <FadeUp delay={0.05}>
+          <h2 className="mt-3 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[40px]">
+            Opiniones reales
+          </h2>
+        </FadeUp>
+        <div className="mt-10 grid gap-5 sm:grid-cols-3">
+          {REVIEWS.map((r, i) => (
+            <FadeUp key={r.name} delay={i * 0.07} className="flex flex-col rounded-3xl border border-black/10 bg-white/40 p-7">
+              <Stars />
+              <p className="mt-4 flex-1 text-[13px] leading-6 tracking-[0.03em] text-black/70 italic">
+                "{r.text}"
+              </p>
+              <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/50">
+                {r.name}
+              </p>
+            </FadeUp>
+          ))}
+        </div>
       </section>
 
       {/* ── TRANSICIÓN PREMIUM ── */}
-      <section className="mx-auto max-w-4xl px-6 py-20 lg:py-28 text-center">
-        <FadeUp>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/55">
-            Más allá del mantenimiento
-          </p>
-        </FadeUp>
-        <FadeUp delay={0.06}>
-          <h2 className="mt-4 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[44px] lg:text-[52px]">
-            Una forma más completa de trabajar tu imagen
-          </h2>
-        </FadeUp>
-        <FadeUp delay={0.12}>
-          <p className="mx-auto mt-7 max-w-[58ch] text-[13px] leading-7 tracking-[0.04em] text-black/60">
-            Si buscas algo más que un mantenimiento, trabajamos servicios premium donde cada detalle se analiza y se diseña en función de tu rostro, tu cabello y tu piel.
-          </p>
-          <p className="mx-auto mt-4 max-w-[52ch] text-[13px] leading-7 tracking-[0.04em] text-black/60">
-            No se trata solo de cortar o perfilar. Se trata de entender qué te favorece y cómo mejorar tu imagen de forma real.
-          </p>
-        </FadeUp>
-        <FadeUp delay={0.18}>
-          <div className="mt-10 flex justify-center">
-            <Link
-              href="/servicios"
-              className="inline-flex items-center justify-center rounded-full border border-black/20 bg-black/5 px-10 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-black/10 hover:border-black/35"
-            >
-              Ver servicios premium →
-            </Link>
-          </div>
-        </FadeUp>
+      <section className="relative bg-[#0f1112] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/20 to-transparent" />
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/40">
+              Más allá del mantenimiento
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.06}>
+            <h2 className="mt-4 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[44px] lg:text-[52px]">
+              Una forma más completa de trabajar tu imagen
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.12}>
+            <p className="mx-auto mt-7 max-w-[58ch] text-[13px] leading-7 tracking-[0.04em] text-white/55">
+              Si buscas algo más que un mantenimiento, trabajamos servicios premium donde cada detalle se analiza y se diseña en función de tu rostro, tu cabello y tu piel.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.18}>
+            <div className="mt-10 flex justify-center">
+              <Link
+                href="/servicios"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-10 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 transition hover:bg-white/10 hover:border-white/35 hover:text-white"
+              >
+                Ver servicios premium →
+              </Link>
+            </div>
+          </FadeUp>
+        </div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/20 to-transparent" />
       </section>
 
       {/* ── CTA FINAL ── */}
