@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 
-const BOOKSY_URL = "https://wa.me/34672516317";
+import { buildWaUrl } from "@/lib/cta";
+
+const BOOKSY_URL = buildWaUrl("servicios");
 
 function FadeUp({
   children,
@@ -115,10 +117,12 @@ export default function ServicesSection() {
                       href={BOOKSY_URL}
                       target="_blank"
                       rel="noreferrer"
+                      data-cta="whatsapp-asesoria"
+                      data-page="servicios"
                       onClick={(e) => e.stopPropagation()}
                       className="btn-reserva mt-6 inline-flex text-[10px] uppercase tracking-[0.22em]"
                     >
-                      Reservar ahora
+                      Solicitar asesoría
                     </a>
                   </div>
                   <span className="shrink-0 text-[22px] text-black/30 transition group-hover:translate-x-1">

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
+import { buildWaUrl } from "@/lib/cta";
 
 type TeamSpotlightProps = {
   kicker?: string;
@@ -38,7 +39,7 @@ export default function TeamSpotlight({
 }: TeamSpotlightProps) {
   return (
     <section id="team" className="relative overflow-hidden bg-[#7f949b] text-black">
-      <div className="mx-auto min-h-[100svh] max-w-6xl px-6 py-16 lg:py-20">
+      <div className="mx-auto min-h-svh max-w-6xl px-6 py-16 lg:py-20">
         {/* TOP MICROCOPY */}
         <div className="mx-auto max-w-xl text-center">
           <motion.p
@@ -79,7 +80,7 @@ export default function TeamSpotlight({
         <div className="relative mt-12 flex flex-col items-center">
           {/* BIG NAME BEHIND */}
           <motion.div
-            className="pointer-events-none absolute left-1/2 top-0 w-[320px] -translate-x-1/2 text-center sm:w-[480px] lg:w-[1200px]"
+            className="pointer-events-none absolute left-1/2 top-0 w-[320px] -translate-x-1/2 text-center sm:w-120 lg:w-300"
             variants={reveal}
             initial="hidden"
             whileInView="show"
@@ -95,7 +96,7 @@ export default function TeamSpotlight({
 
           {/* PHOTO */}
           <motion.div
-            className="relative mt-32 w-[260px] sm:w-[280px] lg:mt-56 lg:w-[300px]"
+            className="relative mt-32 w-65 sm:w-70 lg:mt-56 lg:w-75"
             variants={reveal}
             initial="hidden"
             whileInView="show"
@@ -126,9 +127,11 @@ export default function TeamSpotlight({
 
           {/* CTA BUTTON */}
           <motion.a
-            href="https://wa.me/34672516317"
+            href={buildWaUrl("team")}
             target="_blank"
             rel="noopener noreferrer"
+            data-cta="whatsapp-asesoria"
+            data-page="team"
             className="btn-reserva mt-16 text-[11px] uppercase tracking-[0.22em]"
             variants={reveal}
             initial="hidden"

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { buildWaUrl } from "@/lib/cta";
 
 function FadeUp({
   children,
@@ -28,8 +29,7 @@ function FadeUp({
 }
 
 export default function Footer() {
-  const bookUrl =
-    "https://wa.me/34672516317";
+  const bookUrl = buildWaUrl("footer");
 
   return (
     <footer className="relative overflow-hidden bg-[#0f1112] text-white">
@@ -100,6 +100,10 @@ export default function Footer() {
                 <div className="flex flex-col gap-2">
                   <a
                     href={bookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-cta="whatsapp-asesoria"
+                    data-page="footer"
                     className="btn-reserva text-[11px] uppercase tracking-[0.22em]"
                   >
                     Reservar cita personalizada
@@ -169,7 +173,11 @@ export default function Footer() {
                         WhatsApp
                       </p>
                       <a
-                        href="https://wa.me/34672516317"
+                        href={bookUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-cta="whatsapp-asesoria"
+                        data-page="footer"
                         className="mt-2 flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-white/75 hover:text-white"
                       >
                         <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -234,6 +242,10 @@ export default function Footer() {
               </a>
               <a
                 href={bookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="footer"
                 className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45 hover:text-white/70"
               >
                 WhatsApp

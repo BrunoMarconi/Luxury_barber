@@ -1,10 +1,11 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { buildWaUrl } from "@/lib/cta";
 
-const BOOKSY_URL = "https://wa.me/34672516317";
+const BOOKSY_URL = buildWaUrl("corte-barba");
 
 function FadeUp({
   children,
@@ -141,9 +142,11 @@ export default function CorteBarbaClient() {
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="corte-barba"
                 className="inline-flex items-center justify-center rounded-full bg-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300]"
               >
-                Reservar experiencia premium
+                Solicitar asesoría personalizada
               </a>
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
                 Reserva online en menos de 1 minuto
@@ -262,9 +265,11 @@ export default function CorteBarbaClient() {
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta="whatsapp-asesoria"
+                  data-page="corte-barba"
                   className="mt-10 inline-flex items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
                 >
-                  Reservar experiencia premium
+                  Solicitar asesoría personalizada
                 </a>
               </FadeUp>
             </div>
@@ -563,9 +568,11 @@ export default function CorteBarbaClient() {
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="corte-barba"
                 className="w-full rounded-full bg-[#f8aa00] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300] sm:w-auto"
               >
-                Reservar experiencia premium
+                Solicitar asesoría personalizada
               </a>
               <Link
                 href="/corte-de-pelo-hombre-marbella"

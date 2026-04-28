@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { buildWaUrl } from "@/lib/cta";
 
 const nav = [
   { label: "Equipo", href: "/#team" },
@@ -20,8 +21,7 @@ const nav = [
   { label: "Contacto", href: "/contact" },
 ];
 
-const BOOKSY_URL =
-  "https://wa.me/34672516317";
+const BOOKSY_URL = buildWaUrl("header");
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -108,6 +108,10 @@ export default function Header() {
           ))}
           <a
             href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-asesoria"
+            data-page="header"
             className="btn-reserva text-xs uppercase tracking-[0.22em] ml-4"
           >
             Reservar ahora
@@ -206,6 +210,10 @@ export default function Header() {
 
                 <a
                   href={BOOKSY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta="whatsapp-asesoria"
+                  data-page="header"
                   className="btn-reserva text-[10px] uppercase tracking-[0.22em] w-full sm:w-auto"
                 >
                   Reservar ahora

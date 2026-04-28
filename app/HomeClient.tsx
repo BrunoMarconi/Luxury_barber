@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Head from "next/head";
 import Image from "next/image";
@@ -6,10 +6,9 @@ import { motion } from "framer-motion";
 import TeamSpotlight from "./TeamSpotlight";
 import GallerySection from "./GallerySection";
 import ReviewsSection from "./reseñas";
+import { buildWaUrl } from "@/lib/cta";
 
-// external booking link used in header/footer; reused here for mobile CTA
-const BOOKSY_URL =
-  "https://wa.me/34672516317";
+const BOOKSY_URL = buildWaUrl("home");
 
 type HeroSplitProps = {
   leftImageSrc: string;
@@ -404,9 +403,11 @@ function AuthorityBlock() {
               href={BOOKSY_URL}
               target="_blank"
               rel="noreferrer"
+              data-cta="whatsapp-asesoria"
+              data-page="home"
               className="mt-10 inline-flex items-center justify-center rounded-full border border-[#f8aa00] bg-transparent px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
             >
-              Reservar experiencia premium
+              Solicitar asesoría personalizada
             </motion.a>
           </div>
 
@@ -501,14 +502,18 @@ function ClosingCTA() {
             href={BOOKSY_URL}
             target="_blank"
             rel="noreferrer"
+            data-cta="whatsapp-asesoria"
+            data-page="home"
             className="w-full rounded-full bg-[#f8aa00] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300] sm:w-auto"
           >
-            Reservar experiencia premium
+            Solicitar asesoría personalizada
           </a>
           <a
             href={BOOKSY_URL}
             target="_blank"
             rel="noreferrer"
+            data-cta="whatsapp-asesoria"
+            data-page="home"
             className="w-full rounded-full border border-white/25 bg-transparent px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white/80 transition hover:border-white/50 hover:text-white sm:w-auto"
           >
             Consultar disponibilidad
@@ -610,9 +615,11 @@ function HeroSplit({
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="home"
                 className="inline-flex items-center justify-center rounded-full bg-[#f8aa00] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-[#e69300]"
               >
-                Reservar experiencia premium
+                Solicitar asesoría personalizada
               </a>
               <a
                 href="/corte-de-pelo-hombre-marbella"

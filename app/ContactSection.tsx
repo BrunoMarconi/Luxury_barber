@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { buildWaUrl } from "@/lib/cta";
+
+const WA_CONTACT = buildWaUrl("contacto");
 
 function FadeUp({
   children,
@@ -31,8 +34,8 @@ export default function ContactSection() {
     <section className="relative overflow-hidden bg-[#7f949b] text-white">
       {/* fondo sutil */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.10]">
-        <div className="absolute -top-24 left-10 h-[520px] w-[520px] rounded-full bg-white" />
-        <div className="absolute -bottom-40 right-0 h-[620px] w-[620px] rounded-full bg-white" />
+        <div className="absolute -top-24 left-10 h-130 w-130 rounded-full bg-white" />
+        <div className="absolute -bottom-40 right-0 h-155 w-155 rounded-full bg-white" />
       </div>
 
       <div className="mx-auto max-w-6xl px-6 py-20 lg:py-24">
@@ -55,7 +58,7 @@ export default function ContactSection() {
           <FadeUp delay={0.1}>
             <p className="max-w-[62ch] text-[12px] leading-6 tracking-[0.06em] text-white/60">
               Escríbenos con lo que necesitas y te respondemos rápido. Para
-              reservar directamente, haz clic en el botón de "Reservar ahora" en la página principal o visita nuestro <a href="https://wa.me/34672516317" className="underline hover:text-white/80 transition-colors">WhatsApp</a>.
+              reservar directamente, haz clic en el botón de "Reservar ahora" en la página principal o visita nuestro <a href={WA_CONTACT} target="_blank" rel="noopener noreferrer" data-cta="whatsapp-asesoria" data-page="contacto" className="underline hover:text-white/80 transition-colors">WhatsApp</a>.
             </p>
           </FadeUp>
         </div>
@@ -76,7 +79,11 @@ export default function ContactSection() {
                       WhatsApp
                     </p>
                     <a
-                      href="https://wa.me/34672516317"
+                      href={WA_CONTACT}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cta="whatsapp-asesoria"
+                      data-page="contacto"
                       className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/90 hover:text-white"
                     >
                       Envíanos un mensaje
@@ -145,10 +152,14 @@ export default function ContactSection() {
 
             <FadeUp delay={0.15} amount={0.25}>
               <a
-                href="https://wa.me/34672516317"
+                href={WA_CONTACT}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="contacto"
                 className="btn-reserva w-full text-[11px] uppercase tracking-[0.22em]"
               >
-                Reservar ahora
+                Solicitar asesoría personalizada
               </a>
             </FadeUp>
           </div>
@@ -238,7 +249,7 @@ export default function ContactSection() {
                   </span>
                   <textarea
                     name="message"
-                    className="min-h-[140px] resize-none rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-[12px] leading-6 tracking-[0.06em] text-white placeholder:text-white/35 outline-none focus:border-white/25"
+                    className="min-h-35 resize-none rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-[12px] leading-6 tracking-[0.06em] text-white placeholder:text-white/35 outline-none focus:border-white/25"
                     placeholder="Cuéntanos qué quieres reservar..."
                     required
                   />

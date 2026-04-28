@@ -1,10 +1,11 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { buildWaUrl } from "@/lib/cta";
 
-const BOOKSY_URL = "https://wa.me/34672516317";
+const BOOKSY_URL = buildWaUrl("tratamiento-facial");
 
 function FadeUp({
   children,
@@ -236,6 +237,8 @@ export default function TratamientoFacialClient() {
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta="whatsapp-asesoria"
+                  data-page="tratamiento-facial"
                   className="mt-10 inline-flex items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
                 >
                   Consulta tu cita
@@ -518,6 +521,8 @@ export default function TratamientoFacialClient() {
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta="whatsapp-asesoria"
+                  data-page="tratamiento-facial"
                   className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
                 >
                   Añadir tratamiento a tu servicio
@@ -622,9 +627,11 @@ export default function TratamientoFacialClient() {
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta="whatsapp-asesoria"
+                  data-page="tratamiento-facial"
                   className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
                 >
-                  Reservar tratamiento
+                  Solicitar asesoría personalizada
                 </a>
               </FadeUp>
             </div>
@@ -726,9 +733,11 @@ export default function TratamientoFacialClient() {
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta="whatsapp-asesoria"
+                  data-page="tratamiento-facial"
                   className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
                 >
-                  Reservar tratamiento
+                  Solicitar asesoría personalizada
                 </a>
               </FadeUp>
             </div>
@@ -830,9 +839,11 @@ export default function TratamientoFacialClient() {
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta="whatsapp-asesoria"
+                  data-page="tratamiento-facial"
                   className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
                 >
-                  Reservar tratamiento
+                  Solicitar asesoría personalizada
                 </a>
               </FadeUp>
             </div>
@@ -934,9 +945,11 @@ export default function TratamientoFacialClient() {
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta="whatsapp-asesoria"
+                  data-page="tratamiento-facial"
                   className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
                 >
-                  Reservar tratamiento
+                  Solicitar asesoría personalizada
                 </a>
               </FadeUp>
             </div>
@@ -1038,9 +1051,11 @@ export default function TratamientoFacialClient() {
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta="whatsapp-asesoria"
+                  data-page="tratamiento-facial"
                   className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
                 >
-                  Reservar tratamiento
+                  Solicitar asesoría personalizada
                 </a>
               </FadeUp>
             </div>
@@ -1142,9 +1157,11 @@ export default function TratamientoFacialClient() {
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta="whatsapp-asesoria"
+                  data-page="tratamiento-facial"
                   className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
                 >
-                  Reservar tratamiento
+                  Solicitar asesoría personalizada
                 </a>
               </FadeUp>
             </div>
@@ -1496,6 +1513,8 @@ export default function TratamientoFacialClient() {
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="tratamiento-facial"
                 className="inline-flex items-center justify-center rounded-full border border-transparent bg-black px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-white shadow-lg transition hover:bg-black/80 hover:-translate-y-0.5"
               >
                 Reserva tu tratamiento
@@ -1504,9 +1523,11 @@ export default function TratamientoFacialClient() {
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="tratamiento-facial"
                 className="inline-flex items-center justify-center rounded-full border border-black bg-transparent px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-black/10 hover:-translate-y-0.5"
               >
-                Reservar en Booksy
+                Solicitar asesoría personalizada
               </a>
             </div>
           </FadeUp>

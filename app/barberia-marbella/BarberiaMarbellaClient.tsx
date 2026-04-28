@@ -1,9 +1,10 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { buildWaUrl } from "@/lib/cta";
 
-const BOOKSY_URL = "https://wa.me/34672516317";
+const BOOKSY_URL = buildWaUrl("barberia-marbella");
 
 function FadeUp({
   children,
@@ -61,7 +62,7 @@ export default function BarberiaMarbellaClient() {
       {/* ── HERO ── */}
       <section className="relative overflow-hidden bg-[#0f1112] pt-36 pb-24 lg:pt-44 lg:pb-32">
         <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
-          <div className="absolute -top-32 left-1/2 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-[#f8aa00]" />
+          <div className="absolute -top-32 left-1/2 h-140 w-140 -translate-x-1/2 rounded-full bg-[#f8aa00]" />
         </div>
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/25 to-transparent" />
 
@@ -104,6 +105,8 @@ export default function BarberiaMarbellaClient() {
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="barberia-marbella"
                 className="inline-flex items-center justify-center rounded-full bg-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300]"
               >
                 Reservar servicio
@@ -177,6 +180,8 @@ export default function BarberiaMarbellaClient() {
                     href={BOOKSY_URL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-cta="whatsapp-asesoria"
+                    data-page="barberia-marbella"
                     className="flex items-center justify-center rounded-full bg-[#f8aa00] px-6 py-3.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300]"
                   >
                     {s.cta}
@@ -252,6 +257,8 @@ export default function BarberiaMarbellaClient() {
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="barberia-marbella"
                 className="w-full rounded-full bg-[#f8aa00] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300] sm:w-auto"
               >
                 Reservar cita
