@@ -77,13 +77,13 @@ export default function ServicesSection() {
           <div>
             <FadeUp delay={0}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
-                Servicios personalizados
+                Experiencias personalizadas
               </p>
             </FadeUp>
 
             <FadeUp delay={0.05}>
               <h2 className="mt-3 text-[44px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[56px] lg:text-[72px]">
-                Servicios
+                EXPERIENCIAS
               </h2>
             </FadeUp>
           </div>

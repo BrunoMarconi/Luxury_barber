@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     "barbería premium Marbella",
     "corte masculino Marbella",
   ],
+  verification: {
+    google: "_Q840UH0Q123EINVdWheQidpFbrY4Pj4kv96QtoT8zQ",
+  },
   metadataBase: new URL("https://theprofessionalbarber.es"),
   openGraph: {
     title: "Barbería en Marbella | El Barbero Profesional",
