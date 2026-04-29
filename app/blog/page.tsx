@@ -13,7 +13,7 @@ export default function BlogPage() {
   const posts = getPosts();
 
   return (
-    <main className="min-h-screen bg-[#ece8de] text-black">
+    <main className="min-h-screen bg-[#F5F5F5] text-black">
       <div className="mx-auto max-w-6xl px-6 pt-28 pb-20">
 
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">

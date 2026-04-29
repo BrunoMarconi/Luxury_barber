@@ -1,54 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F5F5F5;
+  --foreground: #0A0A0A;
+  --accent: #0F2A44;
+  --accent-hover: #1a3d5c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ── Base typography ── */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+/* ── Primary button ── */
 .btn-reserva {
-  @apply inline-flex items-center justify-center rounded-full border border-transparent bg-[#f8aa00] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-black shadow-lg shadow-black/20 transition-all duration-200;
+  @apply inline-flex items-center justify-center rounded-full border border-transparent bg-[#C9A84C] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0A0A0A] shadow-lg shadow-black/20 transition-all duration-200;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
 }
 
 .btn-reserva:hover {
-  @apply bg-[#e69300] -translate-y-0.5;
+  @apply bg-[#B8962A] -translate-y-0.5;
 }
 
 .btn-reserva:focus-visible {
-  @apply outline outline-2 outline-offset-2 outline-[#f8aa00];
+  @apply outline outline-2 outline-offset-2 outline-[#C9A84C];
 }
 
+/* ── Blog/article content links ── */
 .article-content a {
-  color: #1d4ed8 !important;
+  color: #0F2A44 !important;
   text-decoration: underline !important;
   text-underline-offset: 2px !important;
   font-weight: 600;
 }
 
 .article-content a:hover {
-  color: #1e40af !important;
+  color: #1a3d5c !important;
 }
 
 .article-content ul li a {
-  color: #1d4ed8 !important;
+  color: #0F2A44 !important;
   text-decoration: underline !important;
 }

@@ -16,11 +16,13 @@ export async function generateMetadata({
     return {};
   }
   const url = `https://your-domain.com/blog/${post.slug}`;
+  const metadataTitle = post.seoTitle || post.title;
+
   return {
-    title: post.title,
+    title: metadataTitle,
     description: post.excerpt,
     openGraph: {
-      title: post.title,
+      title: metadataTitle,
       description: post.excerpt,
       url,
       type: "article",
@@ -34,7 +36,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: metadataTitle,
       description: post.excerpt,
       images: [post.cover || "/images/og-image.jpg"],
     },
@@ -121,7 +123,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const relatedPosts = getPosts().filter((p) => relatedSlugs.includes(p.slug));
 
   return (
-    <main className="min-h-screen bg-[#ece8de] text-black">
+    <main className="min-h-screen bg-[#F5F5F5] text-black">
       <article className="mx-auto max-w-3xl px-6 pt-28 pb-24">
 
         <div className="flex items-center gap-3 rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-black/75">

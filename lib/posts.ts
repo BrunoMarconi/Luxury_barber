@@ -7,6 +7,7 @@ const postsDirectory = path.join(process.cwd(), "content/blog");
 export type Post = {
   slug: string;
   title: string;
+  seoTitle?: string;
   excerpt: string;
   date: string;
   category: string;
@@ -27,6 +28,7 @@ export function getPosts(): Post[] {
     return {
       slug,
       title: data.title,
+      seoTitle: data.seoTitle,
       excerpt: data.excerpt || data.description || "",
       date: data.date,
       category: data.category,
@@ -57,6 +59,7 @@ export function getPost(slug: string): PostDetail | null {
     return {
       slug,
       title: data.title || "",
+      seoTitle: data.seoTitle,
       excerpt: data.excerpt || data.description || "",
       date: data.date || "",
       category: data.category || "",

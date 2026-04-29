@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "./header";
@@ -7,14 +7,18 @@ import Footer from "./Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
 });
 
 // default metadata used across all pages; individual pages can override/extend
@@ -72,7 +76,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.variable} ${inter.variable} antialiased`}
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>

@@ -38,7 +38,7 @@ export default function TeamSpotlight({
   imageSrc,
 }: TeamSpotlightProps) {
   return (
-    <section id="team" className="relative overflow-hidden bg-[#7f949b] text-black">
+    <section id="team" className="relative overflow-hidden bg-[#0A0A0A] text-white">
       <div className="mx-auto min-h-svh max-w-6xl px-6 py-16 lg:py-20">
         {/* TOP MICROCOPY */}
         <div className="mx-auto max-w-xl text-center">

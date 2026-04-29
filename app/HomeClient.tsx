@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Head from "next/head";
 import Image from "next/image";
@@ -29,7 +29,7 @@ function RightPanel({ className }: { className?: string }) {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4, duration: 0.9 }}
-      className={`relative bg-[#ece8de] lg:min-h-[100svh] ${className ?? ""}`}
+      className={`relative bg-[#F5F5F5] lg:min-h-[100svh] ${className ?? ""}`}
     >
       <div className="mx-auto flex h-full max-w-md flex-col px-6 pt-24 pb-24 lg:pt-28">
         <div className="mt-6 flex flex-1 flex-col items-center justify-center text-center">
@@ -147,7 +147,7 @@ const differentiationCards = [
 
 function DifferentiationBlock() {
   return (
-    <section className="bg-[#0f1112] py-24 lg:py-32">
+    <section className="bg-[#0A0A0A] py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20 lg:items-start">
 
@@ -158,7 +158,7 @@ function DifferentiationBlock() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/70">
               El método
             </p>
             <h2 className="mt-4 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[42px] lg:text-[52px]">
@@ -190,7 +190,7 @@ function DifferentiationBlock() {
                 transition={{ duration: 0.7, delay: i * 0.08 }}
                 className="rounded-2xl border border-white/10 bg-white/5 p-6"
               >
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#f8aa00]/30 bg-[#f8aa00]/10 text-[#f8aa00]">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#0F2A44]/30 bg-[#0F2A44]/10 text-white/70">
                   {card.icon}
                 </span>
                 <h3 className="mt-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-white">
@@ -278,7 +278,7 @@ const experienceSteps = [
 
 function ExperienceBlock() {
   return (
-    <section className="bg-[#ece8de] py-24 lg:py-32">
+    <section className="bg-[#F5F5F5] py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6">
         {/* Header */}
         <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-end">
@@ -322,10 +322,10 @@ function ExperienceBlock() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7, delay: i * 0.07 }}
-              className="bg-[#ece8de] p-8"
+              className="bg-[#F5F5F5] p-8"
             >
               <div className="flex items-start gap-4">
-                <span className="shrink-0 text-[11px] font-bold tracking-[0.2em] text-[#f8aa00]">
+                <span className="shrink-0 text-[11px] font-bold tracking-[0.2em] text-white/70">
                   {step.n}
                 </span>
                 <span className="mt-0.5 shrink-0 text-black/40">
@@ -348,8 +348,8 @@ function ExperienceBlock() {
 
 function AuthorityBlock() {
   return (
-    <section className="bg-[#0f1112] py-24 lg:py-32">
-      <div className="pointer-events-none absolute left-1/2 h-px w-3/4 -translate-x-1/2 bg-linear-to-r from-transparent via-[#f8aa00]/30 to-transparent" />
+    <section className="bg-[#0A0A0A] py-24 lg:py-32">
+      <div className="pointer-events-none absolute left-1/2 h-px w-3/4 -translate-x-1/2 bg-linear-to-r from-transparent via-white/10 to-transparent" />
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-16 lg:grid-cols-[1fr_420px] lg:items-center">
 
@@ -360,7 +360,7 @@ function AuthorityBlock() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6 }}
-              className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#f8aa00]"
+              className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/70"
             >
               El especialista
             </motion.p>
@@ -405,7 +405,7 @@ function AuthorityBlock() {
               rel="noreferrer"
               data-cta="whatsapp-asesoria"
               data-page="home"
-              className="mt-10 inline-flex items-center justify-center rounded-full border border-[#f8aa00] bg-transparent px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+              className="mt-10 inline-flex items-center justify-center rounded-full border border-[#0F2A44] bg-transparent px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
             >
               Solicitar asesoría personalizada
             </motion.a>
@@ -447,12 +447,12 @@ function AuthorityBlock() {
 
 function ClosingCTA() {
   return (
-    <section className="relative overflow-hidden bg-[#0a0c0d] py-32 lg:py-40">
+    <section className="relative overflow-hidden bg-[#0A0A0A] py-32 lg:py-40">
       {/* gold line top */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/50 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
 
       {/* subtle radial glow */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f8aa00]/5 blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <motion.p
@@ -460,7 +460,7 @@ function ClosingCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6 }}
-          className="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#f8aa00]"
+          className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/70"
         >
           Reserva tu experiencia
         </motion.p>
@@ -504,7 +504,7 @@ function ClosingCTA() {
             rel="noreferrer"
             data-cta="whatsapp-asesoria"
             data-page="home"
-            className="w-full rounded-full bg-[#f8aa00] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300] sm:w-auto"
+            className="w-full rounded-full bg-[#0F2A44] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c] sm:w-auto"
           >
             Solicitar asesoría personalizada
           </a>
@@ -522,7 +522,7 @@ function ClosingCTA() {
       </div>
 
       {/* gold line bottom */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/50 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
     </section>
   );
 }
@@ -544,7 +544,7 @@ function HeroSplit({
           width: max-content;
           will-change: transform;
           /* slower movement */
-          animation: marquee-left 32s linear infinite;
+          animation: marquee-left 60s linear infinite;
         }
         @keyframes marquee-left {
           from { transform: translateX(0); }
@@ -617,7 +617,7 @@ function HeroSplit({
                 rel="noreferrer"
                 data-cta="whatsapp-asesoria"
                 data-page="home"
-                className="inline-flex items-center justify-center rounded-full bg-[#f8aa00] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-[#e69300]"
+                className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-[#1a3d5c]"
               >
                 Solicitar asesoría personalizada
               </a>
@@ -665,7 +665,7 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
         </div>
 
         {/* Authority Block */}
-        <section className="relative overflow-hidden bg-[#0f1112] py-24 lg:py-32">
+        <section className="relative overflow-hidden bg-[#0A0A0A] py-24 lg:py-32">
           {/* subtle gold glow */}
           <div className="pointer-events-none absolute left-1/2 top-0 h-[1px] w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#f8aa00]/40 to-transparent" />
           <div className="pointer-events-none absolute left-1/2 bottom-0 h-[1px] w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#f8aa00]/40 to-transparent" />
@@ -675,7 +675,7 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-4 text-center text-[11px] font-semibold uppercase tracking-[0.3em] text-[#f8aa00]"
+              className="mb-4 text-center text-[11px] font-semibold uppercase tracking-[0.3em] text-white/70"
             >
               Por qué elegirnos
             </motion.p>
@@ -696,7 +696,7 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
                 transition={{ duration: 0.7, delay: 0.1 }}
                 className="flex flex-col items-center px-8 py-12 text-center md:py-0"
               >
-                <span className="mb-4 text-[80px] font-bold leading-none tracking-tighter text-[#f8aa00] sm:text-[100px]">
+                <span className="mb-4 text-[80px] font-bold leading-none tracking-tighter text-white/70 sm:text-[100px]">
                   10+
                 </span>
                 <h3 className="mb-4 text-[15px] font-semibold uppercase tracking-[0.1em] text-white">
@@ -733,7 +733,7 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
                 className="flex flex-col items-center px-8 py-12 text-center md:py-0"
               >
                 <div className="mb-4 flex h-[80px] items-center sm:h-[100px]">
-                  <span className="inline-flex h-[72px] w-[72px] items-center justify-center rounded-full border border-[#f8aa00]/40 bg-[#f8aa00]/10 sm:h-[88px] sm:w-[88px]">
+                  <span className="inline-flex h-[72px] w-[72px] items-center justify-center rounded-full border border-[#0F2A44]/40 bg-[#0F2A44]/10 sm:h-[88px] sm:w-[88px]">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f8aa00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 sm:h-10 sm:w-10">
                       <circle cx="12" cy="8" r="5"/>
                       <path d="M3 21c0-4.418 4.03-8 9-8s9 3.582 9 8"/>
@@ -760,7 +760,7 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
             >
               <a
                 href={BOOKSY_URL}
-                className="inline-flex items-center justify-center rounded-full border border-[#f8aa00] bg-transparent px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#f8aa00] transition-all duration-300 hover:bg-[#f8aa00] hover:text-black"
+                className="inline-flex items-center justify-center rounded-full border border-[#0F2A44] bg-transparent px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-white/70 transition-all duration-300 hover:bg-[#0F2A44] hover:text-white"
               >
                 Reserva tu cita ahora
               </a>

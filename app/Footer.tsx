@@ -32,7 +32,7 @@ export default function Footer() {
   const bookUrl = buildWaUrl("footer");
 
   return (
-    <footer className="relative overflow-hidden bg-[#0f1112] text-white">
+    <footer className="relative overflow-hidden bg-[#0A0A0A] text-white">
       {/* marquee keyframes local */}
       <style>{`
         @keyframes marquee-left {
@@ -133,7 +133,6 @@ export default function Footer() {
                 <div className="mt-4 grid gap-3">
                   {[
                     ["Inicio", "/#home"],
-                    ["Servicios", "/#services"],
                     ["Galería", "/#gallery"],
                     ["Equipo", "/#team"],
                     ["Contacto", "/contact"],

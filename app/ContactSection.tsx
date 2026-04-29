@@ -31,7 +31,7 @@ function FadeUp({
 
 export default function ContactSection() {
   return (
-    <section className="relative overflow-hidden bg-[#7f949b] text-white">
+    <section className="relative overflow-hidden bg-[#0A0A0A] text-white">
       {/* fondo sutil */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.10]">
         <div className="absolute -top-24 left-10 h-130 w-130 rounded-full bg-white" />

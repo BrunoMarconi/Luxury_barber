@@ -81,20 +81,20 @@ const REVIEWS = [
 
 function Stars() {
   return (
-    <span className="text-[#f8aa00] tracking-tight text-sm">★★★★★</span>
+    <span className="text-[#0F2A44] tracking-tight text-sm">★★★★★</span>
   );
 }
 
 export default function BarberiaMarbellaClient() {
   return (
-    <main className="min-h-screen bg-[#ece8de] text-black">
+    <main className="min-h-screen bg-[#F5F5F5] text-black">
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-[#0f1112] pt-36 pb-24 lg:pt-44 lg:pb-32">
+      <section className="relative overflow-hidden bg-[#0A0A0A] pt-36 pb-24 lg:pt-44 lg:pb-32">
         <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
-          <div className="absolute -top-32 left-1/2 h-140 w-140 -translate-x-1/2 rounded-full bg-[#f8aa00]" />
+          <div className="absolute -top-32 left-1/2 h-140 w-140 -translate-x-1/2 rounded-full bg-[#0F2A44]" />
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/25 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="relative mx-auto max-w-6xl px-6">
           <motion.p
@@ -137,7 +137,7 @@ export default function BarberiaMarbellaClient() {
                 rel="noopener noreferrer"
                 data-cta="whatsapp-asesoria"
                 data-page="barberia-marbella"
-                className="inline-flex items-center justify-center rounded-full bg-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300]"
+                className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
               >
                 Reservar servicio
               </a>
@@ -179,11 +179,11 @@ export default function BarberiaMarbellaClient() {
       </section>
 
       {/* ── SERVICIOS ── */}
-      <section className="relative bg-[#0f1112] py-20 lg:py-28">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/30 to-transparent" />
+      <section className="relative bg-[#0A0A0A] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Servicios disponibles
             </p>
           </FadeUp>
@@ -196,7 +196,7 @@ export default function BarberiaMarbellaClient() {
           <div className="mt-14 grid gap-6 sm:grid-cols-3">
             {SERVICES.map((s, i) => (
               <FadeUp key={s.h2} delay={i * 0.08} className="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-8">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                   {s.kicker}
                 </p>
                 <h3 className="mt-3 text-[20px] font-semibold uppercase leading-tight tracking-tight text-white">
@@ -212,7 +212,7 @@ export default function BarberiaMarbellaClient() {
                     rel="noopener noreferrer"
                     data-cta="whatsapp-asesoria"
                     data-page={s.waPage}
-                    className="flex items-center justify-center rounded-full bg-[#f8aa00] px-6 py-3.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300]"
+                    className="flex items-center justify-center rounded-full bg-[#0F2A44] px-6 py-3.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
                   >
                     {s.cta}
                   </a>
@@ -222,7 +222,7 @@ export default function BarberiaMarbellaClient() {
                     </p>
                     <Link
                       href={s.microHref}
-                      className="mt-1.5 inline-block text-[10px] font-semibold uppercase tracking-[0.18em] text-[#f8aa00]/70 transition hover:text-[#f8aa00]"
+                      className="mt-1.5 inline-block text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50 transition hover:text-white/70"
                     >
                       {s.microLabel}
                     </Link>
@@ -232,7 +232,7 @@ export default function BarberiaMarbellaClient() {
             ))}
           </div>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/30 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </section>
 
       {/* ── RESEÑAS ── */}
@@ -263,7 +263,7 @@ export default function BarberiaMarbellaClient() {
       </section>
 
       {/* ── TRANSICIÓN PREMIUM ── */}
-      <section className="relative bg-[#0f1112] py-20 lg:py-28">
+      <section className="relative bg-[#0A0A0A] py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/20 to-transparent" />
         <div className="mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
@@ -296,12 +296,12 @@ export default function BarberiaMarbellaClient() {
       </section>
 
       {/* ── CTA FINAL ── */}
-      <section className="relative overflow-hidden bg-[#0a0c0d] py-28 lg:py-36">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/50 to-transparent" />
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f8aa00]/5 blur-3xl" />
+      <section className="relative overflow-hidden bg-[#0A0A0A] py-28 lg:py-36">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/70">
               Reserva online
             </p>
           </FadeUp>
@@ -323,7 +323,7 @@ export default function BarberiaMarbellaClient() {
                 rel="noopener noreferrer"
                 data-cta="whatsapp-asesoria"
                 data-page="barberia-marbella"
-                className="w-full rounded-full bg-[#f8aa00] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300] sm:w-auto"
+                className="w-full rounded-full bg-[#0F2A44] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c] sm:w-auto"
               >
                 Reservar cita
               </a>
@@ -339,7 +339,7 @@ export default function BarberiaMarbellaClient() {
             </p>
           </FadeUp>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/50 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
       </section>
 
     </main>

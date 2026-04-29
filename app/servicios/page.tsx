@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ServiciosPage() {
   return (
-    <main className="min-h-screen bg-[#ece8de]">
+    <main className="min-h-screen bg-[#F5F5F5]">
       <div className="pt-20">
         <ServicesSection />
       </div>

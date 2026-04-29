@@ -30,6 +30,18 @@ export default function Header() {
   const [mobileSubOpen, setMobileSubOpen] = useState<string | null>(null);
   const pathname = usePathname();
 
+  // Cierra el dropdown al hacer click fuera
+  useEffect(() => {
+    if (!dropdownOpen) return;
+    const handler = (e: MouseEvent) => {
+      if (!(e.target as Element).closest("[data-dropdown]")) {
+        setDropdownOpen(null);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [dropdownOpen]);
+
   // Cierra el menú al cambiar de ruta
   useEffect(() => {
     setOpen(false);
@@ -71,29 +83,48 @@ export default function Header() {
         </Link>
 
         {/* Desktop */}
-        <nav className="hidden items-center gap-8 md:flex ml-16 bg-black/20 backdrop-blur-sm rounded-full px-6 py-2 border border-white/10">
+        <nav className="hidden items-center gap-5 md:flex ml-auto bg-black/20 backdrop-blur-sm rounded-full px-6 py-2 border border-white/10">
           {nav.map((item) => (
             item.subNav ? (
               <div
                 key={item.href}
                 className="relative"
-                onMouseEnter={() => setDropdownOpen(item.label)}
-                onMouseLeave={() => setDropdownOpen(null)}
+                data-dropdown
               >
-                <div className="pointer-events-auto text-xs font-medium uppercase tracking-[0.22em] text-white/85 hover:text-white transition cursor-pointer">
+                <button
+                  type="button"
+                  onClick={() => setDropdownOpen(dropdownOpen === item.label ? null : item.label)}
+                  className="pointer-events-auto flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.22em] text-white/85 hover:text-white transition cursor-pointer"
+                >
                   {item.label}
-                </div>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`w-3 h-3 opacity-60 transition-transform duration-200 ${dropdownOpen === item.label ? "rotate-180" : ""}`}
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
                 {dropdownOpen === item.label && (
-                  <div className="absolute top-full mt-2 bg-black/90 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10 min-w-50">
-                    {item.subNav.map((subItem) => (
-                      <Link
-                        key={subItem.href}
-                        href={subItem.href}
-                        className="block text-xs font-medium uppercase tracking-[0.22em] text-white/85 hover:text-white transition py-1"
-                      >
-                        {subItem.label}
-                      </Link>
-                    ))}
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-56 rounded-2xl bg-[#0A0A0A] border border-white/10 overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.6)] backdrop-blur-md">
+                    <div className="absolute -top-[5px] left-1/2 -translate-x-1/2 h-2.5 w-2.5 rotate-45 bg-[#0A0A0A] border-l border-t border-white/10" />
+                    <div className="py-1.5">
+                      {item.subNav.map((subItem, idx) => (
+                        <Link
+                          key={subItem.href}
+                          href={subItem.href}
+                          onClick={() => setDropdownOpen(null)}
+                          className={`flex items-center gap-3 px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/65 hover:text-white hover:bg-white/5 transition-colors${idx !== 0 ? " border-t border-white/5" : ""}`}
+                        >
+                          <span className="h-[3px] w-[3px] rounded-full bg-white/30 shrink-0" />
+                          {subItem.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -156,7 +187,7 @@ export default function Header() {
           role="dialog"
           aria-modal="true"
         >
-          <div className="border-b border-white/10 bg-[#0f1112]/95 text-white">
+          <div className="border-b border-white/10 bg-[#0A0A0A]/95 text-white">
             <div className="mx-auto max-w-6xl px-4 pt-4 pb-6 sm:px-6">
               <div className="flex items-center justify-between">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
@@ -180,17 +211,28 @@ export default function Header() {
                         className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white/85 hover:text-white hover:bg-white/10 transition flex justify-between items-center"
                       >
                         {item.label}
-                        <span className={`transition-transform ${mobileSubOpen === item.label ? 'rotate-180' : ''}`}>▼</span>
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className={`w-4 h-4 opacity-60 transition-transform duration-300 ${mobileSubOpen === item.label ? 'rotate-180' : ''}`}
+                        >
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
                       </button>
                       {mobileSubOpen === item.label && (
-                        <div className="mt-2 ml-4 grid gap-2">
-                          {item.subNav.map((subItem) => (
+                        <div className="mt-1 rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
+                          {item.subNav.map((subItem, idx) => (
                             <Link
                               key={subItem.href}
                               href={subItem.href}
                               onClick={() => setOpen(false)}
-                              className="rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/85 hover:text-white hover:bg-white/10 transition"
+                              className={`flex items-center gap-3 px-5 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/70 hover:text-white hover:bg-white/5 transition ${idx !== 0 ? 'border-t border-white/[0.06]' : ''}`}
                             >
+                              <span className="h-1 w-1 rounded-full bg-white/30 shrink-0" />
                               {subItem.label}
                             </Link>
                           ))}

@@ -67,7 +67,7 @@ const serviceCards = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative overflow-hidden bg-[#ece8de]">
+    <section id="services" className="relative overflow-hidden bg-[#F5F5F5]">
       <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
         <div className="absolute -top-24 left-1/2 h-130 w-130 -translate-x-1/2 rounded-full bg-black" />
       </div>

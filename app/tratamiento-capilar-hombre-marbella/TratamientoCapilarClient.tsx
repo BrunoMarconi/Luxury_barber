@@ -53,14 +53,14 @@ const PROBLEMS = [
 
 export default function TratamientoCapilarClient() {
   return (
-    <main className="min-h-screen bg-[#ece8de] text-black">
+    <main className="min-h-screen bg-[#F5F5F5] text-black">
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-[#0f1112] pt-36 pb-28 lg:pt-44 lg:pb-36">
+      <section className="relative overflow-hidden bg-[#0A0A0A] pt-36 pb-28 lg:pt-44 lg:pb-36">
         <div className="pointer-events-none absolute inset-0 opacity-[0.05]">
-          <div className="absolute -top-40 left-1/2 h-160 w-160 -translate-x-1/2 rounded-full bg-[#f8aa00]" />
+          <div className="absolute -top-40 left-1/2 h-160 w-160 -translate-x-1/2 rounded-full bg-[#0F2A44]" />
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/25 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="relative mx-auto max-w-6xl px-6">
           <motion.p
@@ -108,7 +108,7 @@ export default function TratamientoCapilarClient() {
                 rel="noopener noreferrer"
                 data-cta="whatsapp-asesoria"
                 data-page="tratamiento-capilar"
-                className="inline-flex items-center justify-center rounded-full bg-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300]"
+                className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
               >
                 Solicitar asesoría personalizada
               </a>
@@ -150,13 +150,13 @@ export default function TratamientoCapilarClient() {
       </section>
 
       {/* ── AUTORIDAD ── */}
-      <section className="relative bg-[#0f1112] py-20 lg:py-28">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/25 to-transparent" />
+      <section className="relative bg-[#0A0A0A] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
               <FadeUp>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
                   Nuestro enfoque
                 </p>
               </FadeUp>
@@ -170,7 +170,7 @@ export default function TratamientoCapilarClient() {
               <div className="space-y-4 text-[13px] leading-7 tracking-[0.04em] text-white/60">
                 <p>
                   Antes de aplicar cualquier producto, analizamos el estado de tu cuero cabelludo y tu tipo de cabello para determinar exactamente qué necesita. Puedes ver más sobre cómo funciona nuestro{" "}
-                  <Link href="/diagnostico-capilar-marbella" className="text-[#f8aa00] underline underline-offset-2 hover:text-[#e69300]">
+                  <Link href="/diagnostico-capilar-marbella" className="text-white/70 underline underline-offset-2 hover:text-white">
                     diagnóstico capilar
                   </Link>
                   .
@@ -185,7 +185,7 @@ export default function TratamientoCapilarClient() {
             </FadeUp>
           </div>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/25 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </section>
 
       {/* ── PROBLEMAS ── */}
@@ -212,7 +212,7 @@ export default function TratamientoCapilarClient() {
                 key={p}
                 className="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/40 px-5 py-4 text-[12px] leading-5 tracking-[0.04em] text-black/75"
               >
-                <span className="mt-px shrink-0 text-[#f8aa00]">—</span>
+                <span className="mt-px shrink-0 text-white/70">—</span>
                 {p === "Cabello seco, dañado o sin vida" ? (
                   <span>
                     <Link href="/corte-de-pelo-hombre-marbella" className="text-black underline underline-offset-2 hover:text-black/70">
@@ -230,11 +230,11 @@ export default function TratamientoCapilarClient() {
       </section>
 
       {/* ── CÓMO FUNCIONA ── */}
-      <section className="relative bg-[#0f1112] py-20 lg:py-28">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/25 to-transparent" />
+      <section className="relative bg-[#0A0A0A] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               El proceso
             </p>
           </FadeUp>
@@ -246,7 +246,7 @@ export default function TratamientoCapilarClient() {
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {STEPS.map((step, i) => (
               <FadeUp key={step} delay={i * 0.07} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <p className="text-[28px] font-semibold tabular-nums text-[#f8aa00]/30">
+                <p className="text-[28px] font-semibold tabular-nums text-white/20">
                   {String(i + 1).padStart(2, "0")}
                 </p>
                 <p className="mt-3 text-[12px] leading-5 tracking-[0.04em] text-white/70">
@@ -258,14 +258,14 @@ export default function TratamientoCapilarClient() {
           <FadeUp delay={0.4}>
             <p className="mt-10 text-[13px] leading-6 tracking-[0.04em] text-white/50">
               Este tratamiento mejora el resultado final del{" "}
-              <Link href="/corte-de-pelo-hombre-marbella" className="text-[#f8aa00] underline underline-offset-2 hover:text-[#e69300]">
+              <Link href="/corte-de-pelo-hombre-marbella" className="text-white/70 underline underline-offset-2 hover:text-white">
                 corte
               </Link>
               .
             </p>
           </FadeUp>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/25 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </section>
 
       {/* ── DIFERENCIAL ── */}
@@ -304,11 +304,11 @@ export default function TratamientoCapilarClient() {
       </section>
 
       {/* ── RESULTADOS ── */}
-      <section className="relative bg-[#0f1112] py-20 lg:py-28">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/25 to-transparent" />
+      <section className="relative bg-[#0A0A0A] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Qué consigues
             </p>
           </FadeUp>
@@ -329,14 +329,14 @@ export default function TratamientoCapilarClient() {
           <FadeUp delay={0.32}>
             <p className="mt-8 text-[13px] leading-6 tracking-[0.04em] text-white/45">
               Especialmente cuando se combina con{" "}
-              <Link href="/barberia-marbella-corte-barba" className="text-[#f8aa00] underline underline-offset-2 hover:text-[#e69300]">
+              <Link href="/barberia-marbella-corte-barba" className="text-white/70 underline underline-offset-2 hover:text-white">
                 corte y barba
               </Link>
               .
             </p>
           </FadeUp>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/25 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </section>
 
       {/* ── MICRO CONVERSIÓN ── */}
@@ -352,12 +352,12 @@ export default function TratamientoCapilarClient() {
       </section>
 
       {/* ── CTA FINAL ── */}
-      <section className="relative overflow-hidden bg-[#0a0c0d] py-28 lg:py-36">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/50 to-transparent" />
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f8aa00]/5 blur-3xl" />
+      <section className="relative overflow-hidden bg-[#0A0A0A] py-28 lg:py-36">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/70">
               Reserva online
             </p>
           </FadeUp>
@@ -379,7 +379,7 @@ export default function TratamientoCapilarClient() {
                 rel="noopener noreferrer"
                 data-cta="whatsapp-asesoria"
                 data-page="tratamiento-capilar"
-                className="w-full rounded-full bg-[#f8aa00] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300] sm:w-auto"
+                className="w-full rounded-full bg-[#0F2A44] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c] sm:w-auto"
               >
                 Solicitar asesoría personalizada
               </a>
@@ -395,7 +395,7 @@ export default function TratamientoCapilarClient() {
             </p>
           </FadeUp>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/50 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
       </section>
 
     </main>

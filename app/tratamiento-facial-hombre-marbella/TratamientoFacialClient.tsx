@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -89,7 +89,7 @@ const FAQ = [
 
 export default function TratamientoFacialClient() {
   return (
-    <main className="min-h-screen bg-[#ece8de] text-black">
+    <main className="min-h-screen bg-[#F5F5F5] text-black">
 
       {/* ── HERO ── */}
       <section className="relative min-h-[92svh] overflow-hidden">
@@ -207,12 +207,12 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── BLOQUE SEO PRECIO ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <FadeUp>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
                   Lo que necesitas saber
                 </p>
               </FadeUp>
@@ -239,7 +239,7 @@ export default function TratamientoFacialClient() {
                   rel="noopener noreferrer"
                   data-cta="whatsapp-asesoria"
                   data-page="tratamiento-facial"
-                  className="mt-10 inline-flex items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                  className="mt-10 inline-flex items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
                   Consulta tu cita
                 </a>
@@ -253,7 +253,7 @@ export default function TratamientoFacialClient() {
                 { num: "03", label: "Resultado medible", desc: "Mejora visible desde la primera sesión con resultados progresivos en el tiempo." },
               ].map((item, i) => (
                 <FadeUp key={item.num} delay={i * 0.06} className="bg-white/5 px-7 py-6 flex gap-5 items-start">
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] mt-0.5 shrink-0">{item.num}</span>
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 mt-0.5 shrink-0">{item.num}</span>
                   <div>
                     <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-white">{item.label}</p>
                     <p className="mt-1 text-[12px] leading-6 tracking-[0.04em] text-white/55">{item.desc}</p>
@@ -309,8 +309,8 @@ export default function TratamientoFacialClient() {
             </FadeUp>
           </div>
 
-          <FadeUp delay={0.1} className="rounded-3xl bg-[#0f1112] px-10 py-14 flex flex-col justify-between min-h-[400px]">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+          <FadeUp delay={0.1} className="rounded-3xl bg-[#0A0A0A] px-10 py-14 flex flex-col justify-between min-h-[400px]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Análisis piel Marbella
             </p>
             <p className="mt-6 text-[64px] font-semibold uppercase leading-none tracking-tight text-white/8 select-none">
@@ -323,7 +323,7 @@ export default function TratamientoFacialClient() {
                 { icon: "◉", text: "Protocolo definido antes de empezar" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-3">
-                  <span className="text-[#f8aa00] text-[16px] leading-none shrink-0">{item.icon}</span>
+                  <span className="text-white/70 text-[16px] leading-none shrink-0">{item.icon}</span>
                   <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-white/70">{item.text}</p>
                 </div>
               ))}
@@ -333,10 +333,10 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── TECNOLOGÍA ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Tecnología profesional
             </p>
           </FadeUp>
@@ -362,7 +362,7 @@ export default function TratamientoFacialClient() {
               { num: "04", title: "Cierre con frío", desc: "Vaporizador frío para cerrar poros, equilibrar la piel y alargar el resultado." },
             ].map((step, i) => (
               <FadeUp key={step.num} delay={i * 0.06} className="bg-white/5 p-8">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/60">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70/60">
                   {step.num}
                 </p>
                 <h3 className="mt-3 text-[18px] font-semibold uppercase tracking-tight text-white">
@@ -407,7 +407,7 @@ export default function TratamientoFacialClient() {
               <ul className="mt-4 space-y-1.5 flex-1">
                 {t.steps.map((step) => (
                   <li key={step} className="flex items-start gap-2.5 text-[11px] leading-5 tracking-[0.04em] text-black/60">
-                    <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[#f8aa00]" />
+                    <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[#0F2A44]" />
                     {step}
                   </li>
                 ))}
@@ -422,11 +422,11 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── LIMPIEZA FACIAL PROFUNDA ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/30 to-transparent" />
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Tratamiento
             </p>
           </FadeUp>
@@ -447,7 +447,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-10">
               <FadeUp delay={0.1}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El problema
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -461,7 +461,7 @@ export default function TratamientoFacialClient() {
 
               <FadeUp delay={0.14}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El método
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -481,7 +481,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-6">
               <FadeUp delay={0.12}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Qué incluye
                   </p>
                   <ul className="mt-5 space-y-3">
@@ -494,7 +494,7 @@ export default function TratamientoFacialClient() {
                       "Aplicación de productos específicos según el tipo de piel",
                     ].map((step) => (
                       <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0F2A44]" />
                         {step}
                       </li>
                     ))}
@@ -503,8 +503,8 @@ export default function TratamientoFacialClient() {
               </FadeUp>
 
               <FadeUp delay={0.18}>
-                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                <div className="rounded-2xl border border-[#0F2A44]/20 bg-[#0F2A44]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Resultado
                   </p>
                   <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
@@ -523,7 +523,7 @@ export default function TratamientoFacialClient() {
                   rel="noopener noreferrer"
                   data-cta="whatsapp-asesoria"
                   data-page="tratamiento-facial"
-                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                  className="flex w-full items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
                   Añadir tratamiento a tu servicio
                 </a>
@@ -535,10 +535,10 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── HIDRATACIÓN PROFUNDA ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Tratamiento
             </p>
           </FadeUp>
@@ -557,7 +557,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-10">
               <FadeUp delay={0.1}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El problema
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -571,7 +571,7 @@ export default function TratamientoFacialClient() {
 
               <FadeUp delay={0.14}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El método
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -587,7 +587,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-6">
               <FadeUp delay={0.12}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Qué incluye
                   </p>
                   <ul className="mt-5 space-y-3">
@@ -600,7 +600,7 @@ export default function TratamientoFacialClient() {
                       "Activos específicos según tipo de piel",
                     ].map((step) => (
                       <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0F2A44]" />
                         {step}
                       </li>
                     ))}
@@ -609,8 +609,8 @@ export default function TratamientoFacialClient() {
               </FadeUp>
 
               <FadeUp delay={0.18}>
-                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                <div className="rounded-2xl border border-[#0F2A44]/20 bg-[#0F2A44]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Resultado
                   </p>
                   <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
@@ -629,7 +629,7 @@ export default function TratamientoFacialClient() {
                   rel="noopener noreferrer"
                   data-cta="whatsapp-asesoria"
                   data-page="tratamiento-facial"
-                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                  className="flex w-full items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
                   Solicitar asesoría personalizada
                 </a>
@@ -640,11 +640,11 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── TRATAMIENTO OCULAR ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Tratamiento
             </p>
           </FadeUp>
@@ -663,7 +663,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-10">
               <FadeUp delay={0.1}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El problema
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -677,7 +677,7 @@ export default function TratamientoFacialClient() {
 
               <FadeUp delay={0.14}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El método
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -693,7 +693,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-6">
               <FadeUp delay={0.12}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Qué incluye
                   </p>
                   <ul className="mt-5 space-y-3">
@@ -706,7 +706,7 @@ export default function TratamientoFacialClient() {
                       "Activos despigmentantes y descongestivos",
                     ].map((step) => (
                       <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0F2A44]" />
                         {step}
                       </li>
                     ))}
@@ -715,8 +715,8 @@ export default function TratamientoFacialClient() {
               </FadeUp>
 
               <FadeUp delay={0.18}>
-                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                <div className="rounded-2xl border border-[#0F2A44]/20 bg-[#0F2A44]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Resultado
                   </p>
                   <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
@@ -735,7 +735,7 @@ export default function TratamientoFacialClient() {
                   rel="noopener noreferrer"
                   data-cta="whatsapp-asesoria"
                   data-page="tratamiento-facial"
-                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                  className="flex w-full items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
                   Solicitar asesoría personalizada
                 </a>
@@ -746,11 +746,11 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── PURIFICANTE ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Tratamiento
             </p>
           </FadeUp>
@@ -769,7 +769,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-10">
               <FadeUp delay={0.1}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El problema
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -783,7 +783,7 @@ export default function TratamientoFacialClient() {
 
               <FadeUp delay={0.14}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El método
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -799,7 +799,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-6">
               <FadeUp delay={0.12}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Qué incluye
                   </p>
                   <ul className="mt-5 space-y-3">
@@ -812,7 +812,7 @@ export default function TratamientoFacialClient() {
                       "Cierre de poros con vaporizador frío",
                     ].map((step) => (
                       <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0F2A44]" />
                         {step}
                       </li>
                     ))}
@@ -821,8 +821,8 @@ export default function TratamientoFacialClient() {
               </FadeUp>
 
               <FadeUp delay={0.18}>
-                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                <div className="rounded-2xl border border-[#0F2A44]/20 bg-[#0F2A44]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Resultado
                   </p>
                   <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
@@ -841,7 +841,7 @@ export default function TratamientoFacialClient() {
                   rel="noopener noreferrer"
                   data-cta="whatsapp-asesoria"
                   data-page="tratamiento-facial"
-                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                  className="flex w-full items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
                   Solicitar asesoría personalizada
                 </a>
@@ -852,11 +852,11 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── ANTIEDAD ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Tratamiento
             </p>
           </FadeUp>
@@ -875,7 +875,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-10">
               <FadeUp delay={0.1}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El problema
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -889,7 +889,7 @@ export default function TratamientoFacialClient() {
 
               <FadeUp delay={0.14}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El método
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -905,7 +905,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-6">
               <FadeUp delay={0.12}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Qué incluye
                   </p>
                   <ul className="mt-5 space-y-3">
@@ -918,7 +918,7 @@ export default function TratamientoFacialClient() {
                       "Protocolo progresivo de sesiones",
                     ].map((step) => (
                       <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0F2A44]" />
                         {step}
                       </li>
                     ))}
@@ -927,8 +927,8 @@ export default function TratamientoFacialClient() {
               </FadeUp>
 
               <FadeUp delay={0.18}>
-                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                <div className="rounded-2xl border border-[#0F2A44]/20 bg-[#0F2A44]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Resultado
                   </p>
                   <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
@@ -947,7 +947,7 @@ export default function TratamientoFacialClient() {
                   rel="noopener noreferrer"
                   data-cta="whatsapp-asesoria"
                   data-page="tratamiento-facial"
-                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                  className="flex w-full items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
                   Solicitar asesoría personalizada
                 </a>
@@ -958,11 +958,11 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── CALMANTE ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Tratamiento
             </p>
           </FadeUp>
@@ -981,7 +981,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-10">
               <FadeUp delay={0.1}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El problema
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -995,7 +995,7 @@ export default function TratamientoFacialClient() {
 
               <FadeUp delay={0.14}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El método
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -1011,7 +1011,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-6">
               <FadeUp delay={0.12}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Qué incluye
                   </p>
                   <ul className="mt-5 space-y-3">
@@ -1024,7 +1024,7 @@ export default function TratamientoFacialClient() {
                       "Protocolo sin fragancias ni ingredientes agresivos",
                     ].map((step) => (
                       <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0F2A44]" />
                         {step}
                       </li>
                     ))}
@@ -1033,8 +1033,8 @@ export default function TratamientoFacialClient() {
               </FadeUp>
 
               <FadeUp delay={0.18}>
-                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                <div className="rounded-2xl border border-[#0F2A44]/20 bg-[#0F2A44]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Resultado
                   </p>
                   <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
@@ -1053,7 +1053,7 @@ export default function TratamientoFacialClient() {
                   rel="noopener noreferrer"
                   data-cta="whatsapp-asesoria"
                   data-page="tratamiento-facial"
-                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                  className="flex w-full items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
                   Solicitar asesoría personalizada
                 </a>
@@ -1064,11 +1064,11 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── ILUMINADOR ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/30 to-transparent" />
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Tratamiento
             </p>
           </FadeUp>
@@ -1087,7 +1087,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-10">
               <FadeUp delay={0.1}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El problema
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -1101,7 +1101,7 @@ export default function TratamientoFacialClient() {
 
               <FadeUp delay={0.14}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     El método
                   </p>
                   <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/65">
@@ -1117,7 +1117,7 @@ export default function TratamientoFacialClient() {
             <div className="space-y-6">
               <FadeUp delay={0.12}>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Qué incluye
                   </p>
                   <ul className="mt-5 space-y-3">
@@ -1130,7 +1130,7 @@ export default function TratamientoFacialClient() {
                       "Hidratación de cierre para fijar el resultado",
                     ].map((step) => (
                       <li key={step} className="flex items-start gap-3 text-[12px] leading-6 tracking-[0.04em] text-white/65">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0F2A44]" />
                         {step}
                       </li>
                     ))}
@@ -1139,8 +1139,8 @@ export default function TratamientoFacialClient() {
               </FadeUp>
 
               <FadeUp delay={0.18}>
-                <div className="rounded-2xl border border-[#f8aa00]/20 bg-[#f8aa00]/8 p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]/70">
+                <div className="rounded-2xl border border-[#0F2A44]/20 bg-[#0F2A44]/8 p-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                     Resultado
                   </p>
                   <p className="mt-4 text-[14px] font-semibold leading-6 tracking-[0.04em] text-white">
@@ -1159,7 +1159,7 @@ export default function TratamientoFacialClient() {
                   rel="noopener noreferrer"
                   data-cta="whatsapp-asesoria"
                   data-page="tratamiento-facial"
-                  className="flex w-full items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                  className="flex w-full items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
                   Solicitar asesoría personalizada
                 </a>
@@ -1170,12 +1170,12 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── CONEXIÓN CON SERVICIOS ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <FadeUp>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
                   Complemento ideal
                 </p>
               </FadeUp>
@@ -1187,11 +1187,11 @@ export default function TratamientoFacialClient() {
               <FadeUp delay={0.1}>
                 <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-white/60">
                   La mayoría de clientes que reservan un{" "}
-                  <Link href="/corte-de-pelo-hombre-marbella" className="text-[#f8aa00] underline underline-offset-2 hover:text-[#f8aa00]/80 transition">
+                  <Link href="/corte-de-pelo-hombre-marbella" className="text-white/70 underline underline-offset-2 hover:text-white/70/80 transition">
                     corte de cabello en Marbella
                   </Link>
                   {" "}o un servicio de{" "}
-                  <Link href="/barberia-marbella-corte-barba" className="text-[#f8aa00] underline underline-offset-2 hover:text-[#f8aa00]/80 transition">
+                  <Link href="/barberia-marbella-corte-barba" className="text-white/70 underline underline-offset-2 hover:text-white/70/80 transition">
                     corte y barba
                   </Link>
                   {" "}complementan su cita con este tratamiento.
@@ -1209,7 +1209,7 @@ export default function TratamientoFacialClient() {
                 { icon: "◉", title: "Servicio completo", desc: "Corte + barba + tratamiento facial. La imagen más cuidada de la Costa del Sol." },
               ].map((feat) => (
                 <div key={feat.title} className="rounded-2xl border border-white/10 bg-white/5 px-6 py-5 flex gap-4 items-start">
-                  <span className="text-[#f8aa00] text-[20px] leading-none mt-0.5 shrink-0">{feat.icon}</span>
+                  <span className="text-white/70 text-[20px] leading-none mt-0.5 shrink-0">{feat.icon}</span>
                   <div>
                     <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white">{feat.title}</p>
                     <p className="mt-1 text-[12px] leading-6 tracking-[0.04em] text-white/55">{feat.desc}</p>
@@ -1286,10 +1286,10 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── PRUEBA SOCIAL ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Clientes reales
             </p>
           </FadeUp>
@@ -1416,7 +1416,7 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── TESTIMONIOS ── */}
-      <section className="bg-[#ece8de] py-20 lg:py-28">
+      <section className="bg-[#F5F5F5] py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
@@ -1452,10 +1452,10 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── ANTES DE RESERVAR ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-4xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Resuelve tus dudas
             </p>
           </FadeUp>
@@ -1487,7 +1487,7 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── CTA FINAL ── */}
-      <section className="bg-[#f8aa00] py-20 lg:py-28">
+      <section className="bg-[#0F2A44] py-20 lg:py-28">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">

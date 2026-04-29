@@ -169,7 +169,7 @@ export default function ReviewsSection() {
   }, [filtered, expanded]);
 
   return (
-    <section id="reviews" className="relative overflow-hidden bg-[#ece8de] text-black">
+    <section id="reviews" className="relative overflow-hidden bg-[#F5F5F5] text-black">
       {/* detalle de fondo sutil */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.07]">
         <div className="absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-black" />

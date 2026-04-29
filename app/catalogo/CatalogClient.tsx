@@ -307,7 +307,7 @@ export default function CatalogPage() {
   /* ----------------------------- render ----------------------------- */
 
   return (
-    <main className="min-h-screen bg-[#ece8de] text-black">
+    <main className="min-h-screen bg-[#F5F5F5] text-black">
       <div className="mx-auto max-w-6xl px-6 pt-28 pb-20">
         {/* Header */}
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">
@@ -482,7 +482,7 @@ export default function CatalogPage() {
             onClick={() => setActive(null)}
           >
             <motion.div
-              className="w-full max-w-3xl overflow-hidden rounded-3xl border border-black/10 bg-[#ece8de] shadow-[0_40px_90px_rgba(0,0,0,0.35)]"
+              className="w-full max-w-3xl overflow-hidden rounded-3xl border border-black/10 bg-[#F5F5F5] shadow-[0_40px_90px_rgba(0,0,0,0.35)]"
               initial={{ y: 30, opacity: 0, filter: "blur(8px)" }}
               animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
               exit={{ y: 30, opacity: 0, filter: "blur(8px)" }}

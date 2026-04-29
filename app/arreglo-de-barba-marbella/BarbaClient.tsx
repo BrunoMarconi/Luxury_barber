@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -62,7 +62,7 @@ const REVIEWS = [
 
 function Stars({ n = 5 }: { n?: number }) {
   return (
-    <span className="text-[#f8aa00] tracking-tight text-sm">
+    <span className="text-[#0F2A44] tracking-tight text-sm">
       {"★".repeat(n)}
     </span>
   );
@@ -89,7 +89,7 @@ const FAQ = [
 
 export default function BarbaClient() {
   return (
-    <main className="min-h-screen bg-[#ece8de] text-black">
+    <main className="min-h-screen bg-[#F5F5F5] text-black">
 
       {/* ── HERO ── */}
       <section className="relative min-h-[92svh] overflow-hidden">
@@ -144,7 +144,7 @@ export default function BarbaClient() {
                 rel="noopener noreferrer"
                 data-cta="whatsapp-asesoria"
                 data-page="arreglo-de-barba"
-                className="inline-flex items-center justify-center rounded-full bg-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300]"
+                className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
               >
                 Solicitar asesoría personalizada
               </a>
@@ -218,7 +218,7 @@ export default function BarbaClient() {
             { num: "100%", label: "Personalizado", desc: "Ninguna barba es igual. Cada diseño parte del análisis de tu rostro." },
             { num: "5★", label: "Valoración media", desc: "Reseñas verificadas de clientes reales en Booksy." },
           ].map((stat, i) => (
-            <FadeUp key={stat.num} delay={i * 0.07} className="bg-[#ece8de] px-8 py-12 flex flex-col justify-between">
+            <FadeUp key={stat.num} delay={i * 0.07} className="bg-[#F5F5F5] px-8 py-12 flex flex-col justify-between">
               <p className="text-[56px] font-semibold leading-none tracking-tight text-black">
                 {stat.num}
               </p>
@@ -236,13 +236,13 @@ export default function BarbaClient() {
       </section>
 
       {/* ── MÉTODO ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/30 to-transparent" />
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <FadeUp>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
                   El método
                 </p>
               </FadeUp>
@@ -282,7 +282,7 @@ export default function BarbaClient() {
                   rel="noopener noreferrer"
                   data-cta="whatsapp-asesoria"
                   data-page="arreglo-de-barba"
-                  className="mt-10 inline-flex items-center justify-center rounded-full border border-[#f8aa00] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f8aa00] transition hover:bg-[#f8aa00] hover:text-black"
+                  className="mt-10 inline-flex items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
                   Solicitar asesoría personalizada
                 </a>
@@ -327,8 +327,8 @@ export default function BarbaClient() {
             { n: "08", title: "Hidratación y aceite de barba", desc: "Aplicación de productos específicos para suavizar, nutrir e hidratar el vello y la piel." },
             { n: "09", title: "Acabado y recomendación", desc: "Resultado final y pauta personalizada de mantenimiento para casa." },
           ].map((step, i) => (
-            <FadeUp key={step.n} delay={i * 0.05} className="bg-[#ece8de] p-8">
-              <p className="text-[11px] font-bold tracking-[0.2em] text-[#f8aa00]">{step.n}</p>
+            <FadeUp key={step.n} delay={i * 0.05} className="bg-[#F5F5F5] p-8">
+              <p className="text-[11px] font-bold tracking-[0.2em] text-white/70">{step.n}</p>
               <h3 className="mt-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-black">
                 {step.title}
               </h3>
@@ -341,12 +341,12 @@ export default function BarbaClient() {
       </section>
 
       {/* ── DIFERENCIA ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
             <div>
               <FadeUp>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
                   La diferencia
                 </p>
               </FadeUp>
@@ -376,7 +376,7 @@ export default function BarbaClient() {
                   ].map((b, i) => (
                     <FadeUp key={b.title} delay={i * 0.06}>
                       <div className="flex gap-4">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f8aa00]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0F2A44]" />
                         <div>
                           <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-white">
                             {b.title}
@@ -415,7 +415,7 @@ export default function BarbaClient() {
       </section>
 
       {/* ── RESEÑAS ── */}
-      <section className="bg-[#ece8de] py-20 lg:py-28">
+      <section className="bg-[#F5F5F5] py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
@@ -450,10 +450,10 @@ export default function BarbaClient() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Preguntas frecuentes
             </p>
           </FadeUp>
@@ -479,7 +479,7 @@ export default function BarbaClient() {
       </section>
 
       {/* ── TESTIMONIOS ── */}
-      <section className="bg-[#ece8de] py-20 lg:py-28">
+      <section className="bg-[#F5F5F5] py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
@@ -515,10 +515,10 @@ export default function BarbaClient() {
       </section>
 
       {/* ── ANTES DE RESERVAR ── */}
-      <section className="bg-[#0f1112] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-4xl px-6">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
               Resuelve tus dudas
             </p>
           </FadeUp>
@@ -550,12 +550,12 @@ export default function BarbaClient() {
       </section>
 
       {/* ── CTA FINAL ── */}
-      <section className="relative overflow-hidden bg-[#0a0c0d] py-28 lg:py-36">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/50 to-transparent" />
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f8aa00]/5 blur-3xl" />
+      <section className="relative overflow-hidden bg-[#0A0A0A] py-28 lg:py-36">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#f8aa00]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/70">
               Reserva tu servicio
             </p>
           </FadeUp>
@@ -577,7 +577,7 @@ export default function BarbaClient() {
                 rel="noopener noreferrer"
                 data-cta="whatsapp-asesoria"
                 data-page="arreglo-de-barba"
-                className="w-full rounded-full bg-[#f8aa00] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-black transition hover:bg-[#e69300] sm:w-auto"
+                className="w-full rounded-full bg-[#0F2A44] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c] sm:w-auto"
               >
                 Solicitar asesoría personalizada
               </a>
@@ -590,7 +590,7 @@ export default function BarbaClient() {
             </div>
           </FadeUp>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/50 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
       </section>
 
     </main>
