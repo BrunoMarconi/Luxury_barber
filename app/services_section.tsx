@@ -36,7 +36,7 @@ const serviceCards = [
     title: "Corte y Barba",
     description:
       "Servicio completo: corte personalizado con diagnóstico facial y diseño de barba adaptado a tu morfología.",
-    href: "/barberia-marbella-corte-barba",
+    href: "/corte-y-barba-premium-marbella",
     available: true,
   },
   {
@@ -67,29 +67,29 @@ const serviceCards = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative overflow-hidden bg-[#F5F5F5]">
-      <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
-        <div className="absolute -top-24 left-1/2 h-130 w-130 -translate-x-1/2 rounded-full bg-black" />
+    <section id="services" className="relative overflow-hidden bg-[#0A0A0A]">
+      <div className="pointer-events-none absolute inset-0 opacity-[0.05]">
+        <div className="absolute -top-24 left-1/2 h-130 w-130 -translate-x-1/2 rounded-full bg-white" />
       </div>
 
       <div className="mx-auto max-w-6xl px-6 py-20 lg:py-24">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">
           <div>
             <FadeUp delay={0}>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
                 Experiencias personalizadas
               </p>
             </FadeUp>
 
             <FadeUp delay={0.05}>
-              <h2 className="mt-3 text-[44px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[56px] lg:text-[72px]">
+              <h2 className="mt-3 text-[44px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[56px] lg:text-[72px]">
                 EXPERIENCIAS
               </h2>
             </FadeUp>
           </div>
 
           <FadeUp delay={0.1}>
-            <p className="max-w-[62ch] text-[12px] leading-6 tracking-[0.06em] text-black/65">
+            <p className="max-w-[62ch] text-[12px] leading-6 tracking-[0.06em] text-white/60">
               El detalle y la atención personalizada hace la diferencia. Descúbrelo. Reserva tu cita ahora.
             </p>
           </FadeUp>
@@ -101,16 +101,16 @@ export default function ServicesSection() {
               <FadeUp key={card.title} delay={i * 0.06} amount={0.2}>
                 <a
                   href={card.href!}
-                  className="group flex h-full items-start justify-between gap-6 overflow-hidden rounded-3xl border border-black/10 bg-white/35 p-8 backdrop-blur transition hover:bg-white/50"
+                  className="group flex h-full items-start justify-between gap-6 overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur transition hover:bg-white/10"
                 >
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/55">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/50">
                       {card.kicker}
                     </p>
-                    <h3 className="mt-2 text-[22px] font-semibold uppercase leading-tight tracking-tight text-black sm:text-[28px]">
+                    <h3 className="mt-2 text-[22px] font-semibold uppercase leading-tight tracking-tight text-white sm:text-[28px]">
                       {card.title}
                     </h3>
-                    <p className="mt-3 text-[12px] leading-6 tracking-[0.04em] text-black/60">
+                    <p className="mt-3 text-[12px] leading-6 tracking-[0.04em] text-white/60">
                       {card.description}
                     </p>
                     <a
@@ -125,25 +125,25 @@ export default function ServicesSection() {
                       Solicitar asesoría
                     </a>
                   </div>
-                  <span className="shrink-0 text-[22px] text-black/30 transition group-hover:translate-x-1">
+                  <span className="shrink-0 text-[22px] text-white/30 transition group-hover:translate-x-1">
                     →
                   </span>
                 </a>
               </FadeUp>
             ) : (
               <FadeUp key={card.title} delay={i * 0.06} amount={0.2}>
-                <div className="flex h-full items-start justify-between gap-6 overflow-hidden rounded-3xl border border-black/10 bg-white/20 p-8 backdrop-blur opacity-60">
+                <div className="flex h-full items-start justify-between gap-6 overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur opacity-60">
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/55">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/50">
                       {card.kicker}
                     </p>
-                    <h3 className="mt-2 text-[22px] font-semibold uppercase leading-tight tracking-tight text-black sm:text-[28px]">
+                    <h3 className="mt-2 text-[22px] font-semibold uppercase leading-tight tracking-tight text-white sm:text-[28px]">
                       {card.title}
                     </h3>
-                    <p className="mt-3 text-[12px] leading-6 tracking-[0.04em] text-black/60">
+                    <p className="mt-3 text-[12px] leading-6 tracking-[0.04em] text-white/60">
                       {card.description}
                     </p>
-                    <span className="mt-6 inline-block rounded-full border border-black/20 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/50">
+                    <span className="mt-6 inline-block rounded-full border border-white/20 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50">
                       Próximamente
                     </span>
                   </div>

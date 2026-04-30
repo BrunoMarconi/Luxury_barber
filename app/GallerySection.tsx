@@ -3,6 +3,9 @@
 import Image from "next/image";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
+import { buildWaUrl } from "@/lib/cta";
+
+const GALLERY_WA_URL = buildWaUrl("gallery");
 
 type Photo = {
   src: string;
@@ -132,7 +135,7 @@ export default function GalleryScrollRail({ photos }: { photos?: Photo[] }) {
   const galleryPhotos = useMemo(() => (photos && photos.length ? photos : PHOTOS), [photos]);
 
   return (
-    <section id="gallery" className="relative overflow-hidden bg-[#7A7676] text-black">
+    <section id="gallery" className="relative overflow-hidden bg-[#0A0A0A] text-white">
       {/* CSS marquee + mask edges */}
       <style>{`
         .rail-wrap { overflow: hidden; }
@@ -230,15 +233,23 @@ export default function GalleryScrollRail({ photos }: { photos?: Photo[] }) {
         </FadeUp>
 
         {/* CTA */}
-        <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          
-
+        <div className="mt-14 flex flex-col items-center gap-5 text-center">
+          <FadeUp delay={0.08}>
+            <p className="text-[13px] leading-7 text-white/70 max-w-[52ch]">
+              Cada resultado está diseñado, no improvisado.<br />
+              <span className="text-white/45 text-[12px]">Lo que ves aquí es el trabajo real, sin filtros ni staging.</span>
+            </p>
+          </FadeUp>
           <FadeUp delay={0.12} amount={0.35}>
             <a
-              href="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-black/25 bg-black/5 px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-black hover:bg-black/10 transition"
+              href={GALLERY_WA_URL}
+              target="_blank"
+              rel="noreferrer"
+              data-cta="whatsapp-gallery"
+              data-page="home"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-[#0F2A44] px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
             >
-              Contacto
+              Descubrir mi mejor versión
             </a>
           </FadeUp>
         </div>

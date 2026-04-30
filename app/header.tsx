@@ -9,16 +9,16 @@ const nav = [
   { label: "Equipo", href: "/#team" },
   {
     label: "EXPERIENCIAS",
-    href: "/servicios",
+    href: "/barberia-hombre-marbella",
     subNav: [
-      { label: "Corte y Barba", href: "/barberia-marbella-corte-barba" },
+      { label: "Corte y Barba", href: "/corte-y-barba-premium-marbella" },
       { label: "Corte de Cabello", href: "/corte-de-pelo-hombre-marbella" },
       { label: "Barba", href: "/arreglo-de-barba-marbella" },
     ],
   },
   {
     label: "TRATAMIENTOS",
-    href: "/servicios",
+    href: "/barberia-hombre-marbella",
     subNav: [
       { label: "Tratamiento Facial", href: "/tratamiento-facial-hombre-marbella" },
       { label: "Diagnóstico Capilar", href: "/diagnostico-capilar-marbella" },
@@ -26,11 +26,11 @@ const nav = [
   },
   {
     label: "ESENCIALES",
-    href: "/servicios",
+    href: "/barberia-hombre-marbella",
     subNav: [
-      { label: "Corte Esencial", href: "/servicios" },
-      { label: "Corte + Barba Esencial", href: "/servicios" },
-      { label: "Barba Esencial", href: "/servicios" },
+      { label: "Corte Esencial", href: "/barberia-hombre-marbella" },
+      { label: "Corte + Barba Esencial", href: "/barberia-hombre-marbella" },
+      { label: "Barba Esencial", href: "/barberia-hombre-marbella" },
     ],
   },
   { label: "Galería", href: "/#gallery" },
@@ -133,7 +133,7 @@ export default function Header() {
                     <div className="py-2">
                       {item.subNav.map((subItem, idx) => (
                         <Link
-                          key={subItem.href}
+                          key={subItem.label}
                           href={subItem.href}
                           onClick={() => setDropdownOpen(null)}
                           className={`flex items-center gap-4 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/75 hover:text-white hover:bg-white/10 transition-all duration-200${idx !== 0 ? " border-t border-white/10" : ""}`}
@@ -164,7 +164,7 @@ export default function Header() {
             data-page="header"
             className="btn-reserva text-xs uppercase tracking-[0.22em] ml-6 px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
           >
-            Reservar ahora
+            Solicitar asesoría
           </a>
         </nav>
 
@@ -245,7 +245,7 @@ export default function Header() {
                         <div className="mt-2 rounded-2xl border border-white/20 bg-white/5 overflow-hidden shadow-inner">
                           {item.subNav.map((subItem, idx) => (
                             <Link
-                              key={subItem.href}
+                              key={subItem.label}
                               href={subItem.href}
                               onClick={() => setOpen(false)}
                               className={`flex items-center gap-4 px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white/75 hover:text-white hover:bg-white/10 transition-all duration-200 ${idx !== 0 ? 'border-t border-white/10' : ''}`}
@@ -277,7 +277,7 @@ export default function Header() {
                   data-page="header"
                   className="btn-reserva text-sm uppercase tracking-[0.22em] w-full py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200"
                 >
-                  Reservar ahora
+                  Solicitar asesoría
                 </a>
               </div>
 

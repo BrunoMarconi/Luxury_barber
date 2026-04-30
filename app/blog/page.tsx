@@ -13,12 +13,12 @@ export default function BlogPage() {
   const posts = getPosts();
 
   return (
-    <main className="min-h-screen bg-[#F5F5F5] text-black">
+    <main className="min-h-screen bg-[#0A0A0A] text-white">
       <div className="mx-auto max-w-6xl px-6 pt-28 pb-20">
 
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
               Blog
             </p>
 
@@ -27,7 +27,7 @@ export default function BlogPage() {
             </h1>
           </div>
 
-          <p className="text-[12px] leading-6 tracking-[0.06em] text-black/65] max-w-[62ch]">
+          <p className="text-[12px] leading-6 tracking-[0.06em] text-white/60 max-w-[62ch]">
             Aprende a cuidar tu cabello, descubre tendencias y conoce
             los productos profesionales que utilizamos en barbería.
           </p>
@@ -41,7 +41,7 @@ export default function BlogPage() {
 
         {posts.length === 0 && (
           <div className="mt-20 text-center">
-            <p className="text-[14px] text-black/60">No hay posts disponibles aún.</p>
+            <p className="text-[14px] text-white/60">No hay posts disponibles aún.</p>
           </div>
         )}
 

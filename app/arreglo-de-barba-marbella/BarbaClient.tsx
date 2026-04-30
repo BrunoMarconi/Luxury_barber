@@ -119,7 +119,7 @@ export default function BarbaClient() {
             transition={{ duration: 0.85, delay: 0.35 }}
             className="mt-4 max-w-[18ch] text-[40px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[58px] lg:text-[76px]"
           >
-            Arreglo de barba en Marbella
+            La barba no se recorta.<br />Se diseña.
           </motion.h1>
 
           <motion.p
@@ -128,7 +128,7 @@ export default function BarbaClient() {
             transition={{ duration: 0.75, delay: 0.55 }}
             className="mt-6 max-w-[52ch] text-[13px] leading-6 tracking-[0.04em] text-white/75"
           >
-            No es solo perfilar la barba. Es diseñarla según tu rostro y cuidarla para que se vea mejor y dure más.
+            La forma de tu barba puede cambiar por completo cómo se ve tu rostro.
           </motion.p>
 
           <motion.div
@@ -153,12 +153,36 @@ export default function BarbaClient() {
               </p>
             </div>
             <Link
-              href="/servicios"
+              href="/barberia-hombre-marbella"
               className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur transition hover:bg-white/20"
             >
               Ver todos los servicios
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── STRIP POST-HERO ── */}
+      <section className="relative bg-[#0F2A44] py-10">
+        <div className="mx-auto max-w-5xl px-6 flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
+          <div>
+            <p className="text-[15px] font-semibold leading-7 text-white">
+              La mayoría de las barbas no están mal hechas.
+            </p>
+            <p className="mt-1 text-[12px] leading-6 text-white/55">
+              Están mal planteadas.
+            </p>
+          </div>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-strip"
+            data-page="arreglo-de-barba"
+            className="shrink-0 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0F2A44] transition hover:bg-white/90"
+          >
+            Mejorar mi imagen
+          </a>
         </div>
       </section>
 
@@ -269,20 +293,24 @@ export default function BarbaClient() {
               <FadeUp delay={0.18}>
                 <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/55">
                   Si buscas trabajar cabello y barba en la misma visita, descubre el{" "}
-                  <Link href="/barberia-marbella-corte-barba" className="underline underline-offset-2 text-white/75 hover:text-white transition">
+                  <Link href="/corte-y-barba-premium-marbella" className="underline underline-offset-2 text-white/75 hover:text-white transition">
                     servicio completo de corte y barba
                   </Link>
                   .
                 </p>
               </FadeUp>
               <FadeUp delay={0.24}>
+                <p className="mt-8 text-[13px] leading-7 tracking-[0.04em] text-white/70 font-semibold">
+                  No se trata de arreglar tu barba.<br />
+                  <span className="text-white">Se trata de estructurarla.</span>
+                </p>
                 <a
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-cta="whatsapp-asesoria"
+                  data-cta="whatsapp-metodo"
                   data-page="arreglo-de-barba"
-                  className="mt-10 inline-flex items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
+                  className="mt-6 inline-flex items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
                   Solicitar asesoría personalizada
                 </a>
@@ -338,6 +366,22 @@ export default function BarbaClient() {
             </FadeUp>
           ))}
         </div>
+
+        <FadeUp delay={0.2} className="mt-14 flex flex-col items-center gap-4 text-center">
+          <p className="text-[13px] leading-7 text-black/65 max-w-[48ch]">
+            Cada línea, cada volumen y cada ángulo tiene un propósito.
+          </p>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-proceso"
+            data-page="arreglo-de-barba"
+            className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+          >
+            Empezar diagnóstico de imagen
+          </a>
+        </FadeUp>
       </section>
 
       {/* ── DIFERENCIA ── */}
@@ -390,6 +434,23 @@ export default function BarbaClient() {
                   ))}
                 </div>
               </FadeUp>
+
+              <FadeUp delay={0.28} className="mt-10 flex flex-col gap-3">
+                <p className="text-[13px] leading-7 text-white/70">
+                  La diferencia no está en el arreglo.<br />
+                  <span className="font-semibold text-white">Está en el diseño.</span>
+                </p>
+                <a
+                  href={BOOKSY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta="whatsapp-diferenciacion"
+                  data-page="arreglo-de-barba"
+                  className="self-start inline-flex items-center justify-center rounded-full bg-white/10 border border-white/20 px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#0F2A44] hover:border-[#0F2A44]"
+                >
+                  Acceder a experiencia premium
+                </a>
+              </FadeUp>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
@@ -412,6 +473,23 @@ export default function BarbaClient() {
             </div>
           </div>
         </div>
+
+        <FadeUp delay={0.15} className="mt-16 flex flex-col items-center gap-4 text-center">
+          <p className="text-[14px] font-semibold leading-7 text-white">
+            Una barba bien diseñada no se nota.<br />
+            <span className="text-white/60 font-normal text-[13px]">Se siente.</span>
+          </p>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-resultado"
+            data-page="arreglo-de-barba"
+            className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+          >
+            Quiero este resultado
+          </a>
+        </FadeUp>
       </section>
 
       {/* ── RESEÑAS ── */}
@@ -511,6 +589,22 @@ export default function BarbaClient() {
               </FadeUp>
             ))}
           </div>
+
+          <FadeUp delay={0.2} className="mt-14 flex flex-col items-center gap-4 text-center">
+            <p className="text-[15px] font-semibold text-black/80">
+              Pequeños cambios, gran impacto.
+            </p>
+            <a
+              href={BOOKSY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-testimonios"
+              data-page="arreglo-de-barba"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+            >
+              Solicitar asesoría personalizada
+            </a>
+          </FadeUp>
         </div>
       </section>
 
@@ -561,12 +655,12 @@ export default function BarbaClient() {
           </FadeUp>
           <FadeUp delay={0.06}>
             <h2 className="mt-6 text-[34px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[46px] lg:text-[58px]">
-              Una barba bien trabajada cambia completamente la expresión del rostro.
+              Si tu barba no está pensada para tu rostro, está trabajando en tu contra.
             </h2>
           </FadeUp>
           <FadeUp delay={0.12}>
-            <p className="mt-6 text-[13px] leading-7 tracking-[0.03em] text-white/55">
-              Si quieres dejar de llevar una barba genérica y empezar a llevar una que realmente te favorezca, este servicio es para ti.
+            <p className="mt-6 text-[14px] leading-7 tracking-[0.04em] text-white/70 font-semibold">
+              Es momento de hacerlo bien.
             </p>
           </FadeUp>
           <FadeUp delay={0.2}>
@@ -582,7 +676,7 @@ export default function BarbaClient() {
                 Solicitar asesoría personalizada
               </a>
               <Link
-                href="/barberia-marbella-corte-barba"
+                href="/corte-y-barba-premium-marbella"
                 className="w-full rounded-full border border-white/25 bg-transparent px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white/80 transition hover:border-white/50 hover:text-white sm:w-auto"
               >
                 Ver corte y barba

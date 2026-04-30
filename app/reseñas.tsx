@@ -2,6 +2,9 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
+import { buildWaUrl } from "@/lib/cta";
+
+const REVIEWS_WA_URL = buildWaUrl("reviews");
 
 type ReviewSource = "Google" | "Booksy" | "Instagram" | "Other";
 
@@ -242,6 +245,23 @@ export default function ReviewsSection() {
             </button>
           </div>
         ) : null}
+
+        {/* CTA */}
+        <FadeUp delay={0.15} className="mt-14 flex flex-col items-center gap-4 text-center">
+          <p className="text-[15px] font-semibold text-black/80">
+            Tú puedes ser el siguiente resultado.
+          </p>
+          <a
+            href={REVIEWS_WA_URL}
+            target="_blank"
+            rel="noreferrer"
+            data-cta="whatsapp-reviews"
+            data-page="home"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-[#0F2A44] px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+          >
+            Solicitar asesoría personalizada
+          </a>
+        </FadeUp>
       </div>
     </section>
   );

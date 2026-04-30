@@ -110,9 +110,9 @@ export default function BarberiaMarbellaClient() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.35 }}
-            className="mt-4 max-w-[16ch] text-[44px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[60px] lg:text-[80px]"
+            className="mt-4 max-w-[22ch] text-[44px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[60px] lg:text-[80px]"
           >
-            Barbería en Marbella
+            No todos los servicios incluyen la experiencia completa.
           </motion.h1>
 
           <motion.p
@@ -121,7 +121,7 @@ export default function BarberiaMarbellaClient() {
             transition={{ duration: 0.75, delay: 0.5 }}
             className="mt-6 max-w-[50ch] text-[14px] leading-7 tracking-[0.04em] text-white/65"
           >
-            Servicios de barbería con técnica, precisión y atención al detalle.
+            Servicios funcionales para mantenimiento, sin el proceso completo de asesoría.
           </motion.p>
 
           <motion.div
@@ -139,19 +139,42 @@ export default function BarberiaMarbellaClient() {
                 data-page="barberia-marbella"
                 className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
               >
-                Reservar servicio
+                Solicitar asesoría personalizada
               </a>
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
                 Reserva online en menos de 1 minuto
               </p>
             </div>
-            <Link
-              href="/servicios"
+            <a
+              href={buildWaUrl("barberia-marbella-premium")}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-asesoria"
+              data-page="barberia-marbella-premium"
               className="inline-flex items-center justify-center rounded-full border border-white/25 bg-transparent px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 transition hover:border-white/50 hover:text-white"
             >
-              Ver todos los servicios
-            </Link>
+              Acceder a experiencia premium
+            </a>
           </motion.div>
+        </div>
+      </section>
+      <section className="mx-auto max-w-6xl px-6 py-14 lg:py-18">
+        <div className="rounded-3xl border border-black/10 bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.04)] sm:p-10">
+          <p className="text-[13px] leading-7 tracking-[0.04em] text-black/70">
+            Si buscas un cambio real en tu imagen, este no es el punto de partida.
+          </p>
+          <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+            <a
+              href={buildWaUrl("barberia-marbella-premium")}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-asesoria"
+              data-page="barberia-marbella-premium"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+            >
+              Acceder a experiencia premium
+            </a>
+          </div>
         </div>
       </section>
 
@@ -174,6 +197,23 @@ export default function BarberiaMarbellaClient() {
             <p className="text-[13px] leading-7 tracking-[0.04em] text-black/65">
               No todos los clientes buscan el mismo nivel de servicio. Por eso ofrecemos opciones más directas, manteniendo siempre la calidad del trabajo y la atención al detalle que nos define.
             </p>
+          </FadeUp>
+          <FadeUp delay={0.16}>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <p className="max-w-[48ch] text-[13px] leading-7 tracking-[0.04em] text-black/65">
+                Estos servicios están pensados como mantenimiento, no como transformación.
+              </p>
+              <a
+                href={buildWaUrl("barberia-marbella")}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="barberia-marbella"
+                className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+              >
+                Solicitar asesoría personalizada
+              </a>
+            </div>
           </FadeUp>
         </div>
       </section>
@@ -235,6 +275,63 @@ export default function BarberiaMarbellaClient() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </section>
 
+      <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
+        <div className="rounded-3xl border border-black/10 bg-white/80 p-8 sm:p-10">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/55">
+            La diferencia real
+          </p>
+          <h2 className="mt-4 text-[28px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[32px]">
+            La diferencia no está en el resultado inmediato, sino en el proceso.
+          </h2>
+          <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <p className="max-w-[52ch] text-[13px] leading-7 tracking-[0.04em] text-black/70">
+              Aquí trabajamos mantenimiento con criterio, pero para un diseño completo hay un paso adicional que no se sustituye.
+            </p>
+            <a
+              href={buildWaUrl("barberia-marbella-premium")}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-asesoria"
+              data-page="barberia-marbella-premium"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+            >
+              Ver experiencia completa
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative bg-[#0A0A0A] py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+        <div className="mx-auto max-w-6xl px-6 text-center">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
+              Resultados y mantenimiento
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-4 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[44px] lg:text-[52px]">
+              Un buen mantenimiento no sustituye un buen diseño.
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.12}>
+            <div className="mt-10 flex justify-center">
+              <a
+                href={buildWaUrl("barberia-marbella-premium")}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="barberia-marbella-premium"
+                className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-10 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+              >
+                Quiero mejorar mi imagen
+              </a>
+            </div>
+          </FadeUp>
+        </div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+      </section>
+
       {/* ── RESEÑAS ── */}
       <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
         <FadeUp>
@@ -246,6 +343,25 @@ export default function BarberiaMarbellaClient() {
           <h2 className="mt-3 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[40px]">
             Opiniones reales
           </h2>
+        </FadeUp>
+        <FadeUp delay={0.1}>
+          <p className="mt-4 max-w-[62ch] text-[13px] leading-7 tracking-[0.04em] text-black/70">
+            Muchos empiezan aquí. Pero los cambios reales vienen después.
+          </p>
+        </FadeUp>
+        <FadeUp delay={0.14}>
+          <div className="mt-8 flex justify-center">
+            <a
+              href={buildWaUrl("barberia-marbella")}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-asesoria"
+              data-page="barberia-marbella"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+            >
+              Solicitar asesoría personalizada
+            </a>
+          </div>
         </FadeUp>
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
           {REVIEWS.map((r, i) => (
@@ -264,7 +380,7 @@ export default function BarberiaMarbellaClient() {
 
       {/* ── TRANSICIÓN PREMIUM ── */}
       <section className="relative bg-[#0A0A0A] py-20 lg:py-28">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/20 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#0F2A44]/30 to-transparent" />
         <div className="mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/40">
@@ -283,16 +399,20 @@ export default function BarberiaMarbellaClient() {
           </FadeUp>
           <FadeUp delay={0.18}>
             <div className="mt-10 flex justify-center">
-              <Link
-                href="/servicios"
+              <a
+                href={buildWaUrl("barberia-marbella-premium")}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="barberia-marbella-premium"
                 className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-10 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 transition hover:bg-white/10 hover:border-white/35 hover:text-white"
               >
                 Ver servicios premium →
-              </Link>
+              </a>
             </div>
           </FadeUp>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#f8aa00]/20 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#0F2A44]/30 to-transparent" />
       </section>
 
       {/* ── CTA FINAL ── */}
@@ -318,24 +438,18 @@ export default function BarberiaMarbellaClient() {
           <FadeUp delay={0.2}>
             <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a
-                href={BOOKSY_URL}
+                href={buildWaUrl("barberia-marbella-premium")}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cta="whatsapp-asesoria"
-                data-page="barberia-marbella"
+                data-page="barberia-marbella-premium"
                 className="w-full rounded-full bg-[#0F2A44] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c] sm:w-auto"
               >
-                Reservar cita
+                Acceder a experiencia premium
               </a>
-              <Link
-                href="/servicios"
-                className="w-full rounded-full border border-white/25 bg-transparent px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white/80 transition hover:border-white/50 hover:text-white sm:w-auto"
-              >
-                Ver servicios premium
-              </Link>
             </div>
             <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/30">
-              Reserva online en menos de 1 minuto
+              Si buscas algo más, sabes dónde encontrarlo.
             </p>
           </FadeUp>
         </div>

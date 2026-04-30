@@ -15,7 +15,7 @@ const BASE =
   "inline-flex items-center justify-center rounded-full text-[11px] font-semibold uppercase tracking-[0.22em] transition";
 
 const VARIANTS: Record<string, string> = {
-  gold: "bg-[#f8aa00] text-black hover:bg-[#e69300] px-10 py-4",
+  gold: "bg-[#0F2A44] text-white hover:bg-[#1a3d5c] px-10 py-4",
   "ghost-dark":
     "border border-black/20 bg-black/5 text-black hover:bg-black/10 hover:border-black/35 px-10 py-4",
   "ghost-light":

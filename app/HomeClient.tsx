@@ -68,6 +68,28 @@ function RightPanel({ className }: { className?: string }) {
           >
             Más información
           </motion.a>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.05, duration: 0.6 }}
+            className="mt-8 space-y-4"
+          >
+            <p className="text-[12px] leading-6 text-black/55">
+              La diferencia no está solo en el corte.<br />
+              <span className="font-semibold text-black/80">Está en todo lo que hay detrás.</span>
+            </p>
+            <a
+              href={BOOKSY_URL}
+              target="_blank"
+              rel="noreferrer"
+              data-cta="whatsapp-rightpanel"
+              data-page="home"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-6 py-2.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+            >
+              Acceder a experiencia premium
+            </a>
+          </motion.div>
         </div>
       </div>
 
@@ -341,6 +363,30 @@ function ExperienceBlock() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-14 flex flex-col items-center gap-4 text-center"
+        >
+          <p className="text-[13px] leading-7 text-black/60 max-w-[52ch]">
+            No trabajamos con cortes estándar.<br />
+            <span className="font-semibold text-black/80">Cada servicio es un proceso diseñado exclusivamente para ti.</span>
+          </p>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noreferrer"
+            data-cta="whatsapp-experience"
+            data-page="home"
+            className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+          >
+            Solicitar asesoría personalizada
+          </a>
+        </motion.div>
       </div>
     </section>
   );
@@ -472,7 +518,7 @@ function ClosingCTA() {
           transition={{ duration: 0.8, delay: 0.06 }}
           className="mt-6 text-[34px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[46px] lg:text-[58px]"
         >
-          No es para todos. Pero si es para ti, lo vas a notar desde el primer momento.
+          Si has llegado hasta aquí, es porque sabes que puedes verte mejor.
         </motion.h2>
 
         <motion.div
@@ -483,11 +529,10 @@ function ClosingCTA() {
           className="mt-8 space-y-3 text-[14px] leading-7 tracking-[0.03em] text-white/55"
         >
           <p>
-            Este servicio está pensado para hombres que valoran su imagen, el detalle y el criterio detrás de cada decisión.
+            No se trata de cambiar tu estilo.
           </p>
           <p>
-            Si buscas algo rápido, probablemente no sea para ti.<br />
-            Si buscas un resultado bien trabajado, personalizado y con sentido, entonces sí.
+            Se trata de elevarlo.
           </p>
         </motion.div>
 
@@ -592,7 +637,7 @@ function HeroSplit({
               className="mt-3 max-w-[20ch] text-white"
             >
               <span className="block text-[38px] leading-[0.95] tracking-tight sm:text-[56px] lg:text-[76px] xl:text-[86px]">
-                La experiencia de grooming masculino más precisa de Marbella.
+                No es un corte.<br />Es cómo el mundo te percibe.
               </span>
             </motion.h1>
 
@@ -602,7 +647,7 @@ function HeroSplit({
               transition={{ delay: 0.6, duration: 0.7 }}
               className="mt-4 max-w-[52ch] text-[13px] leading-6 tracking-[0.04em] text-white/75 lg:text-[14px]"
             >
-              Diagnóstico capilar y facial, visagismo y corte de alta precisión en una experiencia diseñada para hombres que buscan algo más que un corte convencional.
+              Asesoría personalizada en imagen masculina. Diseñado para hombres que entienden el valor de verse bien.
             </motion.p>
 
             <motion.div
@@ -653,6 +698,31 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
         leftImageSrc="https://images.unsplash.com/photo-1769082863369-227f68991d07?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         rightCardImageSrc="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
+
+      {/* Conversion Strip */}
+      <section className="relative bg-[#0F2A44] py-10">
+        <div className="mx-auto max-w-5xl px-6 flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
+          <div>
+            <p className="text-[15px] font-semibold leading-7 text-white">
+              ¿Sabes realmente qué corte te favorece?
+            </p>
+            <p className="mt-1 text-[12px] leading-6 text-white/55">
+              La mayoría de hombres eligen por moda. Nosotros elegimos por tu rostro.
+            </p>
+          </div>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noreferrer"
+            data-cta="whatsapp-strip"
+            data-page="home"
+            className="shrink-0 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0F2A44] transition hover:bg-white/90"
+          >
+            Empezar diagnóstico de imagen
+          </a>
+        </div>
+      </section>
+
       <DifferentiationBlock />
       <ExperienceBlock />
       <AuthorityBlock />
@@ -667,8 +737,8 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
         {/* Authority Block */}
         <section className="relative overflow-hidden bg-[#0A0A0A] py-24 lg:py-32">
           {/* subtle gold glow */}
-          <div className="pointer-events-none absolute left-1/2 top-0 h-[1px] w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#f8aa00]/40 to-transparent" />
-          <div className="pointer-events-none absolute left-1/2 bottom-0 h-[1px] w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#f8aa00]/40 to-transparent" />
+          <div className="pointer-events-none absolute left-1/2 top-0 h-[1px] w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#0F2A44]/40 to-transparent" />
+          <div className="pointer-events-none absolute left-1/2 bottom-0 h-[1px] w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#0F2A44]/40 to-transparent" />
 
           <div className="mx-auto max-w-6xl px-6">
             <motion.p
@@ -734,7 +804,7 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
               >
                 <div className="mb-4 flex h-[80px] items-center sm:h-[100px]">
                   <span className="inline-flex h-[72px] w-[72px] items-center justify-center rounded-full border border-[#0F2A44]/40 bg-[#0F2A44]/10 sm:h-[88px] sm:w-[88px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#f8aa00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 sm:h-10 sm:w-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 sm:h-10 sm:w-10">
                       <circle cx="12" cy="8" r="5"/>
                       <path d="M3 21c0-4.418 4.03-8 9-8s9 3.582 9 8"/>
                       <path d="M9 8h.01M15 8h.01"/>
@@ -756,13 +826,21 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.45 }}
-              className="mt-16 flex justify-center"
+              className="mt-16 flex flex-col items-center gap-5 text-center"
             >
+              <p className="text-[13px] leading-7 text-white/60 max-w-[48ch]">
+                Lo que ves aquí no es estética. Es intención.<br />
+                <span className="font-semibold text-white/80">Cada resultado tiene un proceso detrás.</span>
+              </p>
               <a
                 href={BOOKSY_URL}
+                target="_blank"
+                rel="noreferrer"
+                data-cta="whatsapp-stats"
+                data-page="home"
                 className="inline-flex items-center justify-center rounded-full border border-[#0F2A44] bg-transparent px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-white/70 transition-all duration-300 hover:bg-[#0F2A44] hover:text-white"
               >
-                Reserva tu cita ahora
+                Solicitar asesoría personalizada
               </a>
             </motion.div>
           </div>

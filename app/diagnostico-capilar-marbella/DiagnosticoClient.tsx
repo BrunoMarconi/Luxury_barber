@@ -153,7 +153,7 @@ export default function DiagnosticoClient() {
               </p>
             </div>
             <Link
-              href="/servicios"
+              href="/barberia-hombre-marbella"
               className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur transition hover:bg-white/20"
             >
               Ver todos los servicios

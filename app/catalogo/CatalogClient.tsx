@@ -89,14 +89,8 @@ function ProductCard({
       transition={{ duration: 0.65, delay, ease: [0.2, 0.8, 0.2, 1] }}
       type="button"
     >
-      <div className="overflow-hidden rounded-3xl border border-black/10 bg-white/40 shadow-[0_18px_45px_rgba(0,0,0,0.08)]">
-        {/* ✅ Stage consistente: ratio fijo, evita “cortes” visuales */}
-        <div
-          className={[
-            "relative w-full overflow-hidden",
-            "bg-[linear-gradient(to_bottom,#fbfaf7,#f1efe8)]",
-          ].join(" ")}
-        >
+      <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_18px_45px_rgba(0,0,0,0.35)]">
+        <div className="relative w-full overflow-hidden bg-[#F5F5F5]">
           <div className="relative aspect-[4/5] w-full">
             <Image
               src={image}
@@ -110,24 +104,21 @@ function ProductCard({
                 "transition duration-700 group-hover:scale-[1.02]",
               ].join(" ")}
             />
-
-            {/* brillo suave */}
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.70),rgba(255,255,255,0)_55%)]" />
           </div>
-
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-black/10" />
         </div>
 
         <div className="p-6">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/60">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
             {titleTop}
           </p>
 
-          <p className="mt-3 text-[14px] font-semibold uppercase tracking-[0.12em] text-black">
+          <p className="mt-3 text-[14px] font-semibold uppercase tracking-[0.12em] text-white">
             {name}
           </p>
 
-          <p className="mt-3 text-[12px] leading-6 tracking-[0.06em] text-black/60">
+          <p className="mt-3 text-[12px] leading-6 tracking-[0.06em] text-white/60">
             {description}
           </p>
 
@@ -136,13 +127,13 @@ function ProductCard({
               {chips.slice(0, 3).map((c) => (
                 <span
                   key={c}
-                  className="rounded-full border border-black/15 bg-white/40 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/70"
+                  className="rounded-full border border-white/15 bg-white/10 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70"
                 >
                   {c}
                 </span>
               ))}
               {chips.length > 3 && (
-                <span className="rounded-full border border-black/15 bg-white/40 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/55">
+                <span className="rounded-full border border-white/15 bg-white/10 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/55">
                   +{chips.length - 3}
                 </span>
               )}
@@ -307,13 +298,13 @@ export default function CatalogPage() {
   /* ----------------------------- render ----------------------------- */
 
   return (
-    <main className="min-h-screen bg-[#F5F5F5] text-black">
+    <main className="min-h-screen bg-[#0A0A0A] text-white">
       <div className="mx-auto max-w-6xl px-6 pt-28 pb-20">
         {/* Header */}
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">
           <div>
             <FadeUp>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
                 Catálogo
               </p>
             </FadeUp>
@@ -325,7 +316,7 @@ export default function CatalogPage() {
           </div>
 
           <FadeUp delay={0.1}>
-            <p className="max-w-[62ch] text-[12px] leading-6 tracking-[0.06em] text-black/65">
+            <p className="max-w-[62ch] text-[12px] leading-6 tracking-[0.06em] text-white/60">
               Experiencia tipo e-commerce: filtra por líneas, busca productos y abre cada ficha para ver
               detalles. Sin compra: solo presentación.
             </p>
@@ -340,8 +331,8 @@ export default function CatalogPage() {
               className={[
                 "rounded-full border px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] transition",
                 line === "ALL"
-                  ? "border-black/35 bg-black/5"
-                  : "border-black/15 bg-white/40 hover:border-black/25",
+                  ? "border-white/25 bg-white/10"
+                  : "border-white/15 bg-white/5 hover:border-white/25",
               ].join(" ")}
               type="button"
             >
@@ -355,8 +346,8 @@ export default function CatalogPage() {
                 className={[
                   "rounded-full border px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] transition",
                   line === l
-                    ? "border-black/35 bg-black/5"
-                    : "border-black/15 bg-white/40 hover:border-black/25",
+                    ? "border-white/25 bg-white/10"
+                    : "border-white/15 bg-white/5 hover:border-white/25",
                 ].join(" ")}
                 type="button"
               >
@@ -370,9 +361,9 @@ export default function CatalogPage() {
               value={q}
               onChange={(e) => setQ(e.target.value)}
               placeholder="Buscar (champú, rubio, reparación...)"
-              className="h-12 w-full sm:w-[320px] rounded-full border border-black/15 bg-white/60 px-5 text-[12px] tracking-[0.06em] outline-none placeholder:text-black/45 focus:border-black/30"
+              className="h-12 w-full sm:w-[320px] rounded-full border border-white/15 bg-white/5 px-5 text-[12px] tracking-[0.06em] text-white outline-none placeholder:text-white/40 focus:border-white/30"
             />
-            <p className="hidden text-[10px] font-semibold uppercase tracking-[0.22em] text-black/50 sm:block">
+            <p className="hidden text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50 sm:block">
               {filtered.length} productos
             </p>
           </div>
@@ -391,11 +382,11 @@ export default function CatalogPage() {
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.45 }}
                 >
-                  <div className="mt-2 mb-2 flex items-center justify-between rounded-2xl border-t border-black/10 pt-6">
-                    <h3 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-black/70">
+                  <div className="mt-2 mb-2 flex items-center justify-between rounded-2xl border-t border-white/10 pt-6">
+                    <h3 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-white/60">
                       Productos individuales
                     </h3>
-                    <p className="hidden text-[11px] text-black/50 sm:block">
+                    <p className="hidden text-[11px] text-white/50 sm:block">
                       Tratamientos arriba · resto del catálogo abajo
                     </p>
                   </div>
@@ -417,17 +408,17 @@ export default function CatalogPage() {
                     ease: [0.2, 0.8, 0.2, 1],
                   }}
                 >
-                  <div className="rounded-3xl border border-black/10 bg-white/35 px-6 py-6 sm:px-8">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/55">
+                  <div className="rounded-3xl border border-white/10 bg-white/5 px-6 py-6 sm:px-8">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
                       {item.line ? `${item.line} · ` : ""}Tratamiento
                     </p>
 
                     <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-                      <p className="text-[22px] font-semibold uppercase tracking-[0.10em] text-black">
+                      <p className="text-[22px] font-semibold uppercase tracking-[0.10em] text-white">
                         {item.title}
                       </p>
                       {item.subtitle ? (
-                        <p className="text-[12px] leading-6 tracking-[0.06em] text-black/60">
+                        <p className="text-[12px] leading-6 tracking-[0.06em] text-white/60">
                           {item.subtitle}
                         </p>
                       ) : null}
@@ -482,7 +473,7 @@ export default function CatalogPage() {
             onClick={() => setActive(null)}
           >
             <motion.div
-              className="w-full max-w-3xl overflow-hidden rounded-3xl border border-black/10 bg-[#F5F5F5] shadow-[0_40px_90px_rgba(0,0,0,0.35)]"
+              className="w-full max-w-3xl overflow-hidden rounded-3xl border border-white/10 bg-[#0A0A0A] shadow-[0_40px_90px_rgba(0,0,0,0.35)]"
               initial={{ y: 30, opacity: 0, filter: "blur(8px)" }}
               animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
               exit={{ y: 30, opacity: 0, filter: "blur(8px)" }}
@@ -491,7 +482,7 @@ export default function CatalogPage() {
             >
               <div className="grid gap-0 sm:grid-cols-[1fr_1.05fr]">
                 {/* ✅ Modal image stage */}
-                <div className="relative bg-white/70">
+                <div className="relative bg-[#F5F5F5]">
                   <div className="relative h-[320px] sm:h-full sm:min-h-[520px]">
                     <Image
                       src={(active as any).image}
@@ -509,28 +500,28 @@ export default function CatalogPage() {
                 </div>
 
                 <div className="p-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/60">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/60">
                     {(active as any).line} · {(active as any).category}
                   </p>
 
-                  <h3 className="mt-3 text-[22px] font-semibold uppercase tracking-[0.10em] text-black">
+                  <h3 className="mt-3 text-[22px] font-semibold uppercase tracking-[0.10em] text-white">
                     {(active as any).name}
                   </h3>
 
-                  <p className="mt-4 text-[12px] leading-6 tracking-[0.06em] text-black/65">
+                  <p className="mt-4 text-[12px] leading-6 tracking-[0.06em] text-white/60">
                     {(active as any).description}
                   </p>
 
                   {(active as any).sizes?.length ? (
                     <div className="mt-6">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-black/55">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50">
                         Sizes
                       </p>
                       <div className="mt-3 flex flex-wrap gap-2">
                         {(active as any).sizes.map((s: string) => (
                           <span
                             key={s}
-                            className="rounded-full border border-black/15 bg-white/50 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/70"
+                            className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70"
                           >
                             {s}
                           </span>
@@ -543,7 +534,7 @@ export default function CatalogPage() {
                     {active.__mode === "normal" ? (
                       <Link
                         href={`/producto/${(active as any).slug}`}
-                        className="inline-flex h-12 flex-1 items-center justify-center rounded-full border border-black/25 bg-black/5 px-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-black hover:bg-black/10 transition"
+                        className="inline-flex h-12 flex-1 items-center justify-center rounded-full border border-white/25 bg-white/5 px-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:bg-white/10 transition"
                       >
                         View product
                       </Link>
@@ -551,14 +542,14 @@ export default function CatalogPage() {
 
                     <button
                       onClick={() => setActive(null)}
-                      className="inline-flex h-12 flex-1 items-center justify-center rounded-full border border-black/15 bg-white/50 px-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-black/75 hover:text-black hover:border-black/25 transition"
+                      className="inline-flex h-12 flex-1 items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/75 hover:text-white hover:border-white/25 transition"
                       type="button"
                     >
                       Close
                     </button>
                   </div>
 
-                  <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/45">
+                  <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
                     Disponible en barbería · Sin compra online
                   </p>
                 </div>

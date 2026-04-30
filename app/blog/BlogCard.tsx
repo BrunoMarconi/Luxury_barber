@@ -13,22 +13,22 @@ export function BlogCard({ post, index }: { post: Post; index: number }) {
       transition={{ duration: 0.65, delay: index * 0.05, ease: [0.2, 0.8, 0.2, 1] }}
     >
       <Link href={`/blog/${post.slug}`} className="group">
-        <div className="overflow-hidden rounded-3xl border border-black/10 bg-white/40 shadow-[0_18px_45px_rgba(0,0,0,0.08)]">
+        <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_18px_45px_rgba(0,0,0,0.3)]">
           <div className="p-6">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/60">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
               {post.category}
             </p>
 
-            <h2 className="mt-3 text-[16px] font-semibold uppercase leading-[1.1] tracking-tight text-black group-hover:text-black/80 transition">
+            <h2 className="mt-3 text-[16px] font-semibold uppercase leading-[1.1] tracking-tight text-white group-hover:text-white/80 transition">
               {post.title}
             </h2>
 
-            <p className="mt-3 text-[12px] leading-6 tracking-[0.06em] text-black/65">
+            <p className="mt-3 text-[12px] leading-6 tracking-[0.06em] text-white/60">
               {post.excerpt}
             </p>
 
             <div className="mt-5 flex items-center justify-between">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-black/50">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
                 {new Date(post.date).toLocaleDateString("es-ES", {
                   year: "numeric",
                   month: "long",
@@ -36,7 +36,7 @@ export function BlogCard({ post, index }: { post: Post; index: number }) {
                 })}
               </p>
 
-              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-black/70 group-hover:text-black transition">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/60 group-hover:text-white transition">
                 Leer →
               </span>
             </div>

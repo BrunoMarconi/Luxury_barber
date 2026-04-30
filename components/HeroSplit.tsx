@@ -9,7 +9,7 @@ export function RightPanel({ className }: { className?: string }) {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4, duration: 0.9 }}
-      className={`relative bg-[#ece8de] lg:min-h-[100svh] ${className ?? ""}`}
+      className={`relative bg-[#F5F5F5] lg:min-h-[100svh] ${className ?? ""}`}
     >
       <div className="mx-auto flex h-full max-w-md flex-col px-6 pt-24 pb-24 lg:pt-28">
         <div className="mt-6 flex flex-1 flex-col items-center justify-center text-center">

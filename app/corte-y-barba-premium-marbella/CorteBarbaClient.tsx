@@ -119,7 +119,7 @@ export default function CorteBarbaClient() {
             transition={{ duration: 0.85, delay: 0.35 }}
             className="mt-4 max-w-[18ch] text-[40px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[58px] lg:text-[76px]"
           >
-            Corte de pelo y barba en Marbella
+            No es un corte ni una barba.<br />Es tu imagen completa.
           </motion.h1>
 
           <motion.p
@@ -128,7 +128,7 @@ export default function CorteBarbaClient() {
             transition={{ duration: 0.75, delay: 0.55 }}
             className="mt-6 max-w-[52ch] text-[13px] leading-6 tracking-[0.04em] text-white/75"
           >
-            Un servicio completo para hombres que buscan un resultado preciso, equilibrado y coherente en su imagen.
+            Diseñamos tu corte y tu barba como un conjunto, no como elementos separados.
           </motion.p>
 
           <motion.div
@@ -153,12 +153,36 @@ export default function CorteBarbaClient() {
               </p>
             </div>
             <Link
-              href="/servicios"
+              href="/barberia-hombre-marbella"
               className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur transition hover:bg-white/20"
             >
               Ver todos los servicios
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── STRIP POST-HERO ── */}
+      <section className="relative bg-[#0F2A44] py-10">
+        <div className="mx-auto max-w-5xl px-6 flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
+          <div>
+            <p className="text-[15px] font-semibold leading-7 text-white">
+              La mayoría de los hombres se corta el cabello y se arregla la barba.
+            </p>
+            <p className="mt-1 text-[12px] leading-6 text-white/55">
+              Aquí se construye una imagen coherente.
+            </p>
+          </div>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-strip"
+            data-page="corte-barba"
+            className="shrink-0 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0F2A44] transition hover:bg-white/90"
+          >
+            Descubrir mi mejor versión
+          </a>
         </div>
       </section>
 
@@ -261,13 +285,17 @@ export default function CorteBarbaClient() {
                 </p>
               </FadeUp>
               <FadeUp delay={0.2}>
+                <p className="mt-8 text-[13px] leading-7 tracking-[0.04em] text-white/70 font-semibold">
+                  No trabajamos por partes.<br />
+                  <span className="text-white">Trabajamos en conjunto.</span>
+                </p>
                 <a
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-cta="whatsapp-asesoria"
+                  data-cta="whatsapp-metodo"
                   data-page="corte-barba"
-                  className="mt-10 inline-flex items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
+                  className="mt-6 inline-flex items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
                   Solicitar asesoría personalizada
                 </a>
@@ -320,6 +348,22 @@ export default function CorteBarbaClient() {
             </FadeUp>
           ))}
         </div>
+
+        <FadeUp delay={0.2} className="mt-14 flex flex-col items-center gap-4 text-center">
+          <p className="text-[13px] leading-7 text-black/65 max-w-[52ch]">
+            Cada decisión en tu corte y barba está pensada para potenciar tu rostro.
+          </p>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-proceso"
+            data-page="corte-barba"
+            className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+          >
+            Empezar diagnóstico de imagen
+          </a>
+        </FadeUp>
       </section>
 
       {/* ── DIFERENCIA ── */}
@@ -383,6 +427,22 @@ export default function CorteBarbaClient() {
                   ))}
                 </div>
               </FadeUp>
+
+              <FadeUp delay={0.28} className="mt-10 flex flex-col gap-3">
+                <p className="text-[13px] leading-7 text-white/70">
+                  Cuando corte y barba trabajan juntos, el resultado cambia por completo.
+                </p>
+                <a
+                  href={BOOKSY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta="whatsapp-diferenciacion"
+                  data-page="corte-barba"
+                  className="self-start inline-flex items-center justify-center rounded-full bg-white/10 border border-white/20 px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#0F2A44] hover:border-[#0F2A44]"
+                >
+                  Acceder a experiencia premium
+                </a>
+              </FadeUp>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
@@ -405,6 +465,23 @@ export default function CorteBarbaClient() {
             </div>
           </div>
         </div>
+
+        <FadeUp delay={0.15} className="mt-16 flex flex-col items-center gap-4 text-center">
+          <p className="text-[14px] font-semibold leading-7 text-white">
+            Esto no es mantenimiento.<br />
+            <span className="text-white/60 font-normal text-[13px]">Es construcción de imagen.</span>
+          </p>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-resultado"
+            data-page="corte-barba"
+            className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+          >
+            Quiero este resultado
+          </a>
+        </FadeUp>
       </section>
 
       {/* ── RESEÑAS ── */}
@@ -504,6 +581,22 @@ export default function CorteBarbaClient() {
               </FadeUp>
             ))}
           </div>
+
+          <FadeUp delay={0.2} className="mt-14 flex flex-col items-center gap-4 text-center">
+            <p className="text-[15px] font-semibold text-black/80">
+              El cambio no es solo visual. Es percepción.
+            </p>
+            <a
+              href={BOOKSY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-testimonios"
+              data-page="corte-barba"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+            >
+              Solicitar asesoría personalizada
+            </a>
+          </FadeUp>
         </div>
       </section>
 
@@ -554,12 +647,12 @@ export default function CorteBarbaClient() {
           </FadeUp>
           <FadeUp delay={0.06}>
             <h2 className="mt-6 text-[34px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[46px] lg:text-[58px]">
-              Cuando todo encaja, se nota.
+              Si quieres un cambio real, no puedes tratar cada parte por separado.
             </h2>
           </FadeUp>
           <FadeUp delay={0.12}>
-            <p className="mt-6 text-[13px] leading-7 tracking-[0.03em] text-white/55">
-              Si buscas un resultado completo, coherente y bien trabajado, este servicio es para ti.
+            <p className="mt-6 text-[14px] leading-7 tracking-[0.04em] text-white/70 font-semibold">
+              Tu imagen funciona como un todo.
             </p>
           </FadeUp>
           <FadeUp delay={0.2}>

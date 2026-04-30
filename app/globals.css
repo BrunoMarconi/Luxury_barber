@@ -28,16 +28,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Primary button ── */
 .btn-reserva {
-  @apply inline-flex items-center justify-center rounded-full border border-transparent bg-[#C9A84C] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0A0A0A] shadow-lg shadow-black/20 transition-all duration-200;
+  @apply inline-flex items-center justify-center rounded-full border border-transparent bg-[#0F2A44] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white shadow-lg shadow-black/20 transition-all duration-200;
   font-family: var(--font-montserrat), system-ui, sans-serif;
 }
 
 .btn-reserva:hover {
-  @apply bg-[#B8962A] -translate-y-0.5;
+  @apply bg-[#1a3d5c] -translate-y-0.5;
 }
 
 .btn-reserva:focus-visible {
-  @apply outline outline-2 outline-offset-2 outline-[#C9A84C];
+  @apply outline outline-2 outline-offset-2 outline-[#0F2A44];
 }
 
 /* ── Blog/article content links ── */

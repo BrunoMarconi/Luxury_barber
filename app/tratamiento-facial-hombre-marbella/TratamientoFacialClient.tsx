@@ -119,23 +119,17 @@ export default function TratamientoFacialClient() {
             transition={{ duration: 0.85, delay: 0.35 }}
             className="mt-4 max-w-[18ch] text-[40px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[58px] lg:text-[76px]"
           >
-            Tratamiento facial para hombre en Marbella
+            No es solo cuidado facial.<br />Es cómo se ve tu piel.
           </motion.h1>
 
-          <motion.div
+          <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-6 max-w-[52ch] space-y-2"
+            className="mt-6 max-w-[52ch] text-[13px] leading-6 tracking-[0.04em] text-white/75"
           >
-            <p className="text-[15px] font-semibold leading-6 tracking-[0.04em] text-white/90">
-              Mejora visible en tu piel desde la primera sesión.
-            </p>
-            <p className="text-[13px] leading-6 tracking-[0.06em] text-white/65">
-              Tu piel habla de ti antes de que tú lo hagas.
-              No trabajamos con protocolos genéricos. Cada piel necesita un enfoque diferente.
-            </p>
-          </motion.div>
+            La piel también comunica. Y dice mucho de ti.
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -144,20 +138,51 @@ export default function TratamientoFacialClient() {
             className="mt-8 flex flex-wrap gap-4"
           >
             <div className="flex flex-col gap-1.5">
-              <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer" className="btn-reserva px-8 py-4 text-[11px]">
-                Reserva tu tratamiento
+              <a
+                href={BOOKSY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="whatsapp-asesoria"
+                data-page="tratamiento-facial"
+                className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+              >
+                Solicitar asesoría personalizada
               </a>
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
                 Reserva online en menos de 1 minuto
               </p>
             </div>
             <Link
-              href="/servicios"
+              href="/barberia-hombre-marbella"
               className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur transition hover:bg-white/20"
             >
               Ver todos los servicios
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── STRIP POST-HERO ── */}
+      <section className="relative bg-[#0F2A44] py-10">
+        <div className="mx-auto max-w-5xl px-6 flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
+          <div>
+            <p className="text-[15px] font-semibold leading-7 text-white">
+              La mayoría de los hombres no cuida su piel.
+            </p>
+            <p className="mt-1 text-[12px] leading-6 text-white/55">
+              Por eso se nota.
+            </p>
+          </div>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-strip"
+            data-page="tratamiento-facial"
+            className="shrink-0 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0F2A44] transition hover:bg-white/90"
+          >
+            Mejorar mi imagen
+          </a>
         </div>
       </section>
 
@@ -204,6 +229,23 @@ export default function TratamientoFacialClient() {
             />
           </FadeUp>
         </div>
+
+        <FadeUp delay={0.2} className="mt-14 flex flex-col items-center gap-4 text-center">
+          <p className="text-[13px] leading-7 text-black/65 max-w-[52ch]">
+            No tratamos la piel de forma general.<br />
+            <span className="font-semibold text-black/80">Analizamos y trabajamos según lo que necesitas.</span>
+          </p>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-intro"
+            data-page="tratamiento-facial"
+            className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+          >
+            Solicitar asesoría personalizada
+          </a>
+        </FadeUp>
       </section>
 
       {/* ── BLOQUE SEO PRECIO ── */}
@@ -374,6 +416,22 @@ export default function TratamientoFacialClient() {
               </FadeUp>
             ))}
           </div>
+
+          <FadeUp delay={0.2} className="mt-14 flex flex-col items-center gap-4 text-center">
+            <p className="text-[13px] leading-7 text-white/65 max-w-[52ch]">
+              Cada tratamiento tiene un propósito específico según tu tipo de piel.
+            </p>
+            <a
+              href={BOOKSY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-tecnologia"
+              data-page="tratamiento-facial"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] border border-white/20 px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+            >
+              Empezar diagnóstico facial
+            </a>
+          </FadeUp>
         </div>
       </section>
 
@@ -1191,7 +1249,7 @@ export default function TratamientoFacialClient() {
                     corte de cabello en Marbella
                   </Link>
                   {" "}o un servicio de{" "}
-                  <Link href="/barberia-marbella-corte-barba" className="text-white/70 underline underline-offset-2 hover:text-white/70/80 transition">
+                  <Link href="/corte-y-barba-premium-marbella" className="text-white/70 underline underline-offset-2 hover:text-white/70/80 transition">
                     corte y barba
                   </Link>
                   {" "}complementan su cita con este tratamiento.
@@ -1262,6 +1320,23 @@ export default function TratamientoFacialClient() {
                 </FadeUp>
               ))}
             </div>
+
+            <FadeUp delay={0.28} className="mt-10 flex flex-col gap-3">
+              <p className="text-[13px] leading-7 text-black/70">
+                No es un tratamiento estándar.<br />
+                <span className="font-semibold text-black/85">Es un tratamiento pensado para ti.</span>
+              </p>
+              <a
+                href={BOOKSY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="whatsapp-diferenciacion"
+                data-page="tratamiento-facial"
+                className="self-start inline-flex items-center justify-center rounded-full border border-black/20 bg-black/5 px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-black/80 transition hover:bg-[#0F2A44] hover:border-[#0F2A44] hover:text-white"
+              >
+                Acceder a experiencia premium
+              </a>
+            </FadeUp>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -1283,6 +1358,23 @@ export default function TratamientoFacialClient() {
             ))}
           </div>
         </div>
+
+        <FadeUp delay={0.15} className="mt-14 flex flex-col items-center gap-4 text-center">
+          <p className="text-[14px] font-semibold leading-7 text-black/80">
+            La diferencia no siempre es evidente.<br />
+            <span className="text-black/50 font-normal text-[13px]">Pero siempre se percibe.</span>
+          </p>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-resultado"
+            data-page="tratamiento-facial"
+            className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+          >
+            Quiero este resultado
+          </a>
+        </FadeUp>
       </section>
 
       {/* ── PRUEBA SOCIAL ── */}
@@ -1407,7 +1499,7 @@ export default function TratamientoFacialClient() {
                 <div className="mt-8 flex flex-wrap gap-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/50">
                   <Link href="/" className="hover:text-black transition">← Inicio</Link>
                   <Link href="/corte-de-pelo-hombre-marbella" className="hover:text-black transition">Corte de cabello</Link>
-                  <Link href="/barberia-marbella-corte-barba" className="hover:text-black transition">Corte y barba</Link>
+                  <Link href="/corte-y-barba-premium-marbella" className="hover:text-black transition">Corte y barba</Link>
                 </div>
               </FadeUp>
             </div>
@@ -1448,6 +1540,22 @@ export default function TratamientoFacialClient() {
               </FadeUp>
             ))}
           </div>
+
+          <FadeUp delay={0.2} className="mt-14 flex flex-col items-center gap-4 text-center">
+            <p className="text-[15px] font-semibold text-black/80">
+              Una piel cuidada cambia cómo te perciben.
+            </p>
+            <a
+              href={BOOKSY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-testimonios"
+              data-page="tratamiento-facial"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+            >
+              Solicitar asesoría personalizada
+            </a>
+          </FadeUp>
         </div>
       </section>
 
@@ -1490,42 +1598,29 @@ export default function TratamientoFacialClient() {
       <section className="bg-[#0F2A44] py-20 lg:py-28">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
               Reserva online · Sin esperas
             </p>
           </FadeUp>
           <FadeUp delay={0.05}>
-            <h2 className="mt-4 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[52px]">
-              Reserva tu tratamiento y empieza a ver tu piel con otro nivel de cuidado
+            <h2 className="mt-4 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[52px]">
+              Tu piel habla antes que tú.
             </h2>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <p className="mt-5 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-              Diagnóstico + tecnología + protocolo personalizado.
-            </p>
-            <p className="mt-2 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-              Mejora visible desde la primera sesión.
+            <p className="mt-5 text-[14px] leading-7 tracking-[0.04em] text-white/70 font-semibold">
+              La pregunta es qué está diciendo.
             </p>
           </FadeUp>
           <FadeUp delay={0.15}>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-10 flex justify-center">
               <a
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cta="whatsapp-asesoria"
                 data-page="tratamiento-facial"
-                className="inline-flex items-center justify-center rounded-full border border-transparent bg-black px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-white shadow-lg transition hover:bg-black/80 hover:-translate-y-0.5"
-              >
-                Reserva tu tratamiento
-              </a>
-              <a
-                href={BOOKSY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-cta="whatsapp-asesoria"
-                data-page="tratamiento-facial"
-                className="inline-flex items-center justify-center rounded-full border border-black bg-transparent px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-black/10 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center rounded-full bg-white px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-[#0F2A44] transition hover:bg-white/90"
               >
                 Solicitar asesoría personalizada
               </a>

@@ -12,6 +12,40 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/corte-premium",
+        destination: "/corte-de-pelo-hombre-marbella",
+        permanent: true,
+      },
+      {
+        source: "/barba-premium",
+        destination: "/arreglo-de-barba-marbella",
+        permanent: true,
+      },
+      {
+        source: "/corte-barba-premium",
+        destination: "/corte-y-barba-premium-marbella",
+        permanent: true,
+      },
+      {
+        source: "/barberia-marbella-corte-barba",
+        destination: "/corte-y-barba-premium-marbella",
+        permanent: true,
+      },
+      {
+        source: "/tratamientos",
+        destination: "/tratamiento-capilar-hombre-marbella",
+        permanent: true,
+      },
+      {
+        source: "/servicios",
+        destination: "/barberia-hombre-marbella",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

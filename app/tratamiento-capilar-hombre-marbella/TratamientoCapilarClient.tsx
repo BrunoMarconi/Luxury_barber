@@ -78,22 +78,17 @@ export default function TratamientoCapilarClient() {
             transition={{ duration: 0.85, delay: 0.35 }}
             className="mt-4 max-w-[20ch] text-[40px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[56px] lg:text-[72px]"
           >
-            Tratamiento Capilar Personalizado en Marbella para Hombre
+            Tu cabello no se está cayendo por casualidad.
           </motion.h1>
 
-          <motion.div
+          <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.5 }}
-            className="mt-6 max-w-[52ch] space-y-2"
+            className="mt-6 max-w-[52ch] text-[15px] font-semibold leading-6 tracking-[0.03em] text-white/90"
           >
-            <p className="text-[15px] font-semibold leading-6 tracking-[0.03em] text-white/90">
-              No es un lavado más.
-            </p>
-            <p className="text-[13px] leading-6 tracking-[0.04em] text-white/60">
-              Es un diagnóstico y tratamiento diseñado según el estado real de tu cuero cabelludo y tu cabello.
-            </p>
-          </motion.div>
+            Detrás de cada problema capilar hay una causa. Aquí la analizamos.
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -117,12 +112,32 @@ export default function TratamientoCapilarClient() {
               </p>
             </div>
             <Link
-              href="/servicios"
+              href="/barberia-hombre-marbella"
               className="inline-flex items-center justify-center rounded-full border border-white/25 bg-transparent px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 transition hover:border-white/50 hover:text-white"
             >
               Ver todos los servicios
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── POST-HERO STRIP ── */}
+      <section className="relative bg-[#0F2A44] py-10">
+        <div className="mx-auto max-w-5xl px-6 flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
+          <div>
+            <p className="text-[15px] font-semibold leading-7 text-white">No todos los problemas capilares son iguales.</p>
+            <p className="mt-1 text-[12px] leading-6 text-white/55">Por eso no todos los tratamientos funcionan.</p>
+          </div>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-asesoria"
+            data-page="tratamiento-capilar"
+            className="shrink-0 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0F2A44] transition hover:bg-white/90"
+          >
+            Analizar mi caso
+          </a>
         </div>
       </section>
 
@@ -185,6 +200,20 @@ export default function TratamientoCapilarClient() {
             </FadeUp>
           </div>
         </div>
+        <FadeUp delay={0.18} className="mt-14 flex flex-col items-center gap-4 text-center">
+          <p className="text-[15px] font-semibold text-white/80">No tratamos el cabello. Tratamos la causa.</p>
+          <p className="text-[12px] leading-6 text-white/45">Un diagnóstico real antes de cualquier aplicación.</p>
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="whatsapp-asesoria"
+            data-page="tratamiento-capilar"
+            className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+          >
+            Analizar mi caso
+          </a>
+        </FadeUp>
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </section>
 
@@ -264,6 +293,19 @@ export default function TratamientoCapilarClient() {
               .
             </p>
           </FadeUp>
+          <FadeUp delay={0.46} className="mt-12 flex flex-col items-center gap-4 text-center">
+            <p className="text-[15px] font-semibold text-white/80">Cada paso tiene un propósito. Ninguno es aleatorio.</p>
+            <a
+              href={BOOKSY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-asesoria"
+              data-page="tratamiento-capilar"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+            >
+              Empezar diagnóstico capilar
+            </a>
+          </FadeUp>
         </div>
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </section>
@@ -329,7 +371,7 @@ export default function TratamientoCapilarClient() {
           <FadeUp delay={0.32}>
             <p className="mt-8 text-[13px] leading-6 tracking-[0.04em] text-white/45">
               Especialmente cuando se combina con{" "}
-              <Link href="/barberia-marbella-corte-barba" className="text-white/70 underline underline-offset-2 hover:text-white">
+              <Link href="/corte-y-barba-premium-marbella" className="text-white/70 underline underline-offset-2 hover:text-white">
                 corte y barba
               </Link>
               .
