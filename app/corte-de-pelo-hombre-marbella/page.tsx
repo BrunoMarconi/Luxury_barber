@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CorteClient from "./CorteClient";
 
 export const metadata: Metadata = {
-  title: "Corte de Cabello en Marbella | Asesoría Personalizada Premium | Reserva Online",
+  title: "Corte de pelo premium para hombre en Marbella | The Professional Barber",
   description:
-    "Corte de cabello en Marbella con asesoría personalizada, diagnóstico capilar y visagismo. Servicio premium para hombres. Reserva tu cita ahora.",
+    "Corte de pelo premium para hombre en Marbella. Diagnóstico facial, diseño personalizado y ejecución de alta precisión. Reserva tu cita.",
   keywords: [
     "corte de cabello en Marbella",
     "corte de pelo hombre Marbella",
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     "lavado capilar Marbella",
   ],
   openGraph: {
-    title: "Corte de Cabello en Marbella con Asesoría Personalizada Premium",
+    title: "Corte de pelo premium para hombre en Marbella",
     description:
-      "Corte de cabello en Marbella con diagnóstico capilar, visagismo y servicio premium. Reserva online.",
+      "Corte de pelo premium para hombre en Marbella. Diagnóstico facial, visagismo y precisión técnica. Reserva online.",
     images: ["/images/Foto1_1.jpeg"],
   },
 };

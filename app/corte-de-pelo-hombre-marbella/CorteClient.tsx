@@ -119,17 +119,19 @@ export default function CorteClient() {
             transition={{ duration: 0.85, delay: 0.35 }}
             className="mt-4 max-w-[18ch] text-[40px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[58px] lg:text-[76px]"
           >
-            Este no es un corte más.<br />Es el que realmente te favorece.
+            Corte de pelo premium para hombre en Marbella
           </motion.h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-6 max-w-[52ch] text-[13px] leading-6 tracking-[0.04em] text-white/75"
+            className="mt-6 max-w-[52ch] space-y-3 text-[13px] leading-6 tracking-[0.04em] text-white/75"
           >
-            Diseñado según tu rostro, proporciones y estilo personal.
-          </motion.p>
+            <p>Esto no es un corte de pelo convencional.<br />Es un servicio diseñado para hombres que cuidan su imagen, su presencia y su impacto.</p>
+            <p>Analizamos estructura facial, tipo de cabello y estilo de vida para diseñar un resultado preciso.</p>
+            <p className="text-white/50 italic">Si buscas lo más básico, este no es tu lugar.<br />Si buscas un corte que realmente marque diferencia, estás en el sitio correcto.</p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -146,7 +148,7 @@ export default function CorteClient() {
                 data-page="corte-de-pelo"
                 className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
               >
-                Solicitar asesoría personalizada
+                Reservar corte premium
               </a>
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
                 Reserva online en menos de 1 minuto
@@ -183,6 +185,26 @@ export default function CorteClient() {
           >
             Descubrir mi corte ideal
           </a>
+        </div>
+      </section>
+
+      {/* ── AUTORIDAD ── */}
+      <section className="bg-[#F5F5F5] py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <FadeUp>
+            <p className="text-[15px] font-semibold leading-8 text-black">
+              Más de 20 años de experiencia respaldan nuestro trabajo.<br />
+              Cada corte se diseña de forma personalizada, no se replica.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-5 text-[13px] leading-7 tracking-[0.04em] text-black/60">
+              Aquí no vienes solo a cortarte el pelo.
+            </p>
+            <p className="mt-1 text-[13px] font-semibold tracking-[0.04em] text-black">
+              Vienes a construir una imagen.
+            </p>
+          </FadeUp>
         </div>
       </section>
 
@@ -294,6 +316,9 @@ export default function CorteClient() {
                   El objetivo no es que te guste hoy.<br />
                   <span className="text-white">Es que te favorezca siempre.</span>
                 </p>
+                <p className="mt-4 text-[12px] leading-6 tracking-[0.04em] text-white/50 italic">
+                  Un corte correcto empieza antes de usar la máquina o la tijera.
+                </p>
                 <a
                   href={BOOKSY_URL}
                   target="_blank"
@@ -302,7 +327,7 @@ export default function CorteClient() {
                   data-page="corte-de-pelo"
                   className="mt-6 inline-flex items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
-                  Solicitar asesoría personalizada
+                  Quiero un diagnóstico personalizado
                 </a>
               </FadeUp>
             </div>
@@ -400,7 +425,11 @@ export default function CorteClient() {
                 <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-white/55">
                   Si también quieres trabajar cabello y barba como un conjunto, descubre el{" "}
                   <Link href="/corte-y-barba-premium-marbella" className="underline underline-offset-2 text-white/75 hover:text-white transition">
-                    servicio completo de corte y barba
+                    servicio completo de corte y barba premium en Marbella
+                  </Link>
+                  . Si el objetivo incluye mejorar el estado del cuero cabelludo, también disponemos de{" "}
+                  <Link href="/tratamiento-capilar-marbella" className="underline underline-offset-2 text-white/75 hover:text-white transition">
+                    tratamiento capilar para hombre en Marbella
                   </Link>
                   .
                 </p>
@@ -409,10 +438,10 @@ export default function CorteClient() {
               <FadeUp delay={0.24}>
                 <div className="mt-10 space-y-6">
                   {[
-                    { title: "Personalización total", desc: "No hay dos cortes iguales. Cada cliente recibe una propuesta diseñada para su cara y su estilo." },
-                    { title: "20+ años de experiencia", desc: "Formado en Colombia, Chile y la Academia Antonio Eloy. El oficio se nota." },
-                    { title: "Especialista en visagismo", desc: "Saber qué corte sienta bien a cada cara es una técnica. Aquí la aplicamos en cada visita." },
-                    { title: "Barbería premium en Marbella", desc: "Un espacio donde el hombre aprende a cuidarse y a proyectar su mejor versión." },
+                    { title: "Diagnóstico facial y capilar", desc: "Antes de cortar, analizamos la estructura del rostro, la densidad, el tipo de cabello y el patrón de crecimiento. Nada se improvisa." },
+                    { title: "Diseño basado en visagismo", desc: "Aplicamos técnicas de visagismo para definir el estilo que más favorece a tu estructura facial. Cada decisión tiene un porqué." },
+                    { title: "Ejecución de alta precisión", desc: "Cada ángulo, cada transición y cada detalle se trabajan con la misma exigencia técnica. No hay atajos en el resultado." },
+                    { title: "Acabado con asesoría personalizada", desc: "Al finalizar, recibes una pauta concreta para mantener el resultado en el tiempo. Criterio aplicado a tu caso, no consejos genéricos." },
                   ].map((b, i) => (
                     <FadeUp key={b.title} delay={i * 0.06}>
                       <div className="flex gap-4">
@@ -639,6 +668,39 @@ export default function CorteClient() {
         </div>
       </section>
 
+      {/* ── FILTRO DE CLIENTE ── */}
+      <section className="bg-[#F5F5F5] py-20 lg:py-24">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/50">
+              Para quién es este servicio
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-4 text-[30px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[40px]">
+              Este servicio no es para todo el mundo
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65 max-w-[52ch] mx-auto">
+              Está pensado para hombres que valoran su imagen y entienden el impacto que tiene en su vida personal, profesional y social.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.15}>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 max-w-2xl mx-auto text-left">
+              <div className="rounded-2xl border border-black/10 bg-white/60 p-6">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-black/40 mb-3">No es para ti si…</p>
+                <p className="text-[13px] leading-6 text-black/60">Buscas únicamente el corte más barato sin importar el resultado ni la precisión.</p>
+              </div>
+              <div className="rounded-2xl border border-[#0F2A44]/20 bg-[#0F2A44]/5 p-6">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0F2A44]/60 mb-3">Sí es para ti si…</p>
+                <p className="text-[13px] leading-6 text-black/70">Buscas una imagen más sólida, elegante y precisa, y entiendes que eso tiene un valor real en tu vida.</p>
+              </div>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
       {/* ── CTA FINAL ── */}
       <section className="relative overflow-hidden bg-[#0A0A0A] py-28 lg:py-36">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
@@ -646,20 +708,25 @@ export default function CorteClient() {
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/70">
-              Reserva tu experiencia
+              El siguiente paso
             </p>
           </FadeUp>
           <FadeUp delay={0.06}>
             <h2 className="mt-6 text-[34px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[46px] lg:text-[58px]">
-              Si estás aquí, ya sabes que no buscas un corte cualquiera.
+              Si estás listo para dejar de improvisar con tu imagen
             </h2>
           </FadeUp>
           <FadeUp delay={0.12}>
-            <p className="mt-6 text-[14px] leading-7 tracking-[0.04em] text-white/70 font-semibold">
-              Ahora necesitas hacerlo bien.
+            <p className="mt-6 text-[14px] leading-7 tracking-[0.04em] text-white/70">
+              Reserva tu corte premium en Marbella y trabajaremos tu imagen con criterio, diagnóstico y precisión.
             </p>
           </FadeUp>
-          <FadeUp delay={0.2}>
+          <FadeUp delay={0.16}>
+            <p className="mt-3 text-[13px] leading-6 tracking-[0.04em] text-white/45 italic">
+              Si quieres dejar de improvisar con tu imagen, este es el siguiente paso.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.22}>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a
                 href={BOOKSY_URL}
@@ -669,7 +736,7 @@ export default function CorteClient() {
                 data-page="corte-de-pelo"
                 className="w-full rounded-full bg-[#0F2A44] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c] sm:w-auto"
               >
-                Solicitar asesoría personalizada
+                Reservar mi corte premium en Marbella
               </a>
               <Link
                 href="/corte-y-barba-premium-marbella"
