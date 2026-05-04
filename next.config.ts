@@ -44,6 +44,11 @@ const nextConfig = {
         destination: "/barberia-hombre-marbella",
         permanent: true,
       },
+      {
+        source: "/barberia-marbella",
+        destination: "/barberia-hombre-marbella",
+        permanent: true,
+      },
     ];
   },
 };

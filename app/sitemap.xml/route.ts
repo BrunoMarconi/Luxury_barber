@@ -9,7 +9,20 @@ export async function GET(request: Request) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || `${protocol}://${host}`;
   const posts = getPosts();
 
-  const staticUrls = ["", "contact", "catalogo", "blog"];
+  const staticUrls = [
+    "",
+    "barberia-hombre-marbella",
+    "corte-de-pelo-hombre-marbella",
+    "arreglo-de-barba-marbella",
+    "corte-y-barba-premium-marbella",
+    "tratamiento-capilar-hombre-marbella",
+    "tratamiento-facial-hombre-marbella",
+    "diagnostico-capilar-marbella",
+    "galeria",
+    "catalogo",
+    "blog",
+    "contact",
+  ];
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

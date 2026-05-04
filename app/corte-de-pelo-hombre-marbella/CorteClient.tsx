@@ -428,7 +428,7 @@ export default function CorteClient() {
                     servicio completo de corte y barba premium en Marbella
                   </Link>
                   . Si el objetivo incluye mejorar el estado del cuero cabelludo, también disponemos de{" "}
-                  <Link href="/tratamiento-capilar-marbella" className="underline underline-offset-2 text-white/75 hover:text-white transition">
+                  <Link href="/tratamiento-capilar-hombre-marbella" className="underline underline-offset-2 text-white/75 hover:text-white transition">
                     tratamiento capilar para hombre en Marbella
                   </Link>
                   .
