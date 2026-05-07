@@ -1,4 +1,4 @@
-const PHONE = "34672516317";
+const PHONE = "34617853179";
 
 export const CTA_TEXT = "Solicitar asesoría personalizada";
 export const CTA_MICRO = "Sin compromiso · Respuesta en menos de 1 hora";

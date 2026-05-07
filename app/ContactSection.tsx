@@ -198,7 +198,7 @@ export default function ContactSection() {
                   const encodedText = encodeURIComponent(text);
 
                   // IMPORTANTE: número en formato internacional SIN +
-                  const whatsappNumber = "34672516317";
+                  const whatsappNumber = "34617853179";
 
                   const url = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
 

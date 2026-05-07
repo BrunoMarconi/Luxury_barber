@@ -302,7 +302,7 @@ export default function CorteBarbaClient() {
               </FadeUp>
             </div>
 
-            <FadeUp delay={0.1} className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.3)]">
+            <FadeUp delay={0.1} className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.3)]">
               <Image
                 src="/images/visagismopelo.jpeg"
                 alt="diseño de barba según estructura facial Marbella"

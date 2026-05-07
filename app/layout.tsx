@@ -118,7 +118,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <SpeedInsights />
         {/* WhatsApp floating button */}
         <a
-          href="https://wa.me/34672516317?text=Hola,%20quiero%20reservar%20una%20cita"
+          href="https://wa.me/34617853179?text=Hola,%20quiero%20reservar%20una%20cita"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Contactar por WhatsApp"
