@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import Script from "next/script";
+import { Suspense } from "react";
 import "./globals.css";
 import Header from "./header";
 import Footer from "./Footer";
+import Analytics from "@/components/Analytics";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
@@ -111,6 +113,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gtag('config', 'G-W0JW367P9G');
           `}
         </Script>
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
         <Header />
         {children}
         {/* page-specific sections will be rendered by each page component */}
@@ -137,7 +142,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@type": "BarberShop",
               name: "El Barbero Profesional",
               url: "https://theprofessionalbarber.es",
-              telephone: "+34 672 516 317",
+              telephone: "+34 617 853 179",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "C. Padre Enrique Cantos, 2",
