@@ -15,6 +15,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/corte-de-pelo%20-hombre-marbella",
+        destination: "/corte-de-pelo-hombre-marbella",
+        permanent: true,
+      },
+      {
         source: "/corte-premium",
         destination: "/corte-de-pelo-hombre-marbella",
         permanent: true,

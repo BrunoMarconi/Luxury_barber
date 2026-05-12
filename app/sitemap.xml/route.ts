@@ -4,7 +4,7 @@ import { getPosts } from "@/lib/posts";
 export const runtime = "nodejs";
 
 export async function GET(request: Request) {
-  const host = request.headers.get("host") || "theprofessionalbarber.es";
+  const host = request.headers.get("host") || "www.theprofessionalbarber.es";
   const protocol = host.startsWith("localhost") ? "http" : "https";
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || `${protocol}://${host}`;
   const posts = getPosts();

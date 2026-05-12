@@ -44,12 +44,12 @@ export const metadata: Metadata = {
   verification: {
     google: "_Q840UH0Q123EINVdWheQidpFbrY4Pj4kv96QtoT8zQ",
   },
-  metadataBase: new URL("https://theprofessionalbarber.es"),
+  metadataBase: new URL("https://www.theprofessionalbarber.es"),
   openGraph: {
     title: "Barbería en Marbella | El Barbero Profesional",
     description:
       "Reserva tu cita en la barbería más exclusiva de Marbella. Corte de pelo hombre premium, afeitado y visagismo con barbero profesional.",
-    url: "https://theprofessionalbarber.es",
+    url: "https://www.theprofessionalbarber.es",
     siteName: "El Barbero Profesional",
     images: [
       {
@@ -141,7 +141,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@context": "https://schema.org",
               "@type": "BarberShop",
               name: "El Barbero Profesional",
-              url: "https://theprofessionalbarber.es",
+              url: "https://www.theprofessionalbarber.es",
               telephone: "+34 617 853 179",
               address: {
                 "@type": "PostalAddress",
