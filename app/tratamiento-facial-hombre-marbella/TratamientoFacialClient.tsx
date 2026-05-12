@@ -94,7 +94,7 @@ export default function TratamientoFacialClient() {
       {/* ── HERO ── */}
       <section className="relative min-h-[92svh] overflow-hidden">
         <Image
-          src="/images/Foto5_1.jpeg"
+          src="/images/servicio-premium-masculino-marbella.jpeg"
           alt="tratamiento facial hombre Marbella"
           fill
           priority
@@ -1455,7 +1455,7 @@ export default function TratamientoFacialClient() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <FadeUp delay={0.05} className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.12)]">
               <Image
-                src="/images/JuanCarlos1.jpeg"
+                src="/images/barbero-profesional-premium-marbella.jpeg"
                 alt="Juan Carlos barbero profesional Marbella"
                 fill
                 className="object-cover"

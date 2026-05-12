@@ -94,7 +94,7 @@ export default function CorteClient() {
       {/* ── HERO ── */}
       <section className="relative min-h-[92svh] overflow-hidden">
         <Image
-          src="/images/cortepelo1.jpeg"
+          src="/images/corte-de-pelo-hombre-premium-marbella.jpeg"
           alt="corte de pelo hombre en Marbella"
           fill
           priority
@@ -334,7 +334,7 @@ export default function CorteClient() {
 
             <FadeUp delay={0.1} className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.3)]">
               <Image
-                src="/images/visagismopelo.jpeg"
+                src="/images/diagnostico-capilar-masculino-marbella.jpeg"
                 alt="diagnóstico capilar y visagismo Marbella"
                 fill
                 className="object-cover"

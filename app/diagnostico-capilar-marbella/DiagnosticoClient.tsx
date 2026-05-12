@@ -284,7 +284,7 @@ export default function DiagnosticoClient() {
 
             <FadeUp delay={0.1} className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.3)]">
               <Image
-                src="/images/visagismopelo.jpeg"
+                src="/images/diagnostico-capilar-masculino-marbella.jpeg"
                 alt="análisis capilar profesional Marbella"
                 fill
                 className="object-cover"

@@ -94,7 +94,7 @@ export default function BarbaClient() {
       {/* ── HERO ── */}
       <section className="relative min-h-[92svh] overflow-hidden">
         <Image
-          src="/images/barba1.jpeg"
+          src="/images/barba-premium-hombre-marbella.jpeg"
           alt="arreglo de barba en Marbella"
           fill
           priority

@@ -94,7 +94,7 @@ export default function CorteBarbaClient() {
       {/* ── HERO ── */}
       <section className="relative min-h-[92svh] overflow-hidden">
         <Image
-          src="/images/barba1.jpeg"
+          src="/images/experiencia-barberia-lujo-marbella.jpeg"
           alt="corte de pelo y barba en Marbella"
           fill
           priority
@@ -304,7 +304,7 @@ export default function CorteBarbaClient() {
 
             <FadeUp delay={0.1} className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.3)]">
               <Image
-                src="/images/visagismopelo.jpeg"
+                src="/images/diagnostico-capilar-masculino-marbella.jpeg"
                 alt="diseño de barba según estructura facial Marbella"
                 fill
                 className="object-cover"
