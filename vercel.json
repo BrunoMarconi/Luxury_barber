@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "theprofessionalbarber.es" }],
+      "destination": "https://www.theprofessionalbarber.es/$1",
+      "permanent": true
+    }
+  ]
+}
