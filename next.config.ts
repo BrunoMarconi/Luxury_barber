@@ -20,6 +20,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/blog/corte-segun-rostro-hombre-marbella",
+        destination: "/blog/corte-rostro-redondo-hombre-marbella",
+        permanent: true,
+      },
+      {
         source: "/corte-premium",
         destination: "/corte-de-pelo-hombre-marbella",
         permanent: true,
