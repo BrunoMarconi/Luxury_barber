@@ -25,6 +25,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/blog/blog-imagen-masculina-visagismo",
+        destination: "/blog/blog-visagismo-masculino-marbella",
+        permanent: true,
+      },
+      {
         source: "/corte-premium",
         destination: "/corte-de-pelo-hombre-marbella",
         permanent: true,
