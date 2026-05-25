@@ -20,11 +20,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/blog/corte-segun-rostro-hombre-marbella",
-        destination: "/blog/corte-rostro-redondo-hombre-marbella",
-        permanent: true,
-      },
-      {
         source: "/blog/blog-imagen-masculina-visagismo",
         destination: "/blog/blog-visagismo-masculino-marbella",
         permanent: true,
