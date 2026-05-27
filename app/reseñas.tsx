@@ -85,9 +85,9 @@ function FadeUp({
 function Stars({ rating = 5 }: { rating?: number }) {
   const r = Math.max(0, Math.min(5, rating));
   return (
-    <div className="flex items-center gap-1" aria-label={`${r} out of 5`}>
+    <div className="flex items-center gap-0.5" aria-label={`${r} out of 5`}>
       {Array.from({ length: 5 }).map((_, i) => (
-        <span key={i} className={i < r ? "text-black/80" : "text-black/20"}>
+        <span key={i} className={`text-[10px] ${i < r ? "text-black/70" : "text-black/15"}`}>
           ★
         </span>
       ))}
@@ -112,14 +112,11 @@ function ReviewCard({ r }: { r: Review }) {
             {r.name}
           </p>
           <div className="mt-2 flex flex-wrap items-center gap-2">
-            <SourcePill s={r.source} />
             {typeof r.rating === "number" ? (
-              <span className="rounded-full border border-black/15 bg-white/40 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/60">
-                <Stars rating={r.rating} />
-              </span>
+              <Stars rating={r.rating} />
             ) : null}
             {r.service ? (
-              <span className="rounded-full border border-black/15 bg-white/40 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/60">
+              <span className="text-[10px] tracking-[0.12em] text-black/45">
                 {r.service}
               </span>
             ) : null}
@@ -184,7 +181,7 @@ export default function ReviewsSection() {
           <div>
             <FadeUp>
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/70">
-                Reseñas
+                Reseñas verificadas en Booksy
               </p>
             </FadeUp>
             <FadeUp delay={0.05}>
@@ -193,34 +190,26 @@ export default function ReviewsSection() {
               </h2>
             </FadeUp>
           </div>
-
-          
         </div>
 
         {/* Controls */}
         <FadeUp delay={0.12}>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex flex-wrap gap-2">
-              {sources.map((s) => (
-                <button
-                  key={s}
-                  type="button"
-                  onClick={() => setSource(s)}
-                  className={[
-                    "rounded-full border px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] transition",
-                    source === s
-                      ? "border-black/35 bg-black/5"
-                      : "border-black/15 bg-white/40 hover:border-black/25",
-                  ].join(" ")}
-                >
-                  {s === "ALL" ? "Todas" : s}
-                </button>
-              ))}
-            </div>
-
-            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-black/50">
-              {filtered.length} reseñas
-            </p>
+          <div className="mt-10 flex flex-wrap gap-2">
+            {sources.map((s) => (
+              <button
+                key={s}
+                type="button"
+                onClick={() => setSource(s)}
+                className={[
+                  "rounded-full border px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] transition",
+                  source === s
+                    ? "border-black/35 bg-black/5"
+                    : "border-black/15 bg-white/40 hover:border-black/25",
+                ].join(" ")}
+              >
+                {s === "ALL" ? "Todas" : s}
+              </button>
+            ))}
           </div>
         </FadeUp>
 
@@ -249,7 +238,7 @@ export default function ReviewsSection() {
         {/* CTA */}
         <FadeUp delay={0.15} className="mt-14 flex flex-col items-center gap-4 text-center">
           <p className="text-[15px] font-semibold text-black/80">
-            Tú puedes ser el siguiente resultado.
+            Tú también puedes experimentar este nivel de cuidado.
           </p>
           <a
             href={REVIEWS_WA_URL}

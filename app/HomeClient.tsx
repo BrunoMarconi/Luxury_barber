@@ -87,7 +87,7 @@ function RightPanel({ className }: { className?: string }) {
               data-page="home"
               className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-6 py-2.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
             >
-              Acceder a experiencia premium
+              Ver experiencia premium
             </a>
           </motion.div>
         </div>
@@ -162,7 +162,7 @@ const differentiationCards = [
         <circle cx="12" cy="16" r="1" />
       </svg>
     ),
-    title: "Tecnología tratamiento profesional",
+    title: "Tecnología y tratamiento profesional",
     text: "Trabajamos con tecnología facial FOREO y productos italianos Previa para mejorar el estado del cabello y la piel.",
   },
 ];
@@ -187,15 +187,11 @@ function DifferentiationBlock() {
               No trabajamos por plantillas. Cada cliente tiene un diseño.
             </h2>
             <div className="mt-8 space-y-5 text-[13px] leading-7 tracking-[0.03em] text-white/60">
-              <p>Cada servicio comienza con un análisis real.</p>
               <p>
-                Evaluamos el estado del cuero cabelludo, la estructura del rostro y la forma en la que crece el cabello.
-                A partir de ahí, diseñamos un resultado adaptado a cada persona.
+                Cada servicio comienza con un análisis real: estructura del rostro, estado del cuero cabelludo y estilo de vida.
               </p>
-              <p>No se trata solo de cortar el pelo.</p>
               <p>
-                Se trata de entender qué te favorece, qué necesitas y cómo mantenerlo en el tiempo.
-                Por eso trabajamos con herramientas de diagnóstico, técnicas de visagismo y productos profesionales que nos permiten tomar decisiones con criterio.
+                A partir de ahí diseñamos un resultado adaptado a cada persona, sin plantillas ni atajos.
               </p>
               <p className="font-semibold text-white/85">Nada es al azar. Cada paso tiene un porqué.</p>
             </div>
@@ -331,7 +327,7 @@ function ExperienceBlock() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="max-w-[56ch] text-[13px] leading-7 tracking-[0.04em] text-black/60"
           >
-            No es solo un corte. Es un proceso completo diseñado para mejorar tu imagen con criterio y precisión.
+            Cada paso está pensado para que el resultado no solo se vea bien el día del corte, sino que comunique algo de ti cada día.
           </motion.p>
         </div>
 
@@ -427,18 +423,13 @@ function AuthorityBlock() {
               className="mt-8 space-y-5 text-[13px] leading-7 tracking-[0.03em] text-white/60"
             >
               <p>
-                Soy Juan Carlos Terán, especialista en imagen masculina con más de 20 años de experiencia en barbería.
+                Soy Juan Carlos Terán, especialista en imagen masculina con más de 20 años de experiencia formado en Colombia, Chile y la academia Antonio Eloy en España.
               </p>
               <p>
-                Mi formación ha pasado por Colombia, Chile y España, incluyendo academias como Antonio Eloy, donde desarrollé una visión más avanzada del cuidado masculino.
+                Cada decisión —desde el diagnóstico hasta el acabado— tiene una base técnica y un objetivo claro: mejorar tu imagen de forma real y coherente contigo.
               </p>
-              <p className="text-white/85">No trabajo desde la improvisación.</p>
-              <p>
-                Cada decisión que tomo —desde el diagnóstico hasta el acabado— tiene una base técnica y un objetivo claro: mejorar tu imagen de forma real y coherente contigo.
-              </p>
-              <p className="text-white/85">Este servicio no está pensado para cualquiera.</p>
-              <p>
-                Está pensado para hombres que valoran el detalle, el criterio y el resultado.
+              <p className="font-semibold text-white/85">
+                Este servicio está pensado para hombres que valoran el detalle, el criterio y el resultado.
               </p>
             </motion.div>
             <motion.a
@@ -572,10 +563,7 @@ function ClosingCTA() {
   );
 }
 
-function HeroSplit({
-  leftImageSrc,
-  rightCardImageSrc,
-}: HeroSplitProps) {
+function HeroSplit(_props: HeroSplitProps) {
   return (
     <section id="home" className="relative min-h-[100svh] w-full overflow-hidden">
       {/* CSS marquee */}
@@ -636,8 +624,8 @@ function HeroSplit({
               transition={{ delay: 0.45, duration: 0.8 }}
               className="mt-3 max-w-[20ch] text-white"
             >
-              <span className="block text-[38px] leading-[0.95] tracking-tight sm:text-[56px] lg:text-[76px] xl:text-[86px]">
-                No es un corte.<br />Es cómo el mundo te percibe.
+              <span className="block text-[32px] leading-[0.95] tracking-tight sm:text-[50px] lg:text-[66px] xl:text-[76px]">
+                Corte de pelo premium para hombre en Marbella.<br />No es solo un corte.<br />Es cómo el mundo te percibe.
               </span>
             </motion.h1>
 
@@ -647,7 +635,7 @@ function HeroSplit({
               transition={{ delay: 0.6, duration: 0.7 }}
               className="mt-4 max-w-[52ch] text-[13px] leading-6 tracking-[0.04em] text-white/75 lg:text-[14px]"
             >
-              Asesoría personalizada en imagen masculina. Diseñado para hombres que entienden el valor de verse bien.
+              Asesoría personalizada en imagen masculina, visagismo y cuidado capilar para hombres que entienden que su presencia también comunica.
             </motion.p>
 
             <motion.div
@@ -670,7 +658,7 @@ function HeroSplit({
                 href="/corte-de-pelo-hombre-marbella"
                 className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-white backdrop-blur transition hover:bg-white/20"
               >
-                Ver el protocolo completo
+                Ver la experiencia completa
               </a>
             </motion.div>
           </div>
@@ -704,10 +692,10 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
         <div className="mx-auto max-w-5xl px-6 flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
           <div>
             <p className="text-[15px] font-semibold leading-7 text-white">
-              ¿Sabes realmente qué corte te favorece?
+              Tu imagen no debería depender de la suerte.
             </p>
             <p className="mt-1 text-[12px] leading-6 text-white/55">
-              La mayoría de hombres eligen por moda. Nosotros elegimos por tu rostro.
+              Trabajamos con criterio técnico y visagismo para diseñar el corte que realmente te favorece.
             </p>
           </div>
           <a
@@ -767,13 +755,13 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
                 className="flex flex-col items-center px-8 py-12 text-center md:py-0"
               >
                 <span className="mb-4 text-[80px] font-bold leading-none tracking-tighter text-white/70 sm:text-[100px]">
-                  10+
+                  20+
                 </span>
                 <h3 className="mb-4 text-[15px] font-semibold uppercase tracking-[0.1em] text-white">
                   Años de experiencia
                 </h3>
                 <p className="max-w-[22ch] text-[13px] leading-6 text-white/50">
-                  Más de una década perfeccionando el arte del corte masculino. Cada detalle cuenta.
+                  Más de dos décadas perfeccionando el arte del corte masculino con criterio y precisión.
                 </p>
               </motion.div>
 
@@ -785,7 +773,12 @@ export default function HomePage({ gallery }: { gallery?: GalleryPhoto[] }) {
                 className="flex flex-col items-center px-8 py-12 text-center md:py-0"
               >
                 <div className="mb-4 flex h-[80px] items-center sm:h-[100px]">
-                  <span className="text-[60px] leading-none sm:text-[72px]">🌍</span>
+                  <span className="inline-flex h-[72px] w-[72px] items-center justify-center rounded-full border border-[#0F2A44]/40 bg-[#0F2A44]/10 sm:h-[88px] sm:w-[88px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 sm:h-10 sm:w-10">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                  </span>
                 </div>
                 <h3 className="mb-4 text-[15px] font-semibold uppercase tracking-[0.1em] text-white">
                   Formación Internacional
