@@ -14,8 +14,6 @@ type Photo = {
 };
 
 const PHOTOS: Photo[] = [
-  { src: "/images/Foto11.jpeg", alt: "Corte premium en Marbella", size: "tall" },
-  { src: "/images/Foto22.jpeg", alt: "Barbería premium Marbella", size: "wide" },
   { src: "/images/foto24.jpeg", alt: "Corte masculino profesional", size: "tall" },
   { src: "/images/foto25.jpeg", alt: "Estilo masculino premium", size: "square" },
   { src: "/images/foto26.jpeg", alt: "Experiencia barbería Marbella", size: "tall" },
