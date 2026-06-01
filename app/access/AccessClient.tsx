@@ -24,7 +24,7 @@ export default function AccessClient() {
       <section className="relative h-screen min-h-[640px] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/experiencia-barberia-lujo-marbella.jpeg"
+            src="/images/access.jpeg"
             alt="The Professional Barber — Marbella"
             fill
             className="object-cover object-center scale-[1.02]"
@@ -78,7 +78,7 @@ export default function AccessClient() {
         <div className="group relative overflow-hidden">
           <div className="relative h-[80vh] min-h-[540px] overflow-hidden">
             <Image
-              src="/images/barberia-premium-hombre-marbella.jpeg"
+              src="/images/access2.jpeg"
               alt="Black Access — The Professional Barber Marbella"
               fill
               className="object-cover object-center transition-transform duration-[1800ms] group-hover:scale-[1.03]"
@@ -120,7 +120,7 @@ export default function AccessClient() {
         <div className="group relative overflow-hidden">
           <div className="relative h-[58vh] min-h-[380px] overflow-hidden">
             <Image
-              src="/images/servicio-premium-masculino-marbella.jpeg"
+              src="/images/access3.jpeg"
               alt="Premium Experience — The Professional Barber Marbella"
               fill
               className="object-cover object-center transition-transform duration-[1800ms] group-hover:scale-[1.03]"
