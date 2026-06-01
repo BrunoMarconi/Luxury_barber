@@ -1,227 +1,249 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const WA_PRIVATE =
+  "https://wa.me/34617853179?text=Hola,%20quiero%20solicitar%20acceso%20privado%20Black%20Access";
+
 export default function AccessClient() {
   return (
     <main className="bg-[#080808] min-h-screen">
+      <style>{`
+        @keyframes fade-up {
+          from { opacity: 0; transform: translateY(18px); }
+          to   { opacity: 1; transform: translateY(0);    }
+        }
+        .au { animation: fade-up 1.1s cubic-bezier(0.22,1,0.36,1) both; }
+        .au-1 { animation-delay: 0.2s; }
+        .au-2 { animation-delay: 0.45s; }
+        .au-3 { animation-delay: 0.65s; }
+        .au-4 { animation-delay: 0.85s; }
+        .au-5 { animation-delay: 1.05s; }
+      `}</style>
 
       {/* ── HERO ── */}
-      <section className="relative h-screen min-h-[600px] flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative h-screen min-h-[640px] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/experiencia-barberia-lujo-marbella.jpeg"
             alt="The Professional Barber — Marbella"
             fill
-            className="object-cover object-center"
+            className="object-cover object-center scale-[1.02]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-[#080808]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-[#080808]" />
+          <div className="absolute inset-0 bg-black/15" />
         </div>
 
-        <div className="relative z-10 text-center px-6 max-w-xl mx-auto">
-          <p className="text-[#C9A96E] tracking-[0.45em] text-[10px] uppercase font-light mb-10">
-            The Professional Barber · Marbella
+        <div className="relative z-10 text-center px-6 max-w-lg mx-auto">
+          <p className="au au-1 text-[#C9A96E] tracking-[0.55em] text-[9px] uppercase font-light mb-8">
+            Marbella · Costa del Sol
           </p>
-          <h1 className="text-[#F0EBE1] font-light tracking-[0.18em] text-4xl md:text-5xl uppercase leading-[1.3] mb-10">
-            Precision<br />Presence<br />Image
+          <h1 className="au au-2 text-[#F0EBE1] font-light tracking-[0.22em] text-[28px] md:text-[36px] uppercase leading-[1.25] mb-6">
+            The Professional<br />Barber
           </h1>
-          <div className="w-10 h-px bg-[#C9A96E] mx-auto mb-10" />
-          <p className="text-[#F0EBE1]/45 text-[11px] tracking-[0.2em] uppercase font-light mb-14 leading-loose">
+          <p className="au au-3 text-[#C9A96E]/70 tracking-[0.45em] text-[9px] uppercase font-light mb-10">
+            Precision&nbsp;&nbsp;·&nbsp;&nbsp;Presence&nbsp;&nbsp;·&nbsp;&nbsp;Image
+          </p>
+          <div className="au au-4 w-8 h-px bg-[#C9A96E]/40 mx-auto mb-10" />
+          <p className="au au-4 text-[#F0EBE1]/40 text-[10px] tracking-[0.18em] font-light mb-14 leading-[2]">
             Private grooming experiences focused on<br />
-            masculine image, structure and visual perception.
+            masculine image, visual perception<br />
+            and advanced care.
           </p>
           <a
             href="#experiences"
-            className="inline-flex items-center gap-4 border border-[#F0EBE1]/20 text-[#F0EBE1]/65 text-[10px] tracking-[0.38em] uppercase px-10 py-4 hover:border-[#C9A96E]/50 hover:text-[#C9A96E] transition-all duration-700 font-light"
+            className="au au-5 inline-flex items-center gap-5 text-[#F0EBE1]/60 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/15 pb-1 hover:text-[#C9A96E] hover:border-[#C9A96E]/40 transition-all duration-700"
           >
-            Enter Experience <span className="text-xs">→</span>
+            Enter Experience <span>→</span>
           </a>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-20">
-          <div className="w-px h-14 bg-[#F0EBE1] animate-pulse mx-auto" />
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div className="w-px h-12 bg-gradient-to-b from-[#F0EBE1]/25 to-transparent" />
         </div>
       </section>
 
       {/* ── PHILOSOPHY ── */}
-      <section className="py-28 px-6 text-center">
-        <p className="text-[#F0EBE1]/35 text-[11px] tracking-[0.35em] uppercase font-light max-w-xs mx-auto leading-loose">
-          Algunos hombres se cortan el cabello.<br />
-          Otros construyen presencia.
+      <section className="py-24 px-6 text-center">
+        <p className="text-[#F0EBE1]/22 text-[10px] tracking-[0.38em] uppercase font-light max-w-[28ch] mx-auto leading-[2.2]">
+          Some men get a haircut.<br />
+          Others build a presence.
         </p>
       </section>
 
       {/* ── EXPERIENCES ── */}
-      <section id="experiences" className="px-5 md:px-10 pb-32 max-w-5xl mx-auto">
-        <div className="mb-16 text-center">
-          <p className="text-[#C9A96E] tracking-[0.45em] text-[10px] uppercase font-light mb-5">
-            Experiencias
-          </p>
-          <div className="w-8 h-px bg-[#C9A96E]/30 mx-auto" />
-        </div>
+      <div id="experiences" className="px-5 md:px-10 max-w-5xl mx-auto pb-40 space-y-3">
 
         {/* BLACK ACCESS */}
-        <Link href="/diagnostico-capilar-marbella" className="block mb-3 group">
-          <div className="relative h-[72vh] min-h-[480px] overflow-hidden">
+        <div className="group relative overflow-hidden">
+          <div className="relative h-[80vh] min-h-[540px] overflow-hidden">
             <Image
               src="/images/barberia-premium-hombre-marbella.jpeg"
-              alt="Black Access — The Professional Barber"
+              alt="Black Access — The Professional Barber Marbella"
               fill
-              className="object-cover object-center transition-transform duration-[1400ms] group-hover:scale-[1.04]"
+              className="object-cover object-center transition-transform duration-[1800ms] group-hover:scale-[1.03]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/92 via-black/25 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-14">
-              <p className="text-[#C9A96E] tracking-[0.45em] text-[9px] uppercase font-light mb-4">
-                Experiencia Definitiva
+            <div className="absolute inset-0 bg-gradient-to-t from-black/96 via-black/35 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/25 to-transparent" />
+
+            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16">
+              <p className="text-[#C9A96E]/80 tracking-[0.55em] text-[8px] uppercase font-light mb-6">
+                Private Sunday Experience
               </p>
-              <h2 className="text-[#F0EBE1] font-light tracking-[0.18em] text-3xl md:text-5xl uppercase mb-5 leading-tight">
-                Black Access
+              <h2 className="text-[#F0EBE1] font-light tracking-[0.25em] text-[38px] md:text-[58px] uppercase leading-[1.05] mb-8">
+                Black<br />Access
               </h2>
-              <p className="text-[#F0EBE1]/55 text-[11px] tracking-[0.12em] font-light max-w-sm leading-relaxed mb-8">
-                Análisis facial completo, diseño estratégico de imagen y construcción sofisticada de presencia masculina.
+              <p className="text-[#F0EBE1]/40 text-[10px] tracking-[0.12em] font-light max-w-[42ch] leading-[1.9] mb-12">
+                A private Sunday experience designed for men who expect precision, discretion, advanced care and complete personal attention.
               </p>
-              <span className="inline-flex items-center gap-3 text-[#C9A96E] text-[10px] tracking-[0.32em] uppercase font-light border-b border-[#C9A96E]/25 pb-1 group-hover:border-[#C9A96E]/70 transition-all duration-600">
-                Descubrir <span className="text-xs">→</span>
-              </span>
+              <div className="flex flex-col sm:flex-row items-start gap-5">
+                <Link
+                  href="/black-access-marbella"
+                  className="inline-flex items-center gap-4 text-[#C9A96E] text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#C9A96E]/30 pb-1 hover:border-[#C9A96E]/80 transition-all duration-700"
+                >
+                  Discover Black Access <span>→</span>
+                </Link>
+                <a
+                  href={WA_PRIVATE}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-4 text-[#F0EBE1]/40 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/12 pb-1 hover:text-[#F0EBE1]/70 hover:border-[#F0EBE1]/30 transition-all duration-700"
+                >
+                  Request Private Access <span>→</span>
+                </a>
+              </div>
             </div>
           </div>
-        </Link>
+        </div>
 
-        {/* PREMIUM */}
-        <Link href="/corte-de-pelo-hombre-marbella" className="block mb-2 group">
-          <div className="relative h-[52vh] min-h-[340px] overflow-hidden">
+        {/* PREMIUM EXPERIENCE */}
+        <div className="group relative overflow-hidden">
+          <div className="relative h-[58vh] min-h-[380px] overflow-hidden">
             <Image
               src="/images/servicio-premium-masculino-marbella.jpeg"
-              alt="Premium Experience — The Professional Barber"
+              alt="Premium Experience — The Professional Barber Marbella"
               fill
-              className="object-cover object-center transition-transform duration-[1400ms] group-hover:scale-[1.04]"
+              className="object-cover object-center transition-transform duration-[1800ms] group-hover:scale-[1.03]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-              <p className="text-[#C9A96E] tracking-[0.45em] text-[9px] uppercase font-light mb-3">
-                Experiencia Premium
+            <div className="absolute inset-0 bg-gradient-to-t from-black/94 via-black/30 to-black/5" />
+
+            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-14">
+              <p className="text-[#C9A96E]/65 tracking-[0.55em] text-[8px] uppercase font-light mb-5">
+                Image&nbsp;&nbsp;·&nbsp;&nbsp;Structure&nbsp;&nbsp;·&nbsp;&nbsp;Precision
               </p>
-              <h2 className="text-[#F0EBE1] font-light tracking-[0.15em] text-2xl md:text-3xl uppercase mb-3 leading-tight">
-                Premium Experience
+              <h2 className="text-[#F0EBE1] font-light tracking-[0.2em] text-[28px] md:text-[40px] uppercase leading-[1.1] mb-6">
+                Premium<br />Experience
               </h2>
-              <p className="text-[#F0EBE1]/45 text-[11px] tracking-[0.1em] font-light max-w-xs leading-relaxed mb-7">
-                Corte de precisión con visagismo y diseño estratégico personalizado.
+              <p className="text-[#F0EBE1]/38 text-[10px] tracking-[0.1em] font-light max-w-[40ch] leading-[1.9] mb-10">
+                A complete grooming experience focused on facial structure, hair design, skin care and masculine presence.
               </p>
-              <span className="inline-flex items-center gap-3 text-[#F0EBE1]/50 text-[10px] tracking-[0.3em] uppercase font-light border-b border-[#F0EBE1]/15 pb-1 group-hover:text-[#C9A96E] group-hover:border-[#C9A96E]/35 transition-all duration-600">
-                Explorar <span className="text-xs">→</span>
-              </span>
+
+              <Link
+                href="/corte-y-barba-premium-marbella"
+                className="inline-flex items-center gap-4 text-[#F0EBE1]/55 text-[9px] tracking-[0.42em] uppercase font-light border-b border-[#F0EBE1]/15 pb-1 mb-10 hover:text-[#C9A96E] hover:border-[#C9A96E]/40 transition-all duration-700 w-fit"
+              >
+                Explore Premium Experience <span>→</span>
+              </Link>
+
+              <div className="flex flex-wrap gap-x-8 gap-y-3">
+                <Link
+                  href="/corte-de-pelo-hombre-marbella"
+                  className="text-[#F0EBE1]/25 text-[8px] tracking-[0.4em] uppercase font-light hover:text-[#F0EBE1]/55 transition-all duration-500"
+                >
+                  Corte Premium →
+                </Link>
+                <Link
+                  href="/arreglo-de-barba-marbella"
+                  className="text-[#F0EBE1]/25 text-[8px] tracking-[0.4em] uppercase font-light hover:text-[#F0EBE1]/55 transition-all duration-500"
+                >
+                  Barba Premium →
+                </Link>
+                <Link
+                  href="/corte-y-barba-premium-marbella"
+                  className="text-[#F0EBE1]/25 text-[8px] tracking-[0.4em] uppercase font-light hover:text-[#F0EBE1]/55 transition-all duration-500"
+                >
+                  Corte + Barba Premium →
+                </Link>
+              </div>
             </div>
           </div>
-        </Link>
+        </div>
 
-        {/* ESSENTIAL */}
-        <Link href="/corte-y-barba-premium-marbella" className="block group">
-          <div className="border-t border-[#F0EBE1]/6 py-7 flex items-center justify-between px-1 group-hover:border-[#F0EBE1]/12 transition-all duration-500">
-            <div>
-              <p className="text-[#F0EBE1]/25 text-[9px] tracking-[0.4em] uppercase font-light mb-1">
-                Essential
-              </p>
-              <p className="text-[#F0EBE1]/45 text-sm tracking-[0.12em] font-light">
-                Corte & Barba
-              </p>
-            </div>
-            <span className="text-[#F0EBE1]/18 group-hover:text-[#F0EBE1]/38 transition-all duration-500 text-sm">
-              →
-            </span>
-          </div>
-        </Link>
-      </section>
-
-      {/* ── IMAGE & PRESENCE ── */}
-      <section className="border-t border-[#F0EBE1]/5 py-32 px-5 md:px-10">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
-          <div>
-            <p className="text-[#C9A96E] tracking-[0.45em] text-[9px] uppercase font-light mb-10">
-              Image & Presence
-            </p>
-            <h2 className="text-[#F0EBE1] font-light tracking-[0.1em] text-2xl md:text-3xl uppercase leading-[1.4] mb-10">
-              La imagen masculina<br />no se improvisa.<br />Se construye.
-            </h2>
-            <div className="w-8 h-px bg-[#C9A96E]/35 mb-10" />
-            <p className="text-[#F0EBE1]/35 text-[11px] leading-loose tracking-[0.05em] font-light mb-12 max-w-sm">
-              Estructura facial, proporciones, diseño de barba, percepción visual. Pequeños detalles que cambian completamente cómo un hombre es percibido. Especialmente en Marbella y la Costa del Sol.
-            </p>
+        {/* ESSENTIAL SERVICES */}
+        <div className="pt-16 pb-4">
+          <p className="text-[#F0EBE1]/18 tracking-[0.55em] text-[8px] uppercase font-light mb-10 px-1">
+            Essential Services
+          </p>
+          <div className="space-y-0">
             <Link
-              href="/diagnostico-capilar-marbella"
-              className="inline-flex items-center gap-3 text-[#F0EBE1]/35 text-[10px] tracking-[0.32em] uppercase font-light hover:text-[#C9A96E] transition-all duration-600 border-b border-[#F0EBE1]/10 pb-1 hover:border-[#C9A96E]/30"
+              href="/corte-de-pelo-hombre-marbella"
+              className="group/row flex items-center justify-between px-1 py-5 border-t border-[#F0EBE1]/6 hover:border-[#F0EBE1]/10 transition-all duration-500"
             >
-              Diagnóstico Capilar <span className="text-xs">→</span>
+              <span className="text-[#F0EBE1]/30 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/55 transition-all duration-500">
+                Corte Essential
+              </span>
+              <span className="text-[#F0EBE1]/15 group-hover/row:text-[#F0EBE1]/35 transition-all duration-500 text-xs">→</span>
+            </Link>
+            <Link
+              href="/arreglo-de-barba-marbella"
+              className="group/row flex items-center justify-between px-1 py-5 border-t border-[#F0EBE1]/6 hover:border-[#F0EBE1]/10 transition-all duration-500"
+            >
+              <span className="text-[#F0EBE1]/30 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/55 transition-all duration-500">
+                Barba Essential
+              </span>
+              <span className="text-[#F0EBE1]/15 group-hover/row:text-[#F0EBE1]/35 transition-all duration-500 text-xs">→</span>
+            </Link>
+            <Link
+              href="/corte-y-barba-premium-marbella"
+              className="group/row flex items-center justify-between px-1 py-5 border-t border-b border-[#F0EBE1]/6 hover:border-[#F0EBE1]/10 transition-all duration-500"
+            >
+              <span className="text-[#F0EBE1]/30 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/55 transition-all duration-500">
+                Corte + Barba Essential
+              </span>
+              <span className="text-[#F0EBE1]/15 group-hover/row:text-[#F0EBE1]/35 transition-all duration-500 text-xs">→</span>
             </Link>
           </div>
-          <div className="relative aspect-[3/4] overflow-hidden">
-            <Image
-              src="/images/visagismo-masculino-y-construccion-de-presencia.jpeg"
-              alt="Visagismo masculino — The Professional Barber"
-              fill
-              className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-black/15" />
-          </div>
         </div>
-      </section>
 
-      {/* ── BARBER PORTRAIT ── */}
-      <section className="px-5 md:px-10 pb-32 max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <Image
-              src="/images/barbero-profesional-premium-marbella.jpeg"
-              alt="Barbero profesional premium — Marbella"
-              fill
-              className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-black/10" />
+      </div>
+
+      {/* ── FOOTER ── */}
+      <footer className="border-t border-[#F0EBE1]/5 py-16 px-6">
+        <div className="max-w-5xl mx-auto flex flex-col items-center gap-10">
+
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            <a
+              href="https://www.instagram.com/theprofessionalbarber.marbella/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#F0EBE1]/28 text-[8px] tracking-[0.45em] uppercase font-light hover:text-[#F0EBE1]/60 transition-all duration-500"
+            >
+              Instagram
+            </a>
+            <span className="text-[#F0EBE1]/10 text-[8px]">·</span>
+            <a
+              href="https://g.page/r/theprofessionalbarber-marbella/review"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#F0EBE1]/28 text-[8px] tracking-[0.45em] uppercase font-light hover:text-[#F0EBE1]/60 transition-all duration-500"
+            >
+              Google Reviews
+            </a>
+            <span className="text-[#F0EBE1]/10 text-[8px]">·</span>
+            <a
+              href="https://booksy.com/es-es/find/business/_/barber-shop/_/marbella"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#F0EBE1]/28 text-[8px] tracking-[0.45em] uppercase font-light hover:text-[#F0EBE1]/60 transition-all duration-500"
+            >
+              Booksy Reviews
+            </a>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <Image
-              src="/images/corte-de-pelo-hombre-premium-marbella.jpeg"
-              alt="Corte de pelo premium — Marbella"
-              fill
-              className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-black/10" />
-          </div>
-        </div>
-      </section>
 
-      {/* ── PRIVATE ACCESS ── */}
-      <section className="bg-[#050505] border-t border-[#F0EBE1]/5 py-36 px-6 text-center">
-        <p className="text-[#C9A96E] tracking-[0.45em] text-[10px] uppercase font-light mb-12">
-          Acceso Privado
-        </p>
-        <h2 className="text-[#F0EBE1] font-light tracking-[0.12em] text-2xl md:text-3xl uppercase mb-10 max-w-md mx-auto leading-[1.5]">
-          Reservado para quienes<br />entienden que la imagen<br />se construye con precisión.
-        </h2>
-        <div className="w-8 h-px bg-[#C9A96E]/30 mx-auto mb-12" />
-        <p className="text-[#F0EBE1]/25 text-[11px] tracking-[0.15em] font-light mb-16 max-w-xs mx-auto leading-loose">
-          Las valoraciones se realizan de forma limitada para mantener un nivel de atención completamente personalizado.
-        </p>
-        <a
-          href="https://wa.me/34617853179?text=Hola,%20quiero%20solicitar%20acceso%20privado%20a%20una%20valoración%20de%20imagen"
-          className="inline-flex items-center gap-5 border border-[#C9A96E]/28 text-[#C9A96E] text-[10px] tracking-[0.38em] uppercase px-12 py-5 hover:border-[#C9A96E]/70 hover:bg-[#C9A96E]/4 transition-all duration-700 font-light"
-        >
-          Solicitar Acceso Privado
-        </a>
-      </section>
-
-      {/* ── MINIMAL FOOTER ── */}
-      <footer className="py-10 px-6 border-t border-[#F0EBE1]/5">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[#F0EBE1]/12 text-[9px] tracking-[0.35em] uppercase font-light">
-            © The Professional Barber · Marbella
+          <p className="text-[#F0EBE1]/12 text-[8px] tracking-[0.45em] uppercase font-light">
+            Marbella&nbsp;&nbsp;·&nbsp;&nbsp;Costa del Sol
           </p>
-          <Link
-            href="/"
-            className="text-[#F0EBE1]/12 text-[9px] tracking-[0.35em] uppercase font-light hover:text-[#F0EBE1]/28 transition-all duration-500"
-          >
-            Volver al sitio principal
-          </Link>
+
         </div>
       </footer>
 
