@@ -4,6 +4,8 @@ import Link from "next/link";
 const WA_PRIVATE =
   "https://wa.me/34617853179?text=Hola,%20quiero%20solicitar%20acceso%20privado%20Black%20Access";
 
+const BLUE = "#4A90D9";
+
 export default function AccessClient() {
   return (
     <main className="bg-[#080808] min-h-screen">
@@ -35,24 +37,24 @@ export default function AccessClient() {
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-lg mx-auto">
-          <p className="au au-1 text-[#C9A96E] tracking-[0.55em] text-[9px] uppercase font-light mb-8">
+          <p className="au au-1 tracking-[0.55em] text-[9px] uppercase font-light mb-8" style={{color: BLUE}}>
             Marbella · Costa del Sol
           </p>
           <h1 className="au au-2 text-[#F0EBE1] font-light tracking-[0.22em] text-[28px] md:text-[36px] uppercase leading-[1.25] mb-6">
             The Professional<br />Barber
           </h1>
-          <p className="au au-3 text-[#C9A96E]/70 tracking-[0.45em] text-[9px] uppercase font-light mb-10">
+          <p className="au au-3 tracking-[0.45em] text-[9px] uppercase font-light mb-10" style={{color: `${BLUE}aa`}}>
             Precision&nbsp;&nbsp;·&nbsp;&nbsp;Presence&nbsp;&nbsp;·&nbsp;&nbsp;Image
           </p>
-          <div className="au au-4 w-8 h-px bg-[#C9A96E]/40 mx-auto mb-10" />
-          <p className="au au-4 text-[#F0EBE1]/40 text-[10px] tracking-[0.18em] font-light mb-14 leading-[2]">
+          <div className="au au-4 w-8 h-px mx-auto mb-10" style={{background: `${BLUE}55`}} />
+          <p className="au au-4 text-[#F0EBE1]/70 text-[10px] tracking-[0.18em] font-light mb-14 leading-[2]">
             Private grooming experiences focused on<br />
             masculine image, visual perception<br />
             and advanced care.
           </p>
           <a
             href="#experiences"
-            className="au au-5 inline-flex items-center gap-5 text-[#F0EBE1]/60 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/15 pb-1 hover:text-[#C9A96E] hover:border-[#C9A96E]/40 transition-all duration-700"
+            className="au au-5 inline-flex items-center gap-5 text-[#F0EBE1]/60 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/15 pb-1 hover:text-[#F0EBE1] hover:border-[#F0EBE1]/40 transition-all duration-700"
           >
             Enter Experience <span>→</span>
           </a>
@@ -65,7 +67,7 @@ export default function AccessClient() {
 
       {/* ── PHILOSOPHY ── */}
       <section className="py-24 px-6 text-center">
-        <p className="text-[#F0EBE1]/22 text-[10px] tracking-[0.38em] uppercase font-light max-w-[28ch] mx-auto leading-[2.2]">
+        <p className="text-[#F0EBE1]/40 text-[10px] tracking-[0.38em] uppercase font-light max-w-[28ch] mx-auto leading-[2.2]">
           Some men get a haircut.<br />
           Others build a presence.
         </p>
@@ -76,30 +78,36 @@ export default function AccessClient() {
 
         {/* BLACK ACCESS */}
         <div className="group relative overflow-hidden">
-          <div className="relative h-[80vh] min-h-[540px] overflow-hidden">
+          <div className="relative min-h-[600px] md:min-h-[700px] overflow-hidden">
             <Image
               src="/images/access2.jpeg"
               alt="Black Access — The Professional Barber Marbella"
               fill
               className="object-cover object-center transition-transform duration-[1800ms] group-hover:scale-[1.03]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/96 via-black/35 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/97 via-black/20 to-black/50" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/25 to-transparent" />
 
-            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16">
-              <p className="text-[#C9A96E]/80 tracking-[0.55em] text-[8px] uppercase font-light mb-6">
+            {/* Label + Title — arriba */}
+            <div className="absolute top-0 left-0 right-0 p-8 md:p-16">
+              <p className="tracking-[0.55em] text-[8px] uppercase font-light mb-5" style={{color: `${BLUE}cc`}}>
                 Private Sunday Experience
               </p>
-              <h2 className="text-[#F0EBE1] font-light tracking-[0.25em] text-[38px] md:text-[58px] uppercase leading-[1.05] mb-8">
+              <h2 className="text-[#F0EBE1] font-light tracking-[0.25em] text-[38px] md:text-[58px] uppercase leading-[1.05]">
                 Black<br />Access
               </h2>
-              <p className="text-[#F0EBE1]/40 text-[10px] tracking-[0.12em] font-light max-w-[42ch] leading-[1.9] mb-12">
+            </div>
+
+            {/* Descripción + CTAs — abajo */}
+            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
+              <p className="text-[#F0EBE1]/75 text-[10px] tracking-[0.12em] font-light max-w-[42ch] leading-[1.9] mb-10">
                 A private Sunday experience designed for men who expect precision, discretion, advanced care and complete personal attention.
               </p>
               <div className="flex flex-col sm:flex-row items-start gap-5">
                 <Link
                   href="/black-access-marbella"
-                  className="inline-flex items-center gap-4 text-[#C9A96E] text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#C9A96E]/30 pb-1 hover:border-[#C9A96E]/80 transition-all duration-700"
+                  className="inline-flex items-center gap-4 text-[9px] tracking-[0.45em] uppercase font-light border-b pb-1 transition-all duration-700"
+                  style={{color: BLUE, borderColor: `${BLUE}55`}}
                 >
                   Discover Black Access <span>→</span>
                 </Link>
@@ -107,7 +115,7 @@ export default function AccessClient() {
                   href={WA_PRIVATE}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-4 text-[#F0EBE1]/40 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/12 pb-1 hover:text-[#F0EBE1]/70 hover:border-[#F0EBE1]/30 transition-all duration-700"
+                  className="inline-flex items-center gap-4 text-[#F0EBE1]/60 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/20 pb-1 hover:text-[#F0EBE1] hover:border-[#F0EBE1]/40 transition-all duration-700"
                 >
                   Request Private Access <span>→</span>
                 </a>
@@ -118,29 +126,35 @@ export default function AccessClient() {
 
         {/* PREMIUM EXPERIENCE */}
         <div className="group relative overflow-hidden">
-          <div className="relative h-[58vh] min-h-[380px] overflow-hidden">
+          <div className="relative min-h-[500px] md:min-h-[560px] overflow-hidden">
             <Image
               src="/images/access3.jpeg"
               alt="Premium Experience — The Professional Barber Marbella"
               fill
               className="object-cover object-center transition-transform duration-[1800ms] group-hover:scale-[1.03]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/94 via-black/30 to-black/5" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/97 via-black/20 to-black/45" />
 
-            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-14">
-              <p className="text-[#C9A96E]/65 tracking-[0.55em] text-[8px] uppercase font-light mb-5">
+            {/* Label + Title — arriba */}
+            <div className="absolute top-0 left-0 right-0 p-8 md:p-14">
+              <p className="tracking-[0.55em] text-[8px] uppercase font-light mb-4" style={{color: `${BLUE}bb`}}>
                 Image&nbsp;&nbsp;·&nbsp;&nbsp;Structure&nbsp;&nbsp;·&nbsp;&nbsp;Precision
               </p>
-              <h2 className="text-[#F0EBE1] font-light tracking-[0.2em] text-[28px] md:text-[40px] uppercase leading-[1.1] mb-6">
+              <h2 className="text-[#F0EBE1] font-light tracking-[0.2em] text-[28px] md:text-[40px] uppercase leading-[1.1]">
                 Premium<br />Experience
               </h2>
-              <p className="text-[#F0EBE1]/38 text-[10px] tracking-[0.1em] font-light max-w-[40ch] leading-[1.9] mb-10">
+            </div>
+
+            {/* Descripción + CTAs — abajo */}
+            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-14">
+              <p className="text-[#F0EBE1]/70 text-[10px] tracking-[0.1em] font-light max-w-[40ch] leading-[1.9] mb-8">
                 A complete grooming experience focused on facial structure, hair design, skin care and masculine presence.
               </p>
 
               <Link
                 href="/corte-y-barba-premium-marbella"
-                className="inline-flex items-center gap-4 text-[#F0EBE1]/55 text-[9px] tracking-[0.42em] uppercase font-light border-b border-[#F0EBE1]/15 pb-1 mb-10 hover:text-[#C9A96E] hover:border-[#C9A96E]/40 transition-all duration-700 w-fit"
+                className="inline-flex items-center gap-4 text-[9px] tracking-[0.42em] uppercase font-light border-b pb-1 mb-8 transition-all duration-700 w-fit hover:text-[#F0EBE1] hover:border-[#F0EBE1]/40"
+                style={{color: BLUE, borderColor: `${BLUE}44`}}
               >
                 Explore Premium Experience <span>→</span>
               </Link>
@@ -148,19 +162,19 @@ export default function AccessClient() {
               <div className="flex flex-wrap gap-x-8 gap-y-3">
                 <Link
                   href="/corte-de-pelo-hombre-marbella"
-                  className="text-[#F0EBE1]/25 text-[8px] tracking-[0.4em] uppercase font-light hover:text-[#F0EBE1]/55 transition-all duration-500"
+                  className="text-[#F0EBE1]/45 text-[8px] tracking-[0.4em] uppercase font-light hover:text-[#F0EBE1]/75 transition-all duration-500"
                 >
                   Corte Premium →
                 </Link>
                 <Link
                   href="/arreglo-de-barba-marbella"
-                  className="text-[#F0EBE1]/25 text-[8px] tracking-[0.4em] uppercase font-light hover:text-[#F0EBE1]/55 transition-all duration-500"
+                  className="text-[#F0EBE1]/45 text-[8px] tracking-[0.4em] uppercase font-light hover:text-[#F0EBE1]/75 transition-all duration-500"
                 >
                   Barba Premium →
                 </Link>
                 <Link
                   href="/corte-y-barba-premium-marbella"
-                  className="text-[#F0EBE1]/25 text-[8px] tracking-[0.4em] uppercase font-light hover:text-[#F0EBE1]/55 transition-all duration-500"
+                  className="text-[#F0EBE1]/45 text-[8px] tracking-[0.4em] uppercase font-light hover:text-[#F0EBE1]/75 transition-all duration-500"
                 >
                   Corte + Barba Premium →
                 </Link>
@@ -171,36 +185,36 @@ export default function AccessClient() {
 
         {/* ESSENTIAL SERVICES */}
         <div className="pt-16 pb-4">
-          <p className="text-[#F0EBE1]/18 tracking-[0.55em] text-[8px] uppercase font-light mb-10 px-1">
+          <p className="text-[#F0EBE1]/30 tracking-[0.55em] text-[8px] uppercase font-light mb-10 px-1">
             Essential Services
           </p>
           <div className="space-y-0">
             <Link
               href="/corte-de-pelo-hombre-marbella"
-              className="group/row flex items-center justify-between px-1 py-5 border-t border-[#F0EBE1]/6 hover:border-[#F0EBE1]/10 transition-all duration-500"
+              className="group/row flex items-center justify-between px-1 py-5 border-t border-[#F0EBE1]/8 hover:border-[#F0EBE1]/15 transition-all duration-500"
             >
-              <span className="text-[#F0EBE1]/30 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/55 transition-all duration-500">
+              <span className="text-[#F0EBE1]/45 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/70 transition-all duration-500">
                 Corte Essential
               </span>
-              <span className="text-[#F0EBE1]/15 group-hover/row:text-[#F0EBE1]/35 transition-all duration-500 text-xs">→</span>
+              <span className="text-[#F0EBE1]/20 group-hover/row:text-[#F0EBE1]/45 transition-all duration-500 text-xs">→</span>
             </Link>
             <Link
               href="/arreglo-de-barba-marbella"
-              className="group/row flex items-center justify-between px-1 py-5 border-t border-[#F0EBE1]/6 hover:border-[#F0EBE1]/10 transition-all duration-500"
+              className="group/row flex items-center justify-between px-1 py-5 border-t border-[#F0EBE1]/8 hover:border-[#F0EBE1]/15 transition-all duration-500"
             >
-              <span className="text-[#F0EBE1]/30 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/55 transition-all duration-500">
+              <span className="text-[#F0EBE1]/45 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/70 transition-all duration-500">
                 Barba Essential
               </span>
-              <span className="text-[#F0EBE1]/15 group-hover/row:text-[#F0EBE1]/35 transition-all duration-500 text-xs">→</span>
+              <span className="text-[#F0EBE1]/20 group-hover/row:text-[#F0EBE1]/45 transition-all duration-500 text-xs">→</span>
             </Link>
             <Link
               href="/corte-y-barba-premium-marbella"
-              className="group/row flex items-center justify-between px-1 py-5 border-t border-b border-[#F0EBE1]/6 hover:border-[#F0EBE1]/10 transition-all duration-500"
+              className="group/row flex items-center justify-between px-1 py-5 border-t border-b border-[#F0EBE1]/8 hover:border-[#F0EBE1]/15 transition-all duration-500"
             >
-              <span className="text-[#F0EBE1]/30 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/55 transition-all duration-500">
+              <span className="text-[#F0EBE1]/45 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/70 transition-all duration-500">
                 Corte + Barba Essential
               </span>
-              <span className="text-[#F0EBE1]/15 group-hover/row:text-[#F0EBE1]/35 transition-all duration-500 text-xs">→</span>
+              <span className="text-[#F0EBE1]/20 group-hover/row:text-[#F0EBE1]/45 transition-all duration-500 text-xs">→</span>
             </Link>
           </div>
         </div>
@@ -216,31 +230,31 @@ export default function AccessClient() {
               href="https://www.instagram.com/theprofessionalbarber.marbella/"
               target="_blank"
               rel="noreferrer"
-              className="text-[#F0EBE1]/28 text-[8px] tracking-[0.45em] uppercase font-light hover:text-[#F0EBE1]/60 transition-all duration-500"
+              className="text-[#F0EBE1]/40 text-[8px] tracking-[0.45em] uppercase font-light hover:text-[#F0EBE1]/70 transition-all duration-500"
             >
               Instagram
             </a>
-            <span className="text-[#F0EBE1]/10 text-[8px]">·</span>
+            <span className="text-[#F0EBE1]/15 text-[8px]">·</span>
             <a
               href="https://g.page/r/theprofessionalbarber-marbella/review"
               target="_blank"
               rel="noreferrer"
-              className="text-[#F0EBE1]/28 text-[8px] tracking-[0.45em] uppercase font-light hover:text-[#F0EBE1]/60 transition-all duration-500"
+              className="text-[#F0EBE1]/40 text-[8px] tracking-[0.45em] uppercase font-light hover:text-[#F0EBE1]/70 transition-all duration-500"
             >
               Google Reviews
             </a>
-            <span className="text-[#F0EBE1]/10 text-[8px]">·</span>
+            <span className="text-[#F0EBE1]/15 text-[8px]">·</span>
             <a
               href="https://booksy.com/es-es/find/business/_/barber-shop/_/marbella"
               target="_blank"
               rel="noreferrer"
-              className="text-[#F0EBE1]/28 text-[8px] tracking-[0.45em] uppercase font-light hover:text-[#F0EBE1]/60 transition-all duration-500"
+              className="text-[#F0EBE1]/40 text-[8px] tracking-[0.45em] uppercase font-light hover:text-[#F0EBE1]/70 transition-all duration-500"
             >
               Booksy Reviews
             </a>
           </div>
 
-          <p className="text-[#F0EBE1]/12 text-[8px] tracking-[0.45em] uppercase font-light">
+          <p className="text-[#F0EBE1]/20 text-[8px] tracking-[0.45em] uppercase font-light">
             Marbella&nbsp;&nbsp;·&nbsp;&nbsp;Costa del Sol
           </p>
 
