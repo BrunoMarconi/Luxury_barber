@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BarbaClient from "./BarbaClient";
+import { fetchGoogleReviews } from "@/lib/google-reviews";
 
 export const metadata: Metadata = {
   title: "Arreglo de Barba en Marbella | Diseño Facial y Cuidado de Piel",
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function BarbaPage() {
-  return <BarbaClient />;
+export default async function BarbaPage() {
+  const googleReviews = await fetchGoogleReviews();
+  return <BarbaClient googleReviews={googleReviews} />;
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CorteClient from "./CorteClient";
+import { fetchGoogleReviews } from "@/lib/google-reviews";
 
 export const metadata: Metadata = {
   title: "Corte de pelo premium para hombre en Marbella | The Professional Barber",
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CorteDePeloPage() {
-  return <CorteClient />;
+export default async function CorteDePeloPage() {
+  const googleReviews = await fetchGoogleReviews();
+  return <CorteClient googleReviews={googleReviews} />;
 }

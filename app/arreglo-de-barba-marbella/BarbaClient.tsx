@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { buildWaUrl } from "@/lib/cta";
+import type { GoogleReview } from "@/lib/google-reviews";
 
 const BOOKSY_URL = buildWaUrl("arreglo-de-barba");
 
@@ -87,7 +88,8 @@ const FAQ = [
   },
 ];
 
-export default function BarbaClient() {
+export default function BarbaClient({ googleReviews = [] }: { googleReviews?: GoogleReview[] }) {
+  const reviews = googleReviews.length ? googleReviews : REVIEWS;
   return (
     <main className="min-h-screen bg-[#F5F5F5] text-black">
 
@@ -498,7 +500,7 @@ export default function BarbaClient() {
           </FadeUp>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {REVIEWS.map((r, i) => (
+            {reviews.map((r, i) => (
               <FadeUp key={r.id} delay={i * 0.06} className="rounded-3xl border border-black/10 bg-white/40 p-6 backdrop-blur">
                 <Stars n={r.rating} />
                 <p className="mt-4 text-[12px] leading-6 tracking-[0.04em] text-black/65">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CorteBarbaClient from "./CorteBarbaClient";
+import { fetchGoogleReviews } from "@/lib/google-reviews";
 
 export const metadata: Metadata = {
   title: "Barbería en Marbella | Corte y Barba Premium | Reserva Online",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CorteBarbaPage() {
-  return <CorteBarbaClient />;
+export default async function CorteBarbaPage() {
+  const googleReviews = await fetchGoogleReviews();
+  return <CorteBarbaClient googleReviews={googleReviews} />;
 }
