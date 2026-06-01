@@ -126,9 +126,17 @@ export default function CorteBarbaClient() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-6 max-w-[52ch] text-[13px] leading-6 tracking-[0.04em] text-white/75"
+            className="mt-6 max-w-[52ch] text-[13px] leading-7 tracking-[0.04em] text-white/75"
           >
-            Diseñamos tu corte y tu barba como un conjunto, no como elementos separados.
+            Cabello y barba diseñados como un conjunto para construir una imagen más sólida, equilibrada y coherente contigo.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.65 }}
+            className="mt-4 max-w-[52ch] text-[13px] leading-7 tracking-[0.04em] text-white/55"
+          >
+            Cada decisión parte del análisis facial, el crecimiento natural y la forma en que quieres proyectarte.
           </motion.p>
 
           <motion.div
@@ -170,7 +178,7 @@ export default function CorteBarbaClient() {
               La mayoría de los hombres se corta el cabello y se arregla la barba.
             </p>
             <p className="mt-1 text-[12px] leading-6 text-white/55">
-              Aquí se construye una imagen coherente.
+              Aquí todo se diseña para que tu imagen tenga armonía.
             </p>
           </div>
           <a
@@ -202,17 +210,17 @@ export default function CorteBarbaClient() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Un buen corte sin una barba bien trabajada no está completo.
+                Un buen corte sin una barba diseñada correctamente nunca termina de verse completo.
               </p>
             </FadeUp>
             <FadeUp delay={0.14}>
               <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Y una barba sin diseño rompe completamente la armonía del rostro.
+                La mayoría de servicios trabaja cabello y barba por separado. El resultado puede verse correcto individualmente, pero pierde armonía cuando se observa el conjunto.
               </p>
             </FadeUp>
             <FadeUp delay={0.18}>
-              <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                La mayoría de servicios trabajan cada parte por separado, sin tener en cuenta el conjunto. El resultado es correcto por partes, pero no tiene coherencia visual como un todo.
+              <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65 font-semibold">
+                Aquí todo se diseña como una sola estructura visual.
               </p>
             </FadeUp>
           </div>
@@ -272,22 +280,18 @@ export default function CorteBarbaClient() {
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  Analizamos tu rostro, el crecimiento del cabello y la densidad de la barba para diseñar un resultado equilibrado.
+                  Analizamos proporciones faciales, crecimiento del cabello y densidad de barba para construir un resultado equilibrado y coherente.
                 </p>
               </FadeUp>
               <FadeUp delay={0.14}>
                 <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  Cada línea, cada volumen y cada transición tiene una intención clara. Todo parte de un{" "}
-                  <Link href="/diagnostico-capilar-marbella" className="underline underline-offset-2 text-white/80 hover:text-white transition">
-                    diagnóstico capilar y facial
-                  </Link>{" "}
-                  que nos permite tomar decisiones con criterio.
+                  Cada línea, transición y volumen responde a una intención visual clara.
                 </p>
               </FadeUp>
               <FadeUp delay={0.2}>
                 <p className="mt-8 text-[13px] leading-7 tracking-[0.04em] text-white/70 font-semibold">
-                  No trabajamos por partes.<br />
-                  <span className="text-white">Trabajamos en conjunto.</span>
+                  No trabajamos cabello y barba por separado.<br />
+                  <span className="text-white">Trabajamos tu imagen como una sola construcción visual.</span>
                 </p>
                 <a
                   href={BOOKSY_URL}
@@ -329,13 +333,13 @@ export default function CorteBarbaClient() {
         </FadeUp>
 
         <div className="mt-14 grid gap-px bg-black/10 sm:grid-cols-2 lg:grid-cols-3 rounded-3xl overflow-hidden">
-          {[
+          [
             { n: "01", title: "Diagnóstico capilar y facial", desc: "Analizamos cuero cabelludo, piel y estructura del rostro antes de empezar." },
-            { n: "02", title: "Diseño completo basado en visagismo", desc: "Diseñamos cabello y barba como un conjunto, adaptado a tu rostro y estilo de vida." },
+            { n: "02", title: "Diseño completo basado en visagismo", desc: "Diseñamos cabello y barba como una sola estructura adaptada a tu rostro y estilo de vida." },
             { n: "03", title: "Corte de alta precisión", desc: "Técnicas avanzadas para un resultado limpio, equilibrado y duradero." },
-            { n: "04", title: "Perfilado y diseño de barba", desc: "Cada línea de la barba se diseña para equilibrar el rostro y reforzar el conjunto." },
-            { n: "05", title: "Lavado con productos Previa", desc: "Productos profesionales seleccionados según el análisis para mejorar el estado capilar." },
-            { n: "06", title: "Tecnología Foreo + acabado", desc: "Aplicación de tecnología facial según necesidad y recomendación personalizada final." },
+            { n: "04", title: "Perfilado y diseño de barba", desc: "Cada línea de la barba se diseña para equilibrar el rostro y reforzar la armonía del conjunto." },
+            { n: "05", title: "Cuidado capilar y facial", desc: "Productos profesionales, tecnología facial Foreo, vapor ozono y herramientas especializadas aplicadas según las necesidades del cabello, la barba y la piel para mejorar acabado, textura y duración del resultado." },
+            { n: "06", title: "Acabado y recomendación", desc: "Resultado final y recomendación personalizada para mantener diseño, textura y duración." },
           ].map((step, i) => (
             <FadeUp key={step.n} delay={i * 0.07} className="bg-[#F5F5F5] p-8">
               <p className="text-[11px] font-bold tracking-[0.2em] text-white/70">{step.n}</p>
@@ -378,40 +382,22 @@ export default function CorteBarbaClient() {
               </FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
-                  Esto no es un corte con barba
+                  Esto no es trabajar cabello y barba por separado.<br />Es construcción completa de imagen masculina.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
-                <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  Es un servicio completo donde cada detalle está pensado para que todo encaje.
-                </p>
-              </FadeUp>
-              <FadeUp delay={0.14}>
-                <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  El resultado no solo se ve mejor. Se siente mejor.
-                </p>
-              </FadeUp>
-              <FadeUp delay={0.17}>
-                <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/55">
-                  Si lo que buscas es trabajar solo el cabello, descubre el{" "}
-                  <Link href="/corte-de-pelo-hombre-marbella" className="underline underline-offset-2 text-white/75 hover:text-white transition">
-                    servicio de corte de cabello
-                  </Link>
-                  . Para mejorar el resultado final, puedes complementar cualquier visita con{" "}
-                  <Link href="/tratamiento-facial-hombre-marbella" className="underline underline-offset-2 text-white/75 hover:text-white transition">
-                    tratamientos faciales
-                  </Link>
-                  .
+                <p className="mt-8 text-[13px] leading-7 tracking-[0.04em] text-white/60">
+                  Cabello, barba, proporciones y estructura facial trabajados como una sola dirección visual para lograr una imagen más sólida, coherente y equilibrada.
                 </p>
               </FadeUp>
 
               <FadeUp delay={0.2}>
                 <div className="mt-10 space-y-6">
-                  {[
-                    { title: "Diseño de conjunto", desc: "Cabello y barba diseñados juntos, con coherencia visual entre ambos." },
-                    { title: "Análisis facial completo", desc: "Mandíbula, pómulos, perfil y proporciones, todo tiene en cuenta antes de empezar." },
-                    { title: "20+ años de experiencia", desc: "Formado internacionalmente. Técnica y criterio en cada visita." },
-                    { title: "Tecnología + precisión", desc: "Vaporizador, Foreo y navaja profesional para un resultado superior." },
+                  [
+                    { title: "Diseño de conjunto", desc: "Cabello y barba diseñados juntos para crear coherencia visual y equilibrio facial." },
+                    { title: "Análisis facial completo", desc: "Mandíbula, pómulos, perfil y proporciones analizados antes de diseñar el resultado." },
+                    { title: "20+ años de experiencia", desc: "Formación internacional y técnica especializada aplicadas a cada detalle." },
+                    { title: "Tecnología + precisión", desc: "Foreo, vapor ozono y herramientas profesionales aplicadas para mejorar acabado, piel y duración del resultado." },
                   ].map((b, i) => (
                     <div key={b.title} className="flex gap-4">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0F2A44]" />
@@ -489,7 +475,7 @@ export default function CorteBarbaClient() {
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
-              Reseñas verificadas · Booksy
+              Reseñas verificadas en Google
             </p>
           </FadeUp>
           <FadeUp delay={0.05}>
@@ -548,92 +534,6 @@ export default function CorteBarbaClient() {
         </div>
       </section>
 
-      {/* ── TESTIMONIOS ── */}
-      <section className="bg-[#F5F5F5] py-20 lg:py-28">
-        <div className="mx-auto max-w-6xl px-6">
-          <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
-              Clientes reales
-            </p>
-          </FadeUp>
-          <FadeUp delay={0.05}>
-            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-              Lo que dicen clientes que ya lo han probado
-            </h2>
-          </FadeUp>
-
-          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              "Nunca me habían explicado qué tipo de corte me favorecía según mi cara.",
-              "Se nota que aquí no improvisan, todo tiene un porqué.",
-              "Después de este servicio, mi imagen cambió completamente.",
-              "La barba me dura más y se ve mucho más trabajada.",
-              "No es un corte más, es otra forma de trabajar la imagen.",
-            ].map((quote, i) => (
-              <FadeUp key={i} delay={i * 0.05} className="rounded-3xl border border-black/10 bg-white/60 p-7">
-                <p className="text-[13px] leading-7 tracking-[0.04em] text-black/70 italic">
-                  &ldquo;{quote}&rdquo;
-                </p>
-                <div className="mt-5 h-px bg-black/10" />
-                <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/35">
-                  Cliente · Marbella
-                </p>
-              </FadeUp>
-            ))}
-          </div>
-
-          <FadeUp delay={0.2} className="mt-14 flex flex-col items-center gap-4 text-center">
-            <p className="text-[15px] font-semibold text-black/80">
-              El cambio no es solo visual. Es percepción.
-            </p>
-            <a
-              href={BOOKSY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cta="whatsapp-testimonios"
-              data-page="corte-barba"
-              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
-            >
-              Solicitar asesoría personalizada
-            </a>
-          </FadeUp>
-        </div>
-      </section>
-
-      {/* ── ANTES DE RESERVAR ── */}
-      <section className="bg-[#0A0A0A] py-20 lg:py-28">
-        <div className="mx-auto max-w-4xl px-6">
-          <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
-              Resuelve tus dudas
-            </p>
-          </FadeUp>
-          <FadeUp delay={0.05}>
-            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
-              Antes de reservar
-            </h2>
-          </FadeUp>
-
-          <div className="mt-12 space-y-0">
-            {[
-              { q: "¿Qué incluye exactamente el servicio?", a: "Incluye diagnóstico, diseño personalizado, ejecución técnica y recomendación final adaptada a cada cliente." },
-              { q: "¿Cuánto dura el servicio?", a: "Depende del servicio, pero en general entre 45 minutos y 1 hora y media, ya que no es un servicio rápido, sino trabajado." },
-              { q: "¿Este servicio es para cualquier persona?", a: "Sí, pero especialmente para quienes buscan mejorar su imagen y no quieren un resultado genérico." },
-              { q: "¿Por qué no se muestra el precio en la web?", a: "Porque cada servicio está pensado como una experiencia completa. Puedes ver todos los detalles y seleccionar tu servicio directamente en la reserva online." },
-              { q: "¿Puedo añadir tratamientos?", a: "Sí, puedes complementar tu servicio con tratamientos faciales para mejorar el resultado final." },
-            ].map((item, i) => (
-              <FadeUp key={i} delay={i * 0.05} className="border-b border-white/10 py-8">
-                <p className="text-[14px] font-semibold uppercase tracking-widest text-white">
-                  {item.q}
-                </p>
-                <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  {item.a}
-                </p>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── CTA FINAL ── */}
       <section className="relative overflow-hidden bg-[#0A0A0A] py-28 lg:py-36">
@@ -647,13 +547,14 @@ export default function CorteBarbaClient() {
           </FadeUp>
           <FadeUp delay={0.06}>
             <h2 className="mt-6 text-[34px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[46px] lg:text-[58px]">
-              Si quieres un cambio real, no puedes tratar cada parte por separado.
+              Tu imagen funciona como una sola estructura.
             </h2>
           </FadeUp>
           <FadeUp delay={0.12}>
-            <p className="mt-6 text-[14px] leading-7 tracking-[0.04em] text-white/70 font-semibold">
-              Tu imagen funciona como un todo.
-            </p>
+            <div className="mt-8 space-y-3 text-[14px] leading-7 tracking-[0.03em] text-white/55">
+              <p>Cuando cabello y barba trabajan en armonía, la percepción cambia por completo.</p>
+              <p>Reserva tu experiencia personalizada en Marbella.</p>
+            </div>
           </FadeUp>
           <FadeUp delay={0.2}>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
