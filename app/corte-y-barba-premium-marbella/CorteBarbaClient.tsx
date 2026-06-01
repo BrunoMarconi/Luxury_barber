@@ -333,7 +333,7 @@ export default function CorteBarbaClient() {
         </FadeUp>
 
         <div className="mt-14 grid gap-px bg-black/10 sm:grid-cols-2 lg:grid-cols-3 rounded-3xl overflow-hidden">
-          [
+          {[
             { n: "01", title: "Diagnóstico capilar y facial", desc: "Analizamos cuero cabelludo, piel y estructura del rostro antes de empezar." },
             { n: "02", title: "Diseño completo basado en visagismo", desc: "Diseñamos cabello y barba como una sola estructura adaptada a tu rostro y estilo de vida." },
             { n: "03", title: "Corte de alta precisión", desc: "Técnicas avanzadas para un resultado limpio, equilibrado y duradero." },
