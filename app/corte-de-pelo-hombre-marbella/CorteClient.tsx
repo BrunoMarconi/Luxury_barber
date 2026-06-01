@@ -79,11 +79,7 @@ const FAQ = [
   },
   {
     q: "¿Qué diferencia este corte de otros en Marbella?",
-    a: "El nivel de personalización. No es un corte genérico, sino un servicio donde se analiza cada detalle para lograr un resultado superior. Todo parte de un diagnóstico real.",
-  },
-  {
-    q: "¿El diagnóstico capilar realmente sirve?",
-    a: "Sí, porque nos permite entender el estado del cuero cabelludo y elegir los productos adecuados para mejorar el resultado. Es el primer paso de cualquier servicio aquí.",
+    a: "El nivel de personalización. No es un corte genérico, sino un servicio donde se analiza cada detalle para lograr un resultado coherente, limpio y bien trabajado. Todo parte de un diagnóstico real.",
   },
 ];
 
@@ -263,7 +259,7 @@ export default function CorteClient() {
           {[
             { num: "+20", label: "Años de experiencia", desc: "Formación internacional y técnica refinada en cada visita." },
             { num: "100%", label: "Personalizado", desc: "Ningún corte es igual. Cada resultado se diseña para tu rostro y estilo." },
-            { num: "5★", label: "Valoración media", desc: "Reseñas verificadas de clientes reales en Booksy." },
+            { num: "—", label: "Reseñas verificadas", desc: "" },
           ].map((stat, i) => (
             <FadeUp key={stat.num} delay={i * 0.07} className="bg-[#F5F5F5] px-8 py-12 flex flex-col justify-between">
               <p className="text-[56px] font-semibold leading-none tracking-tight text-black">
@@ -360,7 +356,7 @@ export default function CorteClient() {
         </FadeUp>
         <FadeUp delay={0.05}>
           <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-            Qué incluye la experiencia
+            Cómo trabajamos tu imagen
           </h2>
         </FadeUp>
 
@@ -368,7 +364,7 @@ export default function CorteClient() {
           {[
             { n: "01", title: "Análisis inicial", desc: "Analizamos el estado del cuero cabelludo, la estructura del rostro y el patrón de crecimiento antes de empezar." },
             { n: "02", title: "Diseño basado en visagismo", desc: "Definimos el estilo más adecuado para tu rostro, crecimiento y estilo de vida." },
-            { n: "03", title: "Corte de alta precisión", desc: "Ejecutamos el corte con técnicas avanzadas, cuidando cada ángulo y cada transición." },
+            { n: "03", title: "Corte de alta precisión", desc: "Trabajamos cada ángulo y transición buscando equilibrio, estructura y naturalidad en el resultado." },
             { n: "04", title: "Lavado con productos Previa", desc: "Productos profesionales seleccionados según el análisis para mejorar el estado capilar." },
             { n: "05", title: "Tecnología Foreo", desc: "Aplicamos tecnología facial según las necesidades del cuero cabelludo o la piel detectadas en el diagnóstico." },
             { n: "06", title: "Acabado y recomendación", desc: "Styling final con herramientas profesionales y pauta personalizada para mantener el resultado." },
@@ -424,7 +420,7 @@ export default function CorteClient() {
               </FadeUp>
               <FadeUp delay={0.14}>
                 <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/60 italic">
-                  Aquí no se improvisa. Se trabaja con criterio.
+                  Aquí no se improvisa. Cada detalle responde a una intención concreta.
                 </p>
               </FadeUp>
               <FadeUp delay={0.18}>
@@ -468,8 +464,8 @@ export default function CorteClient() {
 
               <FadeUp delay={0.32} className="mt-10 flex flex-col gap-3">
                 <p className="text-[13px] leading-7 text-white/70">
-                  La diferencia no está en la técnica.<br />
-                  <span className="font-semibold text-white">Está en el criterio.</span>
+                  La diferencia no está solo en cómo se corta.<br />
+                  <span className="font-semibold text-white">Está en cómo se piensa el resultado.</span>
                 </p>
                 <a
                   href={BOOKSY_URL}

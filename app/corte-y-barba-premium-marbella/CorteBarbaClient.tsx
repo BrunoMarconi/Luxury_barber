@@ -49,7 +49,7 @@ const REVIEWS = [
     name: "Marcos T.",
     rating: 5,
     date: "Ene 2026",
-    text: "Se nota que hay un criterio detrás, no es solo recortar. Analizan tu rostro y diseñan en función de eso.",
+    text: "Se nota que cada decisión tiene un porqué, no es solo recortar. Analizan tu rostro y diseñan en función de eso.",
   },
   {
     id: "r4",
@@ -70,10 +70,6 @@ function Stars({ n = 5 }: { n?: number }) {
 
 const FAQ = [
   {
-    q: "¿Qué tipo de barba me favorece según mi rostro?",
-    a: "Depende de la forma del rostro, la proyección del mentón, la definición de la mandíbula y el perfil facial. Con este análisis, diseñamos una barba personalizada que equilibre el conjunto y mejore la imagen general.",
-  },
-  {
     q: "¿Qué incluye el servicio de corte de cabello y barba en Marbella?",
     a: "Incluye diagnóstico capilar y facial, corte de cabello, diseño de barba personalizado basado en visagismo, lavado con productos Previa, tecnología Foreo y acabado con recomendación personalizada.",
   },
@@ -83,7 +79,7 @@ const FAQ = [
   },
   {
     q: "¿Qué diferencia este servicio de otros en Marbella?",
-    a: "Aquí no se trabaja con plantillas. Cada cliente recibe un diseño completo —cabello y barba— adaptado a su rostro, combinando técnica, diagnóstico y tecnología para un resultado superior.",
+    a: "Aquí no se trabaja con plantillas. Cada cliente recibe un diseño completo —cabello y barba— adaptado a su rostro, combinando técnica, diagnóstico y tecnología para un resultado más coherente y trabajado.",
   },
 ];
 
@@ -243,7 +239,7 @@ export default function CorteBarbaClient() {
           {[
             { num: "+20", label: "Años de experiencia", desc: "Formación internacional y técnica refinada en cada visita." },
             { num: "100%", label: "Personalizado", desc: "Ningún corte ni barba es igual. Cada resultado se diseña para tu rostro." },
-            { num: "5★", label: "Valoración media", desc: "Reseñas verificadas de clientes reales en Booksy." },
+            { num: "—", label: "Reseñas verificadas", desc: "" },
           ].map((stat, i) => (
             <FadeUp key={stat.num} delay={i * 0.07} className="bg-[#F5F5F5] px-8 py-12 flex flex-col justify-between">
               <p className="text-[56px] font-semibold leading-none tracking-tight text-black">
@@ -328,7 +324,7 @@ export default function CorteBarbaClient() {
         </FadeUp>
         <FadeUp delay={0.05}>
           <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-            Qué incluye la experiencia
+            Cómo trabajamos tu imagen
           </h2>
         </FadeUp>
 
@@ -336,7 +332,7 @@ export default function CorteBarbaClient() {
           {[
             { n: "01", title: "Diagnóstico capilar y facial", desc: "Analizamos cuero cabelludo, piel y estructura del rostro antes de empezar." },
             { n: "02", title: "Diseño completo basado en visagismo", desc: "Diseñamos cabello y barba como una sola estructura adaptada a tu rostro y estilo de vida." },
-            { n: "03", title: "Corte de alta precisión", desc: "Técnicas avanzadas para un resultado limpio, equilibrado y duradero." },
+            { n: "03", title: "Corte de alta precisión", desc: "Técnicas de precisión trabajadas para mantener armonía, estructura y duración en el resultado." },
             { n: "04", title: "Perfilado y diseño de barba", desc: "Cada línea de la barba se diseña para equilibrar el rostro y reforzar la armonía del conjunto." },
             { n: "05", title: "Cuidado capilar y facial", desc: "Productos profesionales, tecnología facial Foreo, vapor ozono y herramientas especializadas aplicadas según las necesidades del cabello, la barba y la piel para mejorar acabado, textura y duración del resultado." },
             { n: "06", title: "Acabado y recomendación", desc: "Resultado final y recomendación personalizada para mantener diseño, textura y duración." },
@@ -396,7 +392,7 @@ export default function CorteBarbaClient() {
                   {[
                     { title: "Diseño de conjunto", desc: "Cabello y barba diseñados juntos para crear coherencia visual y equilibrio facial." },
                     { title: "Análisis facial completo", desc: "Mandíbula, pómulos, perfil y proporciones analizados antes de diseñar el resultado." },
-                    { title: "20+ años de experiencia", desc: "Formación internacional y técnica especializada aplicadas a cada detalle." },
+                    { title: "20+ años de experiencia", desc: "Formado internacionalmente. Técnica, precisión y atención al detalle en cada visita." },
                     { title: "Tecnología + precisión", desc: "Foreo, vapor ozono y herramientas profesionales aplicadas para mejorar acabado, piel y duración del resultado." },
                   ].map((b, i) => (
                     <div key={b.title} className="flex gap-4">

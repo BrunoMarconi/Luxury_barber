@@ -243,7 +243,7 @@ export default function BarbaClient() {
           {[
             { num: "+20", label: "Años de experiencia", desc: "Técnica refinada en diseño de barba y cuidado facial masculino." },
             { num: "100%", label: "Personalizado", desc: "Ninguna barba es igual. Cada diseño parte del análisis de tu rostro." },
-            { num: "5★", label: "Valoración media", desc: "Reseñas verificadas de clientes reales en Booksy." },
+            { num: "—", label: "Reseñas verificadas", desc: "" },
           ].map((stat, i) => (
             <FadeUp key={stat.num} delay={i * 0.07} className="bg-[#F5F5F5] px-8 py-12 flex flex-col justify-between">
               <p className="text-[56px] font-semibold leading-none tracking-tight text-black">
@@ -275,7 +275,7 @@ export default function BarbaClient() {
               </FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
-                  Aquí cada barba se adapta al rostro, no a una moda.
+                  Aquí cada barba se diseña según el rostro.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
@@ -333,7 +333,7 @@ export default function BarbaClient() {
         </FadeUp>
         <FadeUp delay={0.05}>
           <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-            Qué incluye la experiencia
+            Cómo trabajamos tu barba
           </h2>
         </FadeUp>
 
@@ -341,7 +341,7 @@ export default function BarbaClient() {
           {[
             { n: "01", title: "Diagnóstico facial", desc: "Analizamos estructura facial, proporciones y crecimiento del vello antes de empezar." },
             { n: "02", title: "Diseño según tu rostro", desc: "Definimos líneas, volúmenes y forma de la barba adaptados a tu morfología." },
-            { n: "03", title: "Corrección y perfilado técnico", desc: "Trabajamos líneas, simetrías y perfilado con precisión para lograr un resultado limpio y equilibrado." },
+            { n: "03", title: "Corrección y perfilado técnico", desc: "Definición precisa de líneas y estructura facial." },
             { n: "04", title: "Trabajo de volúmenes", desc: "Ajustamos el volumen de cada zona para equilibrar visualmente el conjunto del rostro." },
             { n: "05", title: "Cuidado facial y preparación de la piel", desc: "Incluye vapor ozono, limpieza facial con tecnología Foreo y aplicación de productos específicos para mejorar el estado de la piel y potenciar el resultado final." },
             { n: "06", title: "Acabado y recomendación", desc: "Resultado final y recomendación personalizada para mantener diseño, textura y duración." },
@@ -404,9 +404,9 @@ export default function BarbaClient() {
               <FadeUp delay={0.2}>
                 <div className="mt-10 space-y-6">
                   {[
-                    { title: "Diseño personalizado", desc: "Cada barba se diseña según proporciones faciales y crecimiento natural del vello." },
+                    { title: "Diseño personalizado", desc: "Cada barba se adapta al rostro y crecimiento natural de cada persona." },
                     { title: "Cuidado facial", desc: "Trabajamos también la piel para mejorar acabado, duración y aspecto general de la barba." },
-                    { title: "20+ años de experiencia", desc: "Formación internacional y técnica especializada aplicadas a cada detalle." },
+                    { title: "20+ años de experiencia", desc: "Formado internacionalmente. Precisión, experiencia y atención al detalle en cada visita." },
                     { title: "Resultado que dura", desc: "El diseño correcto hace que la barba mantenga mejor forma y presencia entre visitas." },
                   ].map((b, i) => (
                     <FadeUp key={b.title} delay={i * 0.06}>
