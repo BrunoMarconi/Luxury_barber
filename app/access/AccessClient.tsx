@@ -147,10 +147,6 @@ export default function AccessClient() {
 
             {/* Descripción + CTAs — abajo */}
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-14">
-              <p className="text-[#F0EBE1]/70 text-[10px] tracking-[0.1em] font-light max-w-[40ch] leading-[1.9] mb-8">
-                A complete grooming experience focused on facial structure, hair design, skin care and masculine presence.
-              </p>
-
               <Link
                 href="/corte-y-barba-premium-marbella"
                 className="inline-flex items-center gap-4 text-[9px] tracking-[0.42em] uppercase font-light border-b pb-1 mb-8 transition-all duration-700 w-fit hover:text-[#F0EBE1] hover:border-[#F0EBE1]/40"
