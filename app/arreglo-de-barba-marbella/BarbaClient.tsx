@@ -403,7 +403,7 @@ export default function BarbaClient() {
 
               <FadeUp delay={0.2}>
                 <div className="mt-10 space-y-6">
-                  [
+                  {[
                     { title: "Diseño personalizado", desc: "Cada barba se diseña según proporciones faciales y crecimiento natural del vello." },
                     { title: "Cuidado facial", desc: "Trabajamos también la piel para mejorar acabado, duración y aspecto general de la barba." },
                     { title: "20+ años de experiencia", desc: "Formación internacional y técnica especializada aplicadas a cada detalle." },
