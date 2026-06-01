@@ -122,16 +122,22 @@ export default function CorteClient() {
             Corte de pelo premium para hombre en Marbella
           </motion.h1>
 
-          <motion.div
+          <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-6 max-w-[52ch] space-y-3 text-[13px] leading-6 tracking-[0.04em] text-white/75"
+            className="mt-6 max-w-[52ch] text-[13px] leading-7 tracking-[0.04em] text-white/75"
           >
-            <p>Esto no es un corte de pelo convencional.<br />Es un servicio diseñado para hombres que cuidan su imagen, su presencia y su impacto.</p>
-            <p>Analizamos estructura facial, tipo de cabello y estilo de vida para diseñar un resultado preciso.</p>
-            <p className="text-white/50 italic">Si buscas lo más básico, este no es tu lugar.<br />Si buscas un corte que realmente marque diferencia, estás en el sitio correcto.</p>
-          </motion.div>
+            Tu corte no debería depender de la suerte.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.65 }}
+            className="mt-4 max-w-[52ch] text-[13px] leading-7 tracking-[0.04em] text-white/55"
+          >
+            Diseñamos cortes personalizados basados en visagismo, estructura facial y estilo de vida para hombres que entienden que su imagen también comunica.
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -224,17 +230,17 @@ export default function CorteClient() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Si has pasado por diferentes barberías y el resultado nunca termina de convencerte, el problema no es tu cabello.
+                Muchos hombres llevan años confiando su imagen a servicios que cortan cabello, pero no trabajan percepción.
               </p>
             </FadeUp>
             <FadeUp delay={0.14}>
               <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Son cortes genéricos, sin análisis, sin adaptación a tu rostro y sin una intención clara detrás.
+                El resultado: cortes genéricos, sin adaptación facial, sin intención, y sin armonía con su estilo.
               </p>
             </FadeUp>
             <FadeUp delay={0.18}>
-              <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                El resultado dura poco, no encaja contigo y terminas repitiendo el mismo ciclo.
+              <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65 font-semibold">
+                Aquí cada decisión tiene un propósito.
               </p>
             </FadeUp>
           </div>
@@ -308,7 +314,7 @@ export default function CorteClient() {
               </FadeUp>
               <FadeUp delay={0.18}>
                 <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/60 italic">
-                  Nada es al azar. Cada decisión tiene un porqué.
+                  Cada decisión responde a una intención concreta.
                 </p>
               </FadeUp>
               <FadeUp delay={0.24}>
@@ -360,8 +366,8 @@ export default function CorteClient() {
 
         <div className="mt-14 grid gap-px bg-black/10 sm:grid-cols-2 lg:grid-cols-3 rounded-3xl overflow-hidden">
           {[
-            { n: "01", title: "Diagnóstico capilar y facial", desc: "Analizamos el estado del cuero cabelludo, la estructura del rostro y el patrón de crecimiento antes de empezar." },
-            { n: "02", title: "Diseño basado en visagismo", desc: "Definimos el estilo más adecuado para tu rostro, crecimiento y estilo de vida. Nada al azar." },
+            { n: "01", title: "Análisis inicial", desc: "Analizamos el estado del cuero cabelludo, la estructura del rostro y el patrón de crecimiento antes de empezar." },
+            { n: "02", title: "Diseño basado en visagismo", desc: "Definimos el estilo más adecuado para tu rostro, crecimiento y estilo de vida." },
             { n: "03", title: "Corte de alta precisión", desc: "Ejecutamos el corte con técnicas avanzadas, cuidando cada ángulo y cada transición." },
             { n: "04", title: "Lavado con productos Previa", desc: "Productos profesionales seleccionados según el análisis para mejorar el estado capilar." },
             { n: "05", title: "Tecnología Foreo", desc: "Aplicamos tecnología facial según las necesidades del cuero cabelludo o la piel detectadas en el diagnóstico." },
@@ -381,7 +387,7 @@ export default function CorteClient() {
 
         <FadeUp delay={0.2} className="mt-14 flex flex-col items-center gap-4 text-center">
           <p className="text-[13px] leading-7 text-black/65 max-w-[48ch]">
-            Cada decisión está basada en criterio, no en tendencia.
+            Aquí no seguimos tendencias.<br />Diseñamos resultados.
           </p>
           <a
             href={BOOKSY_URL}
@@ -438,10 +444,10 @@ export default function CorteClient() {
               <FadeUp delay={0.24}>
                 <div className="mt-10 space-y-6">
                   {[
-                    { title: "Diagnóstico facial y capilar", desc: "Antes de cortar, analizamos la estructura del rostro, la densidad, el tipo de cabello y el patrón de crecimiento. Nada se improvisa." },
-                    { title: "Diseño basado en visagismo", desc: "Aplicamos técnicas de visagismo para definir el estilo que más favorece a tu estructura facial. Cada decisión tiene un porqué." },
-                    { title: "Ejecución de alta precisión", desc: "Cada ángulo, cada transición y cada detalle se trabajan con la misma exigencia técnica. No hay atajos en el resultado." },
-                    { title: "Acabado con asesoría personalizada", desc: "Al finalizar, recibes una pauta concreta para mantener el resultado en el tiempo. Criterio aplicado a tu caso, no consejos genéricos." },
+                    { title: "Diagnóstico facial y capilar", desc: "Antes de cortar, estudiamos rostro, densidad, tipo de cabello y patrón de crecimiento para diseñar un resultado coherente." },
+                    { title: "Diseño basado en visagismo", desc: "Aplicamos técnicas de visagismo para definir el estilo que más favorece a tu estructura facial." },
+                    { title: "Ejecución de alta precisión", desc: "Cada ángulo, transición y detalle se trabaja con exigencia técnica para lograr un resultado limpio, natural y duradero." },
+                    { title: "Acabado con asesoría personalizada", desc: "Al finalizar, recibes una pauta concreta para mantener el resultado en el tiempo. Una recomendación adaptada a tu cabello, tu estilo y tu rutina real." },
                   ].map((b, i) => (
                     <FadeUp key={b.title} delay={i * 0.06}>
                       <div className="flex gap-4">
@@ -522,12 +528,12 @@ export default function CorteClient() {
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
-              Reseñas verificadas · Booksy
+              Reseñas verificadas en Google
             </p>
           </FadeUp>
           <FadeUp delay={0.05}>
             <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-              Lo que dice la gente
+              Lo que dicen los clientes
             </h2>
           </FadeUp>
 
@@ -581,92 +587,6 @@ export default function CorteClient() {
         </div>
       </section>
 
-      {/* ── TESTIMONIOS ── */}
-      <section className="bg-[#F5F5F5] py-20 lg:py-28">
-        <div className="mx-auto max-w-6xl px-6">
-          <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
-              Clientes reales
-            </p>
-          </FadeUp>
-          <FadeUp delay={0.05}>
-            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-              Lo que dicen clientes que ya lo han probado
-            </h2>
-          </FadeUp>
-
-          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              "Nunca me habían explicado qué tipo de corte me favorecía según mi cara.",
-              "Se nota que aquí no improvisan, todo tiene un porqué.",
-              "Después de este servicio, mi imagen cambió completamente.",
-              "La barba me dura más y se ve mucho más trabajada.",
-              "No es un corte más, es otra forma de trabajar la imagen.",
-            ].map((quote, i) => (
-              <FadeUp key={i} delay={i * 0.05} className="rounded-3xl border border-black/10 bg-white/60 p-7">
-                <p className="text-[13px] leading-7 tracking-[0.04em] text-black/70 italic">
-                  &ldquo;{quote}&rdquo;
-                </p>
-                <div className="mt-5 h-px bg-black/10" />
-                <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/35">
-                  Cliente · Marbella
-                </p>
-              </FadeUp>
-            ))}
-          </div>
-
-          <FadeUp delay={0.2} className="mt-14 flex flex-col items-center gap-4 text-center">
-            <p className="text-[15px] font-semibold text-black/80">
-              Ellos ya entendieron la diferencia.
-            </p>
-            <a
-              href={BOOKSY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cta="whatsapp-testimonios"
-              data-page="corte-de-pelo"
-              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
-            >
-              Solicitar asesoría personalizada
-            </a>
-          </FadeUp>
-        </div>
-      </section>
-
-      {/* ── ANTES DE RESERVAR ── */}
-      <section className="bg-[#0A0A0A] py-20 lg:py-28">
-        <div className="mx-auto max-w-4xl px-6">
-          <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
-              Resuelve tus dudas
-            </p>
-          </FadeUp>
-          <FadeUp delay={0.05}>
-            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
-              Antes de reservar
-            </h2>
-          </FadeUp>
-
-          <div className="mt-12 space-y-0">
-            {[
-              { q: "¿Qué incluye exactamente el servicio?", a: "Incluye diagnóstico, diseño personalizado, ejecución técnica y recomendación final adaptada a cada cliente." },
-              { q: "¿Cuánto dura el servicio?", a: "Depende del servicio, pero en general entre 45 minutos y 1 hora y media, ya que no es un servicio rápido, sino trabajado." },
-              { q: "¿Este servicio es para cualquier persona?", a: "Sí, pero especialmente para quienes buscan mejorar su imagen y no quieren un resultado genérico." },
-              { q: "¿Por qué no se muestra el precio en la web?", a: "Porque cada servicio está pensado como una experiencia completa. Puedes ver todos los detalles y seleccionar tu servicio directamente en la reserva online." },
-              { q: "¿Puedo añadir tratamientos?", a: "Sí, puedes complementar tu servicio con tratamientos faciales para mejorar el resultado final." },
-            ].map((item, i) => (
-              <FadeUp key={i} delay={i * 0.05} className="border-b border-white/10 py-8">
-                <p className="text-[14px] font-semibold uppercase tracking-widest text-white">
-                  {item.q}
-                </p>
-                <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  {item.a}
-                </p>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── FILTRO DE CLIENTE ── */}
       <section className="bg-[#F5F5F5] py-20 lg:py-24">
@@ -713,18 +633,14 @@ export default function CorteClient() {
           </FadeUp>
           <FadeUp delay={0.06}>
             <h2 className="mt-6 text-[34px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[46px] lg:text-[58px]">
-              Si estás listo para dejar de improvisar con tu imagen
+              Tu imagen habla antes que tú.
             </h2>
           </FadeUp>
           <FadeUp delay={0.12}>
-            <p className="mt-6 text-[14px] leading-7 tracking-[0.04em] text-white/70">
-              Reserva tu corte premium en Marbella y trabajaremos tu imagen con criterio, diagnóstico y precisión.
-            </p>
-          </FadeUp>
-          <FadeUp delay={0.16}>
-            <p className="mt-3 text-[13px] leading-6 tracking-[0.04em] text-white/45 italic">
-              Si quieres dejar de improvisar con tu imagen, este es el siguiente paso.
-            </p>
+            <div className="mt-8 space-y-3 text-[14px] leading-7 tracking-[0.03em] text-white/55">
+              <p>La diferencia es decidir si quieres dejarla al azar o trabajarla con intención.</p>
+              <p>Reserva tu corte premium en Marbella y trabajaremos tu imagen con análisis, técnica y visión personalizada.</p>
+            </div>
           </FadeUp>
           <FadeUp delay={0.22}>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
