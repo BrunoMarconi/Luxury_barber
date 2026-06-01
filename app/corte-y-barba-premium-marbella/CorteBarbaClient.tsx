@@ -393,7 +393,7 @@ export default function CorteBarbaClient() {
 
               <FadeUp delay={0.2}>
                 <div className="mt-10 space-y-6">
-                  [
+                  {[
                     { title: "Diseño de conjunto", desc: "Cabello y barba diseñados juntos para crear coherencia visual y equilibrio facial." },
                     { title: "Análisis facial completo", desc: "Mandíbula, pómulos, perfil y proporciones analizados antes de diseñar el resultado." },
                     { title: "20+ años de experiencia", desc: "Formación internacional y técnica especializada aplicadas a cada detalle." },

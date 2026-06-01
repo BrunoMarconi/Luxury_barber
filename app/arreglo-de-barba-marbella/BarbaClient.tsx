@@ -338,7 +338,7 @@ export default function BarbaClient() {
         </FadeUp>
 
         <div className="mt-14 grid gap-px bg-black/10 sm:grid-cols-2 lg:grid-cols-3 rounded-3xl overflow-hidden">
-          [
+          {[
             { n: "01", title: "Diagnóstico facial", desc: "Analizamos estructura facial, proporciones y crecimiento del vello antes de empezar." },
             { n: "02", title: "Diseño según tu rostro", desc: "Definimos líneas, volúmenes y forma de la barba adaptados a tu morfología." },
             { n: "03", title: "Corrección y perfilado técnico", desc: "Trabajamos líneas, simetrías y perfilado con precisión para lograr un resultado limpio y equilibrado." },
