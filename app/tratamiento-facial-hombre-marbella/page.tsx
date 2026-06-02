@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "limpieza facial hombre Marbella",
     "cuidado de la piel hombre Marbella",
     "facial masculino Marbella",
-    "tratamiento facial Marbella precio",
+    "protocolos faciales masculinos Marbella",
     "barbería facial Marbella",
     "Foreo facial Marbella",
     "skincare hombre Marbella",

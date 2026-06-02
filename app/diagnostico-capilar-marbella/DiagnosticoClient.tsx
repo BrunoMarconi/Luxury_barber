@@ -62,7 +62,7 @@ const REVIEWS = [
 
 function Stars({ n = 5 }: { n?: number }) {
   return (
-    <span className="text-[#0F2A44] tracking-tight text-sm">
+    <span className="text-white/80 tracking-tight text-sm">
       {"★".repeat(n)}
     </span>
   );
@@ -71,19 +71,19 @@ function Stars({ n = 5 }: { n?: number }) {
 const FAQ = [
   {
     q: "¿En qué consiste el diagnóstico capilar?",
-    a: "Es un análisis profesional del cuero cabelludo y el cabello utilizando herramientas de diagnóstico especializadas. Evaluamos densidad, nivel de grasa, estado del folículo, posibles problemas como caspa o caída, y las características del crecimiento.",
-  },
-  {
-    q: "¿El diagnóstico capilar es un servicio independiente?",
-    a: "Puede realizarse de forma independiente o como parte de cualquier servicio de corte o tratamiento. En ambos casos, el análisis es el punto de partida para tomar decisiones con criterio.",
+    a: "Un análisis profesional de cuero cabelludo, cabello, piel y estructura facial para definir recomendaciones personalizadas de corte, barba y cuidado.",
   },
   {
     q: "¿Qué pasa después del diagnóstico?",
-    a: "Recibirás una recomendación personalizada sobre el servicio más adecuado, los productos que deberías usar en casa y el protocolo de mantenimiento para mejorar el estado de tu cabello.",
+    a: "Recibirás una recomendación concreta sobre el enfoque más adecuado, los productos y el protocolo de mantenimiento para tu caso.",
   },
   {
     q: "¿El diagnóstico sirve también para problemas de caída?",
-    a: "Sí. Podemos detectar señales tempranas de debilidad capilar, exceso de grasa o inflamación del cuero cabelludo que afectan al crecimiento, y orientarte hacia el tratamiento más adecuado.",
+    a: "Sí. Detectamos señales y orientamos sobre medidas y tratamientos que ayudan a frenar o corregir problemas tempranos.",
+  },
+  {
+    q: "¿Se puede combinar con otros servicios?",
+    a: "Sí. El diagnóstico se integra con cortes, diseño de barba y tratamientos faciales para ofrecer un resultado coherente y duradero.",
   },
 ];
 
@@ -117,18 +117,27 @@ export default function DiagnosticoClient() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.35 }}
-            className="mt-4 max-w-[18ch] text-[40px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[58px] lg:text-[76px]"
+            className="mt-6 max-w-[24ch] text-[28px] font-extralight uppercase leading-[0.95] tracking-[0.28em] text-white sm:text-[36px] lg:text-[48px]"
           >
-            Diagnóstico capilar en Marbella
+            Diagnóstico capilar y facial masculino en Marbella
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-6 max-w-[52ch] text-[13px] leading-6 tracking-[0.04em] text-white/75"
+            className="mt-6 max-w-[56ch] text-[13px] leading-7 tracking-[0.06em] text-white/80"
           >
-            Antes de cortar o diseñar, analizamos. Porque sin diagnóstico, todo es al azar.
+            Antes de cortar o diseñar, analizamos. Porque cuando no existe diagnóstico, todo termina siendo improvisación.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.6 }}
+            className="mt-4 max-w-[56ch] text-[12px] leading-6 tracking-[0.06em] text-white/60"
+          >
+            Evaluamos cuero cabelludo, cabello, piel y estructura facial para entender qué necesita realmente tu imagen antes de intervenir.
           </motion.p>
 
           <motion.div
@@ -162,6 +171,41 @@ export default function DiagnosticoClient() {
         </div>
       </section>
 
+      {/* ── TECNOLOGÍA ── */}
+      <section className="mx-auto max-w-6xl px-6 py-16 lg:py-20">
+        <FadeUp>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
+            Tecnología aplicada con precisión
+          </p>
+        </FadeUp>
+        <FadeUp delay={0.04}>
+          <h3 className="mt-3 text-[22px] font-extralight leading-[1.05] tracking-[0.06em]">
+            La tecnología no reemplaza la lectura profesional. La complementa.
+          </h3>
+        </FadeUp>
+        <FadeUp delay={0.08}>
+          <p className="mt-4 max-w-[64ch] text-[13px] leading-7 text-black/65">
+            Cada herramienta se utiliza para analizar, personalizar y trabajar la experiencia con mayor precisión y coherencia visual.
+          </p>
+        </FadeUp>
+
+        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          {[
+            "Diagnóstico facial masculino",
+            "Tecnología Foreo",
+            "Tecnología galvánica NuSkin",
+            "Vaporizador caliente y frío",
+            "LED terapéutico",
+            "Crioterapia facial",
+            "Activos premium",
+          ].map((t, i) => (
+            <FadeUp key={t} delay={i * 0.04} className="p-3">
+              <p className="text-[12px] font-semibold tracking-[0.14em] text-black/70 uppercase">{t}</p>
+            </FadeUp>
+          ))}
+        </div>
+      </section>
+
       {/* ── PROBLEMA ── */}
       <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -172,23 +216,19 @@ export default function DiagnosticoClient() {
               </p>
             </FadeUp>
             <FadeUp delay={0.05}>
-              <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-                La mayoría nunca ha recibido un análisis real
+              <h2 className="mt-3 text-[30px] font-extralight leading-[1.05] tracking-[0.12em] sm:text-[36px]">
+                La mayoría de personas nunca ha recibido un análisis real de su cabello, su piel o su estructura facial.
               </h2>
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                La mayoría de personas nunca ha recibido un análisis real de su cabello o su piel.
+                Por eso repiten cortes que no les favorecen, productos incorrectos o decisiones tomadas sin análisis real.
               </p>
             </FadeUp>
             <FadeUp delay={0.14}>
               <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                Por eso llevan cortes que no les favorecen, barbas mal estructuradas o problemas en el cuero cabelludo que nunca se corrigen.
-              </p>
-            </FadeUp>
-            <FadeUp delay={0.18}>
-              <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                No es falta de estilo. Es falta de diagnóstico.
+                No es falta de estilo.
+                <span className="font-semibold"> Es falta de diagnóstico.</span>
               </p>
             </FadeUp>
           </div>
@@ -211,7 +251,7 @@ export default function DiagnosticoClient() {
           {[
             { num: "+20", label: "Años de experiencia", desc: "Más de dos décadas analizando y trabajando el cabello masculino." },
             { num: "100%", label: "Personalizado", desc: "Cada diagnóstico es único. Adaptado a tu cabello, tu piel y tus objetivos." },
-            { num: "5★", label: "Valoración media", desc: "Reseñas verificadas de clientes reales en Booksy." },
+            { num: "5★", label: "Valoración media", desc: "Reseñas verificadas de clientes reales en Google." },
           ].map((stat, i) => (
             <FadeUp key={stat.num} delay={i * 0.07} className="bg-[#F5F5F5] px-8 py-12 flex flex-col justify-between">
               <p className="text-[56px] font-semibold leading-none tracking-tight text-black">
@@ -242,30 +282,18 @@ export default function DiagnosticoClient() {
                 </p>
               </FadeUp>
               <FadeUp delay={0.05}>
-                <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
-                  Aquí todo comienza con un análisis.
-                </h2>
+                <h2 className="mt-3 text-[30px] font-extralight leading-[1.05] tracking-[0.12em] text-white sm:text-[36px]">
+                    Aquí todo comienza entendiendo antes de intervenir.
+                  </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  Evaluamos el estado del cuero cabelludo, la calidad del cabello y la estructura del rostro. Utilizamos herramientas de diagnóstico y observación profesional para entender qué necesitas realmente.
+                  Analizamos cuero cabelludo, densidad, crecimiento, piel y estructura facial utilizando observación profesional y tecnología especializada aplicada al cuidado masculino premium.
                 </p>
               </FadeUp>
               <FadeUp delay={0.14}>
                 <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  A partir de ahí, definimos qué servicio es el adecuado para ti: un{" "}
-                  <Link href="/corte-de-pelo-hombre-marbella" className="underline underline-offset-2 text-white/80 hover:text-white transition">
-                    corte de cabello
-                  </Link>
-                  , el{" "}
-                  <Link href="/arreglo-de-barba-marbella" className="underline underline-offset-2 text-white/80 hover:text-white transition">
-                    diseño de barba
-                  </Link>
-                  , un{" "}
-                  <Link href="/tratamiento-facial-hombre-marbella" className="underline underline-offset-2 text-white/80 hover:text-white transition">
-                    tratamiento facial
-                  </Link>
-                  {" "}o una combinación de todos ellos.
+                  A partir del análisis, definimos qué enfoque tiene más sentido para tu imagen, tu cabello y tus necesidades reales.
                 </p>
               </FadeUp>
               <FadeUp delay={0.2}>
@@ -308,18 +336,18 @@ export default function DiagnosticoClient() {
           </h2>
         </FadeUp>
 
-        <div className="mt-14 grid gap-px bg-black/10 sm:grid-cols-2 lg:grid-cols-3 rounded-3xl overflow-hidden">
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { n: "01", title: "Estado del cuero cabelludo", desc: "Densidad, nivel de grasa, estado del folículo y posibles señales de inflamación o debilidad." },
-            { n: "02", title: "Tipo de cabello y densidad", desc: "Clasificamos el tipo de cabello para definir qué técnica y productos son los más adecuados." },
-            { n: "03", title: "Dirección de crecimiento", desc: "Analizamos la dirección, velocidad y patrón de crecimiento para detectar anomalías y adaptar el corte." },
-            { n: "04", title: "Estructura del rostro", desc: "Mandíbula, pómulos, frente y perfil: analizamos las proporciones para diseñar con criterio." },
-            { n: "05", title: "Proporciones faciales", desc: "Identificamos desequilibrios y zonas a potenciar o compensar a través del corte o la barba." },
-            { n: "06", title: "Estado de la piel", desc: "Evaluamos la piel del rostro para orientar hacia el tratamiento facial más adecuado si es necesario." },
+            { n: "01", title: "Cuero cabelludo", desc: "Estado general, densidad, sensibilidad y señales visibles que afectan la salud capilar." },
+            { n: "02", title: "Tipo y comportamiento del cabello", desc: "Textura, densidad y características que determinan qué técnica y productos funcionan mejor." },
+            { n: "03", title: "Dirección de crecimiento", desc: "Patrones naturales de crecimiento que afectan estructura, caída y comportamiento del corte." },
+            { n: "04", title: "Estructura facial", desc: "Mandíbula, pómulos, perfil y proporciones analizadas para construir coherencia visual." },
+            { n: "05", title: "Proporciones y equilibrio", desc: "Identificamos zonas a potenciar, equilibrar o suavizar mediante diseño de imagen masculina." },
+            { n: "06", title: "Estado de la piel", desc: "Evaluamos necesidades visibles de la piel para orientar correctamente protocolos faciales y cuidado posterior." },
           ].map((step, i) => (
-            <FadeUp key={step.n} delay={i * 0.07} className="bg-[#F5F5F5] p-8">
-              <p className="text-[11px] font-bold tracking-[0.2em] text-white/70">{step.n}</p>
-              <h3 className="mt-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-black">
+            <FadeUp key={step.n} delay={i * 0.07} className="p-8 bg-transparent">
+              <p className="text-[11px] font-semibold tracking-[0.2em] text-black/50">{step.n}</p>
+              <h3 className="mt-3 text-[13px] font-semibold uppercase tracking-[0.12em] text-black">
                 {step.title}
               </h3>
               <p className="mt-2 text-[12px] leading-6 tracking-[0.03em] text-black/60">
@@ -341,32 +369,27 @@ export default function DiagnosticoClient() {
                 </p>
               </FadeUp>
               <FadeUp delay={0.05}>
-                <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
+                <h2 className="mt-3 text-[30px] font-extralight leading-[1.05] tracking-[0.06em] text-white sm:text-[36px]">
                   La mayoría empieza cortando. Aquí empezamos entendiendo.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  La mayoría de servicios empiezan directamente cortando. Aquí empezamos entendiendo.
-                </p>
-              </FadeUp>
-              <FadeUp delay={0.14}>
-                <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  Porque un buen resultado no depende solo de la técnica. Depende de tomar decisiones correctas desde el inicio.
+                  Porque un mejor resultado no depende solamente de técnica. Depende de tomar mejores decisiones desde el inicio.
                 </p>
               </FadeUp>
 
               <FadeUp delay={0.2}>
                 <div className="mt-10 space-y-6">
                   {[
-                    { title: "Decisiones con criterio", desc: "No se elige el producto o el servicio al azar. Se elige en función del análisis." },
-                    { title: "Resultados reales", desc: "Un diagnóstico correcto es el primer paso para un resultado que dure." },
-                    { title: "Prevención antes que corrección", desc: "Detectamos problemas en fases tempranas antes de que se vuelvan más difíciles de tratar." },
-                    { title: "Base para el servicio completo", desc: "El diagnóstico se integra con el corte, la barba o el tratamiento para un resultado superior." },
+                    { title: "DECISIONES PERSONALIZADAS", desc: "Cada recomendación parte del análisis y no de tendencias genéricas." },
+                    { title: "RESULTADOS MÁS PRECISOS", desc: "Cuando el diagnóstico es correcto, el resultado se adapta mejor a la persona." },
+                    { title: "PREVENCIÓN Y MANTENIMIENTO", desc: "Detectar antes permite corregir mejor y mantener resultados durante más tiempo." },
+                    { title: "BASE DEL ECOSISTEMA ALPHA", desc: "El diagnóstico conecta corte, barba, tratamientos faciales y cuidado posterior como una sola dirección de imagen." },
                   ].map((b, i) => (
                     <FadeUp key={b.title} delay={i * 0.06}>
                       <div className="flex gap-4">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0F2A44]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/70" />
                         <div>
                           <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-white">
                             {b.title}
@@ -414,23 +437,18 @@ export default function DiagnosticoClient() {
               </p>
             </FadeUp>
             <FadeUp delay={0.05}>
-              <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
-                Cuando se trabaja con diagnóstico
+              <h2 className="mt-3 text-[30px] font-extralight leading-[1.05] tracking-[0.06em] sm:text-[36px]">
+                Cuando se trabaja con diagnóstico, todo cambia.
               </h2>
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65">
-                El análisis previo no es un paso adicional. Es lo que hace que todo lo demás funcione mejor.
-              </p>
             </FadeUp>
           </div>
 
           <FadeUp delay={0.1} className="grid grid-cols-1 gap-4">
             {[
-              { num: "01", text: "El corte se adapta mejor a tu rostro y a tu tipo de cabello." },
-              { num: "02", text: "La barba encaja con la estructura y proporciones reales de tu cara." },
-              { num: "03", text: "La piel mejora su aspecto cuando el tratamiento parte de un diagnóstico." },
-              { num: "04", text: "El resultado dura más porque está diseñado para ti específicamente." },
+              { num: "01", text: "El corte se adapta mejor a tu estructura facial y tipo de cabello." },
+              { num: "02", text: "La barba se diseña con mayor coherencia y equilibrio visual." },
+              { num: "03", text: "La piel responde mejor cuando el protocolo parte de necesidades reales." },
+              { num: "04", text: "El resultado dura más porque fue construido específicamente para ti." },
             ].map((item, i) => (
               <FadeUp key={item.num} delay={i * 0.06} className="flex items-start gap-5 rounded-2xl border border-black/10 bg-white/60 px-6 py-5">
                 <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-black/30 shrink-0 mt-0.5">{item.num}</span>
@@ -442,11 +460,11 @@ export default function DiagnosticoClient() {
       </section>
 
       {/* ── RESEÑAS ── */}
-      <section className="bg-[#F5F5F5] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
-              Reseñas verificadas · Booksy
+              Reseñas verificadas en Google
             </p>
           </FadeUp>
           <FadeUp delay={0.05}>
@@ -456,17 +474,17 @@ export default function DiagnosticoClient() {
           </FadeUp>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {REVIEWS.map((r, i) => (
-              <FadeUp key={r.id} delay={i * 0.06} className="rounded-3xl border border-black/10 bg-white/40 p-6 backdrop-blur">
+            {REVIEWS.slice(0,4).map((r, i) => (
+              <FadeUp key={r.id} delay={i * 0.06} className="rounded-3xl bg-transparent p-6">
                 <Stars n={r.rating} />
-                <p className="mt-4 text-[12px] leading-6 tracking-[0.04em] text-black/65">
+                <p className="mt-4 text-[12px] leading-6 tracking-[0.04em] text-white/70">
                   &ldquo;{r.text}&rdquo;
                 </p>
                 <div className="mt-5 flex items-center justify-between">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-black">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white">
                     {r.name}
                   </p>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-black/40">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
                     {r.date}
                   </p>
                 </div>
@@ -505,40 +523,7 @@ export default function DiagnosticoClient() {
         </div>
       </section>
 
-      {/* ── ANTES DE RESERVAR ── */}
-      <section className="bg-[#0A0A0A] py-20 lg:py-28">
-        <div className="mx-auto max-w-4xl px-6">
-          <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
-              Resuelve tus dudas
-            </p>
-          </FadeUp>
-          <FadeUp delay={0.05}>
-            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[48px]">
-              Antes de reservar
-            </h2>
-          </FadeUp>
-
-          <div className="mt-12 space-y-0">
-            {[
-              { q: "¿Qué incluye exactamente el servicio?", a: "Incluye diagnóstico, diseño personalizado, ejecución técnica y recomendación final adaptada a cada cliente." },
-              { q: "¿Cuánto dura el servicio?", a: "Depende del servicio, pero en general entre 45 minutos y 1 hora y media, ya que no es un servicio rápido, sino trabajado." },
-              { q: "¿Este servicio es para cualquier persona?", a: "Sí, pero especialmente para quienes buscan mejorar su imagen y no quieren un resultado genérico." },
-              { q: "¿Por qué no se muestra el precio en la web?", a: "Porque cada servicio está pensado como una experiencia completa. Puedes ver todos los detalles y seleccionar tu servicio directamente en la reserva online." },
-              { q: "¿Puedo añadir tratamientos?", a: "Sí, puedes complementar tu servicio con tratamientos faciales para mejorar el resultado final." },
-            ].map((item, i) => (
-              <FadeUp key={i} delay={i * 0.05} className="border-b border-white/10 py-8">
-                <p className="text-[14px] font-semibold uppercase tracking-widest text-white">
-                  {item.q}
-                </p>
-                <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  {item.a}
-                </p>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* ── CTA FINAL ── */}
       <section className="relative overflow-hidden bg-[#0A0A0A] py-28 lg:py-36">
@@ -551,13 +536,13 @@ export default function DiagnosticoClient() {
             </p>
           </FadeUp>
           <FadeUp delay={0.06}>
-            <h2 className="mt-6 text-[34px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[46px] lg:text-[58px]">
-              El primer paso para trabajar tu imagen con criterio.
+            <h2 className="mt-6 text-[34px] font-extralight leading-[1.05] tracking-[0.04em] text-white sm:text-[46px] lg:text-[58px]">
+              El primer paso para trabajar tu imagen con dirección.
             </h2>
           </FadeUp>
           <FadeUp delay={0.12}>
             <p className="mt-6 text-[13px] leading-7 tracking-[0.03em] text-white/55">
-              Si quieres dejar de improvisar con tu imagen y empezar a trabajarla con criterio, este es el primer paso.
+              Cuando entiendes realmente tu cabello, tu piel y tu estructura facial, las decisiones dejan de ser improvisación.
             </p>
           </FadeUp>
           <FadeUp delay={0.2}>
