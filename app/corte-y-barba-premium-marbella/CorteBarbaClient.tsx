@@ -99,9 +99,9 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
           className="object-cover scale-[1.03]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-black/55 via-black/30 to-black/75" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-black/10" />
 
-        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col justify-end px-6 pb-16 lg:pb-24">
+        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col justify-end px-6 pb-16 lg:pb-24 pt-20 lg:pt-0">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
