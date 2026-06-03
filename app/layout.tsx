@@ -81,7 +81,9 @@ export default async function RootLayout({
 }>) {
   const headersList = await headers();
   const pathname = headersList.get("x-pathname") || "";
-  const isAccess = pathname.startsWith("/access");
+  const isAccess =
+    pathname.startsWith("/access") ||
+    pathname.startsWith("/black-access-marbella");
 
   return (
     <html lang="es">

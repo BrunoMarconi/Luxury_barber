@@ -84,6 +84,34 @@ export default function TratamientoFacialClient() {
         </div>
       </section>
 
+      {/* ── GALERÍA ── */}
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-0.5">
+        {[
+          {
+            src: "/images/tratamiento-facial-hombre-premium-marbella.jpeg",
+            alt: "Tratamiento facial hombre premium Marbella",
+          },
+          {
+            src: "/images/diagnostico-facial-masculino-marbella.jpeg",
+            alt: "Diagnóstico facial masculino Marbella",
+          },
+{
+            src: "/images/tecnologia-facial-avanzada-hombre-marbella.jpeg",
+            alt: "Tecnología facial avanzada hombre Marbella",
+          },
+        ].map((img) => (
+          <div key={img.src} className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+              sizes="(max-width: 768px) 50vw, 25vw"
+            />
+          </div>
+        ))}
+      </section>
+
       {/* ── SECTION: CONEXIÓN CON SERVICIOS ── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">

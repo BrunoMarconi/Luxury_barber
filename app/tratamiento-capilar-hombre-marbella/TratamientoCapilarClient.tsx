@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { buildWaUrl } from "@/lib/cta";
@@ -162,6 +163,38 @@ export default function TratamientoCapilarClient() {
             </p>
           </FadeUp>
         </div>
+      </section>
+
+      {/* ── GALERÍA ── */}
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-0.5">
+        {[
+          {
+            src: "/images/diagnostico-capilar-hombre-premium-marbella.jpeg",
+            alt: "Diagnóstico capilar hombre premium Marbella",
+          },
+          {
+            src: "/images/tratamiento-capilar-masculino-marbella.jpeg",
+            alt: "Tratamiento capilar masculino Marbella",
+          },
+          {
+            src: "/images/analisis-cuero-cabelludo-premium-marbella.jpeg",
+            alt: "Análisis cuero cabelludo premium Marbella",
+          },
+          {
+            src: "/images/asesoria-capilar-premium-hombre-marbella.jpeg",
+            alt: "Asesoría capilar premium hombre Marbella",
+          },
+        ].map((img) => (
+          <div key={img.src} className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+              sizes="(max-width: 768px) 50vw, 25vw"
+            />
+          </div>
+        ))}
       </section>
 
       {/* ── AUTORIDAD ── */}
