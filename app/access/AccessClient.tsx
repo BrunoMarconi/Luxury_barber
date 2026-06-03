@@ -80,7 +80,7 @@ export default function AccessClient() {
         <div className="group relative overflow-hidden">
           <div className="relative min-h-[600px] md:min-h-[700px] overflow-hidden">
             <Image
-              src="/images/access2.jpeg"
+              src="/images/black-access-corte-premium-hombre-marbella.jpeg"
               alt="Black Access — The Professional Barber Marbella"
               fill
               className="object-cover object-center transition-transform duration-[1800ms] group-hover:scale-[1.03]"
