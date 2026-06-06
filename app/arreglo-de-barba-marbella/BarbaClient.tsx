@@ -327,7 +327,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
       </section>
 
       {/* ── EXPERIENCIA ── */}
-      <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
+      <section className="mx-auto max-w-6xl px-6 py-24 lg:py-32">
         <FadeUp>
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
             El proceso completo
@@ -343,9 +343,9 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
           {[
             { n: "01", title: "Diagnóstico facial", desc: "Analizamos estructura facial, proporciones y crecimiento del vello antes de empezar." },
             { n: "02", title: "Diseño según tu rostro", desc: "Definimos líneas, volúmenes y forma de la barba adaptados a tu morfología." },
-            { n: "03", title: "Corrección y perfilado técnico", desc: "Definición precisa de líneas y estructura facial." },
+            { n: "03", title: "Corrección y perfilado técnico", desc: "Trabajamos líneas, simetrías y perfilado con precisión para lograr un resultado limpio, equilibrado y natural." },
             { n: "04", title: "Trabajo de volúmenes", desc: "Ajustamos el volumen de cada zona para equilibrar visualmente el conjunto del rostro." },
-            { n: "05", title: "Cuidado facial y preparación de la piel", desc: "Incluye vapor ozono, limpieza facial con tecnología Foreo y aplicación de productos específicos para mejorar el estado de la piel y potenciar el resultado final." },
+            { n: "05", title: "Cuidado facial y preparación de la piel", desc: "Incluye vapor ozono, tecnología Foreo, activos profesionales y cuidado facial personalizado para optimizar el estado de la piel y potenciar el resultado final. Según lo detectado en el diagnóstico, la experiencia puede incorporar tecnología galvánica NuSkin, LED terapéutico, crioterapia facial y activos premium seleccionados con criterio profesional." },
             { n: "06", title: "Acabado y recomendación", desc: "Resultado final y recomendación personalizada para mantener diseño, textura y duración." },
           ].map((step, i) => (
             <FadeUp key={step.n} delay={i * 0.05} className="bg-[#F5F5F5] p-8">
@@ -378,7 +378,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
       </section>
 
       {/* ── DIFERENCIA ── */}
-      <section className="bg-[#0A0A0A] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
             <div>
@@ -399,7 +399,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
               </FadeUp>
               <FadeUp delay={0.17}>
                 <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-white/60">
-                  Diseño, líneas, volumen y cuidado de la piel forman parte del resultado.
+                  Diseño, proporción, volumen, cuidado de la piel y personalización avanzada forman parte del resultado.
                 </p>
               </FadeUp>
 
@@ -486,7 +486,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
       </section>
 
       {/* ── RESEÑAS ── */}
-      <section className="bg-[#F5F5F5] py-20 lg:py-28">
+      <section className="bg-[#F5F5F5] py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
@@ -551,7 +551,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
 
 
       {/* ── CTA FINAL ── */}
-      <section className="relative overflow-hidden bg-[#0A0A0A] py-28 lg:py-36">
+      <section className="relative overflow-hidden bg-[#0A0A0A] py-32 lg:py-44">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
@@ -564,6 +564,11 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
             <h2 className="mt-6 text-[34px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[46px] lg:text-[58px]">
               Tu barba también comunica.
             </h2>
+          </FadeUp>
+          <FadeUp delay={0.09}>
+            <p className="mt-5 text-[13px] leading-7 tracking-[0.04em] text-white/45">
+              El diseño correcto no llama la atención.<br />Refuerza tu presencia.
+            </p>
           </FadeUp>
           <FadeUp delay={0.12}>
             <div className="mt-8 space-y-3 text-[14px] leading-7 tracking-[0.03em] text-white/55">

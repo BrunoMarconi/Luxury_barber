@@ -367,8 +367,8 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
             { n: "01", title: "Análisis inicial", desc: "Analizamos el estado del cuero cabelludo, la estructura del rostro y el patrón de crecimiento antes de empezar." },
             { n: "02", title: "Diseño basado en visagismo", desc: "Definimos el estilo más adecuado para tu rostro, crecimiento y estilo de vida." },
             { n: "03", title: "Corte de alta precisión", desc: "Trabajamos cada ángulo y transición buscando equilibrio, estructura y naturalidad en el resultado." },
-            { n: "04", title: "Lavado con productos Previa", desc: "Productos profesionales seleccionados según el análisis para mejorar el estado capilar." },
-            { n: "05", title: "Tecnología Foreo", desc: "Aplicamos tecnología facial según las necesidades del cuero cabelludo o la piel detectadas en el diagnóstico." },
+            { n: "04", title: "Lavado con productos Previa", desc: "Productos profesionales seleccionados según el diagnóstico para mejorar el equilibrio del cuero cabelludo y el estado general del cabello." },
+            { n: "05", title: "Tecnología y personalización", desc: "Aplicamos herramientas de diagnóstico, productos profesionales y tecnología especializada cuando el análisis lo requiere para mejorar el estado del cuero cabelludo, la piel y el resultado final." },
             { n: "06", title: "Acabado y recomendación", desc: "Styling final con herramientas profesionales y pauta personalizada para mantener el resultado." },
           ].map((step, i) => (
             <FadeUp key={step.n} delay={i * 0.07} className="bg-[#F5F5F5] p-8">
@@ -442,7 +442,7 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
               <FadeUp delay={0.24}>
                 <div className="mt-10 space-y-6">
                   {[
-                    { title: "Diagnóstico facial y capilar", desc: "Antes de cortar, estudiamos rostro, densidad, tipo de cabello y patrón de crecimiento para diseñar un resultado coherente." },
+                    { title: "Diagnóstico facial y capilar", desc: "Antes de cortar, estudiamos rostro, densidad, tipo de cabello y patrón de crecimiento para diseñar un resultado coherente. El análisis puede incorporar herramientas de diagnóstico capilar y observación profesional para detectar factores que influyen directamente en el resultado." },
                     { title: "Diseño basado en visagismo", desc: "Aplicamos técnicas de visagismo para definir el estilo que más favorece a tu estructura facial." },
                     { title: "Ejecución de alta precisión", desc: "Cada ángulo, transición y detalle se trabaja con exigencia técnica para lograr un resultado limpio, natural y duradero." },
                     { title: "Acabado con asesoría personalizada", desc: "Al finalizar, recibes una pauta concreta para mantener el resultado en el tiempo. Una recomendación adaptada a tu cabello, tu estilo y tu rutina real." },
@@ -590,31 +590,9 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
       <section className="bg-[#F5F5F5] py-20 lg:py-24">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <FadeUp>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/50">
-              Para quién es este servicio
+            <p className="text-[14px] font-semibold leading-8 tracking-[0.03em] text-black/70 max-w-[52ch] mx-auto">
+              Diseñado para hombres que entienden que su imagen también forma parte de su presencia.
             </p>
-          </FadeUp>
-          <FadeUp delay={0.05}>
-            <h2 className="mt-4 text-[30px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[40px]">
-              Este servicio no es para todo el mundo
-            </h2>
-          </FadeUp>
-          <FadeUp delay={0.1}>
-            <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/65 max-w-[52ch] mx-auto">
-              Está pensado para hombres que valoran su imagen y entienden el impacto que tiene en su vida personal, profesional y social.
-            </p>
-          </FadeUp>
-          <FadeUp delay={0.15}>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 max-w-2xl mx-auto text-left">
-              <div className="rounded-2xl border border-black/10 bg-white/60 p-6">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-black/40 mb-3">No es para ti si…</p>
-                <p className="text-[13px] leading-6 text-black/60">Buscas únicamente el corte más barato sin importar el resultado ni la precisión.</p>
-              </div>
-              <div className="rounded-2xl border border-[#0F2A44]/20 bg-[#0F2A44]/5 p-6">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0F2A44]/60 mb-3">Sí es para ti si…</p>
-                <p className="text-[13px] leading-6 text-black/70">Buscas una imagen más sólida, elegante y precisa, y entiendes que eso tiene un valor real en tu vida.</p>
-              </div>
-            </div>
           </FadeUp>
         </div>
       </section>
@@ -636,7 +614,7 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
           </FadeUp>
           <FadeUp delay={0.12}>
             <div className="mt-8 space-y-3 text-[14px] leading-7 tracking-[0.03em] text-white/55">
-              <p>La diferencia es decidir si quieres dejarla al azar o trabajarla con intención.</p>
+              <p>La diferencia es decidir si quieres confiarla al azar o trabajarla mediante diagnóstico, técnica y criterio profesional.</p>
               <p>Reserva tu corte premium en Marbella y trabajaremos tu imagen con análisis, técnica y visión personalizada.</p>
             </div>
           </FadeUp>

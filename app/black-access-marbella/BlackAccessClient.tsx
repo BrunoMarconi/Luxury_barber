@@ -5,7 +5,13 @@ import Image from "next/image";
 const WA_URL =
   "https://wa.me/34617853179?text=Hola,%20quiero%20solicitar%20Black%20Access";
 
-const DIFFERENTIALS = [
+type Differential = {
+  title: string;
+  text?: string;
+  lines?: string[];
+};
+
+const DIFFERENTIALS: Differential[] = [
   {
     title: "Sesión privada los domingos",
     text: "Un único turno reservado para vivir la experiencia sin atención simultánea a otros clientes.",
@@ -16,7 +22,11 @@ const DIFFERENTIALS = [
   },
   {
     title: "Tecnología aplicada con precisión",
-    text: "La experiencia incorpora tecnología especializada integrada de forma discreta dentro del diagnóstico y la personalización de cada sesión.",
+    lines: [
+      "La experiencia incorpora análisis facial masculino, diagnóstico capilar avanzado, tecnología Foreo, tecnología galvánica NuSkin, LED terapéutico, crioterapia facial, termoterapia controlada y activos premium seleccionados según las necesidades detectadas durante la sesión.",
+      "La tecnología no es protagonista.",
+      "Es la herramienta que permite personalizar cada detalle con mayor precisión.",
+    ],
   },
   {
     title: "Continuidad personalizada",
@@ -62,7 +72,7 @@ export default function BlackAccessClient() {
 
         <div className="relative z-10 px-6 md:px-16 lg:px-24 pb-20 md:pb-32">
 
-          <p className="ba-rv ba-rv1 text-[#F0EBE1]/25 text-[8px] tracking-[0.65em] uppercase font-light mb-10 md:mb-14">
+          <p className="ba-rv ba-rv1 text-[#F0EBE1]/30 text-[8px] tracking-[0.65em] uppercase font-light mb-10 md:mb-14">
             The Professional Barber&nbsp;&nbsp;·&nbsp;&nbsp;Marbella
           </p>
 
@@ -77,11 +87,11 @@ export default function BlackAccessClient() {
             Black<br />Access
           </h1>
 
-          <p className="ba-rv ba-rv3 text-[#F0EBE1]/50 text-[10px] md:text-[11px] tracking-[0.2em] font-light mb-7 max-w-[38ch]">
+          <p className="ba-rv ba-rv3 text-[#F0EBE1]/58 text-[10px] md:text-[11px] tracking-[0.2em] font-light mb-7 max-w-[38ch]">
             La versión más privada de Alpha Signature.
           </p>
 
-          <p className="ba-rv ba-rv4 text-[#F0EBE1]/30 text-[10px] tracking-[0.06em] font-light leading-[2.2] max-w-[46ch] mb-14 md:mb-18">
+          <p className="ba-rv ba-rv4 text-[#F0EBE1]/38 text-[10px] tracking-[0.06em] font-light leading-[2.2] max-w-[46ch] mb-14 md:mb-18">
             Un único turno privado reservado para trabajar tu imagen de forma completamente personalizada.
           </p>
 
@@ -90,11 +100,11 @@ export default function BlackAccessClient() {
               href={WA_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-5 text-[#F0EBE1]/75 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/25 pb-1 hover:text-[#F0EBE1] hover:border-[#F0EBE1]/55 transition-all duration-700"
+              className="inline-flex items-center gap-5 text-[#F0EBE1]/80 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/30 pb-1 hover:text-[#F0EBE1] hover:border-[#F0EBE1]/60 transition-all duration-700"
             >
               Solicitar Black Access
             </a>
-            <p className="text-[#F0EBE1]/20 text-[8px] tracking-[0.2em] font-light">
+            <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.2em] font-light">
               Reserva anticipada con preparación personalizada previa
             </p>
           </div>
@@ -112,7 +122,7 @@ export default function BlackAccessClient() {
 
       {/* ── BLOQUE 1: No trabajamos por partes ── */}
       <section className="px-6 md:px-16 lg:px-24 pt-28 pb-36 md:pt-36 md:pb-48">
-        <p className="text-[#F0EBE1]/20 text-[8px] tracking-[0.58em] uppercase font-light mb-16 md:mb-20">
+        <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.58em] uppercase font-light mb-16 md:mb-20">
           La sesión
         </p>
         <h2
@@ -125,10 +135,10 @@ export default function BlackAccessClient() {
           No trabajamos por partes.<br />Trabajamos tu imagen como un todo.
         </h2>
         <div className="max-w-[52ch] space-y-6">
-          <p className="text-[#F0EBE1]/50 text-[11px] tracking-[0.05em] font-light leading-[2.2]">
+          <p className="text-[#F0EBE1]/58 text-[11px] tracking-[0.05em] font-light leading-[2.2]">
             Cada sesión comienza entendiendo qué necesita realmente tu cabello, piel y estructura facial antes de intervenir.
           </p>
-          <p className="text-[#F0EBE1]/30 text-[11px] tracking-[0.05em] font-light leading-[2.2]">
+          <p className="text-[#F0EBE1]/38 text-[11px] tracking-[0.05em] font-light leading-[2.2]">
             Diagnóstico, precisión y cuidado masculino avanzado integrados dentro de una experiencia completamente personalizada.
           </p>
         </div>
@@ -137,14 +147,20 @@ export default function BlackAccessClient() {
       {/* ── PRECIO ── */}
       <section className="px-6 md:px-16 lg:px-24 py-10">
         <div className="max-w-5xl">
+
+          {/* Microfrase de exclusividad */}
+          <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.58em] uppercase font-light mb-10">
+            Un único turno privado por domingo.
+          </p>
+
           <div className="w-full h-px bg-[#F0EBE1]/7" />
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 py-16 md:py-20">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 py-20 md:py-28">
             <div>
-              <p className="text-[#F0EBE1]/25 text-[8px] tracking-[0.58em] uppercase font-light mb-4">
+              <p className="text-[#F0EBE1]/30 text-[8px] tracking-[0.58em] uppercase font-light mb-5">
                 Black Access
               </p>
-              <p className="text-[#F0EBE1]/40 text-[10px] tracking-[0.22em] font-light mb-10 max-w-[28ch]">
-                Experiencia privada de imagen masculina
+              <p className="text-[#F0EBE1]/48 text-[10px] tracking-[0.22em] font-light mb-12 max-w-[34ch]">
+                Experiencia privada de imagen masculina, diagnóstico avanzado y cuidado personalizado.
               </p>
               <p
                 className="text-[#F0EBE1]/85 font-light"
@@ -157,8 +173,8 @@ export default function BlackAccessClient() {
                 450€
               </p>
             </div>
-            <p className="text-[#F0EBE1]/28 text-[9px] tracking-[0.06em] font-light leading-[2.4] max-w-[42ch] md:text-right">
-              Incluye sesión privada, diagnóstico facial y capilar, barbería de precisión, cuidado avanzado masculino y continuidad personalizada posterior a la experiencia.
+            <p className="text-[#F0EBE1]/36 text-[9px] tracking-[0.06em] font-light leading-[2.4] max-w-[42ch] md:text-right">
+              Incluye sesión privada, diagnóstico facial y capilar avanzado, análisis de imagen masculina, barbería de precisión, tecnología especializada aplicada al cuidado masculino y continuidad personalizada posterior a la experiencia.
             </p>
           </div>
           <div className="w-full h-px bg-[#F0EBE1]/7" />
@@ -168,7 +184,7 @@ export default function BlackAccessClient() {
       {/* ── BLOQUE 2 ── */}
       <section className="px-6 md:px-16 lg:px-24 pt-28 pb-36 md:pt-36 md:pb-48">
         <div className="max-w-5xl md:ml-auto">
-          <p className="text-[#F0EBE1]/20 text-[8px] tracking-[0.58em] uppercase font-light mb-16 md:mb-20 md:text-right">
+          <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.58em] uppercase font-light mb-16 md:mb-20 md:text-right">
             La diferencia
           </p>
           <h2
@@ -181,10 +197,10 @@ export default function BlackAccessClient() {
             No está diseñado para atender más personas.<br />Está diseñado para atenderte mejor.
           </h2>
           <div className="max-w-[52ch] md:ml-auto space-y-6">
-            <p className="text-[#F0EBE1]/45 text-[11px] tracking-[0.05em] font-light leading-[2.2] md:text-right">
+            <p className="text-[#F0EBE1]/52 text-[11px] tracking-[0.05em] font-light leading-[2.2] md:text-right">
               Black Access es una experiencia privada de imagen masculina diseñada para trabajar cabello, barba, piel y cuidado posterior como una sola dirección visual.
             </p>
-            <p className="text-[#F0EBE1]/28 text-[11px] tracking-[0.05em] font-light leading-[2.2] md:text-right">
+            <p className="text-[#F0EBE1]/36 text-[11px] tracking-[0.05em] font-light leading-[2.2] md:text-right">
               No se trata de hacer más.<br />
               Se trata de hacerlo con más atención, más calma y más dedicación.
             </p>
@@ -195,7 +211,7 @@ export default function BlackAccessClient() {
       {/* ── DIFERENCIAL: 4 elementos ── */}
       <section className="px-6 md:px-16 lg:px-24 pb-10">
         <div className="max-w-5xl mx-auto">
-          <p className="text-[#F0EBE1]/20 text-[8px] tracking-[0.55em] uppercase font-light mb-16 md:mb-20">
+          <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.55em] uppercase font-light mb-16 md:mb-20">
             Una experiencia privada&nbsp;&nbsp;·&nbsp;&nbsp;Un solo turno&nbsp;&nbsp;·&nbsp;&nbsp;Toda la atención
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -204,12 +220,22 @@ export default function BlackAccessClient() {
                 key={i}
                 className="border-t border-[#F0EBE1]/7 pt-10 pb-14 md:pt-12 md:pb-18 md:pr-20"
               >
-                <p className="text-[#F0EBE1]/65 text-[9px] tracking-[0.22em] uppercase font-light mb-6">
+                <p className="text-[#F0EBE1]/72 text-[9px] tracking-[0.22em] uppercase font-light mb-6">
                   {item.title}
                 </p>
-                <p className="text-[#F0EBE1]/28 text-[10px] tracking-[0.04em] font-light leading-[2.3] max-w-[40ch]">
-                  {item.text}
-                </p>
+                {item.lines ? (
+                  <div className="space-y-5">
+                    {item.lines.map((line, li) => (
+                      <p key={li} className="text-[#F0EBE1]/36 text-[10px] tracking-[0.04em] font-light leading-[2.3] max-w-[40ch]">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-[#F0EBE1]/36 text-[10px] tracking-[0.04em] font-light leading-[2.3] max-w-[40ch]">
+                    {item.text}
+                  </p>
+                )}
               </div>
             ))}
           </div>
@@ -249,7 +275,7 @@ export default function BlackAccessClient() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/95 via-[#080808]/45 to-[#080808]/18" />
           <div className="absolute inset-0 flex flex-col items-center justify-end pb-24 md:pb-36 px-6 text-center">
-            <p className="text-[#F0EBE1]/20 text-[8px] tracking-[0.58em] uppercase font-light mb-10">
+            <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.58em] uppercase font-light mb-10">
               Black Access&nbsp;&nbsp;·&nbsp;&nbsp;Marbella
             </p>
             <h2
@@ -261,7 +287,7 @@ export default function BlackAccessClient() {
             >
               No es mantenimiento.<br />Es tiempo dedicado a ti.
             </h2>
-            <p className="text-[#F0EBE1]/35 text-[10px] tracking-[0.1em] font-light max-w-[44ch] leading-[2.2]">
+            <p className="text-[#F0EBE1]/43 text-[10px] tracking-[0.1em] font-light max-w-[44ch] leading-[2.2]">
               Cabello, barba, piel y cuidado posterior trabajados como una sola experiencia masculina.
             </p>
           </div>
@@ -271,7 +297,7 @@ export default function BlackAccessClient() {
       {/* ── BLOQUE EXPERIENCIA ── */}
       <section className="px-6 md:px-16 lg:px-24 pt-28 pb-20 md:pt-40 md:pb-28">
         <div className="max-w-5xl">
-          <p className="text-[#F0EBE1]/20 text-[8px] tracking-[0.58em] uppercase font-light mb-16 md:mb-20">
+          <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.58em] uppercase font-light mb-16 md:mb-20">
             Antes de la visita
           </p>
           <h2
@@ -283,11 +309,11 @@ export default function BlackAccessClient() {
           >
             Preparado antes de que llegues.
           </h2>
-          <p className="text-[#F0EBE1]/38 text-[11px] tracking-[0.05em] font-light leading-[2.3] max-w-[50ch] mb-14">
+          <p className="text-[#F0EBE1]/46 text-[11px] tracking-[0.05em] font-light leading-[2.3] max-w-[50ch] mb-14">
             Black Access requiere preparación previa para personalizar completamente la experiencia antes de la visita.
           </p>
           <div className="border-l border-[#F0EBE1]/10 pl-7 md:pl-10">
-            <p className="text-[#F0EBE1]/45 text-[9px] tracking-[0.28em] font-light uppercase">
+            <p className="text-[#F0EBE1]/50 text-[9px] tracking-[0.28em] font-light uppercase">
               Reserva anticipada mínima: 3 días.
             </p>
           </div>
@@ -300,7 +326,7 @@ export default function BlackAccessClient() {
           <div className="w-full h-px bg-[#F0EBE1]/6 mb-20 md:mb-28" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-24">
             <div>
-              <p className="text-[#F0EBE1]/20 text-[8px] tracking-[0.58em] uppercase font-light mb-14">
+              <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.58em] uppercase font-light mb-14">
                 Después de la sesión
               </p>
               <h2
@@ -314,7 +340,7 @@ export default function BlackAccessClient() {
               </h2>
             </div>
             <div className="md:pt-20">
-              <p className="text-[#F0EBE1]/32 text-[11px] tracking-[0.05em] font-light leading-[2.4]">
+              <p className="text-[#F0EBE1]/40 text-[11px] tracking-[0.05em] font-light leading-[2.4]">
                 La experiencia incluye una selección personalizada de productos profesionales preparada según las necesidades detectadas durante la sesión.
               </p>
             </div>
@@ -326,7 +352,7 @@ export default function BlackAccessClient() {
       {/* ── DISPONIBILIDAD ── */}
       <section className="px-6 md:px-16 lg:px-24 py-28 md:py-44">
         <div className="max-w-5xl mx-auto text-center">
-          <p className="text-[#F0EBE1]/20 text-[8px] tracking-[0.58em] uppercase font-light mb-14 md:mb-18">
+          <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.58em] uppercase font-light mb-14 md:mb-18">
             Acceso
           </p>
           <h2
@@ -338,11 +364,14 @@ export default function BlackAccessClient() {
           >
             Disponible únicamente los domingos.
           </h2>
-          <p className="text-[#F0EBE1]/32 text-[11px] tracking-[0.05em] font-light leading-[2.4] max-w-[48ch] mx-auto mb-14">
+          <p className="text-[#F0EBE1]/40 text-[11px] tracking-[0.05em] font-light leading-[2.4] max-w-[48ch] mx-auto mb-8">
             Black Access está disponible en un solo turno privado los domingos. No es una cita más dentro del horario habitual. Es una experiencia reservada para trabajar con calma, privacidad y atención completa.
           </p>
-          <span className="inline-block border-b border-[#F0EBE1]/10 pb-1">
-            <p className="text-[#F0EBE1]/40 text-[9px] tracking-[0.42em] uppercase font-light">
+          <p className="text-[#F0EBE1]/26 text-[10px] tracking-[0.1em] font-light leading-[2.4] max-w-[38ch] mx-auto mb-14">
+            Cuando ese turno está reservado, Black Access no está disponible hasta el domingo siguiente.
+          </p>
+          <span className="inline-block border-b border-[#F0EBE1]/12 pb-1">
+            <p className="text-[#F0EBE1]/48 text-[9px] tracking-[0.42em] uppercase font-light">
               Un solo turno por domingo.
             </p>
           </span>
@@ -354,7 +383,7 @@ export default function BlackAccessClient() {
         <div className="max-w-5xl mx-auto">
           <div className="w-full h-px bg-[#F0EBE1]/6 mb-24 md:mb-36" />
           <div className="text-center">
-            <p className="text-[#F0EBE1]/20 text-[8px] tracking-[0.58em] uppercase font-light mb-14 md:mb-18">
+            <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.58em] uppercase font-light mb-14 md:mb-18">
               Solicitar acceso
             </p>
             <h2
@@ -366,10 +395,10 @@ export default function BlackAccessClient() {
             >
               Tu imagen merece tiempo.
             </h2>
-            <p className="text-[#F0EBE1]/38 text-[11px] tracking-[0.06em] font-light leading-[2.4] max-w-[48ch] mx-auto mb-6">
+            <p className="text-[#F0EBE1]/46 text-[11px] tracking-[0.06em] font-light leading-[2.4] max-w-[48ch] mx-auto mb-6">
               Black Access está diseñado para hombres que entienden que cuidarse no es vanidad.
             </p>
-            <p className="text-[#F0EBE1]/22 text-[11px] tracking-[0.05em] font-light leading-[2.6] mb-20 md:mb-24">
+            <p className="text-[#F0EBE1]/28 text-[11px] tracking-[0.05em] font-light leading-[2.6] mb-20 md:mb-24">
               Es presencia.<br />Es intención.<br />Es respeto por la forma en que se presentan al mundo.
             </p>
             <div className="flex flex-col items-center gap-6">
@@ -377,11 +406,11 @@ export default function BlackAccessClient() {
                 href={WA_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-5 text-[#F0EBE1]/70 text-[9px] tracking-[0.48em] uppercase font-light border-b border-[#F0EBE1]/22 pb-1 hover:text-[#F0EBE1] hover:border-[#F0EBE1]/48 transition-all duration-700"
+                className="inline-flex items-center gap-5 text-[#F0EBE1]/78 text-[9px] tracking-[0.48em] uppercase font-light border-b border-[#F0EBE1]/26 pb-1 hover:text-[#F0EBE1] hover:border-[#F0EBE1]/52 transition-all duration-700"
               >
                 Solicitar Black Access
               </a>
-              <p className="text-[#F0EBE1]/18 text-[8px] tracking-[0.38em] uppercase font-light">
+              <p className="text-[#F0EBE1]/24 text-[8px] tracking-[0.38em] uppercase font-light">
                 Experiencia privada&nbsp;&nbsp;·&nbsp;&nbsp;Domingo&nbsp;&nbsp;·&nbsp;&nbsp;Reserva anticipada
               </p>
             </div>
@@ -392,7 +421,7 @@ export default function BlackAccessClient() {
       {/* ── FOOTER ── */}
       <footer className="border-t border-[#F0EBE1]/5 py-14 px-6">
         <div className="max-w-5xl mx-auto flex flex-col items-center gap-7">
-          <p className="text-[#F0EBE1]/18 text-[8px] tracking-[0.55em] uppercase font-light">
+          <p className="text-[#F0EBE1]/24 text-[8px] tracking-[0.55em] uppercase font-light">
             The Professional Barber
           </p>
           <div className="flex items-center gap-7">
@@ -400,19 +429,19 @@ export default function BlackAccessClient() {
               href="https://www.instagram.com/theprofessionalbarber.marbella/"
               target="_blank"
               rel="noreferrer"
-              className="text-[#F0EBE1]/25 text-[8px] tracking-[0.42em] uppercase font-light hover:text-[#F0EBE1]/55 transition-all duration-500"
+              className="text-[#F0EBE1]/32 text-[8px] tracking-[0.42em] uppercase font-light hover:text-[#F0EBE1]/58 transition-all duration-500"
             >
               Instagram
             </a>
-            <span className="text-[#F0EBE1]/10 text-[8px]">·</span>
+            <span className="text-[#F0EBE1]/14 text-[8px]">·</span>
             <a
               href="/access"
-              className="text-[#F0EBE1]/25 text-[8px] tracking-[0.42em] uppercase font-light hover:text-[#F0EBE1]/55 transition-all duration-500"
+              className="text-[#F0EBE1]/32 text-[8px] tracking-[0.42em] uppercase font-light hover:text-[#F0EBE1]/58 transition-all duration-500"
             >
               Private Access
             </a>
           </div>
-          <p className="text-[#F0EBE1]/10 text-[7px] tracking-[0.48em] uppercase font-light">
+          <p className="text-[#F0EBE1]/16 text-[7px] tracking-[0.48em] uppercase font-light">
             Marbella&nbsp;&nbsp;·&nbsp;&nbsp;Costa del Sol
           </p>
         </div>

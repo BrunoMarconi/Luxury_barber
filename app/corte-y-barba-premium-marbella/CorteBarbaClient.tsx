@@ -82,6 +82,10 @@ const FAQ = [
     q: "¿Qué diferencia este servicio de otros en Marbella?",
     a: "Aquí no se trabaja con plantillas. Cada cliente recibe un diseño completo —cabello y barba— adaptado a su rostro, combinando técnica, diagnóstico y tecnología para un resultado más coherente y trabajado.",
   },
+  {
+    q: "¿Por qué combinar corte y barba genera un mejor resultado?",
+    a: "Porque el rostro se percibe como un conjunto. Cuando cabello y barba se diseñan de forma coordinada, la imagen gana equilibrio, coherencia y presencia.",
+  },
 ];
 
 export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews?: GoogleReview[] }) {
@@ -318,7 +322,7 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
       </section>
 
       {/* ── EXPERIENCIA ── */}
-      <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
+      <section className="mx-auto max-w-6xl px-6 py-24 lg:py-32">
         <FadeUp>
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
             El proceso completo
@@ -336,7 +340,7 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
             { n: "02", title: "Diseño completo basado en visagismo", desc: "Diseñamos cabello y barba como una sola estructura adaptada a tu rostro y estilo de vida." },
             { n: "03", title: "Corte de alta precisión", desc: "Técnicas de precisión trabajadas para mantener armonía, estructura y duración en el resultado." },
             { n: "04", title: "Perfilado y diseño de barba", desc: "Cada línea de la barba se diseña para equilibrar el rostro y reforzar la armonía del conjunto." },
-            { n: "05", title: "Cuidado capilar y facial", desc: "Productos profesionales, tecnología facial Foreo, vapor ozono y herramientas especializadas aplicadas según las necesidades del cabello, la barba y la piel para mejorar acabado, textura y duración del resultado." },
+            { n: "05", title: "Cuidado capilar y facial", desc: "Productos profesionales, tecnología Foreo, tecnología galvánica NuSkin, LED terapéutico, vapor ozono y herramientas especializadas aplicadas según las necesidades del cabello, la barba y la piel para optimizar acabado, textura y duración del resultado." },
             { n: "06", title: "Acabado y recomendación", desc: "Resultado final y recomendación personalizada para mantener diseño, textura y duración." },
           ].map((step, i) => (
             <FadeUp key={step.n} delay={i * 0.07} className="bg-[#F5F5F5] p-8">
@@ -369,7 +373,7 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
       </section>
 
       {/* ── DIFERENCIA ── */}
-      <section className="bg-[#0A0A0A] py-20 lg:py-28">
+      <section className="bg-[#0A0A0A] py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
             <div>
@@ -395,7 +399,7 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
                     { title: "Diseño de conjunto", desc: "Cabello y barba diseñados juntos para crear coherencia visual y equilibrio facial." },
                     { title: "Análisis facial completo", desc: "Mandíbula, pómulos, perfil y proporciones analizados antes de diseñar el resultado." },
                     { title: "20+ años de experiencia", desc: "Formado internacionalmente. Técnica, precisión y atención al detalle en cada visita." },
-                    { title: "Tecnología + precisión", desc: "Foreo, vapor ozono y herramientas profesionales aplicadas para mejorar acabado, piel y duración del resultado." },
+                    { title: "Tecnología + precisión", desc: "Tecnología facial avanzada, vapor ozono, activos profesionales y herramientas de precisión aplicadas según diagnóstico para optimizar piel, cabello, barba y resultado final." },
                   ].map((b, i) => (
                     <div key={b.title} className="flex gap-4">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0F2A44]" />
@@ -469,7 +473,7 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
       </section>
 
       {/* ── RESEÑAS ── */}
-      <section className="bg-[#F5F5F5] py-20 lg:py-28">
+      <section className="bg-[#F5F5F5] py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
@@ -534,7 +538,7 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
 
 
       {/* ── CTA FINAL ── */}
-      <section className="relative overflow-hidden bg-[#0A0A0A] py-28 lg:py-36">
+      <section className="relative overflow-hidden bg-[#0A0A0A] py-32 lg:py-44">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
@@ -553,6 +557,11 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
               <p>Cuando cabello y barba trabajan en armonía, la percepción cambia por completo.</p>
               <p>Reserva tu experiencia personalizada en Marbella.</p>
             </div>
+          </FadeUp>
+          <FadeUp delay={0.16}>
+            <p className="mt-5 text-[13px] leading-7 tracking-[0.04em] text-white/38">
+              La armonía no ocurre por casualidad. Se construye.
+            </p>
           </FadeUp>
           <FadeUp delay={0.2}>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

@@ -48,6 +48,17 @@ const FAQ = [
   },
 ];
 
+const TECHNOLOGY = [
+  'Análisis facial masculino',
+  'Diagnóstico capilar avanzado',
+  'Tecnología Foreo',
+  'Tecnología galvánica NuSkin',
+  'LED terapéutico',
+  'Crioterapia facial',
+  'Termoterapia controlada',
+  'Activos premium profesionales',
+];
+
 export default function TratamientoFacialClient() {
   return (
     <main className="min-h-screen bg-white text-black">
@@ -77,9 +88,14 @@ export default function TratamientoFacialClient() {
           </FadeUp>
 
           <FadeUp delay={0.12}>
-            <p className="mt-10 max-w-[65ch] text-[14px] leading-7 tracking-[0.02em] text-white/75">
-              No tratamos la piel de forma general. Analizamos y trabajamos según lo que realmente necesitas.
-            </p>
+            <div className="mt-10 max-w-[65ch] space-y-4">
+              <p className="text-[14px] leading-7 tracking-[0.02em] text-white/75">
+                Cada protocolo comienza con un diagnóstico profesional para entender exactamente qué necesita tu piel.
+              </p>
+              <p className="text-[14px] leading-7 tracking-[0.02em] text-white/55">
+                Tecnología especializada, activos premium y personalización avanzada aplicados al cuidado masculino.
+              </p>
+            </div>
           </FadeUp>
         </div>
       </section>
@@ -95,7 +111,7 @@ export default function TratamientoFacialClient() {
             src: "/images/diagnostico-facial-masculino-marbella.jpeg",
             alt: "Diagnóstico facial masculino Marbella",
           },
-{
+          {
             src: "/images/tecnologia-facial-avanzada-hombre-marbella.jpeg",
             alt: "Tecnología facial avanzada hombre Marbella",
           },
@@ -112,6 +128,48 @@ export default function TratamientoFacialClient() {
         ))}
       </section>
 
+      {/* ── DIAGNÓSTICO Y TECNOLOGÍA ── */}
+      <section className="bg-[#F7F6F4] py-20 lg:py-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
+            <div>
+              <FadeUp>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/50">
+                  Diagnóstico profesional
+                </p>
+              </FadeUp>
+              <FadeUp delay={0.05}>
+                <h2 className="mt-3 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[42px]">
+                  Primero entendemos.<br />Luego actuamos.
+                </h2>
+              </FadeUp>
+              <FadeUp delay={0.1}>
+                <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/60">
+                  Cada protocolo comienza con un análisis detallado de piel, estructura facial y necesidades reales. La tecnología no define el protocolo — es la herramienta que permite personalizarlo con mayor precisión.
+                </p>
+                <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/45">
+                  Seleccionamos los recursos adecuados una vez comprendemos lo que realmente necesita tu piel. No antes.
+                </p>
+              </FadeUp>
+            </div>
+
+            <FadeUp delay={0.1}>
+              <div className="grid grid-cols-1">
+                {TECHNOLOGY.map((tech, i) => (
+                  <div
+                    key={tech}
+                    className={`flex items-center gap-4 py-4${i !== TECHNOLOGY.length - 1 ? ' border-b border-black/8' : ''}`}
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-black/20 shrink-0" />
+                    <p className="text-[12px] tracking-[0.12em] uppercase font-light text-black/60">{tech}</p>
+                  </div>
+                ))}
+              </div>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
+
       {/* ── SECTION: CONEXIÓN CON SERVICIOS ── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
@@ -124,23 +182,20 @@ export default function TratamientoFacialClient() {
               </FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[48px]">
-                  Potencia el resultado de tu visita
+                  Integrado dentro de una estrategia completa de imagen masculina.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="mt-6 text-[13px] leading-7 tracking-[0.04em] text-black/60">
-                  La mayoría de clientes que reservan un{' '}
+                  Muchos clientes combinan los protocolos faciales con{' '}
                   <Link href="/corte-de-pelo-hombre-marbella" className="text-black/70 underline underline-offset-2 hover:text-black transition">
-                    corte de cabello en Marbella
+                    corte de cabello
                   </Link>
-                  {' '}o un servicio de{' '}
+                  {' '}o{' '}
                   <Link href="/corte-y-barba-premium-marbella" className="text-black/70 underline underline-offset-2 hover:text-black transition">
-                    corte y barba
+                    diseño de barba
                   </Link>
-                  {' '}complementan su cita con este tratamiento.
-                </p>
-                <p className="mt-4 text-[13px] leading-7 tracking-[0.04em] text-black/60">
-                  Esto permite potenciar el resultado final y mejorar la imagen global en una sola visita.
+                  {' '}para trabajar imagen, piel y presencia dentro de una misma experiencia.
                 </p>
               </FadeUp>
             </div>
@@ -149,7 +204,7 @@ export default function TratamientoFacialClient() {
               {[
                 { icon: '◎', title: 'Corte + Facial', desc: 'La combinación más completa. Cabello y piel trabajados en la misma sesión.' },
                 { icon: '◈', title: 'Barba + Facial', desc: 'Preparación de la piel antes del diseño de barba para un resultado superior.' },
-                { icon: '◉', title: 'Servicio completo', desc: 'Corte + barba + tratamiento facial. La imagen más cuidada de la Costa del Sol.' },
+                { icon: '◉', title: 'Servicio completo', desc: 'Corte + barba + tratamiento facial. Una experiencia completa de imagen masculina diseñada para trabajar cabello, barba y piel como un conjunto.' },
               ].map((feat) => (
                 <div key={feat.title} className="rounded-2xl border border-black/10 bg-white px-6 py-5 flex gap-4 items-start">
                   <span className="text-black/70 text-[20px] leading-none mt-0.5 shrink-0">{feat.icon}</span>
@@ -165,7 +220,7 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
+      <section className="mx-auto max-w-6xl px-6 py-24 lg:py-36">
         <FadeUp>
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
             Preguntas frecuentes
@@ -192,25 +247,25 @@ export default function TratamientoFacialClient() {
       </section>
 
       {/* ── CTA FINAL ── */}
-      <section className="relative overflow-hidden bg-[#0A0A0A] py-28 lg:py-36">
+      <section className="relative overflow-hidden bg-[#0A0A0A] py-36 lg:py-48">
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/70">
-              Tu piel también comunica
+              La calidad de tu piel también forma parte de tu imagen.
             </p>
           </FadeUp>
           <FadeUp delay={0.06}>
             <h2 className="mt-6 text-[34px] font-extralight leading-[1.05] tracking-[0.04em] text-white sm:text-[46px] lg:text-[58px]">
-              La diferencia está en decidir si quieres tratarla de forma genérica o trabajarla mediante análisis, tecnología y personalización avanzada.
+              La diferencia está en decidir si quieres seguir utilizando soluciones genéricas o trabajar tu piel mediante diagnóstico profesional, tecnología especializada y protocolos diseñados específicamente para ti.
             </h2>
           </FadeUp>
           <FadeUp delay={0.12}>
-            <p className="mt-6 text-[13px] leading-7 tracking-[0.03em] text-white/55">
-              Solicita tu protocolo facial masculino en Marbella.
+            <p className="mt-8 text-[13px] leading-7 tracking-[0.03em] text-white/55">
+              Solicita tu diagnóstico facial masculino y descubre qué protocolo necesita realmente tu piel.
             </p>
           </FadeUp>
           <FadeUp delay={0.2}>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a
                 href={BOOKSY_URL}
                 target="_blank"

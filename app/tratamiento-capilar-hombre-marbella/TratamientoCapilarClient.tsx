@@ -38,10 +38,11 @@ const STEPS = [
 ];
 
 const RESULTS = [
-  "Cabello más sano",
-  "Cuero cabelludo equilibrado",
-  "Mejor base para el corte",
-  "Resultado estético superior",
+  "Cabello con mejor aspecto y textura",
+  "Cuero cabelludo más equilibrado",
+  "Mejor respuesta a tratamientos posteriores",
+  "Mayor duración del resultado estético",
+  "Sensación de cabello más fuerte y saludable",
 ];
 
 const PROBLEMS = [
@@ -50,6 +51,10 @@ const PROBLEMS = [
   "Caspa o descamación",
   "Cabello seco, dañado o sin vida",
   "Falta de definición en cabellos rizados",
+  "Cuero cabelludo sensible",
+  "Picor o irritación frecuente",
+  "Cabello debilitado",
+  "Pérdida de densidad",
 ];
 
 export default function TratamientoCapilarClient() {
@@ -91,10 +96,19 @@ export default function TratamientoCapilarClient() {
             Detrás de cada problema capilar hay una causa. Aquí la analizamos.
           </motion.p>
 
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            className="mt-4 max-w-[58ch] text-[13px] leading-7 tracking-[0.03em] text-white/55"
+          >
+            Diagnóstico capilar avanzado, tecnología especializada y protocolos personalizados diseñados para trabajar la causa y no únicamente los síntomas.
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.65 }}
+            transition={{ duration: 0.7, delay: 0.72 }}
             className="mt-8 flex flex-wrap items-start gap-4"
           >
             <div className="flex flex-col gap-1.5">
@@ -106,7 +120,7 @@ export default function TratamientoCapilarClient() {
                 data-page="tratamiento-capilar"
                 className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
               >
-                Solicitar asesoría personalizada
+                Solicitar diagnóstico capilar
               </a>
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
                 Reserva online en menos de 1 minuto
@@ -197,7 +211,7 @@ export default function TratamientoCapilarClient() {
         ))}
       </section>
 
-      {/* ── AUTORIDAD ── */}
+      {/* ── AUTORIDAD / NUESTRO ENFOQUE ── */}
       <section className="relative bg-[#0A0A0A] py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
         <div className="mx-auto max-w-6xl px-6">
@@ -210,7 +224,7 @@ export default function TratamientoCapilarClient() {
               </FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="mt-3 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[44px]">
-                  Primero analizamos, después tratamos
+                  Primero entendemos la causa. Después diseñamos el tratamiento.
                 </h2>
               </FadeUp>
             </div>
@@ -224,10 +238,10 @@ export default function TratamientoCapilarClient() {
                   .
                 </p>
                 <p>
-                  No trabajamos con protocolos genéricos. Cada tratamiento se adapta a ti para lograr un resultado real y visible desde la primera sesión.
+                  El diagnóstico puede incluir análisis capilar profesional, observación del cuero cabelludo, evaluación del estado del folículo y detección de factores que afectan directamente la calidad del cabello.
                 </p>
                 <p>
-                  Trabajamos con productos profesionales de alta calidad y técnicas específicas para tratar el cuero cabelludo, no solo el cabello. Cada aplicación tiene una función concreta y un resultado esperado.
+                  No trabajamos con protocolos genéricos. Cada tratamiento se adapta a ti para lograr un resultado real y visible desde la primera sesión.
                 </p>
               </div>
             </FadeUp>
@@ -378,6 +392,33 @@ export default function TratamientoCapilarClient() {
         </div>
       </section>
 
+      {/* ── TECNOLOGÍA ── */}
+      <section className="mx-auto max-w-6xl px-6 pb-20 lg:pb-28">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+          <div>
+            <FadeUp>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/55">
+                Herramientas de precisión
+              </p>
+            </FadeUp>
+            <FadeUp delay={0.05}>
+              <h2 className="mt-3 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[44px]">
+                Tecnología aplicada con criterio.
+              </h2>
+            </FadeUp>
+          </div>
+          <FadeUp delay={0.1}>
+            <div className="space-y-4 text-[13px] leading-7 tracking-[0.04em] text-black/65">
+              <p>
+                Utilizamos diagnóstico capilar profesional, masaje estimulante, protocolos específicos y productos seleccionados según las necesidades detectadas durante el análisis.
+              </p>
+              <p className="text-black/50">La tecnología no sustituye el criterio.</p>
+              <p className="text-black/50">Permite tomar mejores decisiones.</p>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
       {/* ── RESULTADOS ── */}
       <section className="relative bg-[#0A0A0A] py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
@@ -392,7 +433,7 @@ export default function TratamientoCapilarClient() {
               Resultados visibles
             </h2>
           </FadeUp>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {RESULTS.map((r, i) => (
               <FadeUp key={r} delay={i * 0.07} className="rounded-2xl border border-white/10 bg-white/5 px-6 py-5">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80">
@@ -401,7 +442,7 @@ export default function TratamientoCapilarClient() {
               </FadeUp>
             ))}
           </div>
-          <FadeUp delay={0.32}>
+          <FadeUp delay={0.38}>
             <p className="mt-8 text-[13px] leading-6 tracking-[0.04em] text-white/45">
               Especialmente cuando se combina con{" "}
               <Link href="/corte-y-barba-premium-marbella" className="text-white/70 underline underline-offset-2 hover:text-white">
@@ -415,30 +456,30 @@ export default function TratamientoCapilarClient() {
       </section>
 
       {/* ── MICRO CONVERSIÓN ── */}
-      <section className="mx-auto max-w-4xl px-6 py-20 lg:py-24 text-center">
+      <section className="mx-auto max-w-4xl px-6 py-24 lg:py-32 text-center">
         <FadeUp>
           <p className="mx-auto max-w-[52ch] text-[18px] font-semibold leading-7 tracking-tight text-black sm:text-[22px]">
-            Si notas caída, grasa o falta de vida en tu cabello, este tratamiento no es opcional.
+            Cuando entiendes la causa, el tratamiento deja de ser una prueba y empieza a convertirse en una estrategia.
           </p>
-          <p className="mt-3 text-[14px] font-semibold uppercase tracking-[0.1em] text-black/50">
-            Es necesario.
+          <p className="mt-4 text-[14px] font-semibold uppercase tracking-[0.1em] text-black/50">
+            Tu cabello merece algo más que productos al azar.
           </p>
         </FadeUp>
       </section>
 
       {/* ── CTA FINAL ── */}
-      <section className="relative overflow-hidden bg-[#0A0A0A] py-28 lg:py-36">
+      <section className="relative overflow-hidden bg-[#0A0A0A] py-32 lg:py-44">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <FadeUp>
             <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/70">
-              Reserva online
+              Diagnóstico capilar · Marbella
             </p>
           </FadeUp>
           <FadeUp delay={0.06}>
             <h2 className="mt-6 text-[34px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[46px] lg:text-[52px]">
-              Reserva tu tratamiento capilar en Marbella
+              Solicita tu diagnóstico capilar personalizado.
             </h2>
           </FadeUp>
           <FadeUp delay={0.12}>
@@ -456,7 +497,7 @@ export default function TratamientoCapilarClient() {
                 data-page="tratamiento-capilar"
                 className="w-full rounded-full bg-[#0F2A44] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c] sm:w-auto"
               >
-                Solicitar asesoría personalizada
+                Solicitar diagnóstico personalizado
               </a>
               <Link
                 href="/diagnostico-capilar-marbella"
