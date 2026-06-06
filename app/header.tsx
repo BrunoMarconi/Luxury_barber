@@ -289,7 +289,7 @@ export default function Header() {
 
                       {mobileExpOpen && (
                         <div className="mt-2 rounded-2xl border border-white/20 bg-white/5 overflow-hidden shadow-inner">
-                          {item.experiencias.map((exp) => {
+                          {item.experiencias.map((exp, idx) => {
                             /* BLACK ACCESS */
                             if (exp.special) {
                               return (
