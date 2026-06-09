@@ -110,9 +110,9 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
           className="object-cover scale-[1.03]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/40 to-black/15" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/30 to-transparent" />
 
-        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col justify-end px-6 pb-16 lg:pb-24 pt-20 lg:pt-0">
+        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col justify-start px-6 pt-28 lg:pt-36">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
