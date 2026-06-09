@@ -114,14 +114,14 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
           className="object-cover scale-[1.03]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-black/10" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/40 to-black/15" />
 
         <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col justify-end px-6 pb-16 lg:pb-24 pt-20 lg:pt-0">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/75"
+            className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/55"
           >
             Barbería premium · Marbella
           </motion.p>
@@ -130,7 +130,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.35 }}
-            className="mt-4 max-w-[18ch] text-[40px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[58px] lg:text-[76px]"
+            className="mt-4 max-w-[18ch] text-[40px] font-light uppercase leading-none tracking-[0.04em] text-white sm:text-[58px] lg:text-[76px]"
           >
             La barba no se recorta.<br />Se diseña.
           </motion.h1>
@@ -139,46 +139,30 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-6 max-w-[52ch] text-[13px] leading-7 tracking-[0.04em] text-white/75"
+            className="mt-6 max-w-[48ch] text-[13px] leading-7 tracking-[0.04em] text-white/60"
           >
             La forma de tu barba puede cambiar completamente cómo se ve tu rostro.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.65 }}
-            className="mt-4 max-w-[52ch] text-[13px] leading-7 tracking-[0.04em] text-white/55"
-          >
-            Diseñamos barbas personalizadas según proporciones faciales, crecimiento del vello y estructura masculina para lograr un resultado limpio, equilibrado y coherente contigo.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.7 }}
-            className="mt-8 flex flex-wrap gap-4"
+            transition={{ duration: 0.7, delay: 0.65 }}
+            className="mt-8 flex flex-col gap-1.5"
           >
-            <div className="flex flex-col gap-1.5">
-              <a
-                href={BOOKSY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-cta="whatsapp-asesoria"
-                data-page="arreglo-de-barba"
-                className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
-              >
-                Solicitar asesoría personalizada
-              </a>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
-                Reserva online en menos de 1 minuto
-              </p>
-            </div>
-            <Link
-              href="/barberia-hombre-marbella"
-              className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur transition hover:bg-white/20"
+            <a
+              href={BOOKSY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-asesoria"
+              data-page="arreglo-de-barba"
+              className="inline-flex w-fit items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
             >
-              Ver todos los servicios
-            </Link>
+              Solicitar asesoría personalizada
+            </a>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
+              Reserva online en menos de 1 minuto
+            </p>
           </motion.div>
         </div>
       </section>
