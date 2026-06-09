@@ -114,9 +114,9 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
           className="object-cover scale-[1.03]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
 
-        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col justify-start px-6 pt-28 lg:pt-36">
+        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col items-center justify-end px-6 pb-14 lg:pb-20 text-center">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -125,30 +125,27 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
           >
             Barbería premium · Marbella
           </motion.p>
-
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.35 }}
-            className="mt-4 max-w-[18ch] text-[40px] font-light uppercase leading-none tracking-[0.04em] text-white sm:text-[58px] lg:text-[76px]"
+            className="mt-3 text-[32px] font-light uppercase leading-[1.05] tracking-[0.04em] text-white sm:text-[46px] lg:text-[58px]"
           >
             La barba no se recorta.<br />Se diseña.
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-6 max-w-[48ch] text-[13px] leading-7 tracking-[0.04em] text-white/60"
+            className="mt-4 max-w-[40ch] text-[13px] leading-7 tracking-[0.04em] text-white/55"
           >
             La forma de tu barba puede cambiar completamente cómo se ve tu rostro.
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.65 }}
-            className="mt-8 flex flex-col gap-1.5"
+            className="mt-6 flex flex-col items-center gap-1.5"
           >
             <a
               href={BOOKSY_URL}
@@ -156,7 +153,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
               rel="noopener noreferrer"
               data-cta="whatsapp-asesoria"
               data-page="arreglo-de-barba"
-              className="inline-flex w-fit items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
             >
               Solicitar asesoría personalizada
             </a>
@@ -501,7 +498,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
               <GoogleG className="w-4 h-4 shrink-0" />
               <span className="text-[#FBBC04] text-sm leading-none">★★★★★</span>
               <span className="text-[12px] font-semibold text-black">5.0</span>
-              <span className="text-[11px] text-black/40 uppercase tracking-[0.1em]">en Google</span>
+              <span className="text-[11px] text-black/40 uppercase tracking-widest">en Google</span>
             </div>
           </FadeUp>
 
@@ -523,7 +520,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
                     {r.date}
                   </p>
                 </div>
-                <div className="mt-4 pt-4 border-t border-black/[0.08] flex items-center gap-1.5">
+                <div className="mt-4 pt-4 border-t border-black/8 flex items-center gap-1.5">
                   <GoogleG className="w-3 h-3 shrink-0" />
                   <span className="text-[10px] tracking-[0.12em] uppercase text-black/35">Reseña verificada</span>
                 </div>

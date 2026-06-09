@@ -110,9 +110,9 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
           className="object-cover scale-[1.03]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
 
-        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col justify-start px-6 pt-28 lg:pt-36">
+        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col items-center justify-end px-6 pb-14 lg:pb-20 text-center">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -121,30 +121,27 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
           >
             Barbería premium · Marbella
           </motion.p>
-
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.35 }}
-            className="mt-4 max-w-[18ch] text-[40px] font-light uppercase leading-none tracking-[0.04em] text-white sm:text-[58px] lg:text-[76px]"
+            className="mt-3 text-[32px] font-light uppercase leading-[1.05] tracking-[0.04em] text-white sm:text-[46px] lg:text-[58px]"
           >
             Corte de pelo premium para hombre en Marbella
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-6 max-w-[48ch] text-[13px] leading-7 tracking-[0.04em] text-white/60"
+            className="mt-4 max-w-[40ch] text-[13px] leading-7 tracking-[0.04em] text-white/55"
           >
             Tu corte no debería depender de la suerte.
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.65 }}
-            className="mt-8 flex flex-col gap-1.5"
+            className="mt-6 flex flex-col items-center gap-1.5"
           >
             <a
               href={BOOKSY_URL}
@@ -152,7 +149,7 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
               rel="noopener noreferrer"
               data-cta="whatsapp-asesoria"
               data-page="corte-de-pelo"
-              className="inline-flex w-fit items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
             >
               Reservar corte premium
             </a>
