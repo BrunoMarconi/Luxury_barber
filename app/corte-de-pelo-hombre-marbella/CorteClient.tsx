@@ -101,18 +101,18 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
     <main className="min-h-screen bg-[#F5F5F5] text-black">
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[92svh] overflow-hidden">
+      <section className="relative min-h-[72svh] overflow-hidden sm:min-h-[92svh]">
         <Image
           src="/images/corte-de-pelo-hombre-marbella.jpeg"
           alt="corte de pelo hombre en Marbella"
           fill
           priority
-          className="object-cover scale-[1.03]"
+          className="object-cover"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
 
-        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col justify-end px-6 pb-14 lg:pb-20">
+        <div className="relative mx-auto flex h-full min-h-[72svh] max-w-6xl flex-col justify-end px-6 pb-14 sm:min-h-[92svh] lg:pb-20">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
