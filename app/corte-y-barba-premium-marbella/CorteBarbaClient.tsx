@@ -129,7 +129,7 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.35 }}
-            className="mt-3 text-[32px] font-light uppercase leading-[1.05] tracking-[0.04em] text-white sm:text-[46px] lg:text-[58px]"
+            className="mt-3 text-[21px] font-light uppercase leading-[1.05] tracking-[0.04em] text-white sm:text-[46px] lg:text-[58px]"
           >
             No es un corte ni una barba.<br />Es tu imagen completa.
           </motion.h1>
@@ -137,7 +137,7 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-4 max-w-[40ch] text-[13px] leading-7 tracking-[0.04em] text-white/55"
+            className="mt-3 hidden max-w-[40ch] text-[13px] leading-7 tracking-[0.04em] text-white/55 sm:block"
           >
             Cabello y barba diseñados como un conjunto para construir una imagen más sólida, equilibrada y coherente contigo.
           </motion.p>

@@ -129,7 +129,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.35 }}
-            className="mt-3 text-[32px] font-light uppercase leading-[1.05] tracking-[0.04em] text-white sm:text-[46px] lg:text-[58px]"
+            className="mt-3 text-[21px] font-light uppercase leading-[1.05] tracking-[0.04em] text-white sm:text-[46px] lg:text-[58px]"
           >
             La barba no se recorta.<br />Se diseña.
           </motion.h1>
@@ -137,7 +137,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-4 max-w-[40ch] text-[13px] leading-7 tracking-[0.04em] text-white/55"
+            className="mt-3 hidden max-w-[40ch] text-[13px] leading-7 tracking-[0.04em] text-white/55 sm:block"
           >
             La forma de tu barba puede cambiar completamente cómo se ve tu rostro.
           </motion.p>
