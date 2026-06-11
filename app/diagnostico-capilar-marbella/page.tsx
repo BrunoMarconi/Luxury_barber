@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import DiagnosticoClient from "./DiagnosticoClient";
+import { fetchGoogleReviews } from "@/lib/google-reviews";
 
 export const metadata: Metadata = {
   title: "Diagnóstico Capilar en Marbella | Análisis Profesional del Cuero Cabelludo",
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function DiagnosticoPage() {
-  return <DiagnosticoClient />;
+export default async function DiagnosticoPage() {
+  const googleReviews = await fetchGoogleReviews();
+  return <DiagnosticoClient googleReviews={googleReviews} />;
 }

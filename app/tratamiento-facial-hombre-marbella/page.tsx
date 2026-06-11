@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import TratamientoFacialClient from "./TratamientoFacialClient";
+import { fetchGoogleReviews } from "@/lib/google-reviews";
 
 export const metadata: Metadata = {
   title: "Tratamiento Facial Hombre Marbella | Cuidado de Piel Masculino Premium",
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function TratamientoFacialPage() {
-  return <TratamientoFacialClient />;
+export default async function TratamientoFacialPage() {
+  const googleReviews = await fetchGoogleReviews();
+  return <TratamientoFacialClient googleReviews={googleReviews} />;
 }

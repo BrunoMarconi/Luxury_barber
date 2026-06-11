@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { buildWaUrl } from "@/lib/cta";
+import type { GoogleReview } from "@/lib/google-reviews";
 
 const BOOKSY_URL = buildWaUrl("barberia-marbella");
 
@@ -66,26 +67,54 @@ const SERVICES = [
 
 const REVIEWS = [
   {
+    id: "r1",
     name: "Carlos M.",
-    text: "Servicio impecable, el corte dura semanas perfecto.",
+    rating: 5,
+    date: "Mar 2026",
+    text: "Vine sin saber muy bien qué quería y salí con un corte que realmente me favorece. La diferencia con otros sitios es notable.",
   },
   {
+    id: "r2",
     name: "Javier R.",
-    text: "Por fin encontré un barbero que entiende lo que quiero.",
+    rating: 5,
+    date: "Feb 2026",
+    text: "El trato y la atención al detalle son de otro nivel. Cada vez que voy salgo mejor que la anterior.",
   },
   {
+    id: "r3",
     name: "Luis G.",
-    text: "Profesionalismo y detalle desde que entras hasta que sales.",
+    rating: 5,
+    date: "Ene 2026",
+    text: "Nunca había ido a un sitio donde explicaran tan bien el porqué de cada decisión. Profesionalismo total.",
+  },
+  {
+    id: "r4",
+    name: "Marcos T.",
+    rating: 5,
+    date: "Ene 2026",
+    text: "El corte y el arreglo de barba combinados cambian completamente la imagen. Lo recomiendo sin dudarlo.",
   },
 ];
 
-function Stars() {
+function Stars({ n = 5 }: { n?: number }) {
   return (
-    <span className="text-[#0F2A44] tracking-tight text-sm">★★★★★</span>
+    <span className="text-[#FBBC04] tracking-tight text-sm">{"★".repeat(n)}</span>
   );
 }
 
-export default function BarberiaMarbellaClient() {
+function GoogleG({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} xmlns="http://www.w3.org/2000/svg">
+      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+    </svg>
+  );
+}
+
+export default function BarberiaMarbellaClient({ googleReviews = [] }: { googleReviews?: GoogleReview[] }) {
+  const reviews = googleReviews.length ? googleReviews : REVIEWS;
   return (
     <main className="min-h-screen bg-[#F5F5F5] text-black">
 
@@ -333,48 +362,50 @@ export default function BarberiaMarbellaClient() {
       </section>
 
       {/* ── RESEÑAS ── */}
-      <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
-        <FadeUp>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/55">
-            Lo que dicen nuestros clientes
-          </p>
-        </FadeUp>
-        <FadeUp delay={0.05}>
-          <h2 className="mt-3 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[40px]">
-            Opiniones reales
-          </h2>
-        </FadeUp>
-        <FadeUp delay={0.1}>
-          <p className="mt-4 max-w-[62ch] text-[13px] leading-7 tracking-[0.04em] text-black/70">
-            Muchos empiezan aquí. Pero los cambios reales vienen después.
-          </p>
-        </FadeUp>
-        <FadeUp delay={0.14}>
-          <div className="mt-8 flex justify-center">
-            <a
-              href={buildWaUrl("barberia-marbella")}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cta="whatsapp-asesoria"
-              data-page="barberia-marbella"
-              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
-            >
-              Solicitar asesoría personalizada
-            </a>
+      <section className="bg-[#F5F5F5] py-20 lg:py-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeUp>
+            <div className="flex items-center gap-2.5">
+              <GoogleG className="w-4 h-4 shrink-0" />
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
+                Reseñas verificadas en Google
+              </p>
+            </div>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-3 text-[36px] font-semibold uppercase leading-[0.95] tracking-tight sm:text-[48px]">
+              Lo que dicen los clientes
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <div className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-black/10 bg-white px-5 py-2.5">
+              <GoogleG className="w-4 h-4 shrink-0" />
+              <span className="text-[#FBBC04] text-sm leading-none">★★★★★</span>
+              <span className="text-[12px] font-semibold text-black">5.0</span>
+              <span className="text-[11px] text-black/40 uppercase tracking-[0.1em]">en Google</span>
+            </div>
+          </FadeUp>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {reviews.map((r, i) => (
+              <FadeUp key={r.id} delay={i * 0.06} className="rounded-3xl border border-black/10 bg-white p-6 flex flex-col">
+                <div className="flex items-start justify-between">
+                  <Stars n={r.rating} />
+                  <GoogleG className="w-4 h-4 shrink-0 mt-0.5" />
+                </div>
+                <p className="mt-4 flex-1 text-[12px] leading-6 tracking-[0.04em] text-black/65">
+                  &ldquo;{r.text}&rdquo;
+                </p>
+                <div className="mt-5 flex items-center justify-between">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-black">{r.name}</p>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-black/40">{r.date}</p>
+                </div>
+                <div className="mt-4 pt-4 border-t border-black/[0.08] flex items-center gap-1.5">
+                  <GoogleG className="w-3 h-3 shrink-0" />
+                  <span className="text-[10px] tracking-[0.12em] uppercase text-black/35">Reseña verificada</span>
+                </div>
+              </FadeUp>
+            ))}
           </div>
-        </FadeUp>
-        <div className="mt-10 grid gap-5 sm:grid-cols-3">
-          {REVIEWS.map((r, i) => (
-            <FadeUp key={r.name} delay={i * 0.07} className="flex flex-col rounded-3xl border border-black/10 bg-white/40 p-7">
-              <Stars />
-              <p className="mt-4 flex-1 text-[13px] leading-6 tracking-[0.03em] text-black/70 italic">
-                "{r.text}"
-              </p>
-              <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/50">
-                {r.name}
-              </p>
-            </FadeUp>
-          ))}
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BarberiaMarbellaClient from "./BarberiaMarbellaClient";
+import { fetchGoogleReviews } from "@/lib/google-reviews";
 
 export const metadata: Metadata = {
   title: "Barbería en Marbella | Corte, Barba y Servicios Esenciales",
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function BarberiaMarbellaPag() {
-  return <BarberiaMarbellaClient />;
+export default async function BarberiaMarbellaPag() {
+  const googleReviews = await fetchGoogleReviews();
+  return <BarberiaMarbellaClient googleReviews={googleReviews} />;
 }

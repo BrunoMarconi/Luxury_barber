@@ -1,6 +1,7 @@
 ﻿import HomeClient from "./HomeClient";
 import { client } from "@/lib/sanity.client";
 import { galleryQuery } from "@/lib/sanity.queries";
+import { fetchGoogleReviews } from "@/lib/google-reviews";
 
 type DefaultGalleryPhoto = {
   _id: string;
@@ -16,16 +17,17 @@ const defaultGallery: DefaultGalleryPhoto[] = [
 ];
 
 export default async function Page() {
+  const googleReviews = await fetchGoogleReviews();
   try {
     const gallery = await client.fetch(galleryQuery);
-
     return (
       <HomeClient
         gallery={gallery?.length ? gallery : defaultGallery}
+        googleReviews={googleReviews}
       />
     );
   } catch (error) {
     console.error("Sanity fetch failed", error);
-    return <HomeClient gallery={defaultGallery} />;
+    return <HomeClient gallery={defaultGallery} googleReviews={googleReviews} />;
   }
 }
