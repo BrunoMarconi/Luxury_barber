@@ -101,7 +101,7 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
     <main className="min-h-screen bg-[#F5F5F5] text-black">
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[72svh] overflow-hidden sm:min-h-[92svh]">
+      <section className="relative min-h-[100svh] overflow-hidden">
         <Image
           src="/images/corte-de-pelo-hombre-marbella.jpeg"
           alt="corte de pelo hombre en Marbella"
@@ -110,9 +110,9 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/30 to-transparent" />
 
-        <div className="relative mx-auto flex h-full min-h-[72svh] max-w-6xl flex-col justify-end px-6 pb-14 sm:min-h-[92svh] lg:pb-20">
+        <div className="relative mx-auto flex h-full min-h-[100svh] max-w-6xl flex-col justify-end px-6 pb-16 lg:pb-24">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
