@@ -107,7 +107,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
       {/* ── HERO ── */}
       <section className="relative min-h-[92svh] overflow-hidden">
         <Image
-          src="/images/barba-premium-hombre-marbella.jpeg"
+          src="/images/arreglo-de-barba-hombre-marbella.jpeg"
           alt="arreglo de barba en Marbella"
           fill
           priority
@@ -116,7 +116,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
         />
         <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
 
-        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col items-center justify-end px-6 pb-14 lg:pb-20 text-center">
+        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col justify-end px-6 pb-14 lg:pb-20">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
