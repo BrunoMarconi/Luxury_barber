@@ -103,7 +103,7 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
       {/* ── HERO ── */}
       <section className="relative min-h-[100svh] overflow-hidden">
         <Image
-          src="/images/corte-de-pelo-hombre-marbella.jpeg"
+          src="/images/corte-pelo-hero.jpeg"
           alt="corte de pelo hombre en Marbella"
           fill
           priority
@@ -235,9 +235,9 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
             </FadeUp>
           </div>
 
-          <FadeUp delay={0.1} className="relative aspect-3/4 overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.12)]">
+          <FadeUp delay={0.1} className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.12)]">
             <Image
-              src="/images/cortepelo2.jpeg"
+              src="/images/corte-premium.jpeg"
               alt="corte de cabello personalizado Marbella"
               fill
               className="object-cover"
@@ -328,9 +328,9 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
               </FadeUp>
             </div>
 
-            <FadeUp delay={0.1} className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.3)]">
+            <FadeUp delay={0.1} className="relative aspect-3/4 overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.3)]">
               <Image
-                src="/images/diagnostico-capilar-masculino-marbella.jpeg"
+                src="/images/corte-premium2.jpeg"
                 alt="diagnóstico capilar y visagismo Marbella"
                 fill
                 className="object-cover"
@@ -476,10 +476,10 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { src: "/images/cortepelo3.jpeg", alt: "corte de pelo hombre Marbella resultado" },
-                { src: "/images/cortepelo4.jpeg", alt: "corte de cabello hombre Marbella profesional" },
-                { src: "/images/cortepelo5.jpeg", alt: "barbería premium Marbella corte" },
-                { src: "/images/cortepelo6.jpeg", alt: "corte masculino Marbella personalizado" },
+                { src: "/images/pelo1.jpeg", alt: "corte de pelo hombre Marbella resultado" },
+                { src: "/images/pelo2.jpeg", alt: "corte de cabello hombre Marbella profesional" },
+                { src: "/images/pelo3.jpeg", alt: "barbería premium Marbella corte" },
+                { src: "/images/pelo4.jpeg", alt: "corte masculino Marbella personalizado" },
               ].map((img, i) => (
                 <FadeUp key={img.src} delay={i * 0.07} className="relative aspect-square overflow-hidden rounded-2xl">
                   <Image

@@ -22,10 +22,6 @@ type NavItem = {
 
 const nav: NavItem[] = [
   { label: "Inicio", href: "/" },
-  { label: "Equipo", href: "/#team" },
-  { label: "Galería", href: "/#gallery" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contacto", href: "/contact" },
   {
     label: "Experiencias",
     href: "#",
@@ -49,6 +45,10 @@ const nav: NavItem[] = [
       { label: "Tratamientos Capilares", href: "/tratamiento-capilar-hombre-marbella" },
     ],
   },
+  { label: "Equipo", href: "/#team" },
+  { label: "Galería", href: "/#gallery" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contacto", href: "/contact" },
 ];
 
 const BOOKSY_URL = buildWaUrl("header");

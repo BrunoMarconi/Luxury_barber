@@ -506,7 +506,7 @@ function AuthorityBlock() {
           >
             <div className="relative aspect-3/4 w-full overflow-hidden rounded-3xl shadow-[0_32px_64px_rgba(0,0,0,0.5)]">
               <Image
-                src="/images/corte-premium-hombre-visagismo-marbella.jpeg"
+                src="/images/especialista_juancarlos.jpeg"
                 alt="Juan Carlos Terán — Especialista en imagen masculina en Marbella"
                 fill
                 className="object-cover"
@@ -645,11 +645,11 @@ function HeroSplit(_props: HeroSplitProps) {
           className="relative min-h-[70svh] lg:min-h-[100svh]"
         >
           <Image
-            src={'/images/barberia-premium-hombre-marbella.jpeg'}
+            src={'/images/Hero_juancarlos.jpeg'}
             alt="Interior de la barbería El Barbero Profesional en Marbella"
             fill
             priority
-            className="object-cover scale-[1.03]"
+            className="object-cover"
             sizes="(max-width: 1024px) 100vw, 60vw"
           />
 

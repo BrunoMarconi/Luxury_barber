@@ -113,40 +113,62 @@ export default function TratamientoFacialClient({ googleReviews = [] }: { google
   return (
     <main className="min-h-screen bg-white text-black">
       {/* ── HERO ── */}
-      <section className="relative min-h-[92svh] overflow-hidden">
+      <section className="relative min-h-[100svh] overflow-hidden">
         <Image
-          src="/images/servicio-premium-masculino-marbella.jpeg"
+          src="/images/visagismo2.jpeg"
           alt="tratamiento facial hombre Marbella"
           fill
           priority
-          className="object-cover scale-[1.03]"
+          className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/50 to-black/90" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/30 to-transparent" />
 
-        <div className="relative mx-auto flex h-full min-h-[92svh] max-w-6xl flex-col justify-end px-6 pb-16 lg:pb-24">
-          <FadeUp>
-            <h1 className="text-[52px] font-light uppercase leading-[1.05] tracking-[0.08em] text-white sm:text-[72px]">
-              Protocolos faciales <br /> masculinos premium
-            </h1>
-          </FadeUp>
-
-          <FadeUp delay={0.08}>
-            <p className="mt-6 text-[13px] uppercase tracking-[0.2em] text-white/60">
-              Diagnóstico. Tecnología. Rejuvenecimiento masculino.
+        <div className="relative mx-auto flex h-full min-h-[100svh] max-w-6xl flex-col justify-end px-6 pb-16 lg:pb-24">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/55"
+          >
+            Barbería premium · Marbella
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, delay: 0.35 }}
+            className="mt-3 text-[21px] font-light uppercase leading-[1.05] tracking-[0.04em] text-white sm:text-[46px] lg:text-[58px]"
+          >
+            Tratamientos faciales masculinos premium
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.55 }}
+            className="mt-3 hidden max-w-[40ch] text-[13px] leading-7 tracking-[0.04em] text-white/55 sm:block"
+          >
+            Diagnóstico. Tecnología. Rejuvenecimiento masculino.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.65 }}
+            className="mt-6 flex flex-col items-center gap-1.5"
+          >
+            <a
+              href={BOOKSY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-asesoria"
+              data-page="tratamiento-facial"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
+            >
+              Solicitar asesoría personalizada
+            </a>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
+              Reserva online en menos de 1 minuto
             </p>
-          </FadeUp>
-
-          <FadeUp delay={0.12}>
-            <div className="mt-10 max-w-[65ch] space-y-4">
-              <p className="text-[14px] leading-7 tracking-[0.02em] text-white/75">
-                Cada protocolo comienza con un diagnóstico profesional para entender exactamente qué necesita tu piel.
-              </p>
-              <p className="text-[14px] leading-7 tracking-[0.02em] text-white/55">
-                Tecnología especializada, activos premium y personalización avanzada aplicados al cuidado masculino.
-              </p>
-            </div>
-          </FadeUp>
+          </motion.div>
         </div>
       </section>
 
@@ -154,16 +176,20 @@ export default function TratamientoFacialClient({ googleReviews = [] }: { google
       <section className="grid grid-cols-2 md:grid-cols-4 gap-0.5">
         {[
           {
-            src: "/images/tratamiento-facial-hombre-premium-marbella.jpeg",
+            src: "/images/tratamiento-facial1.jpeg",
             alt: "Tratamiento facial hombre premium Marbella",
           },
           {
-            src: "/images/diagnostico-facial-masculino-marbella.jpeg",
+            src: "/images/tratamiento-facial2.jpeg",
             alt: "Diagnóstico facial masculino Marbella",
           },
           {
-            src: "/images/tecnologia-facial-avanzada-hombre-marbella.jpeg",
+            src: "/images/tratamiento-facial3.jpeg",
             alt: "Tecnología facial avanzada hombre Marbella",
+          },
+          {
+            src: "/images/tratamiento-facial4.jpeg",
+            alt: "Protocolo facial masculino Marbella",
           },
         ].map((img) => (
           <div key={img.src} className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>

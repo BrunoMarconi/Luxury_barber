@@ -107,7 +107,7 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
       {/* ── HERO ── */}
       <section className="relative min-h-[100svh] overflow-hidden">
         <Image
-          src="/images/experiencia-barberia-lujo-marbella.jpeg"
+          src="/images/corteybarbahero.jpeg"
           alt="corte de pelo y barba en Marbella"
           fill
           priority
@@ -221,7 +221,7 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
 
           <FadeUp delay={0.1} className="relative aspect-3/4 overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.12)]">
             <Image
-              src="/images/barba2.jpeg"
+              src="/images/corteybarba2.jpeg"
               alt="corte de pelo y barba hombre Marbella"
               fill
               className="object-cover"
@@ -302,7 +302,7 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
 
             <FadeUp delay={0.1} className="relative aspect-3/4 overflow-hidden rounded-3xl shadow-[0_24px_55px_rgba(0,0,0,0.3)]">
               <Image
-                src="/images/diagnostico-capilar-masculino-marbella.jpeg"
+                src="/images/corteybarba3.jpeg"
                 alt="diseño de barba según estructura facial Marbella"
                 fill
                 className="object-cover"

@@ -103,12 +103,12 @@ export default function TeamSpotlight({
             viewport={{ once: true, amount: 0.5 }}
             custom={4}
           >
-            <div className="relative aspect-[3/4.6] w-full shadow-[0_24px_55px_rgba(0,0,0,0.18)]">
+            <div className="relative aspect-4/3 w-full shadow-[0_24px_55px_rgba(0,0,0,0.18)]">
               <Image
-                src={"/images/JuanCarlos1.jpeg"}
+                src={"/images/equipo_juancarlos.jpeg"}
                 alt={name}
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="(max-width: 768px) 260px, 300px"
               />
             </div>

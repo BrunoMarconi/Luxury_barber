@@ -107,7 +107,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
       {/* ── HERO ── */}
       <section className="relative min-h-[100svh] overflow-hidden">
         <Image
-          src="/images/arreglo-de-barba-hombre-marbella.jpeg"
+          src="/images/barba.jpeg"
           alt="arreglo de barba en Marbella"
           fill
           priority
@@ -440,10 +440,10 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { src: "/images/barba3.jpeg", alt: "diseño barba Marbella resultado" },
-                { src: "/images/barba4.jpeg", alt: "perfilado barba preciso Marbella" },
-                { src: "/images/barba5.jpeg", alt: "arreglo barba profesional Marbella" },
-                { src: "/images/barba6.jpeg", alt: "barba bien trabajada Marbella" },
+                { src: "/images/barba4.jpeg", alt: "diseño barba Marbella resultado" },
+                { src: "/images/barba5.jpeg", alt: "perfilado barba preciso Marbella" },
+                { src: "/images/barba6.jpeg", alt: "arreglo barba profesional Marbella" },
+                { src: "/images/barba7.jpeg", alt: "barba bien trabajada Marbella" },
               ].map((img, i) => (
                 <FadeUp key={img.src} delay={i * 0.07} className="relative aspect-square overflow-hidden rounded-2xl">
                   <Image
