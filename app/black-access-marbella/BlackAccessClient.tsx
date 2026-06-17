@@ -79,7 +79,7 @@ export default function BlackAccessClient() {
           <h1
             className="ba-rv ba-rv2 text-[#F0EBE1] font-light uppercase leading-[0.92] mb-10 md:mb-12"
             style={{
-              fontSize: "clamp(60px, 11vw, 120px)",
+              fontSize: "clamp(38px, 11vw, 120px)",
               letterSpacing: "0.14em",
               fontFamily: "var(--font-montserrat)",
             }}
@@ -274,14 +274,14 @@ export default function BlackAccessClient() {
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/95 via-[#080808]/45 to-[#080808]/18" />
-          <div className="absolute inset-0 flex flex-col items-center justify-end pb-24 md:pb-36 px-6 text-center">
-            <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.58em] uppercase font-light mb-10">
+          <div className="absolute inset-0 flex flex-col items-center justify-end pb-16 md:pb-36 px-6 text-center">
+            <p className="text-[#F0EBE1]/26 text-[8px] tracking-[0.58em] uppercase font-light mb-6">
               Black Access&nbsp;&nbsp;·&nbsp;&nbsp;Marbella
             </p>
             <h2
-              className="text-[#F0EBE1] font-light tracking-[0.06em] leading-[1.38] max-w-[18ch] mb-8"
+              className="text-[#F0EBE1] font-light tracking-[0.06em] leading-[1.38] max-w-[18ch] mb-6"
               style={{
-                fontSize: "clamp(26px, 4.5vw, 52px)",
+                fontSize: "clamp(18px, 4.5vw, 52px)",
                 fontFamily: "var(--font-montserrat)",
               }}
             >

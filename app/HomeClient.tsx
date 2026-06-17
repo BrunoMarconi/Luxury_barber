@@ -672,7 +672,7 @@ function HeroSplit(_props: HeroSplitProps) {
               transition={{ delay: 0.45, duration: 0.8 }}
               className="mt-3 max-w-[20ch] text-white"
             >
-              <span className="block text-[32px] leading-[0.95] tracking-tight sm:text-[50px] lg:text-[66px] xl:text-[76px]">
+              <span className="block text-[18px] leading-[1.05] tracking-tight sm:text-[50px] lg:text-[66px] xl:text-[76px]">
                 Corte de pelo premium para hombre en Marbella.<br />No es solo un corte.<br />Es cómo el mundo te percibe.
               </span>
             </motion.h1>

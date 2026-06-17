@@ -84,18 +84,6 @@ export default function Footer() {
             </FadeUp>
 
             <FadeUp delay={0.05}>
-              <h2 className="mt-3 max-w-[18ch] text-[40px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[52px] lg:text-[64px]">
-                Reserva. Llega. Sal impecable.
-              </h2>
-            </FadeUp>
-
-            <FadeUp delay={0.1}>
-              <p className="mt-5 max-w-[70ch] text-[12px] leading-6 tracking-[0.06em] text-white/60">
-                Tu estilo, nuestra precisión <br /><br />Una Barbería pensada para el hombre que valora su imagen y su tiempo. <br /><br />Reserva hoy y disfruta de la experiencia 
-              </p>
-            </FadeUp>
-
-            <FadeUp delay={0.14}>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <div className="flex flex-col gap-2">
                   <a
