@@ -44,19 +44,19 @@ export default function AccessClient() {
             The Professional<br />Barber
           </h1>
           <p className="au au-3 tracking-[0.45em] text-[9px] uppercase font-light mb-10" style={{color: `${BLUE}aa`}}>
-            Precision&nbsp;&nbsp;·&nbsp;&nbsp;Presence&nbsp;&nbsp;·&nbsp;&nbsp;Image
+            Precisión&nbsp;&nbsp;·&nbsp;&nbsp;Presencia&nbsp;&nbsp;·&nbsp;&nbsp;Imagen
           </p>
           <div className="au au-4 w-8 h-px mx-auto mb-10" style={{background: `${BLUE}55`}} />
           <p className="au au-4 text-[#F0EBE1]/70 text-[10px] tracking-[0.18em] font-light mb-14 leading-[2]">
-            Private grooming experiences focused on<br />
-            masculine image, visual perception<br />
-            and advanced care.
+            Experiencias privadas centradas en<br />
+            imagen masculina, percepción visual<br />
+            y cuidado avanzado.
           </p>
           <a
             href="#experiences"
             className="au au-5 inline-flex items-center gap-5 text-[#F0EBE1]/60 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/15 pb-1 hover:text-[#F0EBE1] hover:border-[#F0EBE1]/40 transition-all duration-700"
           >
-            Enter Experience <span>→</span>
+            Descubrir <span>→</span>
           </a>
         </div>
 
@@ -68,8 +68,8 @@ export default function AccessClient() {
       {/* ── PHILOSOPHY ── */}
       <section className="py-24 px-6 text-center">
         <p className="text-[#F0EBE1]/40 text-[10px] tracking-[0.38em] uppercase font-light max-w-[28ch] mx-auto leading-[2.2]">
-          Some men get a haircut.<br />
-          Others build a presence.
+          Algunos hombres se cortan el pelo.<br />
+          Otros construyen una presencia.
         </p>
       </section>
 
@@ -91,7 +91,7 @@ export default function AccessClient() {
             {/* Label + Title — arriba */}
             <div className="absolute top-0 left-0 right-0 p-8 md:p-16">
               <p className="tracking-[0.55em] text-[8px] uppercase font-light mb-5" style={{color: `${BLUE}cc`}}>
-                Private Sunday Experience
+                Experiencia Privada · Domingos
               </p>
               <h2 className="text-[#F0EBE1] font-light tracking-[0.25em] text-[38px] md:text-[58px] uppercase leading-[1.05]">
                 Black<br />Access
@@ -101,7 +101,7 @@ export default function AccessClient() {
             {/* Descripción + CTAs — abajo */}
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
               <p className="text-[#F0EBE1]/75 text-[10px] tracking-[0.12em] font-light max-w-[42ch] leading-[1.9] mb-10">
-                A private Sunday experience designed for men who expect precision, discretion, advanced care and complete personal attention.
+                Una experiencia privada los domingos diseñada para hombres que exigen precisión, discreción, cuidado avanzado y atención completamente personalizada.
               </p>
               <div className="flex flex-col sm:flex-row items-start gap-5">
                 <Link
@@ -109,7 +109,7 @@ export default function AccessClient() {
                   className="inline-flex items-center gap-4 text-[9px] tracking-[0.45em] uppercase font-light border-b pb-1 transition-all duration-700"
                   style={{color: BLUE, borderColor: `${BLUE}55`}}
                 >
-                  Discover Black Access <span>→</span>
+                  Descubrir Black Access <span>→</span>
                 </Link>
                 <a
                   href={WA_PRIVATE}
@@ -117,7 +117,7 @@ export default function AccessClient() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-4 text-[#F0EBE1]/60 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/20 pb-1 hover:text-[#F0EBE1] hover:border-[#F0EBE1]/40 transition-all duration-700"
                 >
-                  Request Private Access <span>→</span>
+                  Solicitar Acceso Privado <span>→</span>
                 </a>
               </div>
             </div>
@@ -138,7 +138,7 @@ export default function AccessClient() {
             {/* Label + Title — arriba */}
             <div className="absolute top-0 left-0 right-0 p-8 md:p-14">
               <p className="tracking-[0.55em] text-[8px] uppercase font-light mb-4" style={{color: `${BLUE}bb`}}>
-                Image&nbsp;&nbsp;·&nbsp;&nbsp;Structure&nbsp;&nbsp;·&nbsp;&nbsp;Precision
+                Imagen&nbsp;&nbsp;·&nbsp;&nbsp;Estructura&nbsp;&nbsp;·&nbsp;&nbsp;Precisión
               </p>
               <h2 className="text-[#F0EBE1] font-light tracking-[0.2em] text-[28px] md:text-[40px] uppercase leading-[1.1]">
                 Premium<br />Experience
@@ -152,7 +152,7 @@ export default function AccessClient() {
                 className="inline-flex items-center gap-4 text-[9px] tracking-[0.42em] uppercase font-light border-b pb-1 mb-8 transition-all duration-700 w-fit hover:text-[#F0EBE1] hover:border-[#F0EBE1]/40"
                 style={{color: BLUE, borderColor: `${BLUE}44`}}
               >
-                Explore Premium Experience <span>→</span>
+                Explorar Premium Experience <span>→</span>
               </Link>
 
               <div className="flex flex-wrap gap-x-8 gap-y-3">
@@ -182,7 +182,7 @@ export default function AccessClient() {
         {/* ESSENTIAL SERVICES */}
         <div className="pt-16 pb-4">
           <p className="text-[#F0EBE1]/30 tracking-[0.55em] text-[8px] uppercase font-light mb-10 px-1">
-            Essential Services
+            Servicios Esenciales
           </p>
           <div className="space-y-0">
             <Link

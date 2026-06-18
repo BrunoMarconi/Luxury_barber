@@ -71,15 +71,15 @@ export default function BlackAccessClient() {
         </div>
 
         {/* Top: label + title */}
-        <div className="relative z-10 px-6 md:px-16 lg:px-24 pt-28 md:pt-32">
-          <p className="ba-rv ba-rv1 text-[#F0EBE1]/40 text-[8px] tracking-[0.65em] uppercase font-light mb-6 md:mb-8">
+        <div className="relative z-10 px-6 md:px-16 lg:px-24 pt-16 md:pt-20">
+          <p className="ba-rv ba-rv1 text-[#F0EBE1]/40 text-[8px] tracking-[0.65em] uppercase font-light mb-4 md:mb-6">
             The Professional Barber&nbsp;&nbsp;·&nbsp;&nbsp;Marbella
           </p>
 
           <h1
             className="ba-rv ba-rv2 text-[#F0EBE1] font-light uppercase leading-[0.92]"
             style={{
-              fontSize: "clamp(38px, 11vw, 120px)",
+              fontSize: "clamp(26px, 7vw, 90px)",
               letterSpacing: "0.14em",
               fontFamily: "var(--font-montserrat)",
             }}
