@@ -56,7 +56,7 @@ export default function BlackAccessClient() {
       `}</style>
 
       {/* ── HERO ── */}
-      <section className="relative h-screen min-h-[700px] flex flex-col justify-end overflow-hidden">
+      <section className="relative h-screen min-h-[700px] flex flex-col justify-between overflow-hidden">
 
         <div className="absolute inset-0 ba-fd">
           <Image
@@ -66,32 +66,35 @@ export default function BlackAccessClient() {
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/35 to-[#080808]/15" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#080808]/65 via-[#080808]/10 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-b from-[#080808]/70 via-transparent to-[#080808]/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#080808]/40 via-transparent to-transparent" />
         </div>
 
-        <div className="relative z-10 px-6 md:px-16 lg:px-24 pb-20 md:pb-32">
-
-          <p className="ba-rv ba-rv1 text-[#F0EBE1]/30 text-[8px] tracking-[0.65em] uppercase font-light mb-10 md:mb-14">
+        {/* Top: label + title */}
+        <div className="relative z-10 px-6 md:px-16 lg:px-24 pt-28 md:pt-32">
+          <p className="ba-rv ba-rv1 text-[#F0EBE1]/40 text-[8px] tracking-[0.65em] uppercase font-light mb-6 md:mb-8">
             The Professional Barber&nbsp;&nbsp;·&nbsp;&nbsp;Marbella
           </p>
 
           <h1
-            className="ba-rv ba-rv2 text-[#F0EBE1] font-light uppercase leading-[0.92] mb-10 md:mb-12"
+            className="ba-rv ba-rv2 text-[#F0EBE1] font-light uppercase leading-[0.92]"
             style={{
-              fontSize: "clamp(26px, 11vw, 120px)",
+              fontSize: "clamp(38px, 11vw, 120px)",
               letterSpacing: "0.14em",
               fontFamily: "var(--font-montserrat)",
             }}
           >
             Black<br />Access
           </h1>
+        </div>
 
-          <p className="ba-rv ba-rv3 text-[#F0EBE1]/58 text-[10px] md:text-[11px] tracking-[0.2em] font-light mb-7 max-w-[38ch]">
+        {/* Bottom: description + CTAs */}
+        <div className="relative z-10 px-6 md:px-16 lg:px-24 pb-20 md:pb-32">
+          <p className="ba-rv ba-rv3 text-[#F0EBE1]/58 text-[10px] md:text-[11px] tracking-[0.2em] font-light mb-5 max-w-[38ch]">
             La versión más privada de Alpha Signature.
           </p>
 
-          <p className="ba-rv ba-rv4 text-[#F0EBE1]/38 text-[10px] tracking-[0.06em] font-light leading-[2.2] max-w-[46ch] mb-14 md:mb-18">
+          <p className="ba-rv ba-rv4 text-[#F0EBE1]/38 text-[10px] tracking-[0.06em] font-light leading-[2.2] max-w-[46ch] mb-10">
             Un único turno privado reservado para trabajar tu imagen de forma completamente personalizada.
           </p>
 
