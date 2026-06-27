@@ -431,7 +431,7 @@ export default function BlackAccessClient() {
           </p>
           <div className="flex items-center gap-7">
             <a
-              href="https://www.instagram.com/theprofessionalbarber.marbella/"
+              href="https://www.instagram.com/theprofessionalbarber.es/"
               target="_blank"
               rel="noreferrer"
               className="text-[#F0EBE1]/32 text-[8px] tracking-[0.42em] uppercase font-light hover:text-[#F0EBE1]/58 transition-all duration-500"

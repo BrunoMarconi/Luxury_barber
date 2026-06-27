@@ -12,9 +12,9 @@ type Photo = {
 };
 
 const PHOTOS: Photo[] = [
-  { src: "/images/foto24.jpeg", alt: "Corte masculino profesional", size: "tall" },
-  { src: "/images/foto25.jpeg", alt: "Estilo masculino premium", size: "square" },
-  { src: "/images/foto26.jpeg", alt: "Experiencia barbería Marbella", size: "tall" },
+  { src: "/images/1.jpeg", alt: "Corte masculino profesional", size: "tall" },
+  { src: "/images/2.jpeg", alt: "Estilo masculino premium", size: "square" },
+  { src: "/images/3.jpeg", alt: "Experiencia barbería Marbella", size: "tall" },
 ];
 
 function FadeUp({

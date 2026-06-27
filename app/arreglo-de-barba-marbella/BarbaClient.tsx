@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { buildWaUrl } from "@/lib/cta";
+import { BOOKSY_URL } from "@/lib/cta";
 import type { GoogleReview } from "@/lib/google-reviews";
 
-const BOOKSY_URL = buildWaUrl("arreglo-de-barba");
+const DIAGNOSTICO_URL = "/tratamiento-capilar-hombre-marbella";
 
 function FadeUp({
   children,
@@ -151,11 +151,11 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
               href={BOOKSY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              data-cta="whatsapp-asesoria"
+              data-cta="booksy-hero"
               data-page="arreglo-de-barba"
               className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
             >
-              Solicitar asesoría personalizada
+              Reservar mi diseño de barba
             </a>
             <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
               Reserva online en menos de 1 minuto
@@ -176,10 +176,8 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
             </p>
           </div>
           <a
-            href={BOOKSY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cta="whatsapp-strip"
+            href={DIAGNOSTICO_URL}
+            data-cta="info-diagnostico"
             data-page="arreglo-de-barba"
             className="shrink-0 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0F2A44] transition hover:bg-white/90"
           >
@@ -293,10 +291,8 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
                   <span className="text-white">Se trata de estructurarla.</span>
                 </p>
                 <a
-                  href={BOOKSY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-cta="whatsapp-metodo"
+                  href={DIAGNOSTICO_URL}
+                  data-cta="info-diagnostico"
                   data-page="arreglo-de-barba"
                   className="mt-6 inline-flex items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
@@ -337,7 +333,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
             { n: "02", title: "Diseño según tu rostro", desc: "Definimos líneas, volúmenes y forma de la barba adaptados a tu morfología." },
             { n: "03", title: "Corrección y perfilado técnico", desc: "Trabajamos líneas, simetrías y perfilado con precisión para lograr un resultado limpio, equilibrado y natural." },
             { n: "04", title: "Trabajo de volúmenes", desc: "Ajustamos el volumen de cada zona para equilibrar visualmente el conjunto del rostro." },
-            { n: "05", title: "Cuidado facial y preparación de la piel", desc: "Incluye vapor ozono, tecnología Foreo, activos profesionales y cuidado facial personalizado para optimizar el estado de la piel y potenciar el resultado final. Según lo detectado en el diagnóstico, la experiencia puede incorporar tecnología galvánica NuSkin, LED terapéutico, crioterapia facial y activos premium seleccionados con criterio profesional." },
+            { n: "05", title: "Cuidado facial y preparación de la piel", desc: ["Incluye vapor ozono, tecnología Foreo, activos profesionales y cuidado facial personalizado para optimizar el estado de la piel y potenciar el resultado final.", "Cuando el diagnóstico lo requiere, la experiencia puede incorporar tecnología galvánica NuSkin, LED terapéutico, crioterapia facial y otros protocolos personalizados para potenciar aún más el resultado."] },
             { n: "06", title: "Acabado y recomendación", desc: "Resultado final y recomendación personalizada para mantener diseño, textura y duración." },
           ].map((step, i) => (
             <FadeUp key={step.n} delay={i * 0.05} className="bg-[#F5F5F5] p-8">
@@ -345,9 +341,17 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
               <h3 className="mt-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-black">
                 {step.title}
               </h3>
-              <p className="mt-2 text-[12px] leading-6 tracking-[0.03em] text-black/60">
-                {step.desc}
-              </p>
+              {Array.isArray(step.desc) ? (
+                <div className="mt-2 space-y-3">
+                  {step.desc.map((p, pi) => (
+                    <p key={pi} className="text-[12px] leading-6 tracking-[0.03em] text-black/60">{p}</p>
+                  ))}
+                </div>
+              ) : (
+                <p className="mt-2 text-[12px] leading-6 tracking-[0.03em] text-black/60">
+                  {step.desc}
+                </p>
+              )}
             </FadeUp>
           ))}
         </div>
@@ -357,10 +361,8 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
             Cada línea, cada volumen y cada ángulo tiene un propósito.
           </p>
           <a
-            href={BOOKSY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cta="whatsapp-proceso"
+            href={DIAGNOSTICO_URL}
+            data-cta="info-diagnostico"
             data-page="arreglo-de-barba"
             className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
           >
@@ -429,7 +431,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-cta="whatsapp-diferenciacion"
+                  data-cta="booksy-diferenciacion"
                   data-page="arreglo-de-barba"
                   className="self-start inline-flex items-center justify-center rounded-full bg-white/10 border border-white/20 px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#0F2A44] hover:border-[#0F2A44]"
                 >
@@ -468,7 +470,7 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
             href={BOOKSY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            data-cta="whatsapp-resultado"
+            data-cta="booksy-resultado"
             data-page="arreglo-de-barba"
             className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
           >
@@ -592,11 +594,11 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                data-cta="whatsapp-asesoria"
+                data-cta="booksy-cta-final"
                 data-page="arreglo-de-barba"
                 className="w-full rounded-full bg-[#0F2A44] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c] sm:w-auto"
               >
-                Solicitar asesoría personalizada
+                Reservar mi diseño de barba
               </a>
               <Link
                 href="/corte-y-barba-premium-marbella"

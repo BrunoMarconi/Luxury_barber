@@ -147,15 +147,15 @@ export default function AccessClient() {
 
             {/* Descripción + CTAs — abajo */}
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-14">
-              <Link
-                href="/corte-y-barba-premium-marbella"
+              <a
+                href="#premium-services"
                 className="inline-flex items-center gap-4 text-[9px] tracking-[0.42em] uppercase font-light border-b pb-1 mb-8 transition-all duration-700 w-fit hover:text-[#F0EBE1] hover:border-[#F0EBE1]/40"
                 style={{color: BLUE, borderColor: `${BLUE}44`}}
               >
                 Explorar Premium Experience <span>→</span>
-              </Link>
+              </a>
 
-              <div className="flex flex-wrap gap-x-8 gap-y-3">
+              <div id="premium-services" className="flex flex-wrap gap-x-8 gap-y-3">
                 <Link
                   href="/corte-de-pelo-hombre-marbella"
                   className="text-[#F0EBE1]/45 text-[8px] tracking-[0.4em] uppercase font-light hover:text-[#F0EBE1]/75 transition-all duration-500"
@@ -186,7 +186,7 @@ export default function AccessClient() {
           </p>
           <div className="space-y-0">
             <Link
-              href="/corte-de-pelo-hombre-marbella"
+              href="/corte-esencial-marbella"
               className="group/row flex items-center justify-between px-1 py-5 border-t border-[#F0EBE1]/8 hover:border-[#F0EBE1]/15 transition-all duration-500"
             >
               <span className="text-[#F0EBE1]/45 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/70 transition-all duration-500">
@@ -195,7 +195,7 @@ export default function AccessClient() {
               <span className="text-[#F0EBE1]/20 group-hover/row:text-[#F0EBE1]/45 transition-all duration-500 text-xs">→</span>
             </Link>
             <Link
-              href="/arreglo-de-barba-marbella"
+              href="/barba-esencial-marbella"
               className="group/row flex items-center justify-between px-1 py-5 border-t border-[#F0EBE1]/8 hover:border-[#F0EBE1]/15 transition-all duration-500"
             >
               <span className="text-[#F0EBE1]/45 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/70 transition-all duration-500">
@@ -204,7 +204,7 @@ export default function AccessClient() {
               <span className="text-[#F0EBE1]/20 group-hover/row:text-[#F0EBE1]/45 transition-all duration-500 text-xs">→</span>
             </Link>
             <Link
-              href="/corte-y-barba-premium-marbella"
+              href="/corte-y-barba-esencial-marbella"
               className="group/row flex items-center justify-between px-1 py-5 border-t border-b border-[#F0EBE1]/8 hover:border-[#F0EBE1]/15 transition-all duration-500"
             >
               <span className="text-[#F0EBE1]/45 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/70 transition-all duration-500">
@@ -223,7 +223,7 @@ export default function AccessClient() {
 
           <div className="flex flex-wrap items-center justify-center gap-8">
             <a
-              href="https://www.instagram.com/theprofessionalbarber.marbella/"
+              href="https://www.instagram.com/theprofessionalbarber.es/"
               target="_blank"
               rel="noreferrer"
               className="text-[#F0EBE1]/40 text-[8px] tracking-[0.45em] uppercase font-light hover:text-[#F0EBE1]/70 transition-all duration-500"

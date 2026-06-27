@@ -113,9 +113,15 @@ export default function TratamientoCapilarClient({ googleReviews = [] }: { googl
 
       {/* ── HERO ── */}
       <section className="relative overflow-hidden bg-[#0A0A0A] pt-36 pb-28 lg:pt-44 lg:pb-36">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.05]">
-          <div className="absolute -top-40 left-1/2 h-160 w-160 -translate-x-1/2 rounded-full bg-[#0F2A44]" />
-        </div>
+        <Image
+          src="/images/tratamiento-capilar.jpeg"
+          alt="tratamiento capilar hombre Marbella"
+          fill
+          priority
+          className="object-cover object-center opacity-30"
+          sizes="100vw"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#0A0A0A] via-[#0A0A0A]/60 to-[#0A0A0A]/40" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="relative mx-auto max-w-6xl px-6">

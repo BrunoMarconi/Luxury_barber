@@ -11,9 +11,9 @@ type DefaultGalleryPhoto = {
 };
 
 const defaultGallery: DefaultGalleryPhoto[] = [
-  { _id: "24", src: "/images/foto24.jpeg", alt: "Corte masculino profesional", size: "tall" },
-  { _id: "25", src: "/images/foto25.jpeg", alt: "Estilo masculino premium", size: "square" },
-  { _id: "26", src: "/images/foto26.jpeg", alt: "Experiencia barbería Marbella", size: "tall" },
+  { _id: "1", src: "/images/1.jpeg", alt: "Corte masculino profesional", size: "tall" },
+  { _id: "2", src: "/images/2.jpeg", alt: "Estilo masculino premium", size: "square" },
+  { _id: "3", src: "/images/3.jpeg", alt: "Experiencia barbería Marbella", size: "tall" },
 ];
 
 export default async function Page() {

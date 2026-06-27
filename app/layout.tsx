@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     description:
       "Reservas abiertas en la barbería más selecta de Marbella. Corte de pelo hombre premium y visagismo.",
     images: ["/images/og-image.jpg"],
-    creator: "@juank.alpha.es",
+    creator: "@theprofessionalbarber.es",
   },
   authors: [{ name: "El Barbero Profesional" }],
 };

@@ -3,10 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { buildWaUrl } from '@/lib/cta';
+import { BOOKSY_URL } from '@/lib/cta';
 import type { GoogleReview } from '@/lib/google-reviews';
-
-const BOOKSY_URL = buildWaUrl('tratamiento-facial');
 
 function FadeUp({
   children,
@@ -145,9 +143,9 @@ export default function TratamientoFacialClient({ googleReviews = [] }: { google
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.55 }}
-            className="mt-3 hidden max-w-[40ch] text-[13px] leading-7 tracking-[0.04em] text-white/55 sm:block"
+            className="mt-4 max-w-[52ch] text-[13px] leading-7 tracking-[0.04em] text-white/60"
           >
-            Diagnóstico. Tecnología. Rejuvenecimiento masculino.
+            Protocolos faciales personalizados diseñados para mejorar la calidad de la piel masculina mediante diagnóstico profesional, tecnología especializada y cuidado avanzado.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -159,11 +157,11 @@ export default function TratamientoFacialClient({ googleReviews = [] }: { google
               href={BOOKSY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              data-cta="whatsapp-asesoria"
+              data-cta="booksy-hero"
               data-page="tratamiento-facial"
               className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
             >
-              Solicitar asesoría personalizada
+              Reservar tratamiento facial
             </a>
             <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
               Reserva online en menos de 1 minuto
@@ -246,6 +244,52 @@ export default function TratamientoFacialClient({ googleReviews = [] }: { google
         </div>
       </section>
 
+      {/* ── NUESTROS PROTOCOLOS ── */}
+      <section className="bg-white py-20 lg:py-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeUp>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/50">
+              Nuestros protocolos
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-3 text-[32px] font-semibold uppercase leading-[0.95] tracking-tight text-black sm:text-[42px]">
+              Una colección de experiencias faciales premium.
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <p className="mt-6 max-w-[60ch] text-[13px] leading-7 tracking-[0.04em] text-black/60">
+              Cada piel tiene necesidades diferentes. Por eso todos los protocolos comienzan con un diagnóstico profesional que permite seleccionar el tratamiento más adecuado para cada persona.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.15}>
+            <div className="mt-14 grid gap-px bg-black/8 sm:grid-cols-2 lg:grid-cols-3 rounded-3xl overflow-hidden">
+              {[
+                { n: "01", title: "Hidratación Esencial", desc: "Restaura los niveles óptimos de hidratación para una piel equilibrada y confortable." },
+                { n: "02", title: "Luminosidad Instantánea", desc: "Activa el brillo natural de la piel para un aspecto más fresco y descansado." },
+                { n: "03", title: "Nutrición Profunda", desc: "Aporta los activos necesarios para pieles secas o carentes de nutrientes esenciales." },
+                { n: "04", title: "Equilibrio Calmante", desc: "Reduce la reactividad cutánea y restaura la barrera de protección de la piel." },
+                { n: "05", title: "Control Purificante", desc: "Limpieza profunda y regulación sebácea para pieles con tendencia a impurezas." },
+                { n: "06", title: "Contorno de Ojos Avanzado", desc: "Tratamiento específico para ojeras, bolsas y signos de cansancio en la zona periocular." },
+                { n: "07", title: "Rejuvenecimiento Activo", desc: "Protocolo intensivo con tecnología avanzada para reducir los signos visibles del envejecimiento." },
+                { n: "08", title: "Energía & Antiestrés", desc: "Activa la vitalidad de la piel y reduce el impacto del estrés en la apariencia cutánea." },
+                { n: "09", title: "Rejuvenecimiento Global", desc: "La experiencia facial más completa. Trabaja en profundidad para un resultado visible e integral." },
+              ].map((proto, i) => (
+                <FadeUp key={proto.n} delay={i * 0.04} className="bg-[#F7F6F4] p-8">
+                  <p className="text-[11px] font-bold tracking-[0.2em] text-black/25">{proto.n}</p>
+                  <h3 className="mt-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-black">
+                    {proto.title}
+                  </h3>
+                  <p className="mt-2 text-[12px] leading-6 tracking-[0.03em] text-black/55">
+                    {proto.desc}
+                  </p>
+                </FadeUp>
+              ))}
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
       {/* ── SECTION: CONEXIÓN CON SERVICIOS ── */}
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
@@ -253,7 +297,7 @@ export default function TratamientoFacialClient({ googleReviews = [] }: { google
             <div>
               <FadeUp>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-black/60">
-                  Complemento ideal
+                  Integra el cuidado facial dentro de tu experiencia
                 </p>
               </FadeUp>
               <FadeUp delay={0.05}>
@@ -378,6 +422,11 @@ export default function TratamientoFacialClient({ googleReviews = [] }: { google
               La calidad de tu piel también forma parte de tu imagen.
             </p>
           </FadeUp>
+          <FadeUp delay={0.04}>
+            <p className="mt-3 text-[13px] leading-7 tracking-[0.04em] text-white/45">
+              Una piel mejor cuidada no cambia quién eres. Refuerza la imagen que proyectas.
+            </p>
+          </FadeUp>
           <FadeUp delay={0.06}>
             <h2 className="mt-6 text-[34px] font-extralight leading-[1.05] tracking-[0.04em] text-white sm:text-[46px] lg:text-[58px]">
               La diferencia está en decidir si quieres seguir utilizando soluciones genéricas o trabajar tu piel mediante diagnóstico profesional, tecnología especializada y protocolos diseñados específicamente para ti.
@@ -394,11 +443,11 @@ export default function TratamientoFacialClient({ googleReviews = [] }: { google
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                data-cta="whatsapp-asesoria"
+                data-cta="booksy-cta-final"
                 data-page="tratamiento-facial"
                 className="w-full rounded-full bg-[#0F2A44] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c] sm:w-auto"
               >
-                Solicitar asesoría personalizada
+                Reservar tratamiento facial
               </a>
             </div>
           </FadeUp>

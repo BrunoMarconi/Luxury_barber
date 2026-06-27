@@ -95,7 +95,7 @@ export default function ContactSection() {
                       Instagram
                     </p>
                     <a
-                      href="https://www.instagram.com/juank.alpha.es?igsh=eXZvb3V2MDBwOHls"
+                      href="https://www.instagram.com/theprofessionalbarber.es/"
                       className="mt-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-white/90 hover:text-white"
                       target="_blank"
                       rel="noopener noreferrer"
