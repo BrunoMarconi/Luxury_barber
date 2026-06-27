@@ -251,7 +251,7 @@ export default function BlackAccessClient() {
       <section className="grid grid-cols-2 gap-0.5 mt-0.5">
         <div className="relative" style={{ aspectRatio: "4/5" }}>
           <Image
-            src="/images/black-access-corte-texturizado-hombre-premium-marbella.jpeg"
+            src="/images/1.jpeg"
             alt="Corte texturizado hombre premium — Black Access Marbella"
             fill
             className="object-cover object-center"
@@ -260,7 +260,7 @@ export default function BlackAccessClient() {
         </div>
         <div className="relative" style={{ aspectRatio: "4/5" }}>
           <Image
-            src="/images/black-access-visagismo-masculino-premium-marbella.jpeg"
+            src="/images/2.jpeg"
             alt="Visagismo masculino premium — Black Access Marbella"
             fill
             className="object-cover object-center"
@@ -273,7 +273,7 @@ export default function BlackAccessClient() {
       <section className="relative overflow-hidden mt-0.5">
         <div className="relative h-[68vh] min-h-[480px] max-h-[780px]">
           <Image
-            src="/images/black-access-barba-premium-hombre-marbella.jpeg"
+            src="/images/3.jpeg"
             alt="Barba premium hombre — Black Access Marbella — cuidado masculino privado"
             fill
             className="object-cover object-top"
