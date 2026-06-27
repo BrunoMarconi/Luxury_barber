@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { buildWaUrl } from "@/lib/cta";
+import { buildWaUrl, BOOKSY_URL } from "@/lib/cta";
 
 function FadeUp({
   children,
@@ -87,10 +87,10 @@ export default function Footer() {
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <div className="flex flex-col gap-2">
                   <a
-                    href={bookUrl}
+                    href={BOOKSY_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    data-cta="whatsapp-asesoria"
+                    data-cta="booksy-footer"
                     data-page="footer"
                     className="btn-reserva text-[11px] uppercase tracking-[0.22em]"
                   >

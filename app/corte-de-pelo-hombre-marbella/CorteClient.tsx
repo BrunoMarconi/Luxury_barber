@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { buildWaUrl } from "@/lib/cta";
+import { BOOKSY_URL } from "@/lib/cta";
 import type { GoogleReview } from "@/lib/google-reviews";
 
-const BOOKSY_URL = buildWaUrl("corte-de-pelo");
+const DIAGNOSTICO_URL = "/tratamiento-capilar-hombre-marbella";
 
 function FadeUp({
   children,
@@ -147,7 +147,7 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
               href={BOOKSY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              data-cta="whatsapp-asesoria"
+              data-cta="booksy-hero"
               data-page="corte-de-pelo"
               className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
             >
@@ -172,10 +172,8 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
             </p>
           </div>
           <a
-            href={BOOKSY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cta="whatsapp-strip"
+            href={DIAGNOSTICO_URL}
+            data-cta="info-diagnostico"
             data-page="corte-de-pelo"
             className="shrink-0 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0F2A44] transition hover:bg-white/90"
           >
@@ -316,10 +314,8 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
                   Un corte correcto empieza antes de usar la máquina o la tijera.
                 </p>
                 <a
-                  href={BOOKSY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-cta="whatsapp-metodo"
+                  href={DIAGNOSTICO_URL}
+                  data-cta="info-diagnostico"
                   data-page="corte-de-pelo"
                   className="mt-6 inline-flex items-center justify-center rounded-full border border-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
                 >
@@ -380,10 +376,8 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
             Aquí no seguimos tendencias.<br />Diseñamos resultados.
           </p>
           <a
-            href={BOOKSY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cta="whatsapp-proceso"
+            href={DIAGNOSTICO_URL}
+            data-cta="info-diagnostico"
             data-page="corte-de-pelo"
             className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
           >
@@ -437,7 +431,7 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
                     { title: "Diagnóstico facial y capilar", desc: "Antes de cortar, estudiamos rostro, densidad, tipo de cabello y patrón de crecimiento para diseñar un resultado coherente. El análisis puede incorporar herramientas de diagnóstico capilar y observación profesional para detectar factores que influyen directamente en el resultado." },
                     { title: "Diseño basado en visagismo", desc: "Aplicamos técnicas de visagismo para definir el estilo que más favorece a tu estructura facial." },
                     { title: "Ejecución de alta precisión", desc: "Cada ángulo, transición y detalle se trabaja con exigencia técnica para lograr un resultado limpio, natural y duradero." },
-                    { title: "Acabado con asesoría personalizada", desc: "Al finalizar, recibes una pauta concreta para mantener el resultado en el tiempo. Una recomendación adaptada a tu cabello, tu estilo y tu rutina real." },
+                    { title: "Acabado con asesoría personalizada", desc: "Al finalizar, recibirás recomendaciones personalizadas para mantener el resultado y el estado de tu cabello entre visitas. Una recomendación adaptada a tu cabello, tu estilo y tu rutina real." },
                   ].map((b, i) => (
                     <FadeUp key={b.title} delay={i * 0.06}>
                       <div className="flex gap-4">
@@ -465,7 +459,7 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
                   href={BOOKSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-cta="whatsapp-diferenciacion"
+                  data-cta="booksy-diferenciacion"
                   data-page="corte-de-pelo"
                   className="self-start inline-flex items-center justify-center rounded-full bg-white/10 border border-white/20 px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#0F2A44] hover:border-[#0F2A44]"
                 >
@@ -504,7 +498,7 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
             href={BOOKSY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            data-cta="whatsapp-resultado"
+            data-cta="booksy-resultado"
             data-page="corte-de-pelo"
             className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
           >
@@ -634,7 +628,7 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                data-cta="whatsapp-asesoria"
+                data-cta="booksy-cta-final"
                 data-page="corte-de-pelo"
                 className="w-full rounded-full bg-[#0F2A44] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c] sm:w-auto"
               >

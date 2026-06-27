@@ -3,9 +3,7 @@
 import Image from "next/image";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
-import { buildWaUrl } from "@/lib/cta";
-
-const GALLERY_WA_URL = buildWaUrl("gallery");
+import { BOOKSY_URL } from "@/lib/cta";
 
 type Photo = {
   src: string;
@@ -211,14 +209,14 @@ export default function GalleryScrollRail({ photos }: { photos?: Photo[] }) {
           </FadeUp>
           <FadeUp delay={0.12} amount={0.35}>
             <a
-              href={GALLERY_WA_URL}
+              href={BOOKSY_URL}
               target="_blank"
               rel="noreferrer"
-              data-cta="whatsapp-gallery"
+              data-cta="booksy-gallery"
               data-page="home"
               className="inline-flex h-12 items-center justify-center rounded-full bg-[#0F2A44] px-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
             >
-              Descubrir mi mejor versión
+              Reservar mi experiencia
             </a>
           </FadeUp>
         </div>

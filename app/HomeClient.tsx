@@ -5,10 +5,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import TeamSpotlight from "./TeamSpotlight";
 import GallerySection from "./GallerySection";
-import { buildWaUrl } from "@/lib/cta";
+import { BOOKSY_URL, buildWaUrlMsg } from "@/lib/cta";
 import type { GoogleReview } from "@/lib/google-reviews";
 
-const BOOKSY_URL = buildWaUrl("home");
+const WA_CONSULTAR_URL = buildWaUrlMsg("Hola Juan Carlos. He llegado desde la página de inicio de The Professional Barber y me gustaría consultar la disponibilidad para reservar una experiencia.");
 
 type HeroSplitProps = {
   leftImageSrc: string;
@@ -80,14 +80,12 @@ function RightPanel({ className }: { className?: string }) {
               <span className="font-semibold text-black/80">Está en todo lo que hay detrás.</span>
             </p>
             <a
-              href={BOOKSY_URL}
-              target="_blank"
-              rel="noreferrer"
-              data-cta="whatsapp-rightpanel"
+              href="/access"
+              data-cta="info-experiencias"
               data-page="home"
               className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-6 py-2.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
             >
-              Ver experiencia premium
+              Descubrir nuestras experiencias
             </a>
           </motion.div>
         </div>
@@ -424,11 +422,11 @@ function ExperienceBlock() {
             href={BOOKSY_URL}
             target="_blank"
             rel="noreferrer"
-            data-cta="whatsapp-experience"
+            data-cta="booksy-process"
             data-page="home"
             className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
           >
-            Solicitar asesoría personalizada
+            Reservar mi diagnóstico
           </a>
         </motion.div>
       </div>
@@ -488,11 +486,11 @@ function AuthorityBlock() {
               href={BOOKSY_URL}
               target="_blank"
               rel="noreferrer"
-              data-cta="whatsapp-asesoria"
+              data-cta="booksy-specialist"
               data-page="home"
               className="mt-10 inline-flex items-center justify-center rounded-full border border-[#0F2A44] bg-transparent px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/70 transition hover:bg-[#0F2A44] hover:text-white"
             >
-              Solicitar asesoría personalizada
+              Trabajar mi imagen contigo
             </motion.a>
           </div>
 
@@ -586,17 +584,17 @@ function ClosingCTA() {
             href={BOOKSY_URL}
             target="_blank"
             rel="noreferrer"
-            data-cta="whatsapp-asesoria"
+            data-cta="booksy-closing"
             data-page="home"
             className="w-full rounded-full bg-[#0F2A44] px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c] sm:w-auto"
           >
-            Solicitar asesoría personalizada
+            Reservar ahora
           </a>
           <a
-            href={BOOKSY_URL}
+            href={WA_CONSULTAR_URL}
             target="_blank"
             rel="noreferrer"
-            data-cta="whatsapp-asesoria"
+            data-cta="whatsapp-closing"
             data-page="home"
             className="w-full rounded-full border border-white/25 bg-transparent px-10 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-white/80 transition hover:border-white/50 hover:text-white sm:w-auto"
           >
@@ -696,11 +694,11 @@ function HeroSplit(_props: HeroSplitProps) {
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noreferrer"
-                data-cta="whatsapp-asesoria"
+                data-cta="booksy-hero"
                 data-page="home"
                 className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-[#1a3d5c]"
               >
-                Solicitar asesoría personalizada
+                Reservar mi experiencia
               </a>
               <a
                 href="/corte-de-pelo-hombre-marbella"
@@ -748,14 +746,12 @@ export default function HomePage({ gallery, googleReviews = [] }: { gallery?: Ga
             </p>
           </div>
           <a
-            href={BOOKSY_URL}
-            target="_blank"
-            rel="noreferrer"
-            data-cta="whatsapp-strip"
+            href="/tratamiento-capilar-hombre-marbella"
+            data-cta="info-diagnostico"
             data-page="home"
             className="shrink-0 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0F2A44] transition hover:bg-white/90"
           >
-            Empezar diagnóstico de imagen
+            Descubrir mi diagnóstico
           </a>
         </div>
       </section>
@@ -878,11 +874,11 @@ export default function HomePage({ gallery, googleReviews = [] }: { gallery?: Ga
                 href={BOOKSY_URL}
                 target="_blank"
                 rel="noreferrer"
-                data-cta="whatsapp-stats"
+                data-cta="booksy-stats"
                 data-page="home"
                 className="inline-flex items-center justify-center rounded-full border border-[#0F2A44] bg-transparent px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-white/70 transition-all duration-300 hover:bg-[#0F2A44] hover:text-white"
               >
-                Solicitar asesoría personalizada
+                Reservar ahora
               </a>
             </motion.div>
           </div>

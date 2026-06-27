@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 
-const WA_URL =
-  "https://wa.me/34617853179?text=Hola,%20quiero%20solicitar%20Black%20Access";
+const WA_URL = `https://wa.me/34617853179?text=${encodeURIComponent("Hola Juan Carlos. He estado viendo la experiencia Black Access y me gustaría recibir orientación para saber si esta experiencia privada es la adecuada para mí y conocer cómo funciona el proceso antes de reservar.")}`;
 
 type Differential = {
   title: string;
@@ -23,7 +22,7 @@ const DIFFERENTIALS: Differential[] = [
   {
     title: "Tecnología aplicada con precisión",
     lines: [
-      "La experiencia incorpora análisis facial masculino, diagnóstico capilar avanzado, tecnología Foreo, tecnología galvánica NuSkin, LED terapéutico, crioterapia facial, termoterapia controlada y activos premium seleccionados según las necesidades detectadas durante la sesión.",
+      "La experiencia integra herramientas de diagnóstico y cuidado avanzado como tecnología FOREO, tecnología galvánica NuSkin, LED terapéutico, crioterapia y activos profesionales seleccionados según las necesidades detectadas durante la sesión.",
       "La tecnología no es protagonista.",
       "Es la herramienta que permite personalizar cada detalle con mayor precisión.",
     ],
@@ -86,6 +85,9 @@ export default function BlackAccessClient() {
           >
             Black<br />Access
           </h1>
+          <p className="ba-rv ba-rv3 mt-4 text-[#F0EBE1]/28 text-[8px] tracking-[0.55em] uppercase font-light">
+            Un único turno disponible cada domingo.
+          </p>
         </div>
 
         {/* Bottom: description + CTAs */}

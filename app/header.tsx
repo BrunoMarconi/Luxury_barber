@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { buildWaUrl } from "@/lib/cta";
+import { buildWaUrlMsg } from "@/lib/cta";
 
 type PremiumSubItem = { label: string; href: string };
 
@@ -51,7 +51,7 @@ const nav: NavItem[] = [
   { label: "Contacto", href: "/contact" },
 ];
 
-const BOOKSY_URL = buildWaUrl("header");
+const WA_ESPECIALISTA_URL = buildWaUrlMsg("Hola Juan Carlos. He estado viendo la página de inicio de The Professional Barber y me gustaría recibir orientación para encontrar la experiencia que mejor se adapte a mi imagen.");
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -221,14 +221,14 @@ export default function Header() {
           )}
 
           <a
-            href={BOOKSY_URL}
+            href={WA_ESPECIALISTA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            data-cta="whatsapp-asesoria"
+            data-cta="whatsapp-header"
             data-page="header"
             className="btn-reserva text-xs uppercase tracking-[0.22em] ml-6 px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
           >
-            Solicitar asesoría
+            Hablar con un especialista
           </a>
         </nav>
 
@@ -371,14 +371,14 @@ export default function Header() {
                 )}
 
                 <a
-                  href={BOOKSY_URL}
+                  href={WA_ESPECIALISTA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-cta="whatsapp-asesoria"
+                  data-cta="whatsapp-header"
                   data-page="header"
                   className="btn-reserva text-sm uppercase tracking-[0.22em] w-full py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200"
                 >
-                  Solicitar asesoría
+                  Hablar con un especialista
                 </a>
               </div>
 
