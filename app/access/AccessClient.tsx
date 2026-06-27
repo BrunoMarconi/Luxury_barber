@@ -179,41 +179,6 @@ export default function AccessClient() {
           </div>
         </div>
 
-        {/* ESSENTIAL SERVICES */}
-        <div className="pt-16 pb-4">
-          <p className="text-[#F0EBE1]/30 tracking-[0.55em] text-[8px] uppercase font-light mb-10 px-1">
-            Servicios Esenciales
-          </p>
-          <div className="space-y-0">
-            <Link
-              href="/corte-esencial-marbella"
-              className="group/row flex items-center justify-between px-1 py-5 border-t border-[#F0EBE1]/8 hover:border-[#F0EBE1]/15 transition-all duration-500"
-            >
-              <span className="text-[#F0EBE1]/45 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/70 transition-all duration-500">
-                Corte Essential
-              </span>
-              <span className="text-[#F0EBE1]/20 group-hover/row:text-[#F0EBE1]/45 transition-all duration-500 text-xs">→</span>
-            </Link>
-            <Link
-              href="/barba-esencial-marbella"
-              className="group/row flex items-center justify-between px-1 py-5 border-t border-[#F0EBE1]/8 hover:border-[#F0EBE1]/15 transition-all duration-500"
-            >
-              <span className="text-[#F0EBE1]/45 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/70 transition-all duration-500">
-                Barba Essential
-              </span>
-              <span className="text-[#F0EBE1]/20 group-hover/row:text-[#F0EBE1]/45 transition-all duration-500 text-xs">→</span>
-            </Link>
-            <Link
-              href="/corte-y-barba-esencial-marbella"
-              className="group/row flex items-center justify-between px-1 py-5 border-t border-b border-[#F0EBE1]/8 hover:border-[#F0EBE1]/15 transition-all duration-500"
-            >
-              <span className="text-[#F0EBE1]/45 text-[10px] tracking-[0.28em] uppercase font-light group-hover/row:text-[#F0EBE1]/70 transition-all duration-500">
-                Corte + Barba Essential
-              </span>
-              <span className="text-[#F0EBE1]/20 group-hover/row:text-[#F0EBE1]/45 transition-all duration-500 text-xs">→</span>
-            </Link>
-          </div>
-        </div>
 
       </div>
 
