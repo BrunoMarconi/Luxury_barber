@@ -147,13 +147,12 @@ export default function AccessClient() {
 
             {/* Descripción + CTAs — abajo */}
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-14">
-              <a
-                href="#premium-services"
-                className="inline-flex items-center gap-4 text-[9px] tracking-[0.42em] uppercase font-light border-b pb-1 mb-8 transition-all duration-700 w-fit hover:text-[#F0EBE1] hover:border-[#F0EBE1]/40"
-                style={{color: BLUE, borderColor: `${BLUE}44`}}
+              <p
+                className="inline-flex items-center gap-4 text-[9px] tracking-[0.42em] uppercase font-light border-b pb-1 mb-8 w-fit"
+                style={{color: `${BLUE}66`, borderColor: `${BLUE}22`}}
               >
                 Explorar Premium Experience <span>→</span>
-              </a>
+              </p>
 
               <div id="premium-services" className="flex flex-wrap gap-x-8 gap-y-3">
                 <Link
@@ -179,6 +178,15 @@ export default function AccessClient() {
           </div>
         </div>
 
+        {/* ESENCIALES CTA */}
+        <div className="pt-12 pb-4 flex justify-center">
+          <Link
+            href="/servicios-esenciales-marbella"
+            className="inline-flex items-center gap-4 text-[#F0EBE1]/50 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/15 pb-1 hover:text-[#F0EBE1]/75 hover:border-[#F0EBE1]/30 transition-all duration-700"
+          >
+            Descubre nuestros servicios esenciales <span>→</span>
+          </Link>
+        </div>
 
       </div>
 
