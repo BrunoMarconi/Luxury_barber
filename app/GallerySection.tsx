@@ -12,9 +12,18 @@ type Photo = {
 };
 
 const PHOTOS: Photo[] = [
-  { src: "/images/foto24.jpeg", alt: "Corte masculino profesional", size: "tall" },
-  { src: "/images/foto25.jpeg", alt: "Estilo masculino premium", size: "square" },
-  { src: "/images/foto26.jpeg", alt: "Experiencia barbería Marbella", size: "tall" },
+  { src: "/images/gallery9.jpeg", alt: "Corte masculino profesional", size: "tall" },
+  { src: "/images/gallery3.jpeg", alt: "Estilo masculino premium", size: "square" },
+  { src: "/images/gallery12.jpeg", alt: "Experiencia barbería Marbella", size: "tall" },
+  { src: "/images/gallery1.jpeg", alt: "Corte de pelo premium Marbella", size: "wide" },
+  { src: "/images/gallery14.jpeg", alt: "Diseño de barba profesional", size: "square" },
+  { src: "/images/gallery6.jpeg", alt: "Imagen masculina premium", size: "tall" },
+  { src: "/images/gallery10.jpeg", alt: "Barbería de lujo Marbella", size: "wide" },
+  { src: "/images/gallery4.jpeg", alt: "Resultado corte de pelo hombre", size: "square" },
+  { src: "/images/gallery8.jpeg", alt: "Cuidado masculino avanzado", size: "tall" },
+  { src: "/images/gallery2.jpeg", alt: "Detalle de barbería premium", size: "square" },
+  { src: "/images/gallery13.jpeg", alt: "Estilo y precisión masculina", size: "wide" },
+  { src: "/images/gallery11.jpeg", alt: "Trabajo de barbería profesional", size: "tall" },
 ];
 
 function FadeUp({
