@@ -181,7 +181,7 @@ export default function AccessClient() {
         {/* ESENCIALES CTA */}
         <div className="pt-12 pb-4 flex justify-center">
           <Link
-            href="/servicios-esenciales-marbella"
+            href="/barberia-hombre-marbella"
             className="inline-flex items-center gap-4 text-[#F0EBE1]/50 text-[9px] tracking-[0.45em] uppercase font-light border-b border-[#F0EBE1]/15 pb-1 hover:text-[#F0EBE1]/75 hover:border-[#F0EBE1]/30 transition-all duration-700"
           >
             Descubre nuestros servicios esenciales <span>→</span>
