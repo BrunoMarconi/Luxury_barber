@@ -2,9 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { buildWaUrl } from "@/lib/cta";
-
-const BOOKSY_URL = buildWaUrl("servicios");
+const BOOKSY_URL = "https://booksy.com/es-es/160739_the-professional-barber_barberia_29260_marbella#ba_s=sh_1";
 
 function FadeUp({
   children,
@@ -63,6 +61,14 @@ const serviceCards = [
     href: "/tratamiento-facial-hombre-marbella",
     available: true,
   },
+  {
+    kicker: "Tratamiento Capilar",
+    title: "Tratamientos Capilares",
+    description:
+      "Diagnóstico capilar avanzado y protocolos personalizados para trabajar la causa real de cada problema: caída, densidad, cuero cabelludo y más.",
+    href: "/tratamiento-capilar-hombre-marbella",
+    available: true,
+  },
 ];
 
 export default function ServicesSection() {
@@ -77,7 +83,7 @@ export default function ServicesSection() {
           <div>
             <FadeUp delay={0}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60">
-                Experiencias personalizadas
+                Servicios Esenciales
               </p>
             </FadeUp>
 
@@ -117,7 +123,7 @@ export default function ServicesSection() {
                       href={BOOKSY_URL}
                       target="_blank"
                       rel="noreferrer"
-                      data-cta="whatsapp-asesoria"
+                      data-cta="booksy-servicios"
                       data-page="servicios"
                       onClick={(e) => e.stopPropagation()}
                       className="btn-reserva mt-6 inline-flex text-[10px] uppercase tracking-[0.22em]"
