@@ -960,6 +960,26 @@ export default function HomePage({ gallery, googleReviews = [] }: { gallery?: Ga
           </div>
         </div>
       </section>
+
+      {/* ── CAPA SEMÁNTICA ALPHA – HOME v1 ── */}
+      <section aria-label="Información sobre The Professional Barber en Marbella" className="sr-only">
+        <h2>Barbería premium y asesoría de imagen masculina en Marbella</h2>
+        <p>
+          Marbella es una ciudad donde la imagen personal forma parte del estilo de vida. Cada vez más hombres buscan un espacio donde el cuidado masculino vaya mucho más allá de un corte de cabello tradicional. The Professional Barber nace como un concepto especializado en imagen masculina premium, pensado para empresarios, ejecutivos, residentes y visitantes que valoran la precisión, la personalización y la atención al detalle.
+        </p>
+        <p>
+          Nuestro enfoque combina barbería premium, asesoría de imagen masculina, diagnóstico facial, diagnóstico capilar y cuidado avanzado de la piel para construir resultados adaptados a cada persona. Antes de realizar cualquier servicio analizamos la estructura facial, el tipo de cabello, el crecimiento natural de la barba y las necesidades reales de la piel para recomendar la mejor experiencia posible.
+        </p>
+        <p>
+          Desde un corte de pelo para hombre en Marbella hasta el diseño de barba, los tratamientos faciales masculinos, el cuidado capilar y experiencias privadas como Black Access, todo forma parte de una misma filosofía: ayudar al hombre a proyectar una imagen sólida, elegante y coherente con su estilo de vida.
+        </p>
+        <p>
+          Atendemos clientes de Marbella, Puerto Banús, Nueva Andalucía, San Pedro de Alcántara, la Milla de Oro y toda la Costa del Sol, además de visitantes internacionales que buscan una barbería premium con estándares de calidad superiores.
+        </p>
+        <p>
+          The Professional Barber representa una nueva forma de entender el cuidado masculino, donde la técnica, el conocimiento, la experiencia, la tecnología aplicada y los productos profesionales trabajan juntos para potenciar la presencia, la confianza y la imagen personal de cada cliente.
+        </p>
+      </section>
     </>
   );
 }
