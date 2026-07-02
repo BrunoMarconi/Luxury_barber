@@ -159,6 +159,20 @@ export default function ServicesSection() {
           )}
         </div>
       </div>
+
+      {/* ── CAPA SEMÁNTICA ALPHA – SERVICIOS ESENCIALES v1 ── */}
+      <section aria-label="Información sobre servicios esenciales de barbería y cuidado masculino en Marbella" className="sr-only">
+        <h2>Servicios esenciales de barbería y cuidado masculino en Marbella</h2>
+        <p>
+          Encontrar el servicio adecuado es el primer paso para construir una imagen masculina cuidada. En The Professional Barber reunimos los principales servicios de barbería y cuidado masculino en Marbella para responder a las necesidades más habituales del hombre actual. Tanto si buscas un corte de cabello, un diseño de barba, un tratamiento facial o un tratamiento capilar, cada experiencia comienza con un diagnóstico profesional que nos permite recomendar la opción más adecuada según tu imagen, tu estilo de vida y tus objetivos.
+        </p>
+        <p>
+          Nuestro enfoque combina barbería de precisión, visagismo, diagnóstico facial y capilar, tecnología aplicada y asesoría personalizada para ofrecer resultados coherentes y duraderos. No creemos en soluciones genéricas. Cada servicio está diseñado para adaptarse a las características de cada cliente y convertirse en el punto de partida de una experiencia de imagen masculina más completa.
+        </p>
+        <p>
+          Desde Marbella, Puerto Banús, Nueva Andalucía, San Pedro de Alcántara, la Milla de Oro y la Costa del Sol recibimos a hombres que buscan una barbería donde técnica, atención personalizada y criterio profesional formen parte de cada visita. Los Servicios Esenciales representan la mejor puerta de entrada al universo de The Professional Barber y permiten descubrir experiencias que pueden evolucionar hacia los servicios Premium o Black Access según las necesidades de cada cliente.
+        </p>
+      </section>
     </section>
   );
 }
