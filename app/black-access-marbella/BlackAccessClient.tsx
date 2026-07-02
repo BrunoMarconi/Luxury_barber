@@ -452,6 +452,20 @@ export default function BlackAccessClient() {
         </div>
       </footer>
 
+      {/* ── CAPA SEMÁNTICA ALPHA – BLACK ACCESS v1 ── */}
+      <section aria-label="Información sobre Black Access — experiencia privada de imagen masculina en Marbella" className="sr-only">
+        <h2>Black Access — Experiencia privada de imagen masculina en Marbella</h2>
+        <p>
+          Black Access representa la experiencia más exclusiva de The Professional Barber y está diseñada para hombres que entienden que la imagen personal forma parte de su identidad. Más que una sesión de barbería, es un espacio privado donde el diagnóstico facial, el análisis capilar, el diseño de imagen masculina y el cuidado avanzado trabajan como un único proceso. Cada experiencia comienza mucho antes de la cita, con una preparación personalizada que permite adaptar cada decisión a las características del cliente y a los objetivos que desea conseguir.
+        </p>
+        <p>
+          Black Access está pensado para empresarios, ejecutivos, profesionales, residentes y visitantes que buscan privacidad, tranquilidad y un servicio completamente personalizado en Marbella. La experiencia integra barbería de precisión, diseño de barba, diagnóstico profesional, tecnología aplicada al cuidado masculino y productos seleccionados según las necesidades detectadas durante la sesión. El objetivo no consiste únicamente en mejorar el cabello o la barba, sino en fortalecer la presencia personal, la confianza y la imagen que cada hombre proyecta en su entorno profesional y social.
+        </p>
+        <p>
+          Disponible exclusivamente mediante reserva anticipada, Black Access ofrece un único turno privado cada domingo, garantizando tiempo, atención y dedicación absoluta. También representa una alternativa para quienes desean regalar una experiencia exclusiva a un esposo, pareja, empresario o profesional que valore el cuidado masculino como parte de su estilo de vida. Desde Marbella, Puerto Banús, Nueva Andalucía, San Pedro de Alcántara, la Milla de Oro y la Costa del Sol, The Professional Barber desarrolla un concepto diferente donde la barbería deja de ser un servicio aislado para convertirse en una experiencia integral de imagen masculina.
+        </p>
+      </section>
+
     </main>
   );
 }
