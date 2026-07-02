@@ -597,6 +597,20 @@ export default function CorteBarbaClient({ googleReviews = [] }: { googleReviews
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
       </section>
 
+      {/* ── CAPA SEMÁNTICA ALPHA – CORTE + BARBA PREMIUM v1 ── */}
+      <section aria-label="Información sobre corte y barba premium para hombre en Marbella" className="sr-only">
+        <h2>Corte y barba premium para hombre en Marbella — diseño de imagen masculina integral</h2>
+        <p>
+          La imagen masculina no se construye trabajando el cabello y la barba por separado. Ambos forman parte de una misma estructura visual y deben diseñarse como un conjunto para conseguir armonía, equilibrio y una presencia más sólida. En The Professional Barber desarrollamos una experiencia de corte y barba premium en Marbella basada en diagnóstico facial, análisis capilar, visagismo y diseño personalizado, permitiendo que cada decisión responda a las características reales de cada cliente y a la imagen que desea proyectar.
+        </p>
+        <p>
+          Nuestro método estudia la forma del rostro, la mandíbula, el patrón de crecimiento del cabello y la barba, las proporciones faciales y el estilo de vida antes de iniciar cualquier trabajo. A partir de ese análisis diseñamos un resultado donde cada línea, cada transición y cada volumen contribuyen a crear una imagen masculina coherente, natural y duradera. No buscamos realizar dos servicios independientes, sino construir una identidad visual completa mediante técnica, criterio y personalización.
+        </p>
+        <p>
+          Recibimos clientes de Marbella, Puerto Banús, Nueva Andalucía, San Pedro de Alcántara, la Milla de Oro y toda la Costa del Sol que buscan una barbería premium especializada en imagen masculina. Para quienes desean seguir elevando su experiencia, este servicio puede complementarse con tratamientos capilares personalizados, tratamientos faciales masculinos o la experiencia privada Black Access, reforzando una filosofía donde la barbería se convierte en una herramienta para potenciar la confianza, la presencia y la percepción profesional de cada hombre.
+        </p>
+      </section>
+
     </main>
   );
 }
