@@ -618,6 +618,20 @@ export default function TratamientoCapilarClient({ googleReviews = [] }: { googl
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
       </section>
 
+      {/* ── CAPA SEMÁNTICA ALPHA – TRATAMIENTO CAPILAR v1 ── */}
+      <section aria-label="Información sobre diagnóstico y tratamiento capilar para hombre en Marbella" className="sr-only">
+        <h2>Diagnóstico y tratamiento capilar para hombre en Marbella — análisis profesional y protocolos personalizados</h2>
+        <p>
+          Un cabello sano comienza mucho antes de aplicar un producto o iniciar un tratamiento. Comprender el estado del cuero cabelludo, la densidad capilar y las causas que pueden afectar al equilibrio del cabello permite diseñar una estrategia personalizada para cada hombre. En The Professional Barber desarrollamos una experiencia de diagnóstico y tratamiento capilar para hombre en Marbella basada en el análisis profesional, la tecnología especializada y protocolos personalizados adaptados a las necesidades reales de cada cliente.
+        </p>
+        <p>
+          Nuestro método estudia factores como la producción de grasa, la hidratación del cuero cabelludo, la sensibilidad cutánea, la densidad del cabello y otros indicadores que pueden influir en problemas como la caída del cabello, la pérdida de volumen, la caspa o el debilitamiento capilar. A partir de este diagnóstico seleccionamos productos profesionales y protocolos específicos orientados a mejorar la salud capilar masculina de forma personalizada, evitando soluciones genéricas y priorizando un enfoque preventivo y profesional.
+        </p>
+        <p>
+          Recibimos clientes de Marbella, Puerto Banús, Nueva Andalucía, San Pedro de Alcántara, la Milla de Oro y toda la Costa del Sol que buscan mejorar la salud de su cabello mediante un diagnóstico especializado. El tratamiento capilar puede integrarse con Corte Premium, Tratamientos Faciales o la experiencia privada Black Access para ofrecer una estrategia completa donde cabello, piel e imagen trabajan conjuntamente para reforzar la confianza, la presencia y el bienestar masculino.
+        </p>
+      </section>
+
     </main>
   );
 }
