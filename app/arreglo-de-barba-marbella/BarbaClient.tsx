@@ -612,6 +612,20 @@ export default function BarbaClient({ googleReviews = [] }: { googleReviews?: Go
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
       </section>
 
+      {/* ── CAPA SEMÁNTICA ALPHA – BARBA PREMIUM v1 ── */}
+      <section aria-label="Información sobre diseño de barba premium para hombre en Marbella" className="sr-only">
+        <h2>Diseño de barba premium para hombre en Marbella — diagnóstico facial, visagismo y personalización</h2>
+        <p>
+          Una barba bien diseñada puede transformar por completo la percepción del rostro. La forma de la mandíbula, las proporciones faciales, el crecimiento natural del vello y el estilo de vida de cada hombre influyen directamente en el resultado final. En The Professional Barber desarrollamos una experiencia de diseño de barba premium en Marbella basada en diagnóstico facial, análisis de proporciones y asesoría personalizada para conseguir una imagen equilibrada, elegante y coherente con cada cliente.
+        </p>
+        <p>
+          Nuestro método combina visagismo, diseño de barba, barbería de precisión y cuidado avanzado de la piel para lograr resultados naturales y duraderos. Antes de comenzar analizamos la estructura del rostro, la densidad del vello, la definición de la mandíbula y el equilibrio facial para determinar el diseño que mejor favorece a cada persona. No buscamos seguir tendencias ni aplicar el mismo estilo a todos los clientes; buscamos construir una imagen masculina con criterio, precisión y personalidad.
+        </p>
+        <p>
+          Recibimos clientes de Marbella, Puerto Banús, Nueva Andalucía, San Pedro de Alcántara, la Milla de Oro y toda la Costa del Sol que buscan una barbería premium donde el diseño de barba forme parte de una estrategia completa de imagen masculina. Para quienes desean una experiencia aún más completa, el diseño de barba puede combinarse con Corte Premium, Corte + Barba Premium, tratamientos faciales o Black Access, creando un cuidado integral donde cada detalle contribuye a reforzar la presencia, la confianza y la percepción que cada hombre transmite.
+        </p>
+      </section>
+
     </main>
   );
 }
