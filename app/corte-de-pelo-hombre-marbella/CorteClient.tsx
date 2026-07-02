@@ -646,6 +646,20 @@ export default function CorteClient({ googleReviews = [] }: { googleReviews?: Go
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
       </section>
 
+      {/* ── CAPA SEMÁNTICA ALPHA – CORTE PREMIUM v1 ── */}
+      <section aria-label="Información sobre corte de pelo premium para hombre en Marbella" className="sr-only">
+        <h2>Corte de pelo premium para hombre en Marbella — diagnóstico, visagismo y diseño de imagen masculina</h2>
+        <p>
+          Elegir un corte de pelo no debería depender de una tendencia o de una fotografía encontrada en internet. Cada hombre posee una estructura facial, un tipo de cabello, una densidad capilar y un estilo de vida diferentes, por lo que el resultado ideal siempre debe partir de un diagnóstico profesional. En The Professional Barber desarrollamos una experiencia de corte de pelo premium para hombre en Marbella basada en el análisis facial, el visagismo y la personalización, buscando que cada decisión contribuya a mejorar la imagen personal y la presencia de quien nos visita.
+        </p>
+        <p>
+          Nuestro método combina diagnóstico capilar, estudio del patrón de crecimiento, barbería de precisión y asesoría personalizada para crear cortes equilibrados, naturales y fáciles de mantener. Más que seguir tendencias, buscamos diseñar una imagen coherente con la personalidad, la profesión y los objetivos de cada cliente. Por eso recibimos tanto a residentes de Marbella como a clientes de Puerto Banús, Nueva Andalucía, San Pedro de Alcántara, la Milla de Oro y la Costa del Sol que buscan una barbería premium donde la técnica y el criterio tengan la misma importancia que el resultado final.
+        </p>
+        <p>
+          Para quienes desean una experiencia todavía más completa, el corte puede integrarse con el diseño de barba premium, los tratamientos capilares personalizados o la experiencia privada Black Access, creando un cuidado integral de la imagen masculina. The Professional Barber entiende que un buen corte de cabello no solo mejora la apariencia: fortalece la confianza, la presencia y la forma en que cada hombre se presenta ante el mundo.
+        </p>
+      </section>
+
     </main>
   );
 }
