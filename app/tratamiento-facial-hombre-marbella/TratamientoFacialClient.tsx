@@ -113,7 +113,7 @@ export default function TratamientoFacialClient({ googleReviews = [] }: { google
       {/* ── HERO ── */}
       <section className="relative min-h-[100svh] overflow-hidden">
         <Image
-          src="/images/tratamiento-capilar.jpeg"
+          src="/images/tratamiento-facial.jpeg"
           alt="tratamiento facial hombre Marbella"
           fill
           priority
