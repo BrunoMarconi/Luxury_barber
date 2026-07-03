@@ -112,82 +112,61 @@ export default function TratamientoCapilarClient({ googleReviews = [] }: { googl
     <main className="min-h-screen bg-[#F5F5F5] text-black">
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-[#0A0A0A] pt-36 pb-28 lg:pt-44 lg:pb-36">
+      <section className="relative min-h-[100svh] overflow-hidden">
         <Image
           src="/images/tratamiento-capilar.jpeg"
           alt="tratamiento capilar hombre Marbella"
           fill
           priority
-          className="object-cover object-center opacity-30"
+          className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#0A0A0A] via-[#0A0A0A]/60 to-[#0A0A0A]/40" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/30 to-transparent" />
 
-        <div className="relative mx-auto max-w-6xl px-6">
+        <div className="relative mx-auto flex h-full min-h-[100svh] max-w-6xl flex-col justify-end px-6 pb-16 lg:pb-24">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/60"
+            className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/55"
           >
             Barbería premium · Marbella
           </motion.p>
-
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.35 }}
-            className="mt-4 max-w-[20ch] text-[40px] font-semibold uppercase leading-[0.95] tracking-tight text-white sm:text-[56px] lg:text-[72px]"
+            className="mt-3 text-[21px] font-light uppercase leading-[1.05] tracking-[0.04em] text-white sm:text-[46px] lg:text-[58px]"
           >
             Tu cabello no se está cayendo por casualidad.
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.5 }}
-            className="mt-6 max-w-[52ch] text-[15px] font-semibold leading-6 tracking-[0.03em] text-white/90"
-          >
-            Detrás de cada problema capilar hay una causa. Aquí la analizamos.
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-            className="mt-4 max-w-[58ch] text-[13px] leading-7 tracking-[0.03em] text-white/55"
+            transition={{ duration: 0.75, delay: 0.55 }}
+            className="mt-4 max-w-[52ch] text-[13px] leading-7 tracking-[0.04em] text-white/60"
           >
             Diagnóstico capilar avanzado, tecnología especializada y protocolos personalizados diseñados para trabajar la causa y no únicamente los síntomas.
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.72 }}
-            className="mt-8 flex flex-wrap items-start gap-4"
+            transition={{ duration: 0.7, delay: 0.65 }}
+            className="mt-6 flex flex-col items-start gap-1.5"
           >
-            <div className="flex flex-col gap-1.5">
-              <a
-                href={BOOKSY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-cta="whatsapp-asesoria"
-                data-page="tratamiento-capilar"
-                className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
-              >
-                Solicitar diagnóstico capilar
-              </a>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
-                Reserva online en menos de 1 minuto
-              </p>
-            </div>
-            <Link
-              href="/barberia-hombre-marbella"
-              className="inline-flex items-center justify-center rounded-full border border-white/25 bg-transparent px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 transition hover:border-white/50 hover:text-white"
+            <a
+              href={BOOKSY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="whatsapp-asesoria"
+              data-page="tratamiento-capilar"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F2A44] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#1a3d5c]"
             >
-              Ver todos los servicios
-            </Link>
+              Solicitar diagnóstico capilar
+            </a>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
+              Reserva online en menos de 1 minuto
+            </p>
           </motion.div>
         </div>
       </section>
